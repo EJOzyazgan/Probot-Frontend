@@ -7,12 +7,10 @@ import {Socket} from 'ngx-socket-io';
   styleUrls: ['./game-table.component.scss']
 })
 export class GameTableComponent implements OnInit {
-  players = [{name: 'Bill', cards: ['AC', 'KH']},
-    {name: 'Bill', cards: ['AC', 'KH']},
-    {name: 'Bill', cards: ['AC', 'KH']},
-    {name: 'Bill', cards: ['AC', 'KH']},
-    {name: 'Bill', cards: ['AC', 'KH']},
-    {name: 'Bill', cards: ['AC', 'KH']}];
+  players = [];
+  commonCards = [];
+  data;
+  pot = 0;
 
   playerPos = [{top: 15, left: 5},
     {top: 60, left: 5},
@@ -25,9 +23,20 @@ export class GameTableComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.socket.on('gameDataUpdated', () => {
-      console.log('Game Updated');
+    this.socket.on('gameDataUpdated', (data) => {
+      this.updateGame(data);
     });
+  }
+
+  updateGame(data) {
+    this.data = data.data;
+
+    if (this.data.commonCards.length >= 1) {
+      this.commonCards.push(this.data.commonCards);
+      console.log(this.commonCards);
+    }
+
+    this.players = data.data.players;
   }
 
   getPlayerStyle(player) {
