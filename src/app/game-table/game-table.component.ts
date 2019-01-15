@@ -26,17 +26,33 @@ export class GameTableComponent implements OnInit {
     this.socket.on('gameDataUpdated', (data) => {
       this.updateGame(data);
     });
+
+    this.socket.on('gameOver', (data) => {
+      this.resetGame(data);
+    });
   }
 
   updateGame(data) {
     this.data = data.data;
 
-    if (this.data.commonCards.length >= 1) {
-      this.commonCards.push(this.data.commonCards);
-      console.log(this.commonCards);
-    }
+    if (this.data.type !== 'status') {
+      for (const card of this.data.commonCards) {
+        this.commonCards.push(card);
+      }
 
-    this.players = data.data.players;
+      this.players = data.data.players;
+      console.log(this.data.handId, this.players);
+      if (this.data.type === 'bet') {
+        this.pot += this.data.amount;
+      } else if (this.data.type === 'win') {
+        this.commonCards = [];
+        this.pot = 0;
+      }
+    }
+  }
+
+  resetGame(data) {
+    this.commonCards = [];
   }
 
   getPlayerStyle(player) {

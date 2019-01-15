@@ -7,18 +7,6 @@
         <div *ngFor="let card of commonCards" class="card-holder">
           <img class="card" src="../../assets/img/cards/{{card.rank + card.type}}.png">
         </div>
-        <!--<div class="card-holder">-->
-          <!--<img class="card" src="../../assets/img/cards/5D.png">-->
-        <!--</div>-->
-        <!--<div class="card-holder">-->
-          <!--<img class="card" src="../../assets/img/cards/KH.png">-->
-        <!--</div>-->
-        <!--<div class="card-holder">-->
-          <!--<img class="card" src="../../assets/img/cards/9D.png">-->
-        <!--</div>-->
-        <!--<div class="card-holder">-->
-          <!--<img class="card" src="../../assets/img/cards/2C.png">-->
-        <!--</div>-->
       </div>
       <p class="table-pot">${{pot}}</p>
     </div>
@@ -26,11 +14,11 @@
     <div class="player" *ngFor="let player of players; let i = index" [ngStyle]="getPlayerStyle(i)">
       <p class="player-name">{{player.name}}</p>
       <div class="player-cards">
-        <div class="card-holder">
-          <img class="card" src="../../assets/img/cards/{{player.cards[0].rank + player.cards[0].type}}.png">
+        <div *ngIf="player.status === 'active'" class="card-holder">
+          <img *ngFor="let card of player.cards" class="card" src="../../assets/img/cards/{{card.rank + card.type}}.png">
         </div>
-        <div class="card-holder">
-          <img class="card" src="../../assets/img/cards/{{player.cards[1].rank + player.cards[1].type}}.png">
+        <div *ngIf="player.status !== 'active'" class="card-holder">
+          <img *ngFor="let card of [0,1]"  class="card" src="../../assets/img/cards/purple_back.png">
         </div>
       </div>
       <p class="player-chips">${{player.chips}}</p>
