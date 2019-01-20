@@ -8,6 +8,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {AlertModule} from 'ngx-alerts';
 import {GameTableComponent} from './game-table/game-table.component';
 import {SocketIoModule, SocketIoConfig} from 'ngx-socket-io';
+import {AuthService} from './services/auth.service';
 
 const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
 
@@ -26,7 +27,9 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     AlertModule.forRoot({maxMessages: 5, timeout: 3000}),
     SocketIoModule.forRoot(config)
   ],
-  providers: [],
+  providers: [
+    AuthService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
