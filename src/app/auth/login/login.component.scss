@@ -1,0 +1,73 @@
+button:disabled,
+button[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #fdfdfd;
+}
+
+.button {
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+  margin: 15px auto 0 auto;
+  padding: 14px 0 15px 0;
+  width: 100%;
+}
+
+.btn-1 {
+  background: #7c7fff;
+  color: #fdfdfd;
+}
+
+.btn-2 {
+  background: transparent;
+  border: 1px solid #7c7fff;
+  color: #7c7fff;
+}
+
+.container-body {
+  background-image: url("../../../assets/img/cards/blue_back.png");
+  background-size: auto;
+  height: 100%;
+  overflow: hidden;
+}
+
+.input {
+  background-color: #f6f6f6;
+  border: 1px solid rgba(0,0,0,.1);
+  border-radius: 6px;
+  box-sizing: border-box;
+  color: #888;
+  font-size: 18px;
+  font-weight: 300;
+  height: 50px;
+  margin: 10px auto 0 auto;
+  padding-left: 10px;
+  width: 100%;
+}
+
+.login-input {
+  width: 100%;
+}
+
+.login-container {
+  background-color: #f6f6f6;
+  box-shadow: 0 6px 8px 0 rgba(45, 35, 66, 0.15);
+  margin: 100px auto 0 auto;
+  max-width: 350px;
+  padding: 20px;
+}
+
+.login-header {
+  text-align: center;
+}
+
+@media (max-width: 599px) {
+  .login-container {
+    max-width: 75%;
+  }
+}
+
+@media (min-width: 600px) {
+
+}
