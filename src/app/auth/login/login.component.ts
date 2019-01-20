@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {AuthService} from '../../services/auth.service';
+import {AlertService} from 'ngx-alerts';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -7,9 +10,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  disableLogin = false;
+  email;
+  password;
+
+  constructor(private authService: AuthService,
+              private alertService: AlertService,
+              private router: Router) {
+  }
 
   ngOnInit() {
+  }
+
+  login() {
+    if (this.email === null || this.email === '' ||
+      this.password === null || this.password === '') {
+      return this.alertService.warning('Please Fill In Email and Password');
+    }
+
+    this.authService.login(this.email, this.password).subscribe(user => {
+      localStorage.setItem('token', user['user'].token);
+      localStorage.setItem('userId', user['user'].id);
+      return this.router.navigate(['/game-view']);
+    });
   }
 
 }

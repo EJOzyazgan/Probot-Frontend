@@ -47,7 +47,6 @@ export class SignupComponent implements OnInit {
         this.authService.signUp(this.user).subscribe(() => {
           this.alertService.success('Sign Up Successful');
           this.authService.login(this.user.email, this.user.password).subscribe((currentUser) => {
-            console.log(currentUser)
             return this.router.navigate(['/game-view']);
           });
         });
