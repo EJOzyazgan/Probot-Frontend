@@ -1,0 +1,355 @@
+.button-list {
+  font-size: 20px;
+  list-style: none;
+}
+
+
+.dashboard {
+  position: absolute;
+  left: 125px;
+  width: 100%;
+  height: 100vh;
+  transition: all 0.5s ease;
+}
+
+.drop-btn {
+  color: #000;
+  background-color: transparent;
+  padding: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  width: 160px;
+  border: none;
+  display: flex;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  right: 30px;
+  width: 160px;
+  z-index: 500;
+}
+
+//.dropdown-content {
+//  display: none;
+//  position: absolute;
+//  background-color: #f9f9f9;
+//  min-width: 160px;
+//  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+//  z-index: 1;
+//}
+//
+//.dropdown-content:hover {
+//  display: block;
+//}
+
+.dropdown-content a {
+  color: black;
+  text-align: center;
+  padding: 8px 12px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;}
+
+button.dropbtn:hover + .dropdown-content {
+  display: block;
+  cursor: pointer;
+  width: 160px;
+}
+
+/* .dropdown:hover > .dropbtn {
+    background-color: #EEE;
+    cursor: pointer;
+    width: 160px;
+} */
+
+.fa {
+  margin-right: 10px;
+}
+
+.fa-ul {
+  margin-left: 0;
+  text-align: center;
+}
+
+.home {
+  width: 135px;
+  height: 35px;
+  background-color: #676767;
+  color: #fdfdfd;
+  font-size: 22px;
+  text-align: left;
+}
+
+.home-text {
+  color: #fdfdfd;
+  font-size: 14px;
+}
+
+.list-item {
+  cursor: pointer;
+  margin-bottom: 10px;
+  width: 100%;
+  color:#fff;
+  height:80px;
+}
+
+.list-item:focus {
+  outline: none;
+}
+
+.logo{
+  /* To correctly align image, regardless of content height: */
+  vertical-align: top;
+  display: inline-block;
+  /* To horizontally center images and caption */
+  text-align: center;
+  /* The width of the container also implies margin around the images. */
+  position: relative;
+  width: 56px;
+  padding-bottom: 20px;
+}
+
+
+.logo-text {
+  font-family: 'Lato', sans-serif;
+  font-weight:bold;
+  font-size: 24px;
+  display: block;
+  color:#fff;
+}
+
+
+.logo-img {
+  height: 56px;
+  width: 56px;
+}
+
+.logout{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+.menu-active {
+  right: 25px;
+  transform: rotate(0);
+}
+
+.menu-item {
+  border-bottom: 1px solid rgba(177,177,177, .4);
+  font-size: 20px;
+  padding: 20px 10px
+}
+
+.menu-item:focus {
+  outline: none;
+}
+
+.menu-list {
+  list-style: none;
+  padding: 10px 20px;
+}
+
+
+.nav-item {
+  align-items: center;
+  color: #fdfdfd;
+  cursor: pointer;
+  display: list-item;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  height: 72px;
+  margin-right: 60px;
+  line-height: 69px;
+  list-style-image: none;
+  list-style-position: outside;
+  list-style-type: none;
+  position: relative;
+}
+
+.nav-list {
+  color:rgb(55, 58, 60);
+  float:right;
+  font-family: 'Lato', sans-serif;
+  font-size:16px;
+  font-weight:300;
+  height:72px;
+  line-height:24px;
+  list-style-image:none;
+  list-style-position:outside;
+  list-style-type:none;
+  margin-bottom: 0;
+  margin-top: 0;
+  margin-right: 20px;
+  padding-left: 0;
+}
+
+.nav-menu {
+  background-color: #fdfdfd;
+  border-radius: 5px;
+  box-shadow: -2px 6px 25px -1px rgba(0,0,0,0.31);
+  color: #111;
+  height: auto;
+  min-width: 150px;
+  position: fixed;
+  right: -500px;
+  top: 62px;
+  transition: all ease .3s;
+  width: auto;
+  z-index: 1000;
+}
+
+
+.nav-menu:after{
+  border: 22px solid;
+  border-color: #fdfdfd transparent transparent transparent;
+  bottom: auto;
+  content: ' ';
+  height: 0;
+  position: absolute;
+  right: 10px;
+  top: -40px;
+  transform: rotate(180deg);
+  width: 0;
+}
+
+.side-bar {
+  width: 96px;
+  height: 100%;
+  background-color: #333;
+  left: 0;
+  position: fixed;
+  z-index: 500;
+  transition: all 1.5s ease;
+}
+
+.item {
+  /* To correctly align image, regardless of content height: */
+  vertical-align: top;
+  display: inline-block;
+  /* To horizontally center images and caption */
+  text-align: center;
+  /* The width of the container also implies margin around the images. */
+  position: relative;
+  width: 51px;
+  height: 80px;
+  padding-top: 20px;
+  opacity: 0.8;
+}
+
+.item:focus {
+  outline: none;
+}
+
+.item-clicked{
+  /* To correctly align image, regardless of content height: */
+  vertical-align: top;
+  display: inline-block;
+  /* To horizontally center images and caption */
+  text-align: center;
+  position: relative;
+  color:#333;
+  background-color: #fff;
+  width: 102px;
+  height: 70px;
+  padding-top: 20px;
+  opacity: .8!important;
+}
+
+.item-clicked:focus {
+  outline: none;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  filter: invert(100%);
+}
+
+.icon-clicked {
+  width: 40px;
+  height: 40px;
+}
+.caption {
+  /* Make the caption a block so it occupies its own line. */
+  display: block;
+  font-size: 12px;
+}
+
+.list-item div:hover{
+  color:#333;
+  background-color: #fff;
+  width: 102px;
+  height:70px;
+  padding-top: 20px;
+  opacity: 80%!important;
+}
+
+.list-item div:focus {
+  outline: none;
+}
+
+.list-item div:hover img{
+  filter:invert(0%);
+}
+
+.list-item:focus {
+  outline: none;
+}
+.spacer {
+  flex: 1;
+}
+
+
+
+@media (max-width: 599px) {
+  .fa {
+    font-size: 25px;
+  }
+  .logout {
+    display: none;
+  }
+  .menu {
+    display: block;
+  }
+  .nav-item {
+    margin-right: 36px;
+    line-height: 75px;
+  }
+  .nav-menu {
+    display: block;
+  }
+  .side-bar {
+    display: none;
+  }
+  .dashboard {
+    left: 0;
+    width: 100%;
+  }
+}
+
+@media (min-width: 600px) {
+  .menu {
+    display: none;
+  }
+  .nav-menu {
+    display: block;
+  }
+  .side-bar {
+    display: block;
+  }
+}
+
+
+
+
+
+
