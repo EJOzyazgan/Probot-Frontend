@@ -30,8 +30,8 @@ export class LoginComponent implements OnInit {
 
     this.authService.login(this.email, this.password).subscribe(user => {
       localStorage.setItem('token', user['user'].token);
-      localStorage.setItem('userId', user['user'].id);
-      return this.router.navigate(['/game-view']);
+      localStorage.setItem('userId', user['user']._id);
+      return this.router.navigate(['/profile/overview']);
     });
   }
 

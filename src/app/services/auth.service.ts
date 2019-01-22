@@ -4,7 +4,7 @@ import {environment} from '../../environments/environment';
 
 @Injectable()
 export class AuthService {
-  authUrl = environment.authUrl;
+  authUrl = environment.apiUrl + 'user';
 
   constructor(private http: HttpClient) {
   }
@@ -21,21 +21,9 @@ export class AuthService {
     return this.http.post(this.authUrl + '/login', {email: email, password: password});
   }
 
-  update(user) {
-    return this.http.patch(this.authUrl + '/update', user, this.options);
-  }
-
   checkExists(email) {
     console.log(this.authUrl);
     return this.http.post(this.authUrl + '/exists', {email: email});
-  }
-
-  get(id) {
-    return this.http.post(this.authUrl + '/get', {userId: id}, this.options);
-  }
-
-  getUsers(id) {
-    return this.http.post(this.authUrl + '/get/users', {userId: id}, this.options);
   }
 
   getByToken(token) {

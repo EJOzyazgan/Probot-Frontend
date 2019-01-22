@@ -1,3 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
 @import "./theme.scss";
 
+html {
+  background-color: white;
+  font-family: 'Lato', sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  z-index: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100%;
+  font-family: 'Lato', sans-serif;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  z-index: 0;
+}
