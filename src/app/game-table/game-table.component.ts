@@ -8,22 +8,27 @@ import {CardGroup, OddsCalculator} from 'poker-odds-calculator';
   styleUrls: ['./game-table.component.scss']
 })
 export class GameTableComponent implements OnInit {
-  players = [];
+  players = [{name: 'marvin', cards: {rank: 3, type: 'K'}},
+    {name: 'I am the best', cards: {rank: 3, type: 'K'}},
+    {name: 'p3', cards: {rank: 3, type: 'K'}},
+    {name: 'p4', cards: {rank: 3, type: 'K'}},
+    {name: 'p5', cards: {rank: 3, type: 'K'}},
+    {name: 'i have a really long name', cards: {rank: 3, type: 'K'}}];
   player;
-  commonCards = [];
+  commonCards = [{rank: 3, type: 'D'}, {rank: 3, type: 'D'}, {rank: 3, type: 'D'}, {rank: 3, type: 'D'}, {rank: 3, type: 'D'}];
   data;
-  message;
+  message = 'i have a really long name Bet $40';
   session;
   smallBlind;
   pot = 0;
-  odds = [];
+  odds = [10, 10, 10, 10, 10, 10];
 
-  playerPos = [{top: 15, left: 10},
-    {top: 60, left: 10},
-    {top: 70, left: 45},
-    {top: 60, left: 80},
-    {top: 15, left: 80},
-    {top: 5, left: 45}];
+  playerPos = [{top: 15, left: 10}, // top left
+    {top: 60, left: 10}, // bottom left
+    {top: 68, left: 45}, // bottom middle
+    {top: 60, left: 78}, // bottom right
+    {top: 15, left: 78}, // top right
+    {top: 8, left: 50}]; // top middle
 
   constructor(private socket: Socket) {
   }
@@ -137,14 +142,26 @@ export class GameTableComponent implements OnInit {
   }
 
   getPlayerStyle(player) {
-    const styles = {
-      'position': 'absolute',
-      'text-align': 'center',
-      'top': `${this.playerPos[player]['top']}%`,
-      'left': `${this.playerPos[player]['left']}%`,
-      'transform': `translate (-${this.playerPos[player]['left']}%, -${this.playerPos[player]['top']}%)`
-    };
-    return styles;
+    let style = {};
+
+    if (player === 2 || player === 5) {
+      style = {
+        'position': 'absolute',
+        'text-align': 'center',
+        'top': `${this.playerPos[player]['top']}%`,
+        'left': '0',
+        'right': '0',
+        'margin': 'auto'
+      };
+    } else {
+      style = {
+        'position': 'absolute',
+        'text-align': 'center',
+        'top': `${this.playerPos[player]['top']}%`,
+        'left': `${this.playerPos[player]['left']}%`
+      };
+    }
+    return style;
   }
 
 }

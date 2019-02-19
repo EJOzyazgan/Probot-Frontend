@@ -11,7 +11,7 @@
 
 .game-messages {
   margin: 15px;
-  font-size: 76px;
+  font-size: 52px;
   color: white;
 }
 
@@ -48,7 +48,7 @@
 }
 
 .card {
-  width: 150px;
+  width: 100px;
   object-fit: contain;
   vertical-align: middle;
 }
@@ -59,7 +59,7 @@
 
 .player-name {
   font-family: serif;
-  font-size: 48px;
+  font-size: 36px;
   margin: 0;
   padding: 5px;
   color: white;
@@ -67,11 +67,13 @@
 
 .player-cards {
   display: flex;
+  width: fit-content;
+  margin: auto;
 }
 
 .player-chips {
   font-family: serif;
-  font-size: 48px;
+  font-size: 36px;
   margin: 0;
   padding: 5px;
   color: white;
@@ -79,11 +81,9 @@
 
 .odds-view {
   position: absolute;
-  bottom: 0;
-  right: 0;
-  border: #4c4fff solid 1px;
+  top: 5px;
+  left: 5px;
   text-align: left;
-  margin: 15px;
   color: white;
   font-family: serif;
   font-size: 24px;
