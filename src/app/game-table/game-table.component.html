@@ -1,4 +1,5 @@
 <div class="game-container">
+  <span class="game-messages">{{message}}</span>
   <div class="game-table">
     <img src="../../assets/img/table-top.png" class="table-image">
 
@@ -22,6 +23,13 @@
         </div>
       </div>
       <p class="player-chips">${{player.chips}}</p>
+    </div>
+  </div>
+
+  <div class="odds-view">
+    <div class="player-odds" *ngFor="let player of players; let i = index">
+      <div>{{player.name}}:</div>
+      <div class="odd">{{odds[i]}}%</div>
     </div>
   </div>
 </div>
