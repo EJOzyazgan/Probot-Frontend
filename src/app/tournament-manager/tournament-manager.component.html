@@ -1,0 +1,80 @@
+<div class="main-container">
+
+  <mat-card class="section-container">
+    <mat-card-header>
+      <mat-card-title>Manage Tournaments</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div *ngIf="!newTournament" class="select-tournament">
+        <mat-form-field class="tournament-name-input">
+          <mat-select [(ngModel)]="tournament" placeholder="Select Tournament"
+                      (selectionChange)="getBrackets(tournament._id)">
+            <mat-option *ngFor="let t of tournaments" [value]="t">{{t.name}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <br>
+
+        <button mat-button (click)="toggle('tournament')">New Tournament</button>
+      </div>
+      <div *ngIf="newTournament" class="new-tournament">
+        <mat-form-field class="tournament-name-input">
+          <input matInput [(ngModel)]="tournament.name"
+                 placeholder="Enter New Tournament Name">
+        </mat-form-field>
+        <br>
+
+        <button mat-button
+                [disabled]="tournament.name === null || tournament.name === undefined || tournament.name.trim() === ''"
+                (click)="createTournament()">Create Tournament
+        </button>
+        <button mat-button color="warn" (click)="toggle('tournament')">Cancel</button>
+      </div>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="section-container">
+    <mat-card-header>
+      <mat-card-title>Manage Brackets</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div *ngIf="!newBracket">
+        <mat-form-field class="tournament-name-input">
+          <mat-select [(ngModel)]="bracket" placeholder="Select Bracket">
+            <mat-option *ngFor="let b of brackets" [value]="b">{{b.name}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <br>
+
+        <button mat-button [disabled]="tournament._id === null || tournament._id === undefined"
+                (click)="toggle('bracket')">New Bracket
+        </button>
+        <button mat-button [disabled]="bracket._id === null || bracket._id === undefined"
+                (click)="viewBracket()" [routerLink]="['/bracket-view']">View Bracket</button>
+      </div>
+
+      <div *ngIf="newBracket">
+        <mat-form-field class="bracket-name-input">
+          <input matInput [(ngModel)]="bracket.name"
+                 placeholder="Enter New Bracket Name">
+        </mat-form-field>
+        <br>
+
+        <button mat-button
+                [disabled]="bracket.name === null || bracket.name === undefined || bracket.name.trim() === ''"
+                (click)="createBracket()">Create Bracket
+        </button>
+        <button mat-button color="warn" (click)="toggle('bracket')">Cancel</button>
+      </div>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="section-container">
+    <mat-card-header>
+      <mat-card-title>Manage Games</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+
+      <button mat-button [disabled]="game !== null">Start Game</button>
+    </mat-card-content>
+  </mat-card>
+</div>

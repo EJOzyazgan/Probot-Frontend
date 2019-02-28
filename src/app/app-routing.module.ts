@@ -3,6 +3,7 @@ import {PreloadAllModules, RouterModule, Routes} from '@angular/router';
 import {GameViewComponent} from './game-view/game-view.component';
 import {AuthGuard} from './guards/auth.guard';
 import {BracketViewComponent} from './bracket-view/bracket-view.component';
+import {TournamentManagerComponent} from './tournament-manager/tournament-manager.component';
 
 const appRoutes: Routes = [
   {path: '', pathMatch: 'full', redirectTo: 'auth/login'},
@@ -10,6 +11,7 @@ const appRoutes: Routes = [
   {path: 'profile', loadChildren: './profile/profile.module#ProfileModule', canActivate: [AuthGuard]},
   {path: 'game-view', component: GameViewComponent},
   {path: 'bracket-view', component: BracketViewComponent},
+  {path: 'tournament-manager', component: TournamentManagerComponent}
 ];
 
 @NgModule({
@@ -20,4 +22,4 @@ const appRoutes: Routes = [
 })
 export class AppRoutingModule {}
 
-export const RoutingComponents = [GameViewComponent, BracketViewComponent];
+export const RoutingComponents = [GameViewComponent, BracketViewComponent, TournamentManagerComponent];
