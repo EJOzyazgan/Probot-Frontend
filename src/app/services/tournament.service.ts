@@ -36,8 +36,8 @@ export class TournamentService {
     return this.http.post(this.tournamentUrl + '/bracket/create', bracket);
   }
 
-  startGame(tournament, game) {
-    return this.http.post(this.tournamentUrl + '/start/game', {tournament: tournament, game: game});
+  startGame(gameData) {
+    return this.http.post(this.tournamentUrl + '/start/game', gameData);
   }
 
 }

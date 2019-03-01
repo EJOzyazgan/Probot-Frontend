@@ -38,7 +38,7 @@
     </mat-card-header>
     <mat-card-content>
       <div *ngIf="!newBracket">
-        <mat-form-field class="tournament-name-input">
+        <mat-form-field class="tournament-bracket-input">
           <mat-select [(ngModel)]="bracket" placeholder="Select Bracket">
             <mat-option *ngFor="let b of brackets" [value]="b">{{b.name}}</mat-option>
           </mat-select>
@@ -49,7 +49,8 @@
                 (click)="toggle('bracket')">New Bracket
         </button>
         <button mat-button [disabled]="bracket._id === null || bracket._id === undefined"
-                (click)="viewBracket()" [routerLink]="['/bracket-view']">View Bracket</button>
+                (click)="viewBracket()" [routerLink]="['/bracket-view']">View Bracket
+        </button>
       </div>
 
       <div *ngIf="newBracket">
@@ -73,8 +74,26 @@
       <mat-card-title>Manage Games</mat-card-title>
     </mat-card-header>
     <mat-card-content>
+      <mat-form-field *ngIf="bracket.divisions !== null" class="bracket-division-input">
+        <mat-select [(ngModel)]="division" placeholder="Select Division">
+          <mat-option *ngFor="let d of bracket.divisions" [value]="d">{{d.name}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <br>
+      <mat-form-field *ngIf="division !== null" class="bracket-round-input">
+        <mat-select [(ngModel)]="round" placeholder="Select Round">
+          <mat-option *ngFor="let r of division.rounds" [value]="r">{{r.name}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <br>
+      <mat-form-field *ngIf="round !== null" class="bracket-game-input">
+        <mat-select [(ngModel)]="game" placeholder="Select Game">
+          <mat-option *ngFor="let g of round.games" [value]="g">{{g.name}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <br>
 
-      <button mat-button [disabled]="game !== null">Start Game</button>
+      <button mat-button [disabled]="game === null" (click)="startGame()">Start Game</button>
     </mat-card-content>
   </mat-card>
 </div>

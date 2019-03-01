@@ -13,9 +13,11 @@ import {Router} from '@angular/router';
 export class TournamentManagerComponent implements OnInit {
   tournaments;
   tournament = new Tournament();
-  bracket = new Bracket();
   brackets;
-  game;
+  bracket = new Bracket();
+  game = null;
+  round = null;
+  division = null;
 
   newTournament = false;
   newBracket = false;
@@ -65,7 +67,14 @@ export class TournamentManagerComponent implements OnInit {
   }
 
   startGame() {
-    this.tournamentService.startGame(this.tournament, this.game).subscribe((game) => {
+    const gameData = {
+      tournament: this.tournament,
+      division: this.division,
+      round: this.round,
+      game: this.game
+    };
+
+    this.tournamentService.startGame(gameData).subscribe((game) => {
 
     });
   }
