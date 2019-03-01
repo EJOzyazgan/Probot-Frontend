@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Bracket} from '../models/bracket.model';
 import {TournamentService} from '../services/tournament.service';
+import {DataService} from '../services/data.service';
 
 @Component({
   selector: 'app-bracket-view',
@@ -9,19 +10,24 @@ import {TournamentService} from '../services/tournament.service';
 })
 export class BracketViewComponent implements OnInit {
   bracket = new Bracket();
+  bracketId;
   selectedDiv;
   bracketLoaded = false;
 
-  constructor(private tournamentService: TournamentService) {
+  constructor(private tournamentService: TournamentService,
+              private dataService: DataService) {
   }
 
   ngOnInit() {
-    this.getBracket();
+    this.dataService.currentBracket.subscribe(bracketId => {
+      this.bracketId = bracketId;
+      console.log(this.bracketId);
+      this.getBracket();
+    });
   }
 
   getBracket() {
-    this.tournamentService.getBracket('5c496c6116b7cb7c90b86c8e').subscribe((bracket) => {
-      console.log(bracket);
+    this.tournamentService.getBracket(this.bracketId).subscribe((bracket) => {
       this.bracket = bracket;
       this.selectedDiv = this.bracket.divisions[0];
       this.bracketLoaded = true;

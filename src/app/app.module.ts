@@ -13,6 +13,8 @@ import {AuthGuard} from './guards/auth.guard';
 import {UserService} from './services/user.service';
 import {TournamentService} from './services/tournament.service';
 import {SharedModule} from './shared/shared.module';
+import { TournamentManagerComponent } from './tournament-manager/tournament-manager.component';
+import {DataService} from './services/data.service';
 
 const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
 
@@ -36,6 +38,7 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     AuthService,
     UserService,
     TournamentService,
+    DataService,
     AuthGuard
   ],
   bootstrap: [AppComponent]
