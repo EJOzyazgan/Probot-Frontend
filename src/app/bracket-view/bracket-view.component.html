@@ -8,7 +8,7 @@
 
   <div *ngIf="bracketLoaded" class="bracket-container">
     <div *ngFor="let round of selectedDiv.rounds" class="tournament-bracket__round">
-      <h3 class="tournament-bracket__round-title">Round: {{round.name}}</h3>
+      <div class="tournament-bracket__round-title">Round: {{round.name}}</div>
       <ul class="tournament-bracket__list">
         <li *ngFor="let game of round.games" class="tournament-bracket__item">
           <mat-card class="tournament-bracket__match" tabindex="0">
@@ -17,8 +17,12 @@
             </mat-card-header>
             <mat-card-content class="card-content">
               <div *ngFor="let bot of game.bots" class="bot-container">
-                <div class="bot-header">{{bot.bot.name}}</div>
-                <div class="bot-score">{{bot.score}}</div>
+                <mat-card class="bot-card">
+                  <mat-card-content class="bot-info">
+                    <div class="bot-header">{{bot.bot.name}}</div>
+                    <div class="bot-score">{{bot.score}}</div>
+                  </mat-card-content>
+                </mat-card>
               </div>
             </mat-card-content>
           </mat-card>

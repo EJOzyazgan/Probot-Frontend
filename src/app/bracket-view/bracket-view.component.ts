@@ -27,7 +27,7 @@ export class BracketViewComponent implements OnInit {
   }
 
   getBracket() {
-    this.tournamentService.getBracket(this.bracketId).subscribe((bracket) => {
+    this.tournamentService.getBracket('5c7456bc1e9ec55334c5b0d4').subscribe((bracket) => {
       this.bracket = bracket;
       this.selectedDiv = this.bracket.divisions[0];
       this.bracketLoaded = true;
