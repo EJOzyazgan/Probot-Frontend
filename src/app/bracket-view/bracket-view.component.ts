@@ -21,13 +21,12 @@ export class BracketViewComponent implements OnInit {
   ngOnInit() {
     this.dataService.currentBracket.subscribe(bracketId => {
       this.bracketId = bracketId;
-      console.log(this.bracketId);
       this.getBracket();
     });
   }
 
   getBracket() {
-    this.tournamentService.getBracket('5c7456bc1e9ec55334c5b0d4').subscribe((bracket) => {
+    this.tournamentService.getBracket(this.bracketId).subscribe((bracket) => {
       this.bracket = bracket;
       this.selectedDiv = this.bracket.divisions[0];
       this.bracketLoaded = true;

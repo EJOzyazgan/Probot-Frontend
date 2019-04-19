@@ -93,7 +93,7 @@
       </mat-form-field>
       <br>
 
-      <button mat-button [disabled]="game === null" (click)="startGame()">Start Game</button>
+      <button mat-button [disabled]="game === null" (click)="startGame()" [routerLink]="['/game-view']">Start Game</button>
     </mat-card-content>
   </mat-card>
 </div>
