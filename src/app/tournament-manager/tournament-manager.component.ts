@@ -74,9 +74,14 @@ export class TournamentManagerComponent implements OnInit {
       game: this.game
     };
 
-    this.tournamentService.startGame(gameData).subscribe((game) => {
+    const tournamentId = '' + this.tournament._id + '-' + this.division.name + this.round.name + this.game.name;
 
-    });
+    console.log(tournamentId);
+    this.dataService.changeTournament(tournamentId);
+
+    // this.tournamentService.startGame(gameData).subscribe((game) => {
+    //
+    // });
   }
 
   toggle(view) {

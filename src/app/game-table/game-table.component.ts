@@ -1,6 +1,7 @@
 import {Component, OnInit, isDevMode} from '@angular/core';
 import {Socket} from 'ngx-socket-io';
 import {CardGroup, OddsCalculator} from 'poker-odds-calculator';
+import {DataService} from '../services/data.service';
 
 @Component({
   selector: 'app-game-table',
@@ -30,7 +31,11 @@ export class GameTableComponent implements OnInit {
     {top: 15, left: 78}, // top right
     {top: 8, left: 50}]; // top middle
 
-  constructor(private socket: Socket) {
+
+  tournamentId;
+
+  constructor(private socket: Socket,
+              private dataService: DataService) {
   }
 
   ngOnInit() {
@@ -40,6 +45,18 @@ export class GameTableComponent implements OnInit {
 
     this.socket.on('gameOver', (data) => {
       this.resetGame(data);
+    });
+
+    this.socket.on('test', (data) => {
+      console.log(data.data);
+    });
+
+    this.socket.on('connect', (data) => {
+      this.dataService.currentTournamentId.subscribe(tournamentId => {
+        this.tournamentId = tournamentId;
+        console.log(this.tournamentId);
+        this.socket.emit('room', this.tournamentId);
+      });
     });
   }
 
