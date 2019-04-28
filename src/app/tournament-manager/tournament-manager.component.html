@@ -87,13 +87,13 @@
       </mat-form-field>
       <br>
       <mat-form-field *ngIf="round !== null" class="bracket-game-input">
-        <mat-select [(ngModel)]="game" placeholder="Select Game">
-          <mat-option *ngFor="let g of round.games" [value]="g">{{g.name}}</mat-option>
+        <mat-select [(ngModel)]="match" placeholder="Select Match">
+          <mat-option *ngFor="let g of round.matches" [value]="g">{{g.name}}</mat-option>
         </mat-select>
       </mat-form-field>
       <br>
 
-      <button mat-button [disabled]="game === null" (click)="startGame()" [routerLink]="['/game-view']">Start Game</button>
+      <button mat-button [disabled]="match === null" (click)="startGame()" [routerLink]="['/game-view']">Start Game</button>
     </mat-card-content>
   </mat-card>
 </div>

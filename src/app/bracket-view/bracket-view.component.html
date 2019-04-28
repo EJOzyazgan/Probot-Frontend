@@ -10,13 +10,13 @@
     <div *ngFor="let round of selectedDiv.rounds" class="tournament-bracket__round">
       <div class="tournament-bracket__round-title">Round: {{round.name}}</div>
       <ul class="tournament-bracket__list">
-        <li *ngFor="let game of round.games" class="tournament-bracket__item">
+        <li *ngFor="let match of round.matches" class="tournament-bracket__item">
           <mat-card class="tournament-bracket__match" tabindex="0">
             <mat-card-header class="card-header">
-              <mat-card-title class="card-title">Game: {{game.name}}</mat-card-title>
+              <mat-card-title class="card-title">Match: {{match.name}}</mat-card-title>
             </mat-card-header>
             <mat-card-content class="card-content">
-              <div *ngFor="let bot of game.bots" class="bot-container">
+              <div *ngFor="let bot of match.bots" class="bot-container">
                 <mat-card class="bot-card">
                   <mat-card-content class="bot-info">
                     <div class="bot-header">{{bot.bot.name}}</div>

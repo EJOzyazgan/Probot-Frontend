@@ -2,6 +2,7 @@ import {Component, OnInit, isDevMode} from '@angular/core';
 import {Socket} from 'ngx-socket-io';
 import {CardGroup, OddsCalculator} from 'poker-odds-calculator';
 import {DataService} from '../services/data.service';
+import {TournamentService} from '../services/tournament.service';
 
 @Component({
   selector: 'app-game-table',
@@ -16,7 +17,7 @@ export class GameTableComponent implements OnInit {
     {name: 'p5', cards: {rank: 3, type: 'K'}},
     {name: 'i have a really long name', cards: {rank: 3, type: 'K'}}];
   player;
-  commonCards = [{rank: 3, type: 'D'}, {rank: 3, type: 'D'}, {rank: 3, type: 'D'}, {rank: 3, type: 'D'}, {rank: 3, type: 'D'}];
+  commonCards = [];
   data;
   message = 'i have a really long name Bet $40';
   session;
@@ -33,9 +34,15 @@ export class GameTableComponent implements OnInit {
 
 
   tournamentId;
+  bracketId;
+  bracket;
+  div;
+  round;
+  match;
 
   constructor(private socket: Socket,
-              private dataService: DataService) {
+              private dataService: DataService,
+              private tournamentService: TournamentService) {
   }
 
   ngOnInit() {
@@ -54,9 +61,31 @@ export class GameTableComponent implements OnInit {
     this.socket.on('connect', (data) => {
       this.dataService.currentTournamentId.subscribe(tournamentId => {
         this.tournamentId = tournamentId;
-        console.log(this.tournamentId);
         this.socket.emit('room', this.tournamentId);
       });
+    });
+
+    this.dataService.currentBracket.subscribe(bracketId => {
+      this.bracketId = bracketId;
+      this.tournamentService.getBracket(this.bracketId).subscribe(bracket => {
+        this.bracket = bracket;
+        console.log('bracket', this.bracket);
+      });
+    });
+
+    this.dataService.currentDivId.subscribe(divId => {
+      this.div = divId;
+      console.log('div', this.div);
+    });
+
+    this.dataService.currentRoundId.subscribe(roundId => {
+      this.round = roundId;
+      console.log('round', this.round);
+    });
+
+    this.dataService.currentMatchId.subscribe(matchId => {
+      this.match = matchId;
+      console.log('match', this.match);
     });
   }
 
@@ -156,6 +185,71 @@ export class GameTableComponent implements OnInit {
 
   resetGame(data) {
     this.commonCards = [];
+
+    const topTwo = [];
+
+    for (const bot of this.bracket.divisions[this.div].rounds[this.round].matches[this.match].bots) {
+      for (const botRank of data.data.rank) {
+        if (bot.bot.name === botRank.name) {
+          bot.score += botRank.pts;
+        }
+      }
+    }
+
+    if (data.data.gameId === 3) {
+      let firstMax = '';
+      while (topTwo.length < 2) {
+        let max = this.deepCopy(this.bracket.divisions[this.div].rounds[this.round].matches[this.match].bots[0]);
+        for (const bot of this.bracket.divisions[this.div].rounds[this.round].matches[this.match].bots) {
+          console.log(bot.score, firstMax);
+          if (bot.score >= max.score && bot.bot.name !== firstMax) {
+            max = this.deepCopy(bot);
+          }
+        }
+        firstMax = max.bot.name;
+        max.score = 0;
+        topTwo.push(max);
+      }
+
+      if (this.round + 1 < this.bracket.divisions[this.div].rounds.length) {
+        if (this.match < 2) {
+          Array.prototype.push.apply(this.bracket.divisions[this.div].rounds[this.round + 1].matches[0].bots, topTwo);
+        } else {
+          Array.prototype.push.apply(this.bracket.divisions[this.div].rounds[this.round + 1].matches[1].bots, topTwo);
+        }
+      }
+    }
+
+    this.tournamentService.updateBracket(this.bracket).subscribe(newBracket => {
+      this.bracket = newBracket['bracket'];
+      console.log(this.bracket);
+    });
+
+  }
+
+  deepCopy(bot) {
+    const target = {
+      bot: null,
+      score: 0,
+      status: 'play'
+    };
+
+    for (const prop in bot) {
+      if (bot.hasOwnProperty(prop)) {
+        target[prop] = bot[prop];
+      }
+    }
+    return target;
+  }
+
+  alreadySelected(bot, topTwo) {
+    for (const b of topTwo) {
+      console.log(b.bot.name, bot.bot.name);
+      if (b.bot.name === bot.bot.name) {
+        return true;
+      }
+    }
+    return false;
   }
 
   getPlayerStyle(player) {
