@@ -15,7 +15,7 @@ export class TournamentManagerComponent implements OnInit {
   tournament = new Tournament();
   brackets;
   bracket = new Bracket();
-  game = null;
+  match = null;
   round = null;
   division = null;
 
@@ -71,17 +71,20 @@ export class TournamentManagerComponent implements OnInit {
       tournament: this.tournament,
       division: this.division,
       round: this.round,
-      game: this.game
+      match: this.match
     };
 
-    const tournamentId = '' + this.tournament._id + '-' + this.division.name + this.round.name + this.game.name;
+    const tournamentId = '' + this.tournament._id + '-' + this.division.name + this.round.name + this.match.name;
 
-    console.log(tournamentId);
     this.dataService.changeTournament(tournamentId);
+    this.dataService.changeBracket(this.bracket._id);
+    this.dataService.changeDiv(this.division.name);
+    this.dataService.changeRound(this.round.name);
+    this.dataService.changeMatch(this.match.name);
 
-    // this.tournamentService.startGame(gameData).subscribe((game) => {
-    //
-    // });
+    this.tournamentService.startGame(gameData).subscribe((game) => {
+
+    });
   }
 
   toggle(view) {

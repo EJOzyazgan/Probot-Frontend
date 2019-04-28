@@ -36,6 +36,10 @@ export class TournamentService {
     return this.http.post(this.tournamentUrl + '/bracket/create', bracket);
   }
 
+  updateBracket(bracket: Bracket) {
+    return this.http.post(this.tournamentUrl + '/bracket/update', bracket);
+  }
+
   startGame(gameData) {
     return this.http.post(this.tournamentUrl + '/start/game', gameData);
   }
