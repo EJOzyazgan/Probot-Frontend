@@ -1,0 +1,258 @@
+.main-container {
+  text-align: center;
+  background-color: #f6f6f6;
+}
+
+.banner {
+  background-image: url('../../../assets/img/banner.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 70vh;
+}
+
+.banner-content {
+  color: #cc0000;
+  text-align: left;
+  float: left;
+  margin-left: 30px;
+  margin-top: 200px;
+}
+
+.banner-header {
+  font-size: 80px;
+}
+
+.banner-sub-text {
+  margin-top: 20px;
+  font-size: 50px;
+}
+
+.social-media {
+  padding: 50px;
+}
+
+.social-header {
+  font-size: 50px;
+}
+
+.social-sub-text {
+  margin-top: 10px;
+  font-size: 30px;
+}
+
+.social-icons {
+  color: #cc0000;
+  width: fit-content;
+  margin: auto;
+  display: flex;
+}
+
+.social-icon {
+  margin: 20px 20px;
+}
+
+.social-icon a {
+  color: inherit;
+}
+
+.bounce {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+.description-section {
+  display: flex;
+}
+
+.description {
+  width: 60%;
+  background: #cc0000;
+  color: #f6f6f6;
+  text-align: left;
+  padding: 50px;
+}
+
+.description-header {
+  font-size: 60px;
+}
+
+.description-sub-text {
+  margin-top: 15px;
+  font-size: 30px;
+}
+
+.coming-soon {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 40px;
+}
+
+.logo-robot {
+  height: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.benefits-section {
+  background: #D2D2D2;
+  padding: 50px;
+}
+
+.benefits-header {
+  font-size: 30px;
+}
+
+.benefits {
+  display: flex;
+  margin-top: 30px;
+}
+
+.benefit {
+  width: 25%;
+  padding: 20px
+}
+
+.benefit-header {
+  color: #cc0000;
+  font-size: 25px;
+}
+
+.benefit-description {
+  margin-top: 10px;
+  font-size: 20px;
+  text-align: left;
+}
+
+.features-section {
+  padding: 50px;
+}
+
+.features {
+  display: flex;
+}
+
+.features-header {
+  font-size: 30px;
+  color: #cc0000;
+  margin-bottom: 50px;
+}
+
+.feature-1, .feature-2 {
+  margin: auto;
+  border-radius: 20px;
+  box-shadow: 0 0 15px 5px #cc0000;
+  padding: 20px;
+  width: 30%;
+  cursor: pointer;
+}
+
+.feature-1:hover .description-1 {
+  display: block;
+}
+
+.feature-2:hover .description-2 {
+  display: block;
+}
+
+.description-1, .description-2 {
+  margin-top: 20px;
+  display: none;
+  font-size: 20px;
+  text-align: left;
+}
+
+.feature-img {
+  height: 200px;
+}
+
+.feature-header {
+  color: #cc0000;
+  font-size: 25px;
+}
+
+.getting-started {
+  background-color: #cc0000;
+  padding: 50px;
+  color: #f6f6f6;
+}
+
+.steps {
+  display: flex;
+}
+
+.step {
+  margin: 30px auto;
+  width: 25%;
+  text-align: center;
+}
+
+.step-img {
+  height: 150px;
+}
+
+.started-header {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+.step-header {
+  font-size: 20px;
+}
+
+@media only screen and (max-width: 900px) {
+  .description-section {
+    display: block;
+  }
+
+  .description {
+    width: fit-content;
+  }
+
+  .benefits {
+    display: block;
+  }
+
+  .benefit {
+    width: 75%;
+    margin: auto;
+  }
+
+  .features {
+    display: block;
+  }
+
+  .feature-1, .feature-2 {
+    width: 80%;
+    margin-bottom: 50px;
+  }
+
+  .steps {
+    display: block;
+  }
+
+  .step {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .banner-header {
+    font-size: 60px;
+  }
+
+  .banner-sub-text {
+    font-size: 30px;
+  }
+}
