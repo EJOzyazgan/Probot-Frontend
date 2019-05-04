@@ -30,7 +30,8 @@ export class LandingPagesComponent implements OnInit {
       };
     } else {
       return {
-        'background': '#f6f6f6'
+        'background': '#f6f6f6',
+        'box-shadow': '0 0 15px 1px #cc0000'
       };
     }
   }
