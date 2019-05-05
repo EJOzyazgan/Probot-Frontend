@@ -1,0 +1,168 @@
+.main-container {
+  text-align: center;
+}
+
+.header-container {
+  display: flex;
+  width: fit-content;
+  margin: 15px auto;
+}
+
+.main-info-container {
+  margin: auto 15px;
+}
+
+.main-info {
+  font-size: 40px;
+  color: #505050;
+}
+
+.event-hook {
+  font-size: 30px;
+  margin-top: 30px;
+  color: #505050;
+}
+
+.registration-container {
+
+}
+
+.register-btn {
+  width: 600px;
+  height: 75px;
+  border-radius: 20px;
+  background-color: #cc0000;
+  margin: 10px 10px 0 auto;
+  font-size: 40px;
+  color: white;
+  border: none;
+}
+
+.register-btn:hover {
+  cursor: pointer;
+  border: #cc0000 solid 2px;
+  background-color: transparent;
+  color: #cc0000;
+}
+
+.bot-btn {
+  width: 300px;
+  height: 50px;
+  border-radius: 20px;
+  background-color: #cc0000;
+  margin: 0 10px 0 auto;
+  font-size: 30px;
+  color: white;
+  border: none;
+}
+
+.bot-btn:hover {
+  cursor: pointer;
+  border: #cc0000 solid 2px;
+  background-color: transparent;
+  color: #cc0000;
+}
+
+.registration-info {
+  font-size: 20px;
+  color: #cc0000;
+}
+
+.bot-setup-download {
+  margin: 10px;
+  font-size: 22px;
+}
+
+.divider {
+  width: 75%;
+  margin: auto;
+}
+
+.section-header {
+  font-size: 30px;
+  margin: 50px 0 30px 0;
+  color: #cc0000;
+}
+
+.about-info {
+  text-align: left;
+  font-size: 24px;
+  width: 75%;
+  margin: 10px auto;
+  color: #505050;
+}
+
+.schedule-info {
+  width: fit-content;
+  font-size: 25px;
+  margin: auto;
+}
+
+.schedule-item {
+  width: fit-content;
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.time {
+  text-align: right;
+  width: 175px;
+}
+
+.start-time {
+  color: #cc0000;
+}
+
+.end-time {
+  color: #505050;
+}
+
+.activity {
+  text-align: left;
+  margin-left: 75px;
+  color: #505050;
+}
+
+.prize-item {
+  display: flex;
+  width: fit-content;
+  margin: 12px auto 0 auto;
+}
+
+.prize {
+  font-size: 30px;
+  color: #cc0000;
+}
+
+.place {
+  font-size: 30px;
+  color: #505050;
+  width: fit-content;
+  margin-right: 15px;
+}
+
+.partners-section {
+  margin-bottom: 50px;
+}
+
+.sponsor-pic {
+  width: 550px;
+  margin: 30px auto;
+}
+
+@media only screen and (max-width: 750px) {
+  .sponsor-pic {
+    width: 400px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .header-container {
+    display: block;
+  }
+
+  .register-btn {
+    width: 75%;
+  }
+}
+

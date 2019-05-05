@@ -2,21 +2,20 @@
 @import "./theme.scss";
 
 html {
-  background-color: white;
   font-family: 'Lato', sans-serif;
-  height: 100%;
+  //background-color: #cc0000;
+  //height: 100%;
   margin: 0;
   padding: 0;
-  overflow: hidden;
-  z-index: 0;
-  scroll-behavior: smooth;
+  //z-index: 0;
+  //scroll-behavior: smooth;
 }
 
 body {
-  height: 100%;
-  font-family: 'Lato', sans-serif;
-  background-color: white;
+  //height: 100%;
+  //font-family: 'Lato', sans-serif;
+  //background-color: #cc0000;
   margin: 0;
   padding: 0;
-  z-index: 0;
+  //z-index: 0;
 }

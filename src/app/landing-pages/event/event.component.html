@@ -1,0 +1,233 @@
+<div class="main-container">
+  <div class="header-container">
+    <div class="main-info-container">
+      <div class="main-info" [ngStyle]="{'margin': '20px 0 40px 0', 'color': '#cc0000', 'font-size': '60px'}">Probot
+        Playground
+        AI Competition
+      </div>
+      <div class="main-info">April 28th, 2019</div>
+      <div class="main-info">PC Ballroom East, UC San Diego</div>
+      <div class="event-hook">Compete against your peers in an automated poker bot tournament for the chance to win
+        prizes and meet industry professionals.
+      </div>
+    </div>
+  </div>
+  <div class="registration-container">
+    <a
+      href="https://docs.google.com/forms/d/e/1FAIpQLSdT5lR0hwrq8ZffmLgiaJTfmDqZtdKyiEzCZbriYN0lskEOsQ/viewform?usp=sf_link">
+      <button class="register-btn">Register Now!</button>
+    </a>
+    <a
+      href="https://docs.google.com/forms/d/e/1FAIpQLSdCcb1O_Knqs_DdC1IMzuVnK6NwuzfRMx1GhR35LGQOVH9qkw/viewform?usp=sf_link">
+      <button class="register-btn">Volunteer Now!</button>
+    </a>
+    <div class="registration-info">* Registration closes April 14th 11:59 pm</div>
+
+    <!--<a href='../../../assets/Bot-Setup-Instructions.zip' download>-->
+    <!--<div class="bot-setup-download">Bot Setup Instructions/Example Game Data</div>-->
+    <!--</a>-->
+  </div>
+
+  <div class="divider">
+    <hr [style.border-color]="'#cc0000'">
+  </div>
+
+  <div class="about-section">
+    <div class="section-header">About Probot Playground AI Competition</div>
+    <div class="about-info">
+      Probot Playground AI Competition is a campus-wide coding event that is half hackathon and half career fair.
+      The event will include a poker bot tournament and recruiting tables from AI companies.
+      Attendees will consist of tournament participants, company recruiters, and students interested in AI.
+    </div>
+  </div>
+
+  <div class="tournament-structure-section">
+    <div class="section-header">Tournament Structure</div>
+    <div class="about-info">
+      The tournament will consist of 3-5 brackets. Each bracket will have three rounds respectively.
+      Each round will have multiple ‘tables’ where 4-6 bots will compete.
+      Each table will play up to three games with the top two bots moving on to the next round.
+      The final and 3rd round will only have one winner who will move on to the final table.
+      The final table will play up to five games and will only have one winner.
+    </div>
+  </div>
+
+  <div class="schedule-section">
+    <div class="section-header">Schedule</div>
+    <div class="schedule-info">
+      <div class="schedule-item">
+        <div class="time">
+          <div class="start-time">
+            10:00 am
+          </div>
+          <div class="end-time">
+            to 10:30 am
+          </div>
+        </div>
+        <div class="activity">
+          Sign-in
+        </div>
+      </div>
+      <div class="schedule-item">
+        <div class="time">
+          <div class="start-time">
+            10:30 am
+          </div>
+          <div class="end-time">
+            to 11:20 am
+          </div>
+        </div>
+        <div class="activity">
+          Opening Ceremony
+        </div>
+      </div>
+      <div class="schedule-item">
+        <div class="time">
+          <div class="start-time">
+            11:20 am
+          </div>
+          <div class="end-time">
+            to 1:00 pm
+          </div>
+        </div>
+        <div class="activity">
+          Knock-out Stage
+        </div>
+      </div>
+      <div class="schedule-item">
+        <div class="time">
+          <div class="start-time">
+            1:00 pm
+          </div>
+          <div class="end-time">
+            to 2:00 pm
+          </div>
+        </div>
+        <div class="activity">
+          Lunch
+        </div>
+      </div>
+      <div class="schedule-item">
+        <div class="time">
+          <div class="start-time">
+            2:00 pm
+          </div>
+          <div class="end-time">
+            to 3:00 pm
+          </div>
+        </div>
+        <div class="activity">
+          Quarter-finals
+        </div>
+      </div>
+      <div class="schedule-item">
+        <div class="time">
+          <div class="start-time">
+            3:00 pm
+          </div>
+          <div class="end-time">
+            to 4:00 pm
+          </div>
+        </div>
+        <div class="activity">
+          Semi-finals
+        </div>
+      </div>
+      <div class="schedule-item">
+        <div class="time">
+          <div class="start-time">
+            4:00 pm
+          </div>
+          <div class="end-time">
+            to 4:20 pm
+          </div>
+        </div>
+        <div class="activity">
+          Finals
+        </div>
+      </div>
+      <div class="schedule-item">
+        <div class="time">
+          <div class="start-time">
+            4:20 pm
+          </div>
+          <div class="end-time">
+            to 5:00 pm
+          </div>
+        </div>
+        <div class="activity">
+          Closing Ceremony
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--<div class="prizes-section">-->
+  <!--<div class="section-header">Prizes</div>-->
+  <!--<div class="prize-item">-->
+  <!--<div class="place">1st Place:</div>-->
+  <!--<div class="prize">$2000</div>-->
+  <!--</div>-->
+  <!--<div class="prize-item">-->
+  <!--<div class="place">2nd Place:</div>-->
+  <!--<div class="prize">$750</div>-->
+  <!--</div>-->
+  <!--<div class="prize-item">-->
+  <!--<div class="place">3rd Place:</div>-->
+  <!--<div class="prize">$250</div>-->
+  <!--</div>-->
+  <!--</div>-->
+
+  <div class="bot-section">
+    <div class="section-header">How to Create Your Bot</div>
+    <div class="about-info">
+      Your bot needs to be written in python and will be hosted in an anaconda environment.
+      Once registered you will receive a link where you may upload your bot.
+      Bots may be uploaded as many times as you like.
+      The most recent upload will be used for the tournament.
+
+      For more detailed instructions and examples please download this <a
+      href='../../../assets/Bot-Setup-Instructions.zip' download>zip folder</a>
+    </div>
+    <a
+      href="https://docs.google.com/forms/d/e/1FAIpQLSewLN27IgH5tFbfk1pg56g2sSyPw3Q_NDtPzZTCze5mDhqkdw/viewform?usp=sf_link">
+      <button class="bot-btn">Submit Bot</button>
+    </a>
+    <div class="registration-info">* You may submit your bot till April 21st 11:59 pm</div>
+  </div>
+
+  <div class="sponsors-section">
+    <div class="section-header" [style.color]="'#cc0000'">Sponsors</div>
+    <div class="sponsor-pic-container">
+      <div class="sponsor-pics">
+        <img class="sponsor-pic" src="../../../assets/razor-logo-black.jpg">
+      </div>
+    </div>
+  </div>
+
+  <div class="companies-section">
+    <div class="section-header" [style.color]="'#cc0000'">Companies</div>
+    <div class="sponsor-pics">
+        <img class="sponsor-pic" src="../../../assets/Riot-logo.png">
+      </div>
+      <div class="sponsor-pics">
+        <img class="sponsor-pic" src="../../../assets/ASML-logo.png">
+      </div>
+      <div class="sponsor-pics">
+        <img class="sponsor-pic" src="../../../assets/vidaloop-logo.png">
+      </div>
+      <div class="sponsor-pics">
+        <img class="sponsor-pic" src="../../../assets/Heali-logo.png">
+      </div>
+      <div class="sponsor-pics">
+        <img class="sponsor-pic" src="../../../assets/traits-ai-logo.png">
+      </div>
+  </div>
+
+  <div class="partners-section">
+    <div class="section-header" [style.color]="'#cc0000'">Partners</div>
+    <div class="sponsor-pics">
+      <img class="sponsor-pic" src="../../../assets/UCSD_DS_logo.png">
+    </div>
+  </div>
+</div>

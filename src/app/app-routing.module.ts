@@ -6,12 +6,13 @@ import {BracketViewComponent} from './bracket-view/bracket-view.component';
 import {TournamentManagerComponent} from './tournament-manager/tournament-manager.component';
 
 const appRoutes: Routes = [
-  {path: '', pathMatch: 'full', redirectTo: 'auth/login'},
+  {path: '', pathMatch: 'full', redirectTo: 'landing-pages/home'},
+  {path: 'landing-pages', loadChildren: './landing-pages/landing-pages.module#LandingPagesModule'},
   {path: 'auth', loadChildren: './auth/auth.module#AuthModule'},
   {path: 'profile', loadChildren: './profile/profile.module#ProfileModule', canActivate: [AuthGuard]},
-  {path: 'game-view', component: GameViewComponent},
-  {path: 'bracket-view', component: BracketViewComponent},
-  {path: 'tournament-manager', component: TournamentManagerComponent}
+  // {path: 'game-view', component: GameViewComponent},
+  // {path: 'bracket-view', component: BracketViewComponent},
+  // {path: 'tournament-manager', component: TournamentManagerComponent}
 ];
 
 @NgModule({

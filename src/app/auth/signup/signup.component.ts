@@ -11,7 +11,7 @@ import {AlertService} from 'ngx-alerts';
 })
 export class SignupComponent implements OnInit {
   user = new User(null);
-  disableLogin = false;
+  disableSignup = false;
   tempPassword = '';
   agreeTos = true;
   show = false;
@@ -26,7 +26,7 @@ export class SignupComponent implements OnInit {
   }
 
   signUp() {
-    this.disableLogin = true;
+    this.disableSignup = true;
     if (this.user.email !== null && this.user.email !== '' &&
       this.user.password !== null && this.user.password !== '' &&
       this.user.name !== null && this.user.name !== '' &&
@@ -52,7 +52,7 @@ export class SignupComponent implements OnInit {
         });
       });
     } else {
-      this.disableLogin = false;
+      this.disableSignup = false;
       this.alertService.warning('Please Fill In All Fields');
     }
   }
