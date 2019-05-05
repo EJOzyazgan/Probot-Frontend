@@ -73,6 +73,7 @@
 
 .description-section {
   display: flex;
+  width: 100%;
 }
 
 .description {
@@ -249,10 +250,18 @@
 
 @media only screen and (max-width: 700px) {
   .banner-header {
-    font-size: 60px;
+    font-size: 50px;
+  }
+
+  .description {
+    padding: 20px;
   }
 
   .banner-sub-text {
-    font-size: 30px;
+    font-size: 25px;
+  }
+
+  .logo-robot {
+    width: 400px;
   }
 }
