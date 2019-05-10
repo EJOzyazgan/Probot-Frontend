@@ -8,7 +8,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatSelectModule} from '@angular/material/select';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
-import {MatTableModule, MatProgressSpinnerModule, MatDialogModule} from '@angular/material';
+import {MatTableModule, MatProgressSpinnerModule, MatDialogModule, MatToolbarModule, MatSidenavModule} from '@angular/material';
 import {MatPaginatorModule} from '@angular/material';
 import {MatBottomSheetModule, MatBottomSheetRef} from '@angular/material/bottom-sheet';
 import { MatNativeDateModule, DateAdapter, MAT_DATE_LOCALE, MAT_DATE_FORMATS } from '@angular/material';
@@ -18,6 +18,8 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatMenuModule} from '@angular/material/menu';
+import {AngularFontAwesomeModule} from 'angular-font-awesome';
+import {AngularSvgIconModule} from 'angular-svg-icon';
 
 
 @NgModule({
@@ -43,7 +45,12 @@ import {MatMenuModule} from '@angular/material/menu';
     MatProgressSpinnerModule,
     MatCheckboxModule,
     MatSlideToggleModule,
-    MatMenuModule
+    MatMenuModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatTableModule,
+    AngularFontAwesomeModule,
+    AngularSvgIconModule
   ],
   providers: [],
   entryComponents: [],
@@ -66,7 +73,12 @@ import {MatMenuModule} from '@angular/material/menu';
     MatBottomSheetModule,
     MatCheckboxModule,
     MatSlideToggleModule,
-    MatMenuModule
+    MatMenuModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatTableModule,
+    AngularFontAwesomeModule,
+    AngularSvgIconModule
   ]
 })
 export class SharedModule {}

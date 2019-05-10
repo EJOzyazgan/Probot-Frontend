@@ -1,0 +1,48 @@
+<div class="main-container">
+  <mat-toolbar class="mat-toolbar mat-elevation-z6">
+    <div class="nav-bar">
+      <div class="menu-btn">
+        <!--<button mat-icon-button (click)="sidenav.toggle()">-->
+        <!--<mat-icon class="md-36">menu</mat-icon>-->
+        <!--</button>-->
+      </div>
+      <img class="company-logo" src="../../assets/img/logo.png">
+      <div class="toolbar">
+        <fa class="user-icon" name="user" size="2x"></fa>
+        <div class="user-name">{{userName}}</div>
+        <fa class="arrow-icon" name="chevron-down"></fa>
+      </div>
+    </div>
+  </mat-toolbar>
+
+  <mat-sidenav-container fxFlexFill class="example-container">
+    <mat-sidenav #sidenav mode="side" opened="true" class="mat-elevation-z6">
+      <div class="side-nav-btns">
+        <div class="item"
+             [routerLink]="['./dashboard']"
+             [routerLinkActive]="['active-nav-btn']">
+            <svg-icon class="side-nav-btn" [applyCss]="true" src="../../assets/dashboard.svg"></svg-icon>
+        </div>
+        <div class="item"
+             [routerLink]="['./bot']"
+             [routerLinkActive]="['active-nav-btn']">
+            <svg-icon class="side-nav-btn" [applyCss]="true" src="../../assets/circuit.svg"></svg-icon>
+        </div>
+        <div class="item"
+             [routerLink]="['./lobby']"
+             [routerLinkActive]="['active-nav-btn']">
+          <svg-icon class="side-nav-btn" [applyCss]="true" src="../../assets/poker-table.svg"></svg-icon>
+        </div>
+        <div class="item"
+             [routerLink]="['./tournament']"
+             [routerLinkActive]="['active-nav-btn']">
+          <svg-icon class="side-nav-btn" [applyCss]="true" src="../../assets/tournament.svg"></svg-icon>
+        </div>
+      </div>
+    </mat-sidenav>
+    <mat-sidenav-content fxFlexFill>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
+

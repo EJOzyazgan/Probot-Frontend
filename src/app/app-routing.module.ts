@@ -6,10 +6,10 @@ import {BracketViewComponent} from './bracket-view/bracket-view.component';
 import {TournamentManagerComponent} from './tournament-manager/tournament-manager.component';
 
 const appRoutes: Routes = [
-  {path: '', pathMatch: 'full', redirectTo: 'landing-pages/home'},
+  {path: '', pathMatch: 'full', redirectTo: 'landing-pages'},
   {path: 'landing-pages', loadChildren: './landing-pages/landing-pages.module#LandingPagesModule'},
   {path: 'auth', loadChildren: './auth/auth.module#AuthModule'},
-  {path: 'profile', loadChildren: './profile/profile.module#ProfileModule', canActivate: [AuthGuard]},
+  {path: 'platform', loadChildren: './platform/platform.module#PlatformModule'}
   // {path: 'game-view', component: GameViewComponent},
   // {path: 'bracket-view', component: BracketViewComponent},
   // {path: 'tournament-manager', component: TournamentManagerComponent}
