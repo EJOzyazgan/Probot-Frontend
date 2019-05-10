@@ -1,0 +1,160 @@
+.main-container {
+  margin-left: -50px;
+}
+
+.center-container {
+  width: 90%;
+  margin: auto;
+}
+
+.overview-container {
+  display: flex;
+  width: fit-content;
+  margin: auto;
+}
+
+.overview-item {
+  width: fit-content;
+  box-shadow: 0 0 12px #cc0000;
+  border-radius: 0;
+  margin: 20px;
+}
+
+.overview-content {
+  display: flex;
+  width: 375px;
+}
+
+.item-icon-container {
+  width: 85px;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+.item-info {
+  margin-left: 20px;
+}
+
+.item-data {
+  margin: auto;
+  font-size: 40px;
+}
+
+.item-type {
+  color: #cc0000;
+  font-size: 30px;
+}
+
+.split-container {
+  display: flex;
+}
+
+.left-container {
+  margin-left: 20px;
+  width: fit-content;
+}
+
+.right-container {
+  margin-left: 45px;
+}
+
+.ranking-container {
+  display: flex;
+}
+
+.rank-icon-container {
+  width: 250px;
+}
+
+.rank-info {
+  margin-left: 50px;
+  padding: 10px;
+}
+
+.info-type {
+  font-size: 40px;
+}
+
+.info-data {
+  font-size: 60px;
+  color: #cc0000;
+}
+
+.rank-score {
+  margin-top: 20px;
+}
+
+.chart-container {
+  margin-top: 20px;
+  background-color: #E9E9E9;
+  box-shadow: 0 0 6px #000000;
+  border-radius: 20px;
+  width: 1000px;
+  height: 400px;
+  display: inline-block;
+}
+
+.section-title {
+  color: #cc0000;
+  font-size: 30px;
+  margin: 10px;
+}
+
+.chart {
+  width: fit-content;
+  margin: auto;
+  box-shadow: 0 0 6px #cc0000;
+}
+
+.leader-board-container {
+  background-color: #E9E9E9;
+  box-shadow: 0 0 6px #000000;
+  border-radius: 20px;
+  width: 700px;
+  height: 720px;
+  display: inline-block;
+}
+
+.leader-board-wrapper {
+  width: 650px;
+  height: 550px;
+  max-height: 550px;
+  background-color: #ffffff;
+  margin: 10px auto;
+  box-shadow: 0 0 6px #cc0000;
+  overflow: auto;
+}
+
+.leader-board {
+  width: 630px;
+  box-shadow: none;
+}
+
+.name-cell {
+  display: flex;
+  padding: 15px;
+}
+
+.name-icon {
+  width: 30px;
+}
+
+.name {
+  margin: auto 10px;
+}
+
+.invite-friend-btn {
+  display: flex;
+  width: 650px;
+  height: 90px;
+  background-color: #cc0000;
+  border-radius: 20px;
+  margin: 10px auto;
+  color: #ffffff;
+}
+
+.invite-btn-text {
+  margin: auto;
+  text-align: center;
+  font-size: 30px;
+}

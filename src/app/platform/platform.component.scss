@@ -1,0 +1,63 @@
+.main-container {
+  height: 100%;
+  overflow: hidden;
+}
+
+mat-toolbar {
+  margin: 0;
+  padding: 0;
+  z-index: 999;
+  position: relative;
+}
+
+.company-logo {
+  height: 50px;
+}
+
+.nav-bar {
+  padding: 10px;
+  display: flex;
+  background: #ffffff;
+  width: 100%;
+}
+
+.toolbar {
+  position: absolute;
+  right: 30px;
+  display: flex;
+}
+
+.user-name {
+  margin: auto 10px;
+  color: #cc0000;
+}
+
+.user-icon {
+  margin: auto;
+}
+
+.arrow-icon {
+  margin: auto;
+}
+
+.mat-sidenav {
+  background: #C1C1C1;
+  width: 50px;
+}
+
+.side-nav-btns {
+  width: 30px;
+  margin: 50px auto;
+}
+
+.item {
+  margin: 30px auto;
+}
+
+.side-nav-btn {
+  width: 30px;
+}
+
+.active-nav-btn {
+  fill: #cc0000;
+}

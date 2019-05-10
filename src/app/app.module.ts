@@ -15,6 +15,7 @@ import {TournamentService} from './services/tournament.service';
 import {SharedModule} from './shared/shared.module';
 import { TournamentManagerComponent } from './tournament-manager/tournament-manager.component';
 import {DataService} from './services/data.service';
+import {GoogleChartsModule} from 'angular-google-charts';
 
 const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
 
@@ -32,7 +33,8 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     HttpClientModule,
     SharedModule,
     AlertModule.forRoot({maxMessages: 5, timeout: 3000}),
-    SocketIoModule.forRoot(config)
+    SocketIoModule.forRoot(config),
+    GoogleChartsModule.forRoot()
   ],
   providers: [
     AuthService,
