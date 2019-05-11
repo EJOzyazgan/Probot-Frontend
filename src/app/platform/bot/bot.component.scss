@@ -1,0 +1,83 @@
+.main-container {
+  margin-left: -50px;
+}
+
+.center-container {
+  width: 90%;
+  margin: auto;
+}
+
+.split-container {
+  margin-top: 30px;
+  display: flex;
+  width: fit-content;
+}
+
+.section-header {
+  font-size: 30px;
+  color: #cc0000;
+}
+
+.edit-btn {
+  float: right;
+  color: #cc0000;
+  font-size: 20px;
+}
+
+.bot-info-container {
+  width: 300px;
+  height: 200px;
+  background: #E9E9E9;
+}
+
+.bot-info-form {
+  width: 100%;
+}
+
+.bot-info-input {
+  width: 100%;
+  font-size: 16px;
+}
+
+.bot-data-container {
+  margin-top: 20px;
+}
+
+.bot-data-btn {
+  background-color: #cc0000;
+  color: #ffffff;
+}
+
+.left-container {
+  width: fit-content;
+}
+
+.right-container {
+  margin-left: 30px;
+  background-color: #E9E9E9;
+  box-shadow: 0 0 6px #000000;
+  border-radius: 20px;
+  width: 1400px;
+  height: 850px;
+  display: inline-block;
+}
+
+.bot-analytics-header {
+  margin: 10px;
+  display: flex;
+}
+
+.bot-analytics-input {
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.analytics-title {
+  margin-top: 12px;
+}
+
+.chart {
+  width: fit-content;
+  margin: auto;
+  box-shadow: 0 0 6px #cc0000;
+}

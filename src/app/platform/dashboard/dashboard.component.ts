@@ -40,7 +40,7 @@ export class DashboardComponent implements OnInit {
     height: 325
   };
 
-  displayedColumns: string[] = ['position', 'name', 'weight'];
+  displayedColumns: string[] = ['position', 'name', 'rank'];
   dataSource = ELEMENT_DATA;
 
   constructor() {

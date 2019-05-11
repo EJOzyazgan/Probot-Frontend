@@ -1,3 +1,80 @@
-<p>
-  bot works!
-</p>
+<div class="main-container">
+  <div class="center-container">
+    <div class="split-container">
+      <div class="left-container">
+        <mat-card class="bot-info-container mat-elevation-z6">
+          <mat-card-title class="section-header">
+            Bot
+            <fa name="edit" class="edit-btn"></fa>
+          </mat-card-title>
+          <mat-card-content>
+            <form class="bot-info-form">
+              <mat-form-field class="bot-info-input">
+                <input matInput placeholder="Bot Name" value="DummyBot">
+              </mat-form-field>
+
+              <mat-form-field class="bot-info-input">
+                <input matInput placeholder="Bot URL" value="https://heroku.com/dummybot">
+              </mat-form-field>
+            </form>
+          </mat-card-content>
+        </mat-card>
+        <div class="bot-data-container">
+          <mat-card class="bot-info-container mat-elevation-z6">
+            <mat-card-title class="section-header">
+              Data
+            </mat-card-title>
+            <mat-card-content>
+              <form class="bot-data-form">
+                <mat-form-field class="bot-info-input">
+                  <mat-label>Time Period</mat-label>
+                  <mat-select>
+                    <mat-option *ngFor="let period of timePeriods" [value]="period">
+                      {{period}}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+
+                <button mat-raised-button class="bot-data-btn">Download Data</button>
+              </form>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+      <div class="right-container">
+        <div class="chart-container">
+          <div class="bot-analytics-header">
+            <div class="section-header analytics-title">Analytics</div>
+            <form class="bot-data-form">
+              <mat-form-field class="bot-analytics-input">
+                <mat-label>Metric</mat-label>
+                <mat-select>
+                  <mat-option *ngFor="let metric of metrics" [value]="metric">
+                    {{metric}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+
+              <mat-form-field class="bot-analytics-input">
+                <mat-label>Time Period</mat-label>
+                <mat-select>
+                  <mat-option *ngFor="let period of timePeriods" [value]="period">
+                    {{period}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </form>
+          </div>
+          <div class="chart">
+            <google-chart
+              [type]="'AreaChart'"
+              [data]="myData"
+              [columnNames]="myColumnNames"
+              [options]="myOptions">
+            </google-chart>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
