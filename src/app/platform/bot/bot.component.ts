@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-bot',
@@ -7,7 +7,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BotComponent implements OnInit {
 
-  constructor() { }
+  timePeriods = ['Today', 'Last Week', 'Last Month', 'All Time', 'Custom'];
+
+  metrics = ['Hands Played', 'Total Winnings'];
+
+  myData = [
+    ['London', {v: 8136000, f: '8,1360'}],
+    ['New York', {v: 8538000, f: '8,530'}]
+  ];
+
+  myColumnNames = ['City', 'Inhabitants'];
+
+  myOptions = {
+    legend: {position: 'none'},
+    width: 1300,
+    height: 730
+  };
+
+  constructor() {
+  }
 
   ngOnInit() {
   }
