@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-platform',
@@ -9,11 +10,23 @@ import {Component, OnInit} from '@angular/core';
 export class PlatformComponent implements OnInit {
 
   userName = 'Probot Play';
+  showLogout = false;
 
-  constructor() {
+  constructor(private router: Router) {
   }
 
   ngOnInit() {
+  }
+
+  toggle(view) {
+    if (view === 'logout') {
+      this.showLogout = !this.showLogout;
+    }
+  }
+
+  logout() {
+    localStorage.clear();
+    return this.router.navigate(['/auth']);
   }
 
 }

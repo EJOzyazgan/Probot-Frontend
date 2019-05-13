@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core';
 import {CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, Router} from '@angular/router';
 import {Observable} from 'rxjs';
 import {AlertService} from 'ngx-alerts';
+import {environment} from '../../environments/environment';
 
 @Injectable()
 export class AuthGuard implements CanActivate {
@@ -14,11 +15,11 @@ export class AuthGuard implements CanActivate {
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
-    if (localStorage.getItem('token') !== null) {
+    if (localStorage.getItem(environment.userTokenKey) !== null) {
       return true;
     } else {
       this.alertService.warning('You must be logged in to access this page');
-      this.router.navigate(['auth/login']);
+      return this.router.navigate(['auth/login']);
     }
   }
 }

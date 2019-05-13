@@ -8,9 +8,14 @@
       </div>
       <img class="company-logo" src="../../assets/img/logo.png">
       <div class="toolbar">
-        <fa class="user-icon" name="user" size="2x"></fa>
-        <div class="user-name">{{userName}}</div>
-        <fa class="arrow-icon" name="chevron-down"></fa>
+        <div class="user-info">
+          <fa class="user-icon" name="user" size="2x"></fa>
+          <div class="user-name">{{userName}}</div>
+          <fa class="arrow-icon" name="chevron-down" (click)="toggle('logout')"></fa>
+        </div>
+        <div class="logout-container" *ngIf="showLogout">
+          <div class="logout-btn" (click)="logout()" >Logout</div>
+        </div>
       </div>
     </div>
   </mat-toolbar>
@@ -21,12 +26,12 @@
         <div class="item"
              [routerLink]="['./dashboard']"
              [routerLinkActive]="['active-nav-btn']">
-            <svg-icon class="side-nav-btn" [applyCss]="true" src="../../assets/dashboard.svg"></svg-icon>
+          <svg-icon class="side-nav-btn" [applyCss]="true" src="../../assets/dashboard.svg"></svg-icon>
         </div>
         <div class="item"
              [routerLink]="['./bot']"
              [routerLinkActive]="['active-nav-btn']">
-            <svg-icon class="side-nav-btn" [applyCss]="true" src="../../assets/circuit.svg"></svg-icon>
+          <svg-icon class="side-nav-btn" [applyCss]="true" src="../../assets/circuit.svg"></svg-icon>
         </div>
         <div class="item"
              [routerLink]="['./lobby']"

@@ -1,71 +1,114 @@
-button:disabled,
-button[disabled]{
-  border: 1px solid #999999;
-  background-color: #cccccc;
-  color: #fdfdfd;
+.main-container {
+  height: 100%;
+}
+
+.split-container {
+  display: flex;
+  height: 100%;
+}
+
+.left-container {
+  z-index: 10;
+  position: relative;
+  width: 40%;
+  box-shadow: 0 0 12px #f6f6f6;
+}
+
+.right-container {
+  position: relative;
+  width: 60%;
+  background-image: url(../../../assets/img/black-felt-texture.jpg);
+  background-repeat:repeat;
+}
+
+.signup-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  width: 80%;
+}
+
+
+.hook-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  width: 80%;
+}
+
+.logo-container {
+  width: 300px;
+  margin: 50px auto 0 auto;
+}
+
+.name-logo-container {
+  width: 100%;
+  margin: 50px auto 0 auto;
+}
+
+.hook-text {
+  color: #f6f6f6;
+  font-size: 40px;
+  margin: auto;
+  text-align: center;
+}
+
+.logo {
+  width: 100%;
+}
+
+.signup-header {
+  color: #cc0000;
+  font-family: 'xirod', sans-serif;
+  text-align: center;
+  font-size: 30px;
+}
+
+.input-container {
+  margin: auto;
+}
+
+.input {
+  font-size: 18px;
+  height: 50px;
+  width: 100%;
+}
+
+.signup-input {
+  width: 100%;
+}
+
+.button-container {
+  margin: auto;
+  display: flex;
+  width: 75%;
 }
 
 .button {
-  border-radius: 3px;
+  height: 50px;
+  border-radius: 20px;
   cursor: pointer;
-  font-size: 17px;
-  margin: 15px auto 0 auto;
-  padding: 14px 0 15px 0;
+  font-size: 16px;
+  margin: 10px;
   width: 100%;
 }
 
 .btn-1 {
-  background: #7c7fff;
-  color: #fdfdfd;
+  background: #cc0000;
+  color: #ffffff;
 }
 
 .btn-2 {
-  background: transparent;
-  border: 1px solid #7c7fff;
-  color: #7c7fff;
+  background: #d6d6d6;
 }
 
-.container-body {
-  background-image: url("../../../assets/img/cards/blue_back.png");
-  background-size: auto;
-  height: 100%;
-  overflow: hidden;
-}
-
-.input {
-  background-color: #f6f6f6;
-  border: 1px solid rgba(0,0,0,.1);
-  border-radius: 6px;
-  box-sizing: border-box;
-  color: #888;
-  font-size: 18px;
-  font-weight: 300;
-  height: 50px;
-  margin: 10px auto 0 auto;
-  padding-left: 10px;
-  width: 100%;
-}
-
-.sign-up-input {
-  width: 100%;
-}
-
-.sign-up-container {
-  background-color: #f6f6f6;
-  box-shadow: 0 6px 8px 0 rgba(45, 35, 66, 0.15);
-  margin: 100px auto 0 auto;
-  max-width: 350px;
-  padding: 20px;
-}
-
-.sign-up-header {
-  text-align: center;
-}
 
 @media (max-width: 599px) {
-  .login-container {
-    max-width: 75%;
-  }
+
 }
 
 @media (min-width: 600px) {

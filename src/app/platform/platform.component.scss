@@ -24,7 +24,23 @@ mat-toolbar {
 .toolbar {
   position: absolute;
   right: 30px;
+}
+
+.user-info {
   display: flex;
+}
+
+.logout-container {
+  background: #E9E9E9;
+  width: fit-content;
+  float: right;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.logout-btn:hover {
+  cursor: pointer;
+  color: #cc0000;
 }
 
 .user-name {
@@ -61,3 +77,4 @@ mat-toolbar {
 .active-nav-btn {
   fill: #cc0000;
 }
+

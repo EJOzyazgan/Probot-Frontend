@@ -1,4 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import {AuthService} from '../../services/auth.service';
+import {User} from '../../models/user.model';
 
 
 export interface PeriodicElement {
@@ -27,6 +29,8 @@ const ELEMENT_DATA: PeriodicElement[] = [
 
 export class DashboardComponent implements OnInit {
 
+  user = new User();
+
   myData = [
     ['London', {v: 8136000, f: '8,1360'}],
     ['New York', {v: 8538000, f: '8,530'}]
@@ -43,10 +47,16 @@ export class DashboardComponent implements OnInit {
   displayedColumns: string[] = ['position', 'name', 'rank'];
   dataSource = ELEMENT_DATA;
 
-  constructor() {
+  constructor(private authService: AuthService) {
   }
 
   ngOnInit() {
+  }
+
+  getUser() {
+    this.authService.getUser().subscribe(user => {
+      console.log(user);
+    });
   }
 
 }
