@@ -1,16 +1,42 @@
-<div class="container-body" id="login">
-  <div class="login-container">
-    <h2 class="login-header">Login</h2>
-    <mat-form-field class="login-input">
-      <input matInput name="email" class="input" placeholder="Enter Email" type="text" id="email"
-             [(ngModel)]="email">
-    </mat-form-field>
-    <mat-form-field class="login-input">
-      <input matInput name="password" class="input" type="password" placeholder="Enter Password" id="password"
-             [(ngModel)]="password">
-    </mat-form-field>
-    <br>
-    <button type="submit" class="button btn-1" (click)="login()" [disabled]="disableLogin">Login</button>
-    <button type="submit" class="button btn-2" routerLink="/auth/signup" [disabled]="disableLogin">Sign Up</button>
+<div class="main-container">
+  <div class="split-container">
+    <div class="left-container">
+      <div class="login-container">
+        <div class="login-header">LOGIN</div>
+
+        <form (ngSubmit)="login()">
+          <div class="input-container">
+            <mat-form-field class="login-input">
+              <input matInput name="email" class="input" placeholder="Enter Email" type="text" id="email"
+                     [(ngModel)]="email">
+            </mat-form-field>
+          </div>
+
+          <div class="input-container">
+            <mat-form-field class="login-input">
+              <input matInput name="password" class="input" type="password" placeholder="Enter Password" id="password"
+                     [(ngModel)]="password">
+            </mat-form-field>
+          </div>
+        </form>
+
+        <div class="button-container">
+          <button mat-button type="submit" class="button btn-1" (click)="login()" [disabled]="disableLogin">Login
+          </button>
+          <button mat-button type="submit" class="button btn-2" routerLink="/auth/signup" [disabled]="disableLogin">Sign
+            Up
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="right-container">
+      <div class="logo-container"><img class="logo" src="../../../assets/img/logo-robot.png"></div>
+      <div class="hook-container">
+        <div class="name-logo-container"><img class="logo" src="../../../assets/img/logo-name.png"></div>
+        <div class="hook-text">Next Generation Gaming Competition</div>
+      </div>
+    </div>
   </div>
+
 </div>

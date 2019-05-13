@@ -9,7 +9,7 @@ const appRoutes: Routes = [
   {path: '', pathMatch: 'full', redirectTo: 'landing-pages'},
   {path: 'landing-pages', loadChildren: './landing-pages/landing-pages.module#LandingPagesModule'},
   {path: 'auth', loadChildren: './auth/auth.module#AuthModule'},
-  {path: 'platform', loadChildren: './platform/platform.module#PlatformModule'}
+  {path: 'platform', loadChildren: './platform/platform.module#PlatformModule', canActivate: [AuthGuard]}
   // {path: 'game-view', component: GameViewComponent},
   // {path: 'bracket-view', component: BracketViewComponent},
   // {path: 'tournament-manager', component: TournamentManagerComponent}
