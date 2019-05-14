@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
+import {AuthService} from '../services/auth.service';
+import {User} from '../models/user.model';
 
 @Component({
   selector: 'app-platform',
@@ -12,10 +14,20 @@ export class PlatformComponent implements OnInit {
   userName = 'Probot Play';
   showLogout = false;
 
-  constructor(private router: Router) {
+  user = new User();
+
+  constructor(private router: Router, private authService: AuthService) {
   }
 
   ngOnInit() {
+    this.getUser();
+  }
+
+  getUser() {
+    this.authService.getUser().subscribe(user => {
+      this.user = user;
+      console.log(this.user);
+    });
   }
 
   toggle(view) {

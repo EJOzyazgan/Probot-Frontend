@@ -54,6 +54,9 @@ export class SignupComponent implements OnInit {
             localStorage.setItem(environment.userIdKey, currentUser['user'].id);
             return this.router.navigate(['/platform']);
           });
+        }, err => {
+          this.disableSignup = false;
+          this.alertService.danger(err['error']['errors']['email']['message']);
         });
       });
     } else {

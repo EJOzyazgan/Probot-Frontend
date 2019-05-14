@@ -48,12 +48,20 @@ mat-toolbar {
   color: #cc0000;
 }
 
+.user-icon-container {
+  //margin: auto;
+}
+
 .user-icon {
-  margin: auto;
+  width: 40px;
 }
 
 .arrow-icon {
   margin: auto;
+}
+
+.arrow-icon:hover {
+  cursor: pointer;
 }
 
 .mat-sidenav {
