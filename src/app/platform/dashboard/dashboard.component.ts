@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {AuthService} from '../../services/auth.service';
 import {User} from '../../models/user.model';
+import {Bot} from '../../models/bot.model';
 
 
 export interface PeriodicElement {
@@ -30,6 +31,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
 export class DashboardComponent implements OnInit {
 
   user = new User();
+  bot = new Bot();
 
   myData = [
     ['London', {v: 8136000, f: '8,1360'}],
@@ -51,12 +53,17 @@ export class DashboardComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.getUser();
   }
 
   getUser() {
     this.authService.getUser().subscribe(user => {
-      console.log(user);
+      this.user = user;
     });
+  }
+
+  getBot() {
+
   }
 
 }

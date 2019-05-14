@@ -9,12 +9,12 @@
       <img class="company-logo" src="../../assets/img/logo.png">
       <div class="toolbar">
         <div class="user-info">
-          <fa class="user-icon" name="user" size="2x"></fa>
+          <svg-icon *ngIf="user.icon" class="user-icon" [applyCss]="true" src="../assets/icons/{{user.icon}}.svg"></svg-icon>
           <div class="user-name">{{userName}}</div>
           <fa class="arrow-icon" name="chevron-down" (click)="toggle('logout')"></fa>
         </div>
         <div class="logout-container" *ngIf="showLogout">
-          <div class="logout-btn" (click)="logout()" >Logout</div>
+          <div class="logout-btn" (click)="logout()">Logout</div>
         </div>
       </div>
     </div>

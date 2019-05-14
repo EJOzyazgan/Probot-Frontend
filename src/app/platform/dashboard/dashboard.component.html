@@ -7,7 +7,7 @@
             <svg-icon class="item-icon" [applyCss]="true" src="../../assets/poker-chip.svg"></svg-icon>
           </div>
           <div class="item-info">
-            <div class="item-data">$1,534,195</div>
+            <div class="item-data">${{user.chips}}</div>
             <div class="item-type">Chips</div>
           </div>
         </mat-card-content>
@@ -43,7 +43,7 @@
             <svg-icon class="item-icon" [applyCss]="true" src="../../assets/chip-stack.svg"></svg-icon>
           </div>
           <div class="item-info">
-            <div class="item-data">$934,195</div>
+            <div class="item-data">${{user.totalWinnings}}</div>
             <div class="item-type">Total Winnings</div>
           </div>
         </mat-card-content>
@@ -62,7 +62,7 @@
                 Class
               </div>
               <div class="info-data">
-                Gold
+                {{user.rankClass}}
               </div>
             </div>
             <div class="rank-score">
@@ -70,7 +70,7 @@
                 Rank
               </div>
               <div class="info-data">
-                3,395
+                {{user.rank}}
               </div>
             </div>
           </div>
@@ -93,25 +93,19 @@
           <div class="leader-board-wrapper">
             <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 leader-board">
 
-              <!--- Note that these columns can be defined in any order.
-                    The actual rendered columns are set as a property on the row definition" -->
-
-              <!-- Position Column -->
               <ng-container matColumnDef="position">
                 <th mat-header-cell *matHeaderCellDef> No.</th>
                 <td mat-cell *matCellDef="let element"> {{element.position}} </td>
               </ng-container>
 
-              <!-- Name Column -->
               <ng-container matColumnDef="name">
                 <th mat-header-cell *matHeaderCellDef> Name</th>
                 <td mat-cell *matCellDef="let element" class="name-cell">
-                  <svg-icon class="name-icon" [applyCss]="true" src="{{element.pic}}"></svg-icon>
+                  <svg-icon *ngIf="user.icon" class="name-icon" [applyCss]="true" src="'../../assets/icons/{{user.icon}}.svg"></svg-icon>
                   <div class="name">{{element.name}}</div>
                 </td>
               </ng-container>
 
-              <!-- Weight Column -->
               <ng-container matColumnDef="rank">
                 <th mat-header-cell *matHeaderCellDef> Rank</th>
                 <td mat-cell *matCellDef="let element"> {{element.weight | number: 0}} </td>
