@@ -26,7 +26,6 @@ export class PlatformComponent implements OnInit {
   getUser() {
     this.authService.getUser().subscribe(user => {
       this.user = user;
-      console.log(this.user);
     });
   }
 

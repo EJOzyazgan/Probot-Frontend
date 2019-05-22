@@ -1,4 +1,9 @@
 import {Component, OnInit} from '@angular/core';
+import {User} from '../../models/user.model';
+import {AuthService} from '../../services/auth.service';
+import {BotService} from '../../services/bot.service';
+import {Bot} from '../../models/bot.model';
+import {environment} from '../../../environments/environment';
 
 @Component({
   selector: 'app-bot',
@@ -6,6 +11,11 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./bot.component.scss']
 })
 export class BotComponent implements OnInit {
+
+  user = new User();
+  bot = new Bot();
+
+  isEditing = false;
 
   timePeriods = ['Today', 'Last Week', 'Last Month', 'All Time', 'Custom'];
 
@@ -24,10 +34,46 @@ export class BotComponent implements OnInit {
     height: 730
   };
 
-  constructor() {
+  constructor(private authService: AuthService, private botService: BotService) {
   }
 
   ngOnInit() {
+    this.getBot();
   }
 
+  getUser() {
+    this.authService.getUser().subscribe(user => {
+      this.user = user;
+      this.getBot();
+    });
+  }
+
+  getBot() {
+    this.botService.getBotByUser().subscribe(bot => {
+      if (bot) {
+        this.bot = bot;
+      }
+    });
+  }
+
+  createBot() {
+    this.bot.userId = localStorage.getItem(environment.userIdKey);
+    this.botService.create(this.bot).subscribe(bot => {
+      this.bot = bot;
+    });
+  }
+
+  patchBot() {
+    this.botService.patchBot(this.bot).subscribe(patchedBot => {
+      this.bot = patchedBot;
+    });
+  }
+
+  formCompleted() {
+    return this.bot.name === undefined || this.bot.serviceUrl === undefined;
+  }
+
+  toggleEdit() {
+    this.isEditing = !this.isEditing;
+  }
 }

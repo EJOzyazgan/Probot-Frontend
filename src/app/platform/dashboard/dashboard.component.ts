@@ -2,6 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {AuthService} from '../../services/auth.service';
 import {User} from '../../models/user.model';
 import {Bot} from '../../models/bot.model';
+import * as moment from 'moment';
+import {BotService} from '../../services/bot.service';
 
 
 export interface PeriodicElement {
@@ -49,21 +51,31 @@ export class DashboardComponent implements OnInit {
   displayedColumns: string[] = ['position', 'name', 'rank'];
   dataSource = ELEMENT_DATA;
 
-  constructor(private authService: AuthService) {
+  constructor(private authService: AuthService, private botService: BotService) {
   }
 
   ngOnInit() {
     this.getUser();
+    this.getBot();
   }
 
   getUser() {
     this.authService.getUser().subscribe(user => {
       this.user = user;
+      this.user.lastLoggedIn = moment.utc().toDate();
+
+      this.authService.patchUser(this.user).subscribe(patchedUser => {
+        this.user = patchedUser;
+      });
     });
   }
 
   getBot() {
-
+    this.botService.getBotByUser().subscribe(bot => {
+      if (bot) {
+        this.bot = bot;
+      }
+    });
   }
 
 }

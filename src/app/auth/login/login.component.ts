@@ -32,7 +32,6 @@ export class LoginComponent implements OnInit {
     }
 
     this.authService.login(this.email, this.password).subscribe(user => {
-      console.log(user);
       localStorage.setItem(environment.userTokenKey, user['user'].token);
       localStorage.setItem(environment.userIdKey, user['user'].id);
       return this.router.navigate(['/platform']);

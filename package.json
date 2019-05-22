@@ -29,6 +29,7 @@
     "core-js": "^2.5.4",
     "font-awesome": "^4.7.0",
     "font-awesome-animation": "^0.2.1",
+    "moment": "^2.24.0",
     "ngx-alerts": "^3.4.0",
     "ngx-socket-io": "^2.1.1",
     "poker-odds-calculator": "^0.3.1",
