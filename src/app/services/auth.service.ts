@@ -37,4 +37,8 @@ export class AuthService {
   resetPasswordEmail(email) {
     return this.http.post(this.authUrl + '/forgot', {email: email});
   }
+
+  patchUser(user) {
+    return this.http.patch(this.authUrl + '/patch', user, this.options);
+  }
 }

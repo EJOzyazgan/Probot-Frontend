@@ -1,13 +1,17 @@
+import {Table} from './table.model';
+
 export class Bot {
   constructor(
-    public id?: number,
+    public _id?: string,
     public name?: string,
     public serviceUrl?: string,
     public userId?: string,
     public handsPlayed?: number,
     public handsWon?: number,
     public lastPlayed?: Date,
-    public tournaments?: [string]
+    public tournaments?: [string],
+    public currentTable?: string,
+    public tablesPlayed?: [Table]
   ) {
   }
 }
