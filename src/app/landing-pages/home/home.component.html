@@ -15,17 +15,17 @@
     <div class="social-header">Stay in Touch</div>
     <div class="social-sub-text">Follow our social media to stay up to date on platform news</div>
     <div class="social-icons">
-      <div class="social-icon">
+      <div class="social-icon" (click)="SendSocialEvent('twitter')">
         <a href="https://twitter.com/probotplay">
           <fa name="twitter" size="3x"></fa>
         </a>
       </div>
-      <div class="social-icon">
+      <div class="social-icon" (click)="SendSocialEvent('facebook')">
         <a href="https://www.facebook.com/probotplayground/">
           <fa name="facebook-f" size="3x"></fa>
         </a>
       </div>
-      <div class="social-icon">
+      <div class="social-icon" (click)="SendSocialEvent('linkedin')">
         <a href="https://www.linkedin.com/company/probot-playground-inc/">
           <fa name="linkedin" size="3x"></fa>
         </a>

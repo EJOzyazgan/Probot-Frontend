@@ -17,6 +17,7 @@ import { TournamentManagerComponent } from './tournament-manager/tournament-mana
 import {DataService} from './services/data.service';
 import {GoogleChartsModule} from 'angular-google-charts';
 import {BotService} from './services/bot.service';
+import {GoogleAnalyticsService} from './services/google-analytics.service';
 
 const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
 
@@ -43,6 +44,7 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     TournamentService,
     DataService,
     BotService,
+    GoogleAnalyticsService,
     AuthGuard
   ],
   bootstrap: [AppComponent]
