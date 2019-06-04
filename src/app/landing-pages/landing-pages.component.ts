@@ -1,4 +1,5 @@
 import {Component, HostListener, OnInit} from '@angular/core';
+import {GoogleAnalyticsService} from '../services/google-analytics.service';
 
 @Component({
   selector: 'app-landing-pages',
@@ -9,7 +10,7 @@ export class LandingPagesComponent implements OnInit {
 
   isScroll = false;
 
-  constructor() {
+  constructor(private googleAnalyticsService: GoogleAnalyticsService) {
   }
 
   ngOnInit() {
@@ -34,5 +35,10 @@ export class LandingPagesComponent implements OnInit {
         'box-shadow': '0 0 15px 1px #cc0000'
       };
     }
+  }
+
+  SendSocialEvent(type) {
+    // We call the event emmiter function from our service and pass in the details
+    this.googleAnalyticsService.eventEmitter('SocialMedia', 'click', type, 1);
   }
 }
