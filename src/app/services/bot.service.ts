@@ -9,8 +9,10 @@ export class BotService {
   constructor(private http: HttpClient) {
   }
 
-  options = {
-    headers: new HttpHeaders().set('auth', localStorage.getItem('probot-user-token'))
+ options = {
+    headers: new HttpHeaders()
+      .set('Authorization', 'Bearer ' + localStorage.getItem(environment.userTokenKey))
+      .set('Content-Type', 'application/json')
   };
 
   getBotByUser() {
@@ -22,6 +24,6 @@ export class BotService {
   }
 
   patchBot(bot) {
-    return this.http.patch(this.botUrl + '/patch', bot, this.options);
+    return this.http.patch(this.botUrl + '/patch/' + bot.id, bot, this.options);
   }
 }

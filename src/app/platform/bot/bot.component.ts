@@ -38,26 +38,21 @@ export class BotComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.getBot();
+    this.getUser();
   }
 
   getUser() {
     this.authService.getUser().subscribe(user => {
       this.user = user;
-      this.getBot();
-    });
-  }
 
-  getBot() {
-    this.botService.getBotByUser().subscribe(bot => {
-      if (bot) {
-        this.bot = bot;
+      if (this.user.bots.length > 0) {
+        this.bot = this.user.bots[0];
       }
     });
   }
 
   createBot() {
-    this.bot.userId = localStorage.getItem(environment.userIdKey);
+    this.bot.userId = this.user.id;
     this.botService.create(this.bot).subscribe(bot => {
       this.bot = bot;
     });

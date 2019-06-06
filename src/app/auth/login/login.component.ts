@@ -32,12 +32,12 @@ export class LoginComponent implements OnInit {
     }
 
     this.authService.login(this.email, this.password).subscribe(user => {
-      localStorage.setItem(environment.userTokenKey, user['user'].token);
-      localStorage.setItem(environment.userIdKey, user['user'].id);
+      localStorage.setItem(environment.userTokenKey, user['token']);
       return this.router.navigate(['/platform']);
     }, err => {
       this.disableLogin = false;
-      return this.alertService.danger(err['error']);
+      console.log(err);
+      return this.alertService.danger(err['error']['msg']);
     });
   }
 

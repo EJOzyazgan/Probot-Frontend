@@ -1,3 +1,5 @@
+import {Bot} from './bot.model';
+
 export class User {
   constructor(
     public id?: string,
@@ -11,7 +13,8 @@ export class User {
     public rank?: number,
     public totalWinnings?: number,
     public friends?: [string],
-    public icon?: string
+    public icon?: string,
+    public bots?: [Bot]
   ) {
   }
 }

@@ -5,20 +5,20 @@
         <mat-card class="bot-info-container mat-elevation-z6">
           <mat-card-title class="section-header">
             Bot
-            <fa *ngIf="bot._id !== undefined" name="edit" class="edit-btn" (click)="toggleEdit()"></fa>
+            <fa *ngIf="bot.id !== undefined" name="edit" class="edit-btn" (click)="toggleEdit()"></fa>
           </mat-card-title>
           <mat-card-content>
             <form class="bot-info-form">
               <mat-form-field class="bot-info-input">
-                <input matInput [disabled]="!isEditing && bot._id !== undefined" name="bot-name" placeholder="Bot Name" [(ngModel)]="bot.name">
+                <input matInput [disabled]="!isEditing && bot.id !== undefined" name="bot-name" placeholder="Bot Name" [(ngModel)]="bot.name">
               </mat-form-field>
 
               <mat-form-field class="bot-info-input">
-                <input matInput [disabled]="!isEditing && bot._id !== undefined" name="bot-url" placeholder="Bot URL" [(ngModel)]="bot.serviceUrl">
+                <input matInput [disabled]="!isEditing && bot.id !== undefined" name="bot-url" placeholder="Bot URL" [(ngModel)]="bot.serviceUrl">
               </mat-form-field>
             </form>
             <div class="btn-container">
-              <button *ngIf="bot._id === undefined" [disabled]="formCompleted()" mat-raised-button (click)="createBot()">Add Bot</button>
+              <button *ngIf="bot.id === undefined" [disabled]="formCompleted()" mat-raised-button (click)="createBot()">Add Bot</button>
               <button *ngIf="isEditing" mat-raised-button [disabled]="formCompleted()" (click)="patchBot()">Save</button>
               <button *ngIf="isEditing" mat-raised-button class="bot-action-btn" (click)="toggleEdit()">Cancel</button>
             </div>

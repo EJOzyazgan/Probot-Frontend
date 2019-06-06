@@ -10,7 +10,9 @@ export class AuthService {
   }
 
   options = {
-    headers: new HttpHeaders().set('auth', localStorage.getItem('probot-user-token'))
+    headers: new HttpHeaders()
+      .set('Authorization', 'Bearer ' + localStorage.getItem(environment.userTokenKey))
+      .set('Content-Type', 'application/json')
   };
 
   signUp(user) {
@@ -31,7 +33,7 @@ export class AuthService {
   }
 
   getUser() {
-    return this.http.get(this.authUrl + '/get/' + localStorage.getItem(environment.userIdKey), this.options);
+    return this.http.get(this.authUrl + '/get', this.options);
   }
 
   resetPasswordEmail(email) {

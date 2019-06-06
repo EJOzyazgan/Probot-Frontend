@@ -42,18 +42,13 @@ export class SignupComponent implements OnInit {
         return this.alertService.warning('Password must be at least 8 characters long');
       }
       this.authService.checkExists(this.user.email).subscribe(user => {
-        if (user[0]) {
+        if (user['exists']) {
           this.disableSignup = false;
           return this.alertService.warning('User with this email exists');
         }
 
         this.authService.signUp(this.user).subscribe(() => {
           this.alertService.success('Sign Up Successful');
-          this.authService.login(this.user.email, this.user.password).subscribe(currentUser => {
-            localStorage.setItem(environment.userTokenKey, currentUser['user'].token);
-            localStorage.setItem(environment.userIdKey, currentUser['user'].id);
-            return this.router.navigate(['/platform']);
-          });
         }, err => {
           this.disableSignup = false;
           this.alertService.danger(err['error']['errors']['email']['message']);
