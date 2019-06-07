@@ -36,11 +36,22 @@ export class DashboardComponent implements OnInit {
   bot = new Bot();
 
   myData = [
-    ['London', {v: 8136000, f: '8,1360'}],
-    ['New York', {v: 8538000, f: '8,530'}]
+    ['5-25-19', {v: 0, f: '0'}],
+    ['5-26-19', {v: 0, f: '0'}],
+    ['5-27-19', {v: 0, f: '0'}],
+    ['5-28-19', {v: 0, f: '0'}],
+    ['5-29-19', {v: 0, f: '0'}],
+    ['5-30-19', {v: 0, f: '0'}],
+    ['5-31-19', {v: 0, f: '0'}],
+    ['6-1-19', {v: 0, f: '0'}],
+    ['6-2-19', {v: 0, f: '0'}],
+    ['6-3-19', {v: 0, f: '0'}],
+    ['6-4-19', {v: 0, f: '0'}],
+    ['6-5-19', {v: 0, f: '0'}],
+    ['6-6-19', {v: 0, f: '0'}]
   ];
 
-  myColumnNames = ['City', 'Inhabitants'];
+  myColumnNames = ['Date', 'Winnings'];
 
   myOptions = {
     legend: {position: 'none'},
