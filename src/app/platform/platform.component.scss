@@ -78,6 +78,10 @@ mat-toolbar {
   margin: 30px auto;
 }
 
+.item:hover {
+  cursor: pointer;
+}
+
 .side-nav-btn {
   width: 30px;
 }

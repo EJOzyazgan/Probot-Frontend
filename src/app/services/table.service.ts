@@ -3,27 +3,19 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {environment} from '../../environments/environment';
 
 @Injectable()
-export class BotService {
-  botUrl = environment.apiUrl + 'bot';
+export class TableService {
+  tableUrl = environment.apiUrl + 'table';
 
   constructor(private http: HttpClient) {
   }
 
- options = {
+  options = {
     headers: new HttpHeaders()
       .set('Authorization', 'Bearer ' + localStorage.getItem(environment.userTokenKey))
       .set('Content-Type', 'application/json')
   };
 
-  getBotByUser() {
-    return this.http.get(this.botUrl + '/get/user', this.options);
-  }
-
-  create(bot) {
-    return this.http.post(this.botUrl + '/create', bot, this.options);
-  }
-
-  patchBot(bot) {
-    return this.http.patch(this.botUrl + '/patch/' + bot.id, bot, this.options);
+  startSandboxTable(body) {
+    return this.http.post(this.tableUrl + '/start/sandbox', body, this.options);
   }
 }
