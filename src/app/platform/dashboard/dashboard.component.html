@@ -19,7 +19,7 @@
             <svg-icon class="item-icon" [applyCss]="true" src="../../assets/poker-cards.svg"></svg-icon>
           </div>
           <div class="item-info">
-            <div class="item-data">{{bot._id === undefined ? '0' : bot.handsPlayed}}</div>
+            <div class="item-data">{{bot.id === undefined ? '0' : bot.handsPlayed}}</div>
             <div class="item-type">Hands Played</div>
           </div>
         </mat-card-content>
@@ -31,7 +31,7 @@
             <svg-icon class="item-icon" [applyCss]="true" src="../../assets/award.svg"></svg-icon>
           </div>
           <div class="item-info">
-            <div class="item-data">{{bot._id === undefined ? '0' : bot.handsPlayed === 0 ? '0' : (bot.handsWon / bot.handsPlayed)*100}}%</div>
+            <div class="item-data">{{bot.id === undefined ? '0' : bot.handsPlayed === 0 ? '0' : (bot.handsWon / bot.handsPlayed)*100}}%</div>
             <div class="item-type">Win Rate</div>
           </div>
         </mat-card-content>
