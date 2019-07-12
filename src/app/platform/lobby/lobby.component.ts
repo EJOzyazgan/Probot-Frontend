@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {BotService} from '../../services/bot.service';
 import {TableService} from '../../services/table.service';
-import {Bot} from '../../models/bot.model';
 import {AlertService} from 'ngx-alerts';
+import {User} from '../../models/user.model';
+import {AuthService} from '../../services/auth.service';
 
 @Component({
   selector: 'app-lobby',
@@ -10,22 +10,22 @@ import {AlertService} from 'ngx-alerts';
   styleUrls: ['./lobby.component.scss']
 })
 export class LobbyComponent implements OnInit {
-  bot = new Bot();
+  user = new User();
   buyin;
 
-  constructor(private botService: BotService,
+  constructor(private authService: AuthService,
               private tableService: TableService,
               private alertService: AlertService) {
   }
 
   ngOnInit() {
-    this.getBot();
+    this.getUser();
   }
 
   startSandBox() {
-    if (this.bot.id !== null) {
+    if (this.user.bots[0] !== null) {
       const body = {
-        bot: this.bot
+        bot: this.user.bots[0]
       };
       this.tableService.startSandboxTable(body).subscribe(res => {
         this.alertService.success(res['msg']);
@@ -37,8 +37,12 @@ export class LobbyComponent implements OnInit {
 
   startPVP() {
     if (this.buyin) {
+      if (this.buyin > this.user.chips) {
+        return this.alertService.warning('Not enough chips');
+      }
+
       const body = {
-        bot: this.bot,
+        bot: this.user.bots[0],
         buyin: this.buyin
       };
 
@@ -53,12 +57,9 @@ export class LobbyComponent implements OnInit {
 
   }
 
-  getBot() {
-    this.botService.getBotByUser().subscribe(bot => {
-      if (bot) {
-        this.bot = bot;
-      }
+  getUser() {
+    this.authService.getUser().subscribe(user => {
+      this.user = user;
     });
   }
-
 }
