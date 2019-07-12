@@ -48,6 +48,25 @@ export class DashboardComponent implements OnInit {
     ['6-3-19', {v: 0, f: '0'}],
     ['6-4-19', {v: 0, f: '0'}],
     ['6-5-19', {v: 0, f: '0'}],
+    ['6-6-19', {v: 0, f: '0'}],
+    ['6-3-19', {v: 0, f: '0'}],
+    ['6-4-19', {v: 0, f: '0'}],
+    ['6-5-19', {v: 0, f: '0'}],
+    ['6-6-19', {v: 0, f: '0'}],
+    ['5-27-19', {v: 0, f: '0'}],
+    ['5-28-19', {v: 0, f: '0'}],
+    ['5-29-19', {v: 0, f: '0'}],
+    ['5-30-19', {v: 0, f: '0'}],
+    ['5-31-19', {v: 0, f: '0'}],
+    ['6-1-19', {v: 0, f: '0'}],
+    ['6-2-19', {v: 0, f: '0'}],
+    ['6-3-19', {v: 0, f: '0'}],
+    ['6-4-19', {v: 0, f: '0'}],
+    ['6-5-19', {v: 0, f: '0'}],
+    ['6-6-19', {v: 0, f: '0'}],
+    ['6-3-19', {v: 0, f: '0'}],
+    ['6-4-19', {v: 0, f: '0'}],
+    ['6-5-19', {v: 0, f: '0'}],
     ['6-6-19', {v: 0, f: '0'}]
   ];
 
@@ -72,6 +91,7 @@ export class DashboardComponent implements OnInit {
   getUser() {
     this.authService.getUser().subscribe(user => {
       this.user = user;
+      this.bot = this.user.bots[0];
       this.user.lastLoggedIn = moment.utc().toDate();
 
       this.authService.patchUser(this.user).subscribe(patchedUser => {
@@ -79,13 +99,4 @@ export class DashboardComponent implements OnInit {
       });
     });
   }
-
-  getBot() {
-    this.botService.getBotByUser().subscribe(bot => {
-      if (bot) {
-        this.bot = bot;
-      }
-    });
-  }
-
 }

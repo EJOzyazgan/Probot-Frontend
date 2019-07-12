@@ -17,7 +17,19 @@
           BOT VS. BOT
         </mat-card-title>
         <mat-card-content>
-          <div class="message">Coming Soon!</div>
+          <form>
+            <mat-form-field>
+              <mat-label class="select-label">Buy In</mat-label>
+              <mat-select class="buyin-select" [(ngModel)]="buyin" name="buyin-select">
+                <mat-option [value]=100>100</mat-option>
+                <mat-option [value]=200>200</mat-option>
+                <mat-option [value]=300>300</mat-option>
+                <mat-option [value]=400>400</mat-option>
+                <mat-option [value]=500>500</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </form>
+          <button mat-raised-button class="play-btn" (click)="startPVP()">Play</button>
         </mat-card-content>
       </div>
     </mat-card>

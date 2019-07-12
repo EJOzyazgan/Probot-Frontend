@@ -18,4 +18,8 @@ export class TableService {
   startSandboxTable(body) {
     return this.http.post(this.tableUrl + '/start/sandbox', body, this.options);
   }
+
+  joinTable(body) {
+    return this.http.post(this.tableUrl + '/join', body, this.options);
+  }
 }
