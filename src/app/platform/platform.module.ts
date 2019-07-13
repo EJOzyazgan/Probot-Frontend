@@ -10,7 +10,7 @@ import {SharedModule} from '../shared/shared.module';
 import {BotComponent} from './bot/bot.component';
 import {LobbyComponent} from './lobby/lobby.component';
 import {TournamentComponent} from './tournament/tournament.component';
-import {GoogleChartsModule} from 'angular-google-charts';
+import {Ng2GoogleChartsModule} from 'ng2-google-charts';
 
 @NgModule({
   declarations: [
@@ -27,7 +27,7 @@ import {GoogleChartsModule} from 'angular-google-charts';
     FlexLayoutModule,
     PlatformRoutingModule,
     AngularFontAwesomeModule,
-    GoogleChartsModule.forRoot()
+    Ng2GoogleChartsModule
   ]
 })
 export class PlatformModule {
