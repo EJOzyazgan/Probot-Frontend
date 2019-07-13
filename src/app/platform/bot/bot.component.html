@@ -10,16 +10,21 @@
           <mat-card-content>
             <form class="bot-info-form">
               <mat-form-field class="bot-info-input">
-                <input matInput [disabled]="!isEditing && bot.id !== undefined" name="bot-name" placeholder="Bot Name" [(ngModel)]="bot.name">
+                <input matInput [disabled]="!isEditing && bot.id !== undefined" name="bot-name" placeholder="Bot Name"
+                       [(ngModel)]="bot.name">
               </mat-form-field>
 
               <mat-form-field class="bot-info-input">
-                <input matInput [disabled]="!isEditing && bot.id !== undefined" name="bot-url" placeholder="Bot URL" [(ngModel)]="bot.serviceUrl">
+                <input matInput [disabled]="!isEditing && bot.id !== undefined" name="bot-url" placeholder="Bot URL"
+                       [(ngModel)]="bot.serviceUrl">
               </mat-form-field>
             </form>
             <div class="btn-container">
-              <button *ngIf="bot.id === undefined" [disabled]="formCompleted()" mat-raised-button (click)="createBot()">Add Bot</button>
-              <button *ngIf="isEditing" mat-raised-button [disabled]="formCompleted()" (click)="patchBot()">Save</button>
+              <button *ngIf="bot.id === undefined" [disabled]="formCompleted()" mat-raised-button (click)="createBot()">
+                Add Bot
+              </button>
+              <button *ngIf="isEditing" mat-raised-button [disabled]="formCompleted()" (click)="patchBot()">Save
+              </button>
               <button *ngIf="isEditing" mat-raised-button class="bot-action-btn" (click)="toggleEdit()">Cancel</button>
             </div>
           </mat-card-content>
@@ -53,18 +58,18 @@
             <form class="bot-data-form">
               <mat-form-field class="bot-analytics-input">
                 <mat-label>Metric</mat-label>
-                <mat-select>
-                  <mat-option *ngFor="let metric of metrics" [value]="metric">
-                    {{metric}}
+                <mat-select [(ngModel)]="metricType"  name="metricType" (selectionChange)="getMetrics()">
+                  <mat-option *ngFor="let metric of metrics" [value]="metric[1]">
+                    {{metric[0]}}
                   </mat-option>
                 </mat-select>
               </mat-form-field>
 
               <mat-form-field class="bot-analytics-input">
                 <mat-label>Time Period</mat-label>
-                <mat-select>
-                  <mat-option *ngFor="let period of timePeriods" [value]="period">
-                    {{period}}
+                <mat-select [(ngModel)]="metricTimePeriod"  name="metricTime" (selectionChange)="getMetrics()">
+                  <mat-option *ngFor="let period of timePeriods" [value]="period[1]">
+                    {{period[0]}}
                   </mat-option>
                 </mat-select>
               </mat-form-field>
@@ -72,11 +77,9 @@
           </div>
           <div class="chart">
             <google-chart
-              [type]="'AreaChart'"
-              [data]="myData"
-              [columnNames]="myColumnNames"
-              [options]="myOptions">
-            </google-chart>
+              #metricsChart
+              id="metricsChart"
+              [data]="metricsData"></google-chart>
           </div>
         </div>
       </div>

@@ -15,10 +15,11 @@ import {TournamentService} from './services/tournament.service';
 import {SharedModule} from './shared/shared.module';
 import { TournamentManagerComponent } from './tournament-manager/tournament-manager.component';
 import {DataService} from './services/data.service';
-import {GoogleChartsModule} from 'angular-google-charts';
 import {BotService} from './services/bot.service';
 import {GoogleAnalyticsService} from './services/google-analytics.service';
 import {TableService} from './services/table.service';
+import {MetricService} from './services/metric.service';
+import { Ng2GoogleChartsModule } from 'ng2-google-charts';
 
 const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
 
@@ -35,9 +36,9 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     FormsModule,
     HttpClientModule,
     SharedModule,
+    Ng2GoogleChartsModule,
     AlertModule.forRoot({maxMessages: 5, timeout: 3000}),
-    SocketIoModule.forRoot(config),
-    GoogleChartsModule.forRoot()
+    SocketIoModule.forRoot(config)
   ],
   providers: [
     AuthService,
@@ -46,6 +47,7 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     DataService,
     BotService,
     TableService,
+    MetricService,
     GoogleAnalyticsService,
     AuthGuard
   ],

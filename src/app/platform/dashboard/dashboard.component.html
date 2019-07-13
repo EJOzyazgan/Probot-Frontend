@@ -31,7 +31,10 @@
             <svg-icon class="item-icon" [applyCss]="true" src="../../assets/award.svg"></svg-icon>
           </div>
           <div class="item-info">
-            <div class="item-data">{{bot.id === undefined ? '0' : bot.handsPlayed === 0 ? '0' : (bot.handsWon / bot.handsPlayed)*100}}%</div>
+            <div
+              class="item-data">{{bot.id === undefined ? '0' : bot.handsPlayed === 0 ? '0' : (bot.handsWon / bot.handsPlayed) * 100 | number:'1.0-0'}}
+              %
+            </div>
             <div class="item-type">Win Rate</div>
           </div>
         </mat-card-content>
@@ -43,7 +46,7 @@
             <svg-icon class="item-icon" [applyCss]="true" src="../../assets/chip-stack.svg"></svg-icon>
           </div>
           <div class="item-info">
-            <div class="item-data">${{user.totalWinnings}}</div>
+            <div class="item-data">${{bot.id === undefined ? '0' : bot.totalWinnings}}</div>
             <div class="item-type">Total Winnings</div>
           </div>
         </mat-card-content>
@@ -79,11 +82,9 @@
           <div class="section-title">Total Winnings</div>
           <div class="chart">
             <google-chart
-              [type]="'AreaChart'"
-              [data]="myData"
-              [columnNames]="myColumnNames"
-              [options]="myOptions">
-            </google-chart>
+              #totalWinningsChart
+              id="totalWinningsChart"
+              [data]="totalWinningsData"></google-chart>
           </div>
         </div>
       </div>
@@ -101,7 +102,8 @@
               <ng-container matColumnDef="name">
                 <th mat-header-cell *matHeaderCellDef> Name</th>
                 <td mat-cell *matCellDef="let element" class="name-cell">
-                  <svg-icon *ngIf="user.icon" class="name-icon" [applyCss]="true" src="'../../assets/icons/{{user.icon}}.svg"></svg-icon>
+                  <svg-icon *ngIf="user.icon" class="name-icon" [applyCss]="true"
+                            src="'../../assets/icons/{{user.icon}}.svg"></svg-icon>
                   <div class="name">{{element.name}}</div>
                 </td>
               </ng-container>

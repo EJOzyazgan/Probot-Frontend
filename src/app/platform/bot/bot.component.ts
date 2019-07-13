@@ -1,9 +1,11 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {User} from '../../models/user.model';
 import {AuthService} from '../../services/auth.service';
 import {BotService} from '../../services/bot.service';
 import {Bot} from '../../models/bot.model';
-import {environment} from '../../../environments/environment';
+import * as moment from 'moment';
+import {MetricService} from '../../services/metric.service';
+import DurationConstructor = moment.unitOfTime.DurationConstructor;
 
 @Component({
   selector: 'app-bot',
@@ -11,41 +13,50 @@ import {environment} from '../../../environments/environment';
   styleUrls: ['./bot.component.scss']
 })
 export class BotComponent implements OnInit {
+  @ViewChild('metricsChart') metricsChart;
 
   user = new User();
   bot = new Bot();
 
   isEditing = false;
 
-  timePeriods = ['Today', 'Last Week', 'Last Month', 'All Time', 'Custom'];
-
-  metrics = ['Hands Played', 'Total Winnings'];
-
-   myData = [
-    ['5-25-19', {v: 0, f: '0'}],
-    ['5-26-19', {v: 0, f: '0'}],
-    ['5-27-19', {v: 0, f: '0'}],
-    ['5-28-19', {v: 0, f: '0'}],
-    ['5-29-19', {v: 0, f: '0'}],
-    ['5-30-19', {v: 0, f: '0'}],
-    ['5-31-19', {v: 0, f: '0'}],
-    ['6-1-19', {v: 0, f: '0'}],
-    ['6-2-19', {v: 0, f: '0'}],
-    ['6-3-19', {v: 0, f: '0'}],
-    ['6-4-19', {v: 0, f: '0'}],
-    ['6-5-19', {v: 0, f: '0'}],
-    ['6-6-19', {v: 0, f: '0'}]
+  timePeriods = [
+    ['1Day', 'day'],
+    ['1Week', 'week'],
+    ['1Month', 'month'],
+    ['1Year', 'year'],
   ];
 
-  myColumnNames = ['Date', 'Winnings'];
+  metrics = [
+    ['Hands Played', 'handPlayed'],
+    ['Hands Won', 'handWon'],
+    ['Total Winnings', 'totalWinnings']
+  ];
 
-  myOptions = {
-    legend: {position: 'none'},
-    width: 1300,
-    height: 730
+  metricType = 'totalWinnings';
+  metricTimePeriod: DurationConstructor = 'month';
+
+  metricsData = {
+    chartType: 'LineChart',
+    dataTable: this.mockData(),
+    options: {
+      series: {
+        0: {color: '#cc0000'}
+      },
+      legend: {position: 'none'},
+      width: 1300,
+      height: 730,
+      animation: {
+        startup: true,
+        duration: 800,
+        easing: 'out'
+      }
+    }
   };
 
-  constructor(private authService: AuthService, private botService: BotService) {
+  constructor(private authService: AuthService,
+              private botService: BotService,
+              private metricService: MetricService) {
   }
 
   ngOnInit() {
@@ -58,8 +69,23 @@ export class BotComponent implements OnInit {
 
       if (this.user.bots.length > 0) {
         this.bot = this.user.bots[0];
+        this.getMetrics();
       }
     });
+  }
+
+  getMetrics() {
+    if (this.bot.id) {
+      const body = {
+        metricType: this.metricType,
+        startTime: moment().subtract(1, this.metricTimePeriod).format(),
+        endTime: moment().format()
+      };
+
+      this.metricService.getMetrics(body, this.bot.id).subscribe((metrics: Array<any>) => {
+        this.updateMetricsChart(metrics);
+      });
+    }
   }
 
   createBot() {
@@ -72,6 +98,7 @@ export class BotComponent implements OnInit {
   patchBot() {
     this.botService.patchBot(this.bot).subscribe(patchedBot => {
       this.bot = patchedBot;
+      this.toggleEdit();
     });
   }
 
@@ -81,5 +108,44 @@ export class BotComponent implements OnInit {
 
   toggleEdit() {
     this.isEditing = !this.isEditing;
+  }
+
+  updateMetricsChart(metrics) {
+    const data = [];
+    data.push(['Date', this.getTag()]);
+
+    for (let i = 0; i < metrics.length; i++) {
+      data.push([moment(metrics[i].createdAt).format('M-D-YY'), metrics[i].value]);
+    }
+
+    this.metricsData.dataTable = data;
+
+    if (this.metricsChart.wrapper) {
+      this.metricsChart.draw();
+    }
+  }
+
+  getTag() {
+    if (this.metricType === 'totalWinnings') {
+      return 'Total Winnings';
+    } else if (this.metricType === 'handWon') {
+      return 'Hands Won';
+    }
+    return 'Hands Played';
+  }
+
+  mockData() {
+    const start = moment().subtract(1, 'month');
+    const end = moment();
+
+    const data = [];
+    data.push(['Date', this.getTag()]);
+
+    while (start.diff(end) < 0) {
+      data.push([start.format('M-D-YY'), 0]);
+      start.add(1, 'day');
+    }
+
+    return data;
   }
 }

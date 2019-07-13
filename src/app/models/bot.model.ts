@@ -11,7 +11,8 @@ export class Bot {
     public lastPlayed?: Date,
     public tournaments?: [string],
     public currentTable?: string,
-    public tablesPlayed?: [Table]
+    public tablesPlayed?: [Table],
+    public totalWinnings?: number
   ) {
   }
 }

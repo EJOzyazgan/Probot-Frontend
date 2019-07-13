@@ -1,9 +1,9 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {AuthService} from '../../services/auth.service';
 import {User} from '../../models/user.model';
 import {Bot} from '../../models/bot.model';
 import * as moment from 'moment';
-import {BotService} from '../../services/bot.service';
+import {MetricService} from '../../services/metric.service';
 
 
 export interface PeriodicElement {
@@ -31,57 +31,34 @@ const ELEMENT_DATA: PeriodicElement[] = [
 })
 
 export class DashboardComponent implements OnInit {
+  @ViewChild('totalWinningsChart') totalWinningsChart;
 
   user = new User();
   bot = new Bot();
 
-  myData = [
-    ['5-25-19', {v: 0, f: '0'}],
-    ['5-26-19', {v: 0, f: '0'}],
-    ['5-27-19', {v: 0, f: '0'}],
-    ['5-28-19', {v: 0, f: '0'}],
-    ['5-29-19', {v: 0, f: '0'}],
-    ['5-30-19', {v: 0, f: '0'}],
-    ['5-31-19', {v: 0, f: '0'}],
-    ['6-1-19', {v: 0, f: '0'}],
-    ['6-2-19', {v: 0, f: '0'}],
-    ['6-3-19', {v: 0, f: '0'}],
-    ['6-4-19', {v: 0, f: '0'}],
-    ['6-5-19', {v: 0, f: '0'}],
-    ['6-6-19', {v: 0, f: '0'}],
-    ['6-3-19', {v: 0, f: '0'}],
-    ['6-4-19', {v: 0, f: '0'}],
-    ['6-5-19', {v: 0, f: '0'}],
-    ['6-6-19', {v: 0, f: '0'}],
-    ['5-27-19', {v: 0, f: '0'}],
-    ['5-28-19', {v: 0, f: '0'}],
-    ['5-29-19', {v: 0, f: '0'}],
-    ['5-30-19', {v: 0, f: '0'}],
-    ['5-31-19', {v: 0, f: '0'}],
-    ['6-1-19', {v: 0, f: '0'}],
-    ['6-2-19', {v: 0, f: '0'}],
-    ['6-3-19', {v: 0, f: '0'}],
-    ['6-4-19', {v: 0, f: '0'}],
-    ['6-5-19', {v: 0, f: '0'}],
-    ['6-6-19', {v: 0, f: '0'}],
-    ['6-3-19', {v: 0, f: '0'}],
-    ['6-4-19', {v: 0, f: '0'}],
-    ['6-5-19', {v: 0, f: '0'}],
-    ['6-6-19', {v: 0, f: '0'}]
-  ];
-
-  myColumnNames = ['Date', 'Winnings'];
-
-  myOptions = {
-    legend: {position: 'none'},
-    width: 950,
-    height: 325
+  totalWinningsData = {
+    chartType: 'LineChart',
+    dataTable: this.mockData(),
+    options: {
+      series: {
+        0: {color: '#cc0000'}
+      },
+      legend: {position: 'none'},
+      width: 950,
+      height: 325,
+      animation: {
+        startup: true,
+        duration: 800,
+        easing: 'out'
+      }
+    }
   };
 
   displayedColumns: string[] = ['position', 'name', 'rank'];
   dataSource = ELEMENT_DATA;
 
-  constructor(private authService: AuthService, private botService: BotService) {
+  constructor(private authService: AuthService,
+              private metricService: MetricService) {
   }
 
   ngOnInit() {
@@ -92,11 +69,46 @@ export class DashboardComponent implements OnInit {
     this.authService.getUser().subscribe(user => {
       this.user = user;
       this.bot = this.user.bots[0];
+      this.getTotalWinnings();
+
       this.user.lastLoggedIn = moment.utc().toDate();
 
       this.authService.patchUser(this.user).subscribe(patchedUser => {
         this.user = patchedUser;
       });
     });
+  }
+
+  getTotalWinnings() {
+    const body = {
+      metricType: 'totalWinnings',
+      startTime: moment().subtract(1, 'month').format(),
+      endTime: moment().format()
+    };
+
+    this.metricService.getMetrics(body, this.bot.id).subscribe((metrics: Array<any>) => {
+      for (let i = 0; i < metrics.length; i++) {
+        this.totalWinningsData.dataTable[i + 1][1] = metrics[i].value;
+      }
+
+      if (this.totalWinningsChart.wrapper) {
+        this.totalWinningsChart.draw();
+      }
+    });
+  }
+
+  mockData() {
+    const start = moment().subtract(1, 'month');
+    const end = moment();
+
+    const data = [];
+    data.push(['Date', 'Winnings']);
+
+    while (start.diff(end) < 0) {
+      data.push([start.format('M-D-YY'), 0]);
+      start.add(1, 'day');
+    }
+
+    return data;
   }
 }
