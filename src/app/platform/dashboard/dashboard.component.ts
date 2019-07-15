@@ -68,8 +68,11 @@ export class DashboardComponent implements OnInit {
   getUser() {
     this.authService.getUser().subscribe(user => {
       this.user = user;
-      this.bot = this.user.bots[0];
-      this.getTotalWinnings();
+
+      if (this.user.bots[0]) {
+        this.bot = this.user.bots[0];
+        this.getTotalWinnings();
+      }
 
       this.user.lastLoggedIn = moment.utc().toDate();
 

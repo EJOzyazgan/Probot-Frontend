@@ -25,19 +25,17 @@ export class LoginComponent implements OnInit {
 
   login() {
     this.disableLogin = true;
-    if (this.email === null || this.email === '' || this.email === undefined ||
-      this.password === null || this.password === '' || this.password === undefined) {
+    if (this.email === null || this.email.trim() === '' || this.email === undefined ||
+      this.password === null || this.password.trim() === '' || this.password === undefined) {
       this.disableLogin = false;
       return this.alertService.warning('Please Fill In Email and Password');
     }
 
     this.authService.login(this.email, this.password).subscribe(user => {
-      console.log(user);
       localStorage.setItem(environment.userTokenKey, user['token']);
       return this.router.navigate(['/platform']);
     }, err => {
       this.disableLogin = false;
-      console.log(err);
       return this.alertService.danger(err['error']['msg']);
     });
   }

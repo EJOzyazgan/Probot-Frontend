@@ -11,6 +11,7 @@ export class User {
     public chips?: number,
     public rankClass?: string,
     public rank?: number,
+    public username?: string,
     public friends?: [string],
     public icon?: string,
     public bots?: [Bot]

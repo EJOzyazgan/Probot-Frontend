@@ -3,7 +3,7 @@ import {User} from '../../models/user.model';
 import {Router} from '@angular/router';
 import {AuthService} from '../../services/auth.service';
 import {AlertService} from 'ngx-alerts';
-import {environment} from '../../../environments/environment';
+import {DataService} from '../../services/data.service';
 
 @Component({
   selector: 'app-signup',
@@ -18,7 +18,8 @@ export class SignupComponent implements OnInit {
 
   constructor(private alertService: AlertService,
               private authService: AuthService,
-              private router: Router) {
+              private router: Router,
+              private dataService: DataService) {
   }
 
   ngOnInit() {
@@ -27,10 +28,10 @@ export class SignupComponent implements OnInit {
 
   signUp() {
     this.disableSignup = true;
-    if (this.user.email !== null && this.user.email !== '' &&
-      this.user.password !== null && this.user.password !== '' &&
-      this.user.name !== null && this.user.name !== '' &&
-      this.confirmPassword !== null && this.confirmPassword !== '' &&
+    if (this.user.email !== null && this.user.email.trim() !== '' &&
+      this.user.password !== null && this.user.password.trim() !== '' &&
+      this.user.username !== null && this.user.username.trim() !== '' &&
+      this.confirmPassword !== null && this.confirmPassword.trim() !== '' &&
       this.agreeTos) {
 
 
@@ -44,11 +45,12 @@ export class SignupComponent implements OnInit {
       this.authService.checkExists(this.user.email).subscribe(user => {
         if (user['exists']) {
           this.disableSignup = false;
-          return this.alertService.warning('User with this email exists');
+          return this.alertService.warning('User with this email already exists');
         }
 
         this.authService.signUp(this.user).subscribe(() => {
-          this.alertService.success('Sign Up Successful');
+          this.dataService.changeEmail(this.user.email);
+          return this.router.navigate(['/auth/email-verification']);
         }, err => {
           this.disableSignup = false;
           this.alertService.danger(err['error']['errors']['email']['message']);

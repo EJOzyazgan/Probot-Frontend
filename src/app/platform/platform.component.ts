@@ -10,8 +10,6 @@ import {User} from '../models/user.model';
 })
 
 export class PlatformComponent implements OnInit {
-
-  userName = 'Probot Play';
   showLogout = false;
 
   user = new User();

@@ -24,8 +24,21 @@ export class AuthService {
   }
 
   checkExists(email) {
-    console.log(this.authUrl);
     return this.http.post(this.authUrl + '/exists', {email: email});
+  }
+
+  resetPassword(email) {
+    return this.http.get(this.authUrl + '/reset-password/' + email);
+  }
+
+  validateResetPassword(token) {
+    this.options = {
+      headers: new HttpHeaders()
+        .set('Authorization', 'Bearer ' + token)
+        .set('Content-Type', 'application/json')
+    };
+
+    return this.http.get(this.authUrl + '/validate/reset-password/' + token, this.options);
   }
 
   getByToken(token) {

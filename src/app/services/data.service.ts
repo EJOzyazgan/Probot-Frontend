@@ -19,7 +19,14 @@ export class DataService {
   private matchId = new BehaviorSubject(null);
   currentMatchId = this.matchId.asObservable();
 
+  private email = new BehaviorSubject(null);
+  currentEmail = this.email.asObservable();
+
   constructor() {
+  }
+
+  changeEmail(email: string) {
+    this.email.next((email));
   }
 
   changeBracket(bracketId: string) {

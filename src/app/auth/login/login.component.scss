@@ -106,6 +106,17 @@
   background: #d6d6d6;
 }
 
+.forgot-password {
+  width: fit-content;
+  margin: auto;
+  color: blue;
+  text-decoration: underline;
+}
+
+.forgot-password:hover {
+  cursor: pointer;
+}
+
 
 @media (max-width: 599px) {
 
