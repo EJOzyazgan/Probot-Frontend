@@ -10,7 +10,7 @@
       <div class="toolbar">
         <div class="user-info">
           <svg-icon *ngIf="user.icon" class="user-icon" [applyCss]="true" src="../assets/icons/{{user.icon}}.svg"></svg-icon>
-          <div class="user-name">{{userName}}</div>
+          <div class="user-name">{{user.username}}</div>
           <fa class="arrow-icon" name="chevron-down" (click)="toggle('logout')"></fa>
         </div>
         <div class="logout-container" *ngIf="showLogout">

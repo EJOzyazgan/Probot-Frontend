@@ -23,10 +23,12 @@
         <div class="button-container">
           <button mat-button type="submit" class="button btn-1" (click)="login()" [disabled]="disableLogin">Login
           </button>
-          <button mat-button type="submit" class="button btn-2" routerLink="/auth/signup" [disabled]="disableLogin">Sign
+          <button mat-button type="submit" class="button btn-2" [routerLink]="'/auth/signup'" [disabled]="disableLogin">Sign
             Up
           </button>
         </div>
+
+        <div class="forgot-password" [routerLink]="'/auth/forgot-password'">Forgot Password</div>
       </div>
     </div>
 
