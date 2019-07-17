@@ -125,4 +125,44 @@
     </div>
   </div>
 
+  <mat-card class="daily-reward-container mat-elevation-z24" *ngIf="dailyReward">
+    <mat-card-title class="reward-header large-header">Daily Reward!!!</mat-card-title>
+    <mat-card-content class="rewards-container">
+      <mat-card class="reward-container mat-elevation-z3" [ngStyle]="getRewardStyle(1)" (click)="getReward(0)">
+        <mat-card-title class="reward-header">Day 1</mat-card-title>
+        <mat-card-content class="reward">
+          <p>{{rewards[0]}}<br>Chips</p>
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card class="reward-container mat-elevation-z3" [ngStyle]="getRewardStyle(2)" (click)="getReward(1)">
+        <mat-card-title class="reward-header">Day 2</mat-card-title>
+        <mat-card-content class="reward">
+          <p>{{rewards[1]}}<br>Chips</p>
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card class="reward-container mat-elevation-z3" [ngStyle]="getRewardStyle(3)" (click)="getReward(2)">
+        <mat-card-title class="reward-header">Day 3</mat-card-title>
+        <mat-card-content class="reward">
+          <p>{{rewards[2]}}<br>Chips</p>
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card class="reward-container mat-elevation-z3" [ngStyle]="getRewardStyle(4)" (click)="getReward(3)">
+        <mat-card-title class="reward-header">Day 4</mat-card-title>
+        <mat-card-content class="reward">
+          <p>{{rewards[3]}}<br>Chips</p>
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card class="reward-container  mat-elevation-z3" [ngStyle]="getRewardStyle(5)" (click)="getReward(4)">
+        <mat-card-title class="reward-header">Day 5</mat-card-title>
+        <mat-card-content class="reward">
+          <p>{{rewards[4]}}<br>Chips</p>
+        </mat-card-content>
+      </mat-card>
+    </mat-card-content>
+  </mat-card>
 </div>
+

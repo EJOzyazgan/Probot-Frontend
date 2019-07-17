@@ -36,6 +36,10 @@ export class DashboardComponent implements OnInit {
   user = new User();
   bot = new Bot();
 
+  dailyReward = false;
+
+  rewards = [500, 1000, 1750, 3000, 5000];
+
   totalWinningsData = {
     chartType: 'LineChart',
     dataTable: this.mockData(),
@@ -57,6 +61,8 @@ export class DashboardComponent implements OnInit {
   displayedColumns: string[] = ['position', 'name', 'rank'];
   dataSource = ELEMENT_DATA;
 
+  MINUTE_DAY = 1440;
+
   constructor(private authService: AuthService,
               private metricService: MetricService) {
   }
@@ -74,7 +80,15 @@ export class DashboardComponent implements OnInit {
         this.getTotalWinnings();
       }
 
-      this.user.lastLoggedIn = moment.utc().toDate();
+      if (!this.user.firstLoggedIn ||
+        (moment(this.user.firstLoggedIn).diff(moment(), 'minutes') < -this.MINUTE_DAY &&
+          moment(this.user.firstLoggedIn).diff(moment(), 'minutes') > -(2 * this.MINUTE_DAY))) {
+        this.user.daysLoggedIn++;
+        this.user.firstLoggedIn = moment().toDate();
+        this.dailyReward = true;
+      }
+
+      this.user.lastLoggedIn = moment().toDate();
 
       this.authService.patchUser(this.user).subscribe(patchedUser => {
         this.user = patchedUser;
@@ -113,5 +127,37 @@ export class DashboardComponent implements OnInit {
     }
 
     return data;
+  }
+
+  getRewardStyle(reward) {
+    console.log('style');
+    let style;
+
+    if (this.user.daysLoggedIn > reward && (reward < 5)) {
+      style = {
+        'background': '#cc0000',
+        'color': 'white',
+        'pointer-events': 'none'
+      };
+    }
+
+    return style;
+  }
+
+  getReward(reward) {
+    this.user.chips += this.rewards[reward];
+    this.authService.patchUser(this.user).subscribe(updatedUser => {
+      if (updatedUser) {
+        this.user = updatedUser;
+      }
+    });
+
+    this.toggleView('rewards');
+  }
+
+  toggleView(view) {
+    if (view === 'rewards') {
+      this.dailyReward = !this.dailyReward;
+    }
   }
 }

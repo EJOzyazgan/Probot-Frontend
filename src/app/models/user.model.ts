@@ -8,6 +8,8 @@ export class User {
     public password?: string,
     public createdAt?: Date,
     public lastLoggedIn?: Date,
+    public firstLoggedIn?: Date,
+    public daysLoggedIn?: number,
     public chips?: number,
     public rankClass?: string,
     public rank?: number,

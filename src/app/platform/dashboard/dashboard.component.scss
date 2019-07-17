@@ -1,5 +1,6 @@
 .main-container {
   margin-left: -50px;
+  position: relative;
 }
 
 .center-container {
@@ -158,3 +159,44 @@
   text-align: center;
   font-size: 30px;
 }
+
+.daily-reward-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+}
+
+.large-header {
+  font-size: 32px;
+}
+
+.reward-header {
+  text-align: center;
+}
+
+.rewards-container {
+  display: flex;
+  padding: 10px;
+}
+
+.reward-container {
+  margin: 0 10px;
+  text-align: center;
+  height: 100px;
+  width: 100px;
+  border: #cc0000 3px solid;
+}
+
+.reward-container:hover {
+  cursor: pointer;
+}
+
+.reward {
+  margin-top: 12px;
+  font-size: 18px;
+}
+
+
+
