@@ -4,6 +4,7 @@ import {User} from '../../models/user.model';
 import {Bot} from '../../models/bot.model';
 import * as moment from 'moment';
 import {MetricService} from '../../services/metric.service';
+import {AlertService} from 'ngx-alerts';
 
 
 export interface PeriodicElement {
@@ -36,7 +37,10 @@ export class DashboardComponent implements OnInit {
   user = new User();
   bot = new Bot();
 
-  dailyReward = false;
+  dailyRewardView = false;
+  referralView = false;
+
+  friendsEmail = null;
 
   rewards = [500, 1000, 1750, 3000, 5000];
 
@@ -64,7 +68,8 @@ export class DashboardComponent implements OnInit {
   MINUTE_DAY = 1440;
 
   constructor(private authService: AuthService,
-              private metricService: MetricService) {
+              private metricService: MetricService,
+              private alertService: AlertService) {
   }
 
   ngOnInit() {
@@ -85,7 +90,7 @@ export class DashboardComponent implements OnInit {
           moment(this.user.firstLoggedIn).diff(moment(), 'minutes') > -(2 * this.MINUTE_DAY))) {
         this.user.daysLoggedIn++;
         this.user.firstLoggedIn = moment().toDate();
-        this.dailyReward = true;
+        this.dailyRewardView = true;
       }
 
       this.user.lastLoggedIn = moment().toDate();
@@ -155,9 +160,25 @@ export class DashboardComponent implements OnInit {
     this.toggleView('rewards');
   }
 
+  referFriend() {
+    if (this.friendsEmail !== null && this.friendsEmail.trim() !== '') {
+      this.authService.sendReferralEmail(this.friendsEmail).subscribe(email => {
+        this.alertService.success(email['msg']);
+        this.toggleView('refer');
+      }, err => {
+        this.alertService.danger(err['error']['error']['msg']);
+        this.toggleView('refer');
+      });
+    } else {
+      this.alertService.warning('Must provide friend\'s email');
+    }
+  }
+
   toggleView(view) {
     if (view === 'rewards') {
-      this.dailyReward = !this.dailyReward;
+      this.dailyRewardView = !this.dailyRewardView;
+    } else if (view === 'refer') {
+      this.referralView = !this.referralView;
     }
   }
 }

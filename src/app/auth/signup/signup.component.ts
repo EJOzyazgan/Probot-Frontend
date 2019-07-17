@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {User} from '../../models/user.model';
-import {Router} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {AuthService} from '../../services/auth.service';
 import {AlertService} from 'ngx-alerts';
 import {DataService} from '../../services/data.service';
@@ -16,14 +16,18 @@ export class SignupComponent implements OnInit {
   confirmPassword = '';
   agreeTos = true;
 
-  constructor(private alertService: AlertService,
+  referralCode;
+
+  constructor(private route: ActivatedRoute,
+              private alertService: AlertService,
               private authService: AuthService,
               private router: Router,
               private dataService: DataService) {
   }
 
   ngOnInit() {
-
+    this.referralCode = this.route.snapshot.paramMap.get('referralCode');
+    this.user.referredBy = this.referralCode;
   }
 
   signUp() {
@@ -42,10 +46,10 @@ export class SignupComponent implements OnInit {
         this.disableSignup = false;
         return this.alertService.warning('Password must be at least 8 characters long');
       }
-      this.authService.checkExists(this.user.email).subscribe(user => {
+      this.authService.checkExists(this.user.email, this.user.username).subscribe(user => {
         if (user['exists']) {
           this.disableSignup = false;
-          return this.alertService.warning('User with this email already exists');
+          return this.alertService.warning(user['msg']);
         }
 
         this.authService.signUp(this.user).subscribe(() => {

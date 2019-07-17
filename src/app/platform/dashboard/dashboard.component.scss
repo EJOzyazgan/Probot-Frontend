@@ -8,6 +8,16 @@
   margin: auto;
 }
 
+.center {
+  width: fit-content;
+  margin: auto;
+  text-align: center;
+}
+
+.input {
+  font-size: 24px;
+}
+
 .overview-container {
   display: flex;
   width: fit-content;
@@ -116,6 +126,28 @@
   display: inline-block;
 }
 
+.leader-board-header {
+  display: flex;
+}
+
+.invite-friend-btns {
+  display: flex;
+  width: fit-content;
+  margin: auto;
+}
+
+.btn-1 {
+  background: #cc0000;
+  color: #ffffff;
+}
+
+.invite-btn {
+  margin: 5px;
+  text-align: center;
+  font-size: 26px;
+  border-radius: 10px;
+}
+
 .leader-board-wrapper {
   width: 650px;
   height: 550px;
@@ -144,23 +176,12 @@
   margin: auto 10px;
 }
 
-.invite-friend-btn {
-  display: flex;
-  width: 650px;
-  height: 90px;
-  background-color: #cc0000;
-  border-radius: 20px;
-  margin: 10px auto;
-  color: #ffffff;
+.bold {
+  font-weight: bold;
+  color: #cc0000;
 }
 
-.invite-btn-text {
-  margin: auto;
-  text-align: center;
-  font-size: 30px;
-}
-
-.daily-reward-container {
+.popup-container {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -170,6 +191,10 @@
 
 .large-header {
   font-size: 32px;
+}
+
+.sub-header {
+  font-size: 20px;
 }
 
 .reward-header {
@@ -195,6 +220,10 @@
 
 .reward {
   margin-top: 12px;
+  font-size: 18px;
+}
+
+.send-invite-btn {
   font-size: 18px;
 }
 

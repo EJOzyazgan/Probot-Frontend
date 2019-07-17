@@ -9,6 +9,7 @@ import {ResetPasswordComponent} from './reset-password/reset-password.component'
 const authRoutes: Routes = [
   {path: '', redirectTo: 'login', pathMatch: 'full'},
   {path: 'signup', component: SignupComponent},
+  {path: 'signup/:referralCode', component: SignupComponent},
   {path: 'login', component: LoginComponent},
   {path: 'email-verification', component: EmailVerificationComponent},
   {path: 'forgot-password', component: ForgotPasswordComponent},
