@@ -13,10 +13,10 @@ export class User {
     public chips?: number,
     public referralCode?: string,
     public referredBy?: string,
-    public rankClass?: string,
+    public rankClass?: number,
     public rank?: number,
     public username?: string,
-    public friends?: [string],
+    public friends?: Array<any>,
     public icon?: string,
     public bots?: [Bot]
   ) {

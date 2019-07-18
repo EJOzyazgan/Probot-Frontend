@@ -49,6 +49,14 @@ export class AuthService {
     return this.http.get(this.authUrl + '/referral/' + email, this.options);
   }
 
+  addFriend(email) {
+    return this.http.get(this.authUrl + '/add/friend/' + email, this.options);
+  }
+
+  getFriends(friends) {
+    return this.http.post(this.authUrl + '/get/friends', friends, this.options);
+  }
+
   patchUser(user) {
     return this.http.patch(this.authUrl + '/patch', user, this.options);
   }
