@@ -90,42 +90,50 @@
       </div>
       <div class="right-container">
         <div class="leader-board-container">
-          <div class="section-title">Friends Leaderboard</div>
+          <div class="leader-board-header">
+            <div class="section-title">Friends Leaderboard</div>
+            <div class="invite-friend-btns">
+              <button mat-raised-button class="invite-btn" (click)="toggleView('invite')">Add Friend</button>
+              <button mat-raised-button class="invite-btn btn-1" (click)="toggleView('refer');">Invite Friend</button>
+            </div>
+          </div>
           <div class="leader-board-wrapper">
             <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 leader-board">
 
               <ng-container matColumnDef="position">
-                <th mat-header-cell *matHeaderCellDef> No.</th>
+                <th mat-header-cell *matHeaderCellDef>No.</th>
                 <td mat-cell *matCellDef="let element"> {{element.position}} </td>
               </ng-container>
 
               <ng-container matColumnDef="name">
-                <th mat-header-cell *matHeaderCellDef> Name</th>
+                <th mat-header-cell *matHeaderCellDef>Name</th>
                 <td mat-cell *matCellDef="let element" class="name-cell">
-                  <svg-icon *ngIf="user.icon" class="name-icon" [applyCss]="true"
-                            src="'../../assets/icons/{{user.icon}}.svg"></svg-icon>
+                  <svg-icon *ngIf="element.icon" class="name-icon" [applyCss]="true"
+                            src="'../../assets/icons/{{element.icon}}.svg"></svg-icon>
                   <div class="name">{{element.name}}</div>
                 </td>
               </ng-container>
 
+              <ng-container matColumnDef="class">
+                <th mat-header-cell *matHeaderCellDef>Class</th>
+                <td mat-cell *matCellDef="let element"> {{element.class}} </td>
+              </ng-container>
+
               <ng-container matColumnDef="rank">
-                <th mat-header-cell *matHeaderCellDef> Rank</th>
-                <td mat-cell *matCellDef="let element"> {{element.weight | number: 0}} </td>
+                <th mat-header-cell *matHeaderCellDef>Rank</th>
+                <td mat-cell *matCellDef="let element"> {{element.rank | number: 0}} </td>
               </ng-container>
 
               <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
               <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
             </table>
           </div>
-          <div class="invite-friend-btn">
-            <p class="invite-btn-text">Need more chips? Refer a friend!</p>
-          </div>
         </div>
       </div>
     </div>
   </div>
 
-  <mat-card class="daily-reward-container mat-elevation-z24" *ngIf="dailyReward">
+  <mat-card class="popup-container mat-elevation-z24" *ngIf="dailyRewardView">
     <mat-card-title class="reward-header large-header">Daily Reward!!!</mat-card-title>
     <mat-card-content class="rewards-container">
       <mat-card class="reward-container mat-elevation-z3" [ngStyle]="getRewardStyle(1)" (click)="getReward(0)">
@@ -162,6 +170,33 @@
           <p>{{rewards[4]}}<br>Chips</p>
         </mat-card-content>
       </mat-card>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="popup-container mat-elevation-z24" *ngIf="referralView">
+    <mat-card-title class="reward-header large-header">Invite Friend!</mat-card-title>
+    <mat-card-subtitle class="sub-header">You will both receive an additional <span class="bold">2000 chips</span> on account activation!!!</mat-card-subtitle>
+    <mat-card-content class="center">
+      <form (ngSubmit)="referFriend()">
+        <mat-form-field>
+          <input matInput type="email" name="email" placeholder="Friend's Email" class="input" [(ngModel)]="friendsEmail">
+        </mat-form-field>
+      </form>
+
+      <button mat-raised-button (click)="referFriend()" class="send-invite-btn btn-1">Send Invite</button>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="popup-container mat-elevation-z24" *ngIf="addFriendView">
+    <mat-card-title class="reward-header large-header">Add Friend!</mat-card-title>
+    <mat-card-content class="center">
+      <form (ngSubmit)="referFriend()">
+        <mat-form-field>
+          <input matInput type="email" name="email" placeholder="Friend's Email" class="input" [(ngModel)]="friendsEmail">
+        </mat-form-field>
+      </form>
+
+      <button mat-raised-button (click)="addFriend()" class="send-invite-btn btn-1">Send Request</button>
     </mat-card-content>
   </mat-card>
 </div>

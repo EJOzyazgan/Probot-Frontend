@@ -23,8 +23,8 @@ export class AuthService {
     return this.http.post(this.authUrl + '/login', {email: email, password: password});
   }
 
-  checkExists(email) {
-    return this.http.post(this.authUrl + '/exists', {email: email});
+  checkExists(email, username) {
+    return this.http.post(this.authUrl + '/exists', {email: email, username: username});
   }
 
   resetPassword(email) {
@@ -41,16 +41,20 @@ export class AuthService {
     return this.http.get(this.authUrl + '/validate/reset-password/' + token, this.options);
   }
 
-  getByToken(token) {
-    return this.http.post(this.authUrl + '/get/token', {token: token}, this.options);
-  }
-
   getUser() {
     return this.http.get(this.authUrl + '/get', this.options);
   }
 
-  resetPasswordEmail(email) {
-    return this.http.post(this.authUrl + '/forgot', {email: email});
+  sendReferralEmail(email) {
+    return this.http.get(this.authUrl + '/referral/' + email, this.options);
+  }
+
+  addFriend(email) {
+    return this.http.get(this.authUrl + '/add/friend/' + email, this.options);
+  }
+
+  getFriends(friends) {
+    return this.http.post(this.authUrl + '/get/friends', friends, this.options);
   }
 
   patchUser(user) {

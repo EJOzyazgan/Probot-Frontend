@@ -11,10 +11,12 @@ export class User {
     public firstLoggedIn?: Date,
     public daysLoggedIn?: number,
     public chips?: number,
-    public rankClass?: string,
+    public referralCode?: string,
+    public referredBy?: string,
+    public rankClass?: number,
     public rank?: number,
     public username?: string,
-    public friends?: [string],
+    public friends?: Array<any>,
     public icon?: string,
     public bots?: [Bot]
   ) {

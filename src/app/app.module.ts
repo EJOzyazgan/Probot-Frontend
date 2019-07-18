@@ -10,7 +10,6 @@ import {GameTableComponent} from './game-table/game-table.component';
 import {SocketIoModule, SocketIoConfig} from 'ngx-socket-io';
 import {AuthService} from './services/auth.service';
 import {AuthGuard} from './guards/auth.guard';
-import {UserService} from './services/user.service';
 import {TournamentService} from './services/tournament.service';
 import {SharedModule} from './shared/shared.module';
 import { TournamentManagerComponent } from './tournament-manager/tournament-manager.component';
@@ -42,7 +41,6 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
   ],
   providers: [
     AuthService,
-    UserService,
     TournamentService,
     DataService,
     BotService,

@@ -4,25 +4,9 @@ import {User} from '../../models/user.model';
 import {Bot} from '../../models/bot.model';
 import * as moment from 'moment';
 import {MetricService} from '../../services/metric.service';
+import {AlertService} from 'ngx-alerts';
+import {MatTableDataSource} from '@angular/material';
 
-
-export interface PeriodicElement {
-  name: string;
-  pic: string;
-  position: number;
-  weight: number;
-}
-
-const ELEMENT_DATA: PeriodicElement[] = [
-  {position: 1, pic: '../../assets/award.svg', name: 'John', weight: 2817},
-  {position: 2, pic: '../../assets/award.svg', name: 'Sam', weight: 3819},
-  {position: 3, pic: '../../assets/award.svg', name: 'Billy', weight: 6937},
-  {position: 4, pic: '../../assets/award.svg', name: 'Tony', weight: 8371},
-  {position: 5, pic: '../../assets/award.svg', name: 'EJ', weight: 8792},
-  {position: 6, pic: '../../assets/award.svg', name: 'Sarah', weight: 9472},
-  {position: 7, pic: '../../assets/award.svg', name: 'Mark', weight: 10238},
-  {position: 8, pic: '../../assets/award.svg', name: 'Emma', weight: 10782}
-];
 
 @Component({
   selector: 'app-dashboard',
@@ -36,9 +20,14 @@ export class DashboardComponent implements OnInit {
   user = new User();
   bot = new Bot();
 
-  dailyReward = false;
+  dailyRewardView = false;
+  referralView = false;
+  addFriendView = false;
+
+  friendsEmail = null;
 
   rewards = [500, 1000, 1750, 3000, 5000];
+  friends: Array<User>;
 
   totalWinningsData = {
     chartType: 'LineChart',
@@ -58,13 +47,14 @@ export class DashboardComponent implements OnInit {
     }
   };
 
-  displayedColumns: string[] = ['position', 'name', 'rank'];
-  dataSource = ELEMENT_DATA;
+  displayedColumns: string[] = ['position', 'name', 'class', 'rank'];
+  dataSource = new MatTableDataSource();
 
   MINUTE_DAY = 1440;
 
   constructor(private authService: AuthService,
-              private metricService: MetricService) {
+              private metricService: MetricService,
+              private alertService: AlertService) {
   }
 
   ngOnInit() {
@@ -74,6 +64,10 @@ export class DashboardComponent implements OnInit {
   getUser() {
     this.authService.getUser().subscribe(user => {
       this.user = user;
+
+      if (this.user.friends.length > 0) {
+        this.getFriends();
+      }
 
       if (this.user.bots[0]) {
         this.bot = this.user.bots[0];
@@ -85,7 +79,7 @@ export class DashboardComponent implements OnInit {
           moment(this.user.firstLoggedIn).diff(moment(), 'minutes') > -(2 * this.MINUTE_DAY))) {
         this.user.daysLoggedIn++;
         this.user.firstLoggedIn = moment().toDate();
-        this.dailyReward = true;
+        this.dailyRewardView = true;
       }
 
       this.user.lastLoggedIn = moment().toDate();
@@ -112,6 +106,29 @@ export class DashboardComponent implements OnInit {
         this.totalWinningsChart.draw();
       }
     });
+  }
+
+  getFriends() {
+    const friendIds = this.user.friends.map(f => f.friendId);
+
+    this.authService.getFriends(friendIds).subscribe((friends: Array<User>) => {
+      this.friends = friends['friends'];
+      this.populateFriends();
+    });
+  }
+
+  populateFriends() {
+    const friends = [];
+    for (let i = 0; i < this.friends.length; i++) {
+      friends.push({
+        position: i + 1,
+        icon: this.friends[i].icon,
+        name: this.friends[i].username,
+        class: this.friends[i].rankClass,
+        rank: this.friends[i].rank
+      });
+    }
+    this.dataSource.data = friends;
   }
 
   mockData() {
@@ -155,9 +172,34 @@ export class DashboardComponent implements OnInit {
     this.toggleView('rewards');
   }
 
+  referFriend() {
+    if (this.friendsEmail !== null && this.friendsEmail.trim() !== '') {
+      this.authService.sendReferralEmail(this.friendsEmail).subscribe(email => {
+        this.alertService.success(email['msg']);
+        this.toggleView('refer');
+      }, err => {
+        this.alertService.danger(err['error']['error']['msg']);
+        this.toggleView('refer');
+      });
+    } else {
+      this.alertService.warning('Must provide friend\'s email');
+    }
+  }
+
+  addFriend() {
+    this.authService.addFriend(this.friendsEmail).subscribe(email => {
+      this.alertService.success(email['msg']);
+      this.toggleView('invite');
+    });
+  }
+
   toggleView(view) {
     if (view === 'rewards') {
-      this.dailyReward = !this.dailyReward;
+      this.dailyRewardView = !this.dailyRewardView;
+    } else if (view === 'refer') {
+      this.referralView = !this.referralView;
+    } else if (view === 'invite') {
+      this.addFriendView = !this.addFriendView;
     }
   }
 }
