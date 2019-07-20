@@ -57,7 +57,7 @@
       <div class="left-container">
         <div class="ranking-container">
           <div class="rank-icon-container">
-            <svg-icon class="rank-icon" [applyCss]="true" src="../../assets/{{user.rankClass}}-rank.svg"></svg-icon>
+            <svg-icon *ngIf="user.rankClass" class="rank-icon" [applyCss]="true" src="../../assets/{{user.rankClass}}-rank.svg"></svg-icon>
           </div>
           <div class="rank-info">
             <div class="rank-class">
