@@ -1,6 +1,9 @@
 .main-container {
   height: 100%;
-  overflow: hidden;
+}
+
+.main-content {
+  height: 100%;
 }
 
 mat-toolbar {
@@ -28,6 +31,9 @@ mat-toolbar {
 
 .user-info {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
 }
 
 .logout-container {
@@ -48,10 +54,6 @@ mat-toolbar {
   color: #cc0000;
 }
 
-.user-icon-container {
-  //margin: auto;
-}
-
 .user-icon {
   width: 40px;
 }
@@ -66,12 +68,20 @@ mat-toolbar {
 
 .mat-sidenav {
   background: #C1C1C1;
-  width: 50px;
 }
 
 .side-nav-btns {
   width: 30px;
   margin: 50px auto;
+}
+
+.menu-btn {
+  width: 10px;
+}
+
+.menu-item {
+  width: 30px;
+  margin: 10px auto;
 }
 
 .item {

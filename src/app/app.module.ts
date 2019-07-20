@@ -19,6 +19,7 @@ import {GoogleAnalyticsService} from './services/google-analytics.service';
 import {TableService} from './services/table.service';
 import {MetricService} from './services/metric.service';
 import { Ng2GoogleChartsModule } from 'ng2-google-charts';
+import { FlexLayoutModule} from '@angular/flex-layout';
 
 const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
 
@@ -36,6 +37,7 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     HttpClientModule,
     SharedModule,
     Ng2GoogleChartsModule,
+    FlexLayoutModule,
     AlertModule.forRoot({maxMessages: 5, timeout: 3000}),
     SocketIoModule.forRoot(config)
   ],
