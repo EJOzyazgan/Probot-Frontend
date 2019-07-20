@@ -80,6 +80,10 @@ export class DashboardComponent implements OnInit {
         this.user.daysLoggedIn++;
         this.user.firstLoggedIn = moment().toDate();
         this.dailyRewardView = true;
+      } else if (moment(this.user.firstLoggedIn).diff(moment(), 'minutes') > -(2 * this.MINUTE_DAY)) {
+        this.user.daysLoggedIn = 1;
+        this.user.firstLoggedIn = moment().toDate();
+        this.dailyRewardView = true;
       }
 
       this.user.lastLoggedIn = moment().toDate();
@@ -147,7 +151,6 @@ export class DashboardComponent implements OnInit {
   }
 
   getRewardStyle(reward) {
-    console.log('style');
     let style;
 
     if (this.user.daysLoggedIn > reward && (reward < 5)) {
