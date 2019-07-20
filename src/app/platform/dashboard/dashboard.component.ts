@@ -80,7 +80,7 @@ export class DashboardComponent implements OnInit {
         this.user.daysLoggedIn++;
         this.user.firstLoggedIn = moment().toDate();
         this.dailyRewardView = true;
-      } else if (moment(this.user.firstLoggedIn).diff(moment(), 'minutes') > -(2 * this.MINUTE_DAY)) {
+      } else if (moment(this.user.firstLoggedIn).diff(moment(), 'minutes') <= -(2 * this.MINUTE_DAY)) {
         this.user.daysLoggedIn = 1;
         this.user.firstLoggedIn = moment().toDate();
         this.dailyRewardView = true;
