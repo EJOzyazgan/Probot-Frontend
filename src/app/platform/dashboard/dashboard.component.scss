@@ -1,5 +1,4 @@
 .main-container {
-  border: #cc0000 1px solid;
   height: 100%;
   overflow-x: scroll;
   position: relative;
@@ -236,6 +235,37 @@
 
   .rank-icon-container {
     margin: auto;
+    width: 150px;
+  }
+
+  .item-icon-container {
+    width: 60px;
+  }
+
+  .item-data {
+    font-size: 28px;
+  }
+
+  .item-type {
+    font-size: 20px;
+  }
+
+  .info-data {
+    font-size: 30px;
+  }
+
+  .info-type {
+    font-size: 24px;
+  }
+
+  .rank-info {
+    display: flex;
+    margin: auto;
+  }
+
+  .rank-score {
+    margin-top: 0;
+    margin-left: 15px;
   }
 }
 
