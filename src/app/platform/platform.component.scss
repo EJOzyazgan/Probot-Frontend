@@ -1,9 +1,13 @@
 .main-container {
   height: 100%;
-  overflow: hidden;
+  position: relative;
 }
 
-mat-toolbar {
+.main-content {
+  height: calc(100% - 65px);
+}
+
+.mat-toolbar {
   margin: 0;
   padding: 0;
   z-index: 999;
@@ -11,7 +15,7 @@ mat-toolbar {
 }
 
 .company-logo {
-  height: 50px;
+  height: 45px;
 }
 
 .nav-bar {
@@ -19,23 +23,19 @@ mat-toolbar {
   display: flex;
   background: #ffffff;
   width: 100%;
+  height: fit-content;
 }
 
 .toolbar {
   position: absolute;
   right: 30px;
+  height: fit-content;
 }
 
 .user-info {
   display: flex;
-}
-
-.logout-container {
-  background: #E9E9E9;
+  align-items: center;
   width: fit-content;
-  float: right;
-  padding: 5px;
-  border-radius: 10px;
 }
 
 .logout-btn:hover {
@@ -46,10 +46,6 @@ mat-toolbar {
 .user-name {
   margin: auto 10px;
   color: #cc0000;
-}
-
-.user-icon-container {
-  //margin: auto;
 }
 
 .user-icon {
@@ -66,12 +62,19 @@ mat-toolbar {
 
 .mat-sidenav {
   background: #C1C1C1;
-  width: 50px;
 }
 
 .side-nav-btns {
   width: 30px;
-  margin: 50px auto;
+}
+
+.menu-btn {
+  width: 10px;
+}
+
+.menu-item {
+  width: 30px;
+  margin: 10px auto;
 }
 
 .item {

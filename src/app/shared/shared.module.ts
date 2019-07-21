@@ -49,6 +49,7 @@ import {AngularSvgIconModule} from 'angular-svg-icon';
     MatToolbarModule,
     MatSidenavModule,
     MatTableModule,
+    MatMenuModule,
     AngularFontAwesomeModule,
     AngularSvgIconModule
   ],

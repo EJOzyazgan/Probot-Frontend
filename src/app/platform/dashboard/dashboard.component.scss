@@ -1,11 +1,7 @@
 .main-container {
-  margin-left: -50px;
+  height: 100%;
+  overflow-x: scroll;
   position: relative;
-}
-
-.center-container {
-  width: 90%;
-  margin: auto;
 }
 
 .center {
@@ -18,17 +14,10 @@
   font-size: 24px;
 }
 
-.overview-container {
-  display: flex;
-  width: fit-content;
-  margin: auto;
-}
-
 .overview-item {
-  width: fit-content;
-  box-shadow: 0 0 12px #cc0000;
+  border: #cc0000 3px solid;
   border-radius: 0;
-  margin: 20px;
+  margin: 15px;
 }
 
 .overview-content {
@@ -56,13 +45,8 @@
   font-size: 30px;
 }
 
-.split-container {
-  display: flex;
-}
-
 .left-container {
-  margin-left: 20px;
-  width: fit-content;
+  margin-top: 15px;
 }
 
 .right-container {
@@ -95,39 +79,15 @@
   margin-top: 20px;
 }
 
-.chart-container {
-  margin-top: 20px;
-  background-color: #E9E9E9;
-  box-shadow: 0 0 6px #000000;
-  border-radius: 20px;
-  width: 1000px;
-  height: 400px;
-  display: inline-block;
-}
-
 .section-title {
   color: #cc0000;
   font-size: 30px;
-  margin: 10px;
+  margin: 10px 0;
 }
 
 .chart {
   width: fit-content;
   margin: auto;
-  box-shadow: 0 0 6px #cc0000;
-}
-
-.leader-board-container {
-  background-color: #E9E9E9;
-  box-shadow: 0 0 6px #000000;
-  border-radius: 20px;
-  width: 700px;
-  height: 720px;
-  display: inline-block;
-}
-
-.leader-board-header {
-  display: flex;
 }
 
 .invite-friend-btns {
@@ -149,17 +109,17 @@
 }
 
 .leader-board-wrapper {
-  width: 650px;
+  width: 625px;
   height: 625px;
   min-height: 625px;
   background-color: #ffffff;
   margin: 10px auto;
-  box-shadow: 0 0 6px #cc0000;
+  //border: #cc0000 3px solid;
   overflow: auto;
 }
 
 .leader-board {
-  width: 630px;
+  width: 100%;
   box-shadow: none;
 }
 
@@ -187,6 +147,17 @@
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 10px;
+}
+
+.close-btn {
+  top: 0;
+  right: 0;
+  position: absolute;
+  color: #cc0000;
+}
+
+.close-btn:hover {
+  cursor: pointer;
 }
 
 .large-header {
@@ -227,5 +198,89 @@
   font-size: 18px;
 }
 
+@media only screen and (max-width: 1800px) {
+  .leader-board-container {
+    margin-top: 20px;
+  }
 
+  .right-container {
+    margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .chart-container {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .leader-board-wrapper {
+    width: 500px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .leader-board-wrapper {
+    width: 300px;
+  }
+
+  .overview-content {
+    width: 325px;
+  }
+
+  .overview-item {
+    margin: 10px;
+  }
+
+  .rank-icon-container {
+    margin: auto;
+    width: 150px;
+  }
+
+  .item-icon-container {
+    width: 60px;
+  }
+
+  .item-data {
+    font-size: 28px;
+  }
+
+  .item-type {
+    font-size: 20px;
+  }
+
+  .info-data {
+    font-size: 30px;
+  }
+
+  .info-type {
+    font-size: 24px;
+  }
+
+  .rank-info {
+    display: flex;
+    margin: auto;
+  }
+
+  .rank-score {
+    margin-top: 0;
+    margin-left: 15px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .leader-board-wrapper {
+    width: 275px;
+  }
+
+  .overview-content {
+    width: 275px;
+  }
+
+  .invite-friend-btns {
+    display: block;
+    text-align: center;
+  }
+}
 

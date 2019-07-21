@@ -1,28 +1,53 @@
 <div class="main-container">
   <mat-toolbar class="mat-toolbar mat-elevation-z6">
     <div class="nav-bar">
-      <div class="menu-btn">
-        <!--<button mat-icon-button (click)="sidenav.toggle()">-->
-        <!--<mat-icon class="md-36">menu</mat-icon>-->
-        <!--</button>-->
+      <div class="menu-btn" fxShow="true" fxHide.gt-sm="true">
+        <button mat-icon-button [matMenuTriggerFor]="appMenu">
+          <i class="material-icons">menu</i>
+        </button>
       </div>
-      <img class="company-logo" src="../../assets/img/logo.png">
+      <img class="company-logo" src="../../assets/img/logo.png" fxShow.gt-sm="true" fxHide="true">
       <div class="toolbar">
         <div class="user-info">
-          <svg-icon *ngIf="user.icon" class="user-icon" [applyCss]="true" src="../assets/icons/{{user.icon}}.svg"></svg-icon>
+          <svg-icon *ngIf="user.icon" class="user-icon" [applyCss]="true"
+                    src="../assets/icons/{{user.icon}}.svg"></svg-icon>
           <div class="user-name">{{user.username}}</div>
-          <fa class="arrow-icon" name="chevron-down" (click)="toggle('logout')"></fa>
-        </div>
-        <div class="logout-container" *ngIf="showLogout">
-          <div class="logout-btn" (click)="logout()">Logout</div>
+          <fa class="arrow-icon" name="chevron-down" [matMenuTriggerFor]="userMenu"></fa>
         </div>
       </div>
     </div>
   </mat-toolbar>
 
-  <mat-sidenav-container fxFlexFill class="example-container">
-    <mat-sidenav #sidenav mode="side" opened="true" class="mat-elevation-z6">
-      <div class="side-nav-btns">
+  <mat-menu #appMenu="matMenu">
+    <div class="menu-item"
+         [routerLink]="['./dashboard']"
+         [routerLinkActive]="['active-nav-btn']">
+      <svg-icon class="menu-btn" [applyCss]="true" src="../../assets/dashboard.svg"></svg-icon>
+    </div>
+    <div class="menu-item"
+         [routerLink]="['./bot']"
+         [routerLinkActive]="['active-nav-btn']">
+      <svg-icon class="menu-btn" [applyCss]="true" src="../../assets/circuit.svg"></svg-icon>
+    </div>
+    <div class="menu-item"
+         [routerLink]="['./lobby']"
+         [routerLinkActive]="['active-nav-btn']">
+      <svg-icon class="menu-btn" [applyCss]="true" src="../../assets/poker-table.svg"></svg-icon>
+    </div>
+    <!--<div class="menu-item"-->
+    <!--[routerLink]="['./tournament']"-->
+    <!--[routerLinkActive]="['active-nav-btn']">-->
+    <!--<svg-icon class="menu-btn" [applyCss]="true" src="../../assets/tournament.svg"></svg-icon>-->
+    <!--</div>-->
+  </mat-menu>
+
+  <mat-menu #userMenu="matMenu">
+    <div (click)="logout()" fxLayoutAlign="center" class="logout-btn">Logout</div>
+  </mat-menu>
+
+  <div class="main-content" fxLayout="row">
+    <mat-card class="mat-elevation-z6 mat-sidenav" fxShow.gt-sm="true" fxHide="true">
+      <mat-card-content class="side-nav-btns">
         <div class="item"
              [routerLink]="['./dashboard']"
              [routerLinkActive]="['active-nav-btn']">
@@ -38,16 +63,16 @@
              [routerLinkActive]="['active-nav-btn']">
           <svg-icon class="side-nav-btn" [applyCss]="true" src="../../assets/poker-table.svg"></svg-icon>
         </div>
-        <div class="item"
-             [routerLink]="['./tournament']"
-             [routerLinkActive]="['active-nav-btn']">
-          <svg-icon class="side-nav-btn" [applyCss]="true" src="../../assets/tournament.svg"></svg-icon>
-        </div>
-      </div>
-    </mat-sidenav>
-    <mat-sidenav-content fxFlexFill>
+        <!--<div class="item"-->
+        <!--[routerLink]="['./tournament']"-->
+        <!--[routerLinkActive]="['active-nav-btn']">-->
+        <!--<svg-icon class="side-nav-btn" [applyCss]="true" src="../../assets/tournament.svg"></svg-icon>-->
+        <!--</div>-->
+      </mat-card-content>
+    </mat-card>
+    <div fxFlex="grow">
       <router-outlet></router-outlet>
-    </mat-sidenav-content>
-  </mat-sidenav-container>
+    </div>
+  </div>
 </div>
 
