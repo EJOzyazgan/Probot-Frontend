@@ -13,7 +13,7 @@ import DurationConstructor = moment.unitOfTime.DurationConstructor;
   styleUrls: ['./bot.component.scss']
 })
 export class BotComponent implements OnInit {
-  @ViewChild('metricsChart') metricsChart;
+  @ViewChild('metricsChart', {static: false}) metricsChart;
 
   user = new User();
   bot = new Bot();
@@ -78,8 +78,7 @@ export class BotComponent implements OnInit {
     if (this.bot.id) {
       const body = {
         metricType: this.metricType,
-        startTime: moment().subtract(1, this.metricTimePeriod).format(),
-        endTime: moment().format()
+        period: this.metricTimePeriod
       };
 
       this.metricService.getMetrics(body, this.bot.id).subscribe((metrics: Array<any>) => {
@@ -115,7 +114,8 @@ export class BotComponent implements OnInit {
     data.push(['Date', this.getTag()]);
 
     for (let i = 0; i < metrics.length; i++) {
-      data.push([moment(metrics[i].createdAt).format('M-D-YY'), metrics[i].value]);
+      const date = moment(metrics[i].createdAt).format('M-D HH:mm');
+      data.push([date, metrics[i].value]);
     }
 
     this.metricsData.dataTable = data;
