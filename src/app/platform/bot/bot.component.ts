@@ -13,7 +13,7 @@ import DurationConstructor = moment.unitOfTime.DurationConstructor;
   styleUrls: ['./bot.component.scss']
 })
 export class BotComponent implements OnInit {
-  @ViewChild('metricsChart') metricsChart;
+  @ViewChild('metricsChart', {static: false}) metricsChart;
 
   user = new User();
   bot = new Bot();

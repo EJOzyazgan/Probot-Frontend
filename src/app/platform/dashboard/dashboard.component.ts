@@ -15,7 +15,7 @@ import {MatTableDataSource} from '@angular/material';
 })
 
 export class DashboardComponent implements OnInit {
-  @ViewChild('totalWinningsChart') totalWinningsChart;
+  @ViewChild('totalWinningsChart', {static: false}) totalWinningsChart;
 
   user = new User();
   bot = new Bot();
@@ -97,8 +97,7 @@ export class DashboardComponent implements OnInit {
   getTotalWinnings() {
     const body = {
       metricType: 'totalWinnings',
-      startTime: moment().subtract(1, 'month').format(),
-      endTime: moment().format()
+      period: 'month'
     };
 
     this.metricService.getMetrics(body, this.bot.id).subscribe((metrics: Array<any>) => {
