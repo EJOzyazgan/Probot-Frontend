@@ -5,7 +5,7 @@ import {Bot} from '../../models/bot.model';
 import * as moment from 'moment';
 import {MetricService} from '../../services/metric.service';
 import {AlertService} from 'ngx-alerts';
-import {MatTableDataSource} from '@angular/material';
+import {MatTableDataSource} from '@angular/material/table';
 
 
 @Component({
@@ -101,14 +101,24 @@ export class DashboardComponent implements OnInit {
     };
 
     this.metricService.getMetrics(body, this.bot.id).subscribe((metrics: Array<any>) => {
-      for (let i = 0; i < metrics.length; i++) {
-        this.totalWinningsData.dataTable[i + 1][1] = metrics[i].value;
-      }
-
-      if (this.totalWinningsChart.wrapper) {
-        this.totalWinningsChart.draw();
-      }
+      this.updateMetricsChart(metrics);
     });
+  }
+
+  updateMetricsChart(metrics) {
+    const data = [];
+    data.push(['Date', 'Total Winnings']);
+
+    for (let i = 0; i < metrics.length; i++) {
+      const date = moment(metrics[i].createdAt).format('M-D HH:mm');
+      data.push([date, metrics[i].value]);
+    }
+
+    this.totalWinningsData.dataTable = data;
+
+    if (this.totalWinningsChart.wrapper) {
+      this.totalWinningsChart.draw();
+    }
   }
 
   getFriends() {
