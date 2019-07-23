@@ -29,21 +29,18 @@
         </mat-card-content>
       </mat-card>
       <mat-card class="bot-info-container bot-data-container mat-elevation-z6">
-        <mat-card-title class="section-header">
-          Data
-        </mat-card-title>
+        <mat-card-title class="section-header">Data</mat-card-title>
         <mat-card-content>
           <form class="bot-data-form">
             <mat-form-field class="bot-info-input">
               <mat-label>Time Period</mat-label>
-              <mat-select>
-                <mat-option *ngFor="let period of timePeriods" [value]="period">
-                  {{period}}
+              <mat-select [(ngModel)]="dataTimePeriod" name="dataPeriod">
+                <mat-option *ngFor="let period of dataPeriods; let i = index " [value]="i">
+                  {{period[0]}}
                 </mat-option>
               </mat-select>
             </mat-form-field>
-
-            <button mat-raised-button class="bot-data-btn">Download Data</button>
+            <button mat-raised-button class="bot-data-btn" (click)="getDataCSV()">Download Data</button>
           </form>
         </mat-card-content>
       </mat-card>
