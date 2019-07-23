@@ -6,6 +6,8 @@ import {Bot} from '../../models/bot.model';
 import * as moment from 'moment';
 import {MetricService} from '../../services/metric.service';
 import DurationConstructor = moment.unitOfTime.DurationConstructor;
+import {AlertService} from 'ngx-alerts';
+import * as fileSaver from 'file-saver';
 
 @Component({
   selector: 'app-bot',
@@ -19,6 +21,15 @@ export class BotComponent implements OnInit {
   bot = new Bot();
 
   isEditing = false;
+
+  dataPeriods = [
+    ['1Hour', 'hour', 1],
+    ['3Hours', 'hour', 3],
+    ['1Week', 'week', 1],
+    ['1Month', 'month', 1],
+    ['3Months', 'month', 3],
+    ['1Year', 'year', 1],
+  ];
 
   timePeriods = [
     ['1Day', 'day'],
@@ -35,6 +46,8 @@ export class BotComponent implements OnInit {
 
   metricType = 'totalWinnings';
   metricTimePeriod: DurationConstructor = 'month';
+
+  dataTimePeriod = -1;
 
   metricsData = {
     chartType: 'LineChart',
@@ -56,7 +69,8 @@ export class BotComponent implements OnInit {
 
   constructor(private authService: AuthService,
               private botService: BotService,
-              private metricService: MetricService) {
+              private metricService: MetricService,
+              private alertService: AlertService) {
   }
 
   ngOnInit() {
@@ -147,5 +161,29 @@ export class BotComponent implements OnInit {
     }
 
     return data;
+  }
+
+  getDataCSV() {
+    if (this.dataTimePeriod < 0) {
+      return this.alertService.warning('Please select time period');
+    } else if (!this.bot) {
+      return this.alertService.warning('No data available');
+    }
+
+    const body = {
+      botId: this.bot.id,
+      timePeriod: this.dataPeriods[this.dataTimePeriod]
+    };
+
+    this.botService.getData(body).subscribe((data: Array<any>) => {
+      if (data.length < 1) {
+        return this.alertService.info(`No data for ${this.dataPeriods[this.dataTimePeriod][0]}`);
+      }
+
+      const blob: any = new Blob([JSON.stringify(data, null, 2)], {type: 'text/json; charset=utf-8'});
+      fileSaver.saveAs(blob, 'data.json');
+    }, err => {
+      this.alertService.danger(err['error']['error']['msg']);
+    });
   }
 }

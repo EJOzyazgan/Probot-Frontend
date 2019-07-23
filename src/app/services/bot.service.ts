@@ -9,7 +9,7 @@ export class BotService {
   constructor(private http: HttpClient) {
   }
 
- options = {
+  options = {
     headers: new HttpHeaders()
       .set('Authorization', 'Bearer ' + localStorage.getItem(environment.userTokenKey))
       .set('Content-Type', 'application/json')
@@ -25,5 +25,9 @@ export class BotService {
 
   patchBot(bot) {
     return this.http.patch(this.botUrl + '/patch/' + bot.id, bot, this.options);
+  }
+
+  getData(body) {
+    return this.http.post(this.botUrl + '/get/data', body, this.options);
   }
 }
