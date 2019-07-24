@@ -1,0 +1,42 @@
+<div class="main-container">
+  <div class="user-fields">
+    <div class="section">
+      <div class="section-header">Username:</div>
+      <mat-form-field>
+        <mat-label>Username</mat-label>
+        <input matInput type="text" placeholder="{{user.username}}" [disabled]="!editUsername" [(ngModel)]="tempUsername">
+        <button mat-icon-button matSuffix (click)="reset('username')" [attr.aria-label]="'Edit username'"
+                [attr.aria-pressed]="editUsername">
+          <mat-icon matSuffix>create</mat-icon>
+        </button>
+      </mat-form-field>
+    </div>
+
+    <div class="section">
+      <div class="section-header">Password:</div>
+      <mat-form-field>
+        <mat-label>New Password</mat-label>
+        <input matInput type="password" placeholder="New Password" [disabled]="!changePass" [(ngModel)]="tempPassword">
+        <button mat-icon-button matSuffix (click)="reset('password')" [attr.aria-label]="'New password'"
+                [attr.aria-pressed]="changePass">
+          <mat-icon matSuffix>create</mat-icon>
+        </button>
+      </mat-form-field>
+      <br>
+
+      <mat-form-field>
+        <mat-label>Confirm Password</mat-label>
+        <input matInput type="password" placeholder="Confirm Password" [disabled]="!changePass" [(ngModel)]="confirmPassword">
+        <button mat-icon-button matSuffix (click)="reset('password')" [attr.aria-label]="'Confirm password'"
+                [attr.aria-pressed]="changePass">
+          <mat-icon matSuffix>create</mat-icon>
+        </button>
+      </mat-form-field>
+    </div>
+
+    <button mat-raised-button (click)="save()" class="btn-1" *ngIf="changePass || editUsername"
+            [disabled]="!validInput()">
+      Save
+    </button>
+  </div>
+</div>

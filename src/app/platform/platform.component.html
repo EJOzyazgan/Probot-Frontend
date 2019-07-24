@@ -42,6 +42,7 @@
   </mat-menu>
 
   <mat-menu #userMenu="matMenu">
+    <div [routerLink]="['./profile']" fxLayoutAlign="center" class="logout-btn">Profile</div>
     <div (click)="logout()" fxLayoutAlign="center" class="logout-btn">Logout</div>
   </mat-menu>
 
