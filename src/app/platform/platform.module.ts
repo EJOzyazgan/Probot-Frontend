@@ -11,6 +11,7 @@ import {BotComponent} from './bot/bot.component';
 import {LobbyComponent} from './lobby/lobby.component';
 import {TournamentComponent} from './tournament/tournament.component';
 import {Ng2GoogleChartsModule} from 'ng2-google-charts';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {Ng2GoogleChartsModule} from 'ng2-google-charts';
     DashboardComponent,
     BotComponent,
     LobbyComponent,
-    TournamentComponent
+    TournamentComponent,
+    ProfileComponent
   ],
   imports: [
     CommonModule,

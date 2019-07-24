@@ -5,6 +5,7 @@ import {DashboardComponent} from './dashboard/dashboard.component';
 import {BotComponent} from './bot/bot.component';
 import {LobbyComponent} from './lobby/lobby.component';
 import {TournamentComponent} from './tournament/tournament.component';
+import {ProfileComponent} from './profile/profile.component';
 
 
 const platformRoutes: Routes = [
@@ -14,7 +15,8 @@ const platformRoutes: Routes = [
       {path: 'dashboard', component: DashboardComponent},
       {path: 'bot', component: BotComponent},
       {path: 'lobby', component: LobbyComponent},
-      {path: 'tournament', component: TournamentComponent}
+      {path: 'profile', component: ProfileComponent}
+      // {path: 'tournament', component: TournamentComponent}
     ]
   }
 ];
