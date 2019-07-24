@@ -1,33 +1,33 @@
 <div class="main-container">
   <div class="split-container">
     <div class="left-container">
-      <div class="signup-container">
-        <div class="signup-header">SIGN UP</div>
+      <div class="body-container">
+        <div class="header">SIGN UP</div>
 
         <form (ngSubmit)="signUp()">
           <div class="input-container">
-            <mat-form-field class="signup-input">
+            <mat-form-field class="field-input">
               <input matInput name="username" class="input" placeholder="Enter Username" type="text" id="username"
                      [(ngModel)]="user.username">
             </mat-form-field>
           </div>
 
           <div class="input-container">
-            <mat-form-field class="signup-input">
+            <mat-form-field class="field-input">
               <input matInput name="email" class="input" placeholder="Enter Email" type="email" id="email"
                      [(ngModel)]="user.email">
             </mat-form-field>
           </div>
 
           <div class="input-container">
-            <mat-form-field class="signup-input">
+            <mat-form-field class="field-input">
               <input matInput name="password" class="input" type="password" placeholder="Enter Password" id="password"
                      [(ngModel)]="user.password">
             </mat-form-field>
           </div>
 
           <div class="input-container">
-            <mat-form-field class="signup-input">
+            <mat-form-field class="field-input">
               <input matInput name="password" class="input" type="password" placeholder="Confirm Password"
                      id="confirm-password"
                      [(ngModel)]="confirmPassword">
@@ -46,10 +46,12 @@
     </div>
 
     <div class="right-container">
-      <div class="logo-container"><img class="logo" src="../../../assets/img/logo-robot.png"></div>
-      <div class="hook-container">
-        <div class="name-logo-container"><img class="logo" src="../../../assets/img/logo-name.png"></div>
-        <div class="hook-text">Next Generation Gaming Competition</div>
+      <div class="body-container">
+        <div class="logo-container"><img class="logo" src="../../../assets/img/logo-robot.png"></div>
+        <div class="hook-container">
+          <div class="name-logo-container"><img class="logo" src="../../../assets/img/logo-name.png"></div>
+          <div class="hook-text">Next Generation Gaming Competition</div>
+        </div>
       </div>
     </div>
   </div>
