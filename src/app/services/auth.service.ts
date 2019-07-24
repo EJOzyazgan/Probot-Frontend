@@ -28,7 +28,7 @@ export class AuthService {
   }
 
   resetPassword(email) {
-    return this.http.get(this.authUrl + '/reset-password/' + email);
+    return this.http.get(this.authUrl + `/reset-password/${email}`);
   }
 
   validateResetPassword(token) {
@@ -38,7 +38,15 @@ export class AuthService {
         .set('Content-Type', 'application/json')
     };
 
-    return this.http.get(this.authUrl + '/validate/reset-password/' + token, this.options);
+    return this.http.get(this.authUrl + `/validate/reset-password/${token}`, this.options);
+  }
+
+  validateEmail(token) {
+    return this.http.get(this.authUrl + `/validate/token/${token}`);
+  }
+
+  acceptFriendRequest(userReferral, friendReferral) {
+    return this.http.get(this.authUrl + `/accept/friend-request/${userReferral}/${friendReferral}`);
   }
 
   getUser() {
@@ -46,11 +54,11 @@ export class AuthService {
   }
 
   sendReferralEmail(email) {
-    return this.http.get(this.authUrl + '/referral/' + email, this.options);
+    return this.http.get(this.authUrl + `/referral/${email}`, this.options);
   }
 
   addFriend(email) {
-    return this.http.get(this.authUrl + '/add/friend/' + email, this.options);
+    return this.http.get(this.authUrl + `/add/friend/${email}`, this.options);
   }
 
   getFriends(friends) {

@@ -1,0 +1,10 @@
+<div class="main-container">
+  <mat-card class="center-card mat-elevation-z6">
+    <mat-card-title>Friend Request</mat-card-title>
+    <mat-card-content>
+      <p *ngIf="accepted">Friend request accepted! Have fun on the playground!</p>
+      <p *ngIf="!accepted">Friend request failed, please try again.</p>
+      <button mat-button type="submit" class="button btn-1" [routerLink]="'/auth/login'">Login</button>
+    </mat-card-content>
+  </mat-card>
+</div>
