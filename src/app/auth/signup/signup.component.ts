@@ -8,7 +8,7 @@ import {DataService} from '../../services/data.service';
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
-  styleUrls: ['./signup.component.scss']
+  styleUrls: ['../login-signup.scss']
 })
 export class SignupComponent implements OnInit {
   user = new User(null);

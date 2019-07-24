@@ -8,6 +8,7 @@ import {SharedModule} from '../shared/shared.module';
 import { EmailVerificationComponent } from './email-verification/email-verification.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
+import { FriendRequestComponent } from './friend-request/friend-request.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { ResetPasswordComponent } from './reset-password/reset-password.componen
     LoginComponent,
     EmailVerificationComponent,
     ForgotPasswordComponent,
-    ResetPasswordComponent
+    ResetPasswordComponent,
+    FriendRequestComponent
   ],
   imports: [
     CommonModule,

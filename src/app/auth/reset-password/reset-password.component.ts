@@ -7,7 +7,7 @@ import {AlertService} from 'ngx-alerts';
 @Component({
   selector: 'app-reset-password',
   templateUrl: './reset-password.component.html',
-  styleUrls: ['./reset-password.component.scss']
+  styleUrls: ['../auth.scss']
 })
 export class ResetPasswordComponent implements OnInit {
   user = new User(null);

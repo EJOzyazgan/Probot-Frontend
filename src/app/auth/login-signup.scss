@@ -1,5 +1,6 @@
 .main-container {
   height: 100%;
+  position: relative;
 }
 
 .split-container {
@@ -12,16 +13,17 @@
   position: relative;
   width: 40%;
   box-shadow: 0 0 12px #f6f6f6;
+  background-color: white;
 }
 
 .right-container {
   position: relative;
   width: 60%;
-  background-image: url(../../../assets/img/black-felt-texture.jpg);
-  background-repeat:repeat;
+  background-image: url(../../assets/img/metal-mesh.jpg);
+  background-repeat: repeat;
 }
 
-.login-container {
+.body-container {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -32,17 +34,12 @@
 
 
 .hook-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin: 0;
-  width: 80%;
+  margin: auto;
 }
 
 .logo-container {
   width: 300px;
-  margin: 50px auto 0 auto;
+  margin: auto;
 }
 
 .name-logo-container {
@@ -61,7 +58,7 @@
   width: 100%;
 }
 
-.login-header {
+.header {
   color: #cc0000;
   font-family: 'xirod', sans-serif;
   text-align: center;
@@ -78,7 +75,7 @@
   width: 100%;
 }
 
-.login-input {
+.field-input {
   width: 100%;
 }
 
@@ -117,11 +114,38 @@
   cursor: pointer;
 }
 
+@media only screen and (max-width: 1000px) {
+  .main-container {
+    background-image: url(../../assets/img/metal-mesh.jpg);
+    background-repeat: repeat;
+  }
 
-@media (max-width: 599px) {
+  .right-container {
+    display: none;
+  }
 
+  .body-container {
+    height: fit-content;
+    padding: 30px;
+    background-color: white;
+  }
+
+  .left-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    width: 80%;
+  }
 }
 
-@media (min-width: 600px) {
+@media only screen and (max-width: 525px) {
+  .button-container {
+    display: block;
+  }
 
+  .button {
+    margin-left: 0;
+  }
 }
