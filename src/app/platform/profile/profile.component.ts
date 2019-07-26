@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {User} from '../../models/user.model';
 import {AuthService} from '../../services/auth.service';
 import {AlertService} from 'ngx-alerts';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-profile',
@@ -10,7 +11,7 @@ import {AlertService} from 'ngx-alerts';
 })
 export class ProfileComponent implements OnInit {
   editUsername = false;
-  changePass = false;
+  changePass = true;
 
   user = new User();
 
@@ -32,16 +33,6 @@ export class ProfileComponent implements OnInit {
     });
   }
 
-  validInput() {
-    if (this.editUsername) {
-      return this.tempUsername !== null && this.tempUsername.trim() !== '';
-    } else if (this.changePass) {
-      return this.tempPassword !== null &&
-        this.tempPassword.trim() !== '' && this.tempPassword.length > 8 &&
-        this.confirmPassword !== null && this.tempPassword.trim() === this.confirmPassword.trim();
-    }
-  }
-
   save() {
     if (this.tempUsername) {
       this.user.username = this.tempUsername;
@@ -57,6 +48,17 @@ export class ProfileComponent implements OnInit {
       this.reset('new');
       this.alertService.success('User updated');
     });
+  }
+
+  setValue(value, field) {
+    switch (field) {
+      case 'tempPass':
+        this.tempPassword = value;
+        break;
+      case 'confirmPass':
+        this.confirmPassword = value;
+        break;
+    }
   }
 
   reset(field) {
@@ -75,5 +77,4 @@ export class ProfileComponent implements OnInit {
       this.confirmPassword = null;
     }
   }
-
 }

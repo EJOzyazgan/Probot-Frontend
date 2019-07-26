@@ -1,5 +1,5 @@
 import {NgModule} from '@angular/core';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {CommonModule} from '@angular/common';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {AngularFontAwesomeModule} from 'angular-font-awesome';
@@ -29,7 +29,8 @@ import { ProfileComponent } from './profile/profile.component';
     FlexLayoutModule,
     PlatformRoutingModule,
     AngularFontAwesomeModule,
-    Ng2GoogleChartsModule
+    Ng2GoogleChartsModule,
+    ReactiveFormsModule
   ]
 })
 export class PlatformModule {

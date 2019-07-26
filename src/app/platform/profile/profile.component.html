@@ -2,41 +2,44 @@
   <div class="user-fields">
     <div class="section">
       <div class="section-header">Username:</div>
-      <mat-form-field>
-        <mat-label>Username</mat-label>
-        <input matInput type="text" placeholder="{{user.username}}" [disabled]="!editUsername" [(ngModel)]="tempUsername">
-        <button mat-icon-button matSuffix (click)="reset('username')" [attr.aria-label]="'Edit username'"
-                [attr.aria-pressed]="editUsername">
-          <mat-icon matSuffix>create</mat-icon>
-        </button>
-      </mat-form-field>
+      <mat-form-field class="full-input">
+        <mat-label>{{user.username}}</mat-label>
+        <input matInput type="text" placeholder="New Username" [disabled]=""
+               [(ngModel)]="tempUsername">
+      </mat-form-field><br>
+
+      <button mat-raised-button (click)="save()" class="btn-1"
+              [disabled]="!tempUsername">Save</button>
     </div>
 
     <div class="section">
       <div class="section-header">Password:</div>
-      <mat-form-field>
-        <mat-label>New Password</mat-label>
-        <input matInput type="password" placeholder="New Password" [disabled]="!changePass" [(ngModel)]="tempPassword">
-        <button mat-icon-button matSuffix (click)="reset('password')" [attr.aria-label]="'New password'"
-                [attr.aria-pressed]="changePass">
-          <mat-icon matSuffix>create</mat-icon>
-        </button>
-      </mat-form-field>
-      <br>
+      <app-custom-input
+        [label]="'New Password'"
+        [type]="'password'"
+        [placeholder]="'New Password'"
+        [toggleEdit]="false"
+        [shouldShow]="true"
+        [validation]="'password'"
+        [position]="'bottom'"
+        (valueEmitter)="setValue($event, 'tempPass')"
+      ></app-custom-input>
 
-      <mat-form-field>
-        <mat-label>Confirm Password</mat-label>
-        <input matInput type="password" placeholder="Confirm Password" [disabled]="!changePass" [(ngModel)]="confirmPassword">
-        <button mat-icon-button matSuffix (click)="reset('password')" [attr.aria-label]="'Confirm password'"
-                [attr.aria-pressed]="changePass">
-          <mat-icon matSuffix>create</mat-icon>
-        </button>
-      </mat-form-field>
+      <app-custom-input
+        [label]="'Confirm Password'"
+        [type]="'password'"
+        [placeholder]="'Confirm Password'"
+        [toggleEdit]="false"
+        [shouldShow]="true"
+        [validation]="'password'"
+        [position]="'bottom'"
+        (valueEmitter)="setValue($event, 'confirmPass')"
+      ></app-custom-input>
+
+      <button mat-raised-button (click)="save()" class="btn-1"
+              [disabled]="!tempPassword || !confirmPassword || tempPassword !== confirmPassword">Save</button>
     </div>
 
-    <button mat-raised-button (click)="save()" class="btn-1" *ngIf="changePass || editUsername"
-            [disabled]="!validInput()">
-      Save
-    </button>
+
   </div>
 </div>

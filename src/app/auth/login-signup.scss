@@ -69,12 +69,6 @@
   margin: auto;
 }
 
-.input {
-  font-size: 18px;
-  height: 50px;
-  width: 100%;
-}
-
 .field-input {
   width: 100%;
 }
@@ -96,6 +90,11 @@
 
 .btn-1 {
   background: #cc0000;
+  color: #ffffff;
+}
+
+.btn-1:disabled {
+  background: #C1C1C1;
   color: #ffffff;
 }
 

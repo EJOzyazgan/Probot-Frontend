@@ -1,0 +1,16 @@
+.tooltip-container {
+  float: right;
+}
+
+.tooltip{
+  background: #474747;
+  border-radius: 0.25em;
+  padding:0.75em;
+  display: block;
+  z-index: 5;
+  color:white;
+  height: fit-content;
+  width: fit-content;
+  transition:0.5s;
+  position: absolute;
+}
