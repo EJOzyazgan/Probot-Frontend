@@ -168,6 +168,12 @@ export class DashboardComponent implements OnInit {
         'color': 'white',
         'pointer-events': 'none'
       };
+    } else if (this.user.daysLoggedIn < reward) {
+      style = {
+        'background': '#C1C1C1',
+        'color': 'black',
+        'pointer-events': 'none'
+      };
     }
 
     return style;

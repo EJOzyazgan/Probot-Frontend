@@ -34,8 +34,8 @@ export class ResetPasswordComponent implements OnInit {
 
   saveNewPassword() {
     this.disable = true;
-    if (this.user.password !== null && this.user.password.trim() !== '' &&
-      this.confirmPassword !== null && this.confirmPassword.trim() !== '') {
+    if (this.user.password && this.user.password.trim() !== '' &&
+      this.confirmPassword && this.confirmPassword.trim() !== '') {
 
       if (this.user.password !== this.confirmPassword) {
         this.disable = false;
@@ -54,6 +54,17 @@ export class ResetPasswordComponent implements OnInit {
       this.alertService.warning('Please Fill In All Fields');
     }
 
+  }
+
+  setValue(value, field) {
+    switch (field) {
+      case 'tempPass':
+        this.user.password = value;
+        break;
+      case 'confirmPass':
+        this.confirmPassword = value;
+        break;
+    }
   }
 
 }

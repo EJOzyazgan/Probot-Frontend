@@ -11,22 +11,13 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
 })
 export class ProfileComponent implements OnInit {
   editUsername = false;
-  changePass = false;
+  changePass = true;
 
   user = new User();
 
   tempUsername;
   tempPassword;
   confirmPassword;
-
-  passRegEx = '^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])';
-
-  passwordControl = new FormGroup({
-    password: new FormControl('', [
-      Validators.minLength(8),
-      Validators.pattern(this.passRegEx),
-    ])
-  });
 
   constructor(private authService: AuthService,
               private alertService: AlertService) {
@@ -40,16 +31,6 @@ export class ProfileComponent implements OnInit {
     this.authService.getUser().subscribe(user => {
       this.user = user;
     });
-  }
-
-  validInput() {
-    if (this.editUsername) {
-      return this.tempUsername !== null && this.tempUsername.trim() !== '';
-    } else if (this.changePass) {
-      return this.tempPassword !== null &&
-        this.tempPassword.trim() !== '' && this.tempPassword.length > 8 &&
-        this.confirmPassword !== null && this.tempPassword.trim() === this.confirmPassword.trim();
-    }
   }
 
   save() {
@@ -69,6 +50,17 @@ export class ProfileComponent implements OnInit {
     });
   }
 
+  setValue(value, field) {
+    switch (field) {
+      case 'tempPass':
+        this.tempPassword = value;
+        break;
+      case 'confirmPass':
+        this.confirmPassword = value;
+        break;
+    }
+  }
+
   reset(field) {
     if (field === 'username') {
       this.editUsername = !this.editUsername;
@@ -85,11 +77,4 @@ export class ProfileComponent implements OnInit {
       this.confirmPassword = null;
     }
   }
-
-  getErrorMessage() {
-    return this.passwordControl.hasError('minLength') ? 'Must be at least 8 long' :
-        this.passwordControl.hasError('pattern') ? 'Not a valid email' :
-            '';
-  }
-
 }

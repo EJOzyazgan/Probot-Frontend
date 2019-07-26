@@ -32,10 +32,10 @@ export class SignupComponent implements OnInit {
 
   signUp() {
     this.disableSignup = true;
-    if (this.user.email !== null && this.user.email.trim() !== '' &&
-      this.user.password !== null && this.user.password.trim() !== '' &&
-      this.user.username !== null && this.user.username.trim() !== '' &&
-      this.confirmPassword !== null && this.confirmPassword.trim() !== '' &&
+    if (this.user.email && this.user.email.trim() !== '' &&
+      this.user.password && this.user.password.trim() !== '' &&
+      this.user.username && this.user.username.trim() !== '' &&
+      this.confirmPassword && this.confirmPassword.trim() !== '' &&
       this.agreeTos) {
 
 
@@ -63,6 +63,20 @@ export class SignupComponent implements OnInit {
     } else {
       this.disableSignup = false;
       this.alertService.warning('Please Fill In All Fields');
+    }
+  }
+
+  setValue(value, field) {
+    switch (field) {
+      case 'tempPass':
+        this.user.password = value;
+        break;
+      case 'confirmPass':
+        this.confirmPassword = value;
+        break;
+      case 'email':
+        this.user.email = value;
+        break;
     }
   }
 }
