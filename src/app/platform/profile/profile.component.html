@@ -12,15 +12,17 @@
       </mat-form-field>
     </div>
 
-    <div class="section">
+    <div class="section" [formGroupName]="passwordControl">
       <div class="section-header">Password:</div>
       <mat-form-field>
         <mat-label>New Password</mat-label>
-        <input matInput type="password" placeholder="New Password" [disabled]="!changePass" [(ngModel)]="tempPassword">
+        <input matInput type="password" name="new-password"
+               placeholder="New Password" [disabled]="!changePass" [(ngModel)]="tempPassword">
         <button mat-icon-button matSuffix (click)="reset('password')" [attr.aria-label]="'New password'"
                 [attr.aria-pressed]="changePass">
           <mat-icon matSuffix>create</mat-icon>
         </button>
+        <mat-error *ngIf="passwordControl.invalid">{{getErrorMessage()}}</mat-error>
       </mat-form-field>
       <br>
 

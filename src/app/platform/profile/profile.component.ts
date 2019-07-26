@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {User} from '../../models/user.model';
 import {AuthService} from '../../services/auth.service';
 import {AlertService} from 'ngx-alerts';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-profile',
@@ -17,6 +18,15 @@ export class ProfileComponent implements OnInit {
   tempUsername;
   tempPassword;
   confirmPassword;
+
+  passRegEx = '^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])';
+
+  passwordControl = new FormGroup({
+    password: new FormControl('', [
+      Validators.minLength(8),
+      Validators.pattern(this.passRegEx),
+    ])
+  });
 
   constructor(private authService: AuthService,
               private alertService: AlertService) {
@@ -74,6 +84,12 @@ export class ProfileComponent implements OnInit {
       this.tempPassword = null;
       this.confirmPassword = null;
     }
+  }
+
+  getErrorMessage() {
+    return this.passwordControl.hasError('minLength') ? 'Must be at least 8 long' :
+        this.passwordControl.hasError('pattern') ? 'Not a valid email' :
+            '';
   }
 
 }
