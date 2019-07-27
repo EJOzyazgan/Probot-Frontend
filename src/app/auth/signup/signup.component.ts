@@ -12,7 +12,6 @@ import {DataService} from '../../services/data.service';
 })
 export class SignupComponent implements OnInit {
   user = new User(null);
-  disableSignup = false;
   confirmPassword = '';
   agreeTos = true;
 
@@ -31,7 +30,6 @@ export class SignupComponent implements OnInit {
   }
 
   signUp() {
-    this.disableSignup = true;
     if (this.user.email && this.user.email.trim() !== '' &&
       this.user.password && this.user.password.trim() !== '' &&
       this.user.username && this.user.username.trim() !== '' &&
@@ -40,15 +38,12 @@ export class SignupComponent implements OnInit {
 
 
       if (this.user.password !== this.confirmPassword) {
-        this.disableSignup = false;
         return this.alertService.warning('Passwords Do Not Match');
       } else if (this.user.password.length < 8) {
-        this.disableSignup = false;
         return this.alertService.warning('Password must be at least 8 characters long');
       }
       this.authService.checkExists(this.user.email, this.user.username).subscribe(user => {
         if (user['exists']) {
-          this.disableSignup = false;
           return this.alertService.warning(user['msg']);
         }
 
@@ -56,12 +51,10 @@ export class SignupComponent implements OnInit {
           this.dataService.changeEmail(this.user.email);
           return this.router.navigate(['/auth/email-verification']);
         }, err => {
-          this.disableSignup = false;
           this.alertService.danger(err['error']['errors']['email']['message']);
         });
       });
     } else {
-      this.disableSignup = false;
       this.alertService.warning('Please Fill In All Fields');
     }
   }

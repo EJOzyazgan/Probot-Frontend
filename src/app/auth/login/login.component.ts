@@ -11,7 +11,6 @@ import {environment} from '../../../environments/environment';
 })
 export class LoginComponent implements OnInit {
 
-  disableLogin = false;
   email;
   password;
 
@@ -23,11 +22,13 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
+  disableLogin() {
+    return !this.email || this.email.trim() === '' || !this.password || this.password.trim() === '';
+  }
+
   login() {
-    this.disableLogin = true;
     if (this.email === null || this.email.trim() === '' || this.email === undefined ||
       this.password === null || this.password.trim() === '' || this.password === undefined) {
-      this.disableLogin = false;
       return this.alertService.warning('Please Fill In Email and Password');
     }
 
@@ -35,7 +36,6 @@ export class LoginComponent implements OnInit {
       localStorage.setItem(environment.userTokenKey, user['token']);
       return this.router.navigate(['/platform']);
     }, err => {
-      this.disableLogin = false;
       return this.alertService.danger(err['error']['msg']);
     });
   }
