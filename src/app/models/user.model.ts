@@ -2,7 +2,7 @@ import {Bot} from './bot.model';
 
 export class User {
   constructor(
-    public id?: string,
+    public id?: number,
     public email?: string,
     public name?: string,
     public password?: string,
@@ -18,7 +18,8 @@ export class User {
     public username?: string,
     public friends?: Array<any>,
     public icon?: string,
-    public bots?: [Bot]
+    public bots?: [Bot],
+    public isAdmin?: boolean
   ) {
   }
 }

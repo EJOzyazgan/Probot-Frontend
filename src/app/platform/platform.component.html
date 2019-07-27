@@ -50,16 +50,17 @@
     <mat-card class="mat-elevation-z6 mat-sidenav" fxShow.gt-sm="true" fxHide="true">
       <mat-card-content class="side-nav-btns">
         <div class="item"
-             [routerLink]="['./dashboard']"
+             [routerLink]="[user.isAdmin ? './admin-dashboard' : './dashboard']"
              [routerLinkActive]="['active-nav-btn']">
           <svg-icon class="side-nav-btn" [applyCss]="true" src="../../assets/dashboard.svg"></svg-icon>
         </div>
         <div class="item"
-             [routerLink]="['./bot']"
+             [routerLink]="[user.isAdmin ? './admin-bots' : './bot']"
              [routerLinkActive]="['active-nav-btn']">
           <svg-icon class="side-nav-btn" [applyCss]="true" src="../../assets/circuit.svg"></svg-icon>
         </div>
         <div class="item"
+             *ngIf="!user.isAdmin"
              [routerLink]="['./lobby']"
              [routerLinkActive]="['active-nav-btn']">
           <svg-icon class="side-nav-btn" [applyCss]="true" src="../../assets/poker-table.svg"></svg-icon>

@@ -1,0 +1,97 @@
+<div class="main-container">
+  <div fxLayout="row wrap" fxLayoutAlign="center">
+    <mat-card class="overview-item mat-elevation-z4">
+      <mat-card-content class="overview-content">
+        <div class="item-info">
+          <div class="item-data">{{handsPlayed ? handsPlayed : 0}}</div>
+          <div class="item-type">Platform Hands Played</div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="overview-item mat-elevation-z4">
+      <mat-card-content class="overview-content">
+        <div class="item-info">
+          <div class="item-data">{{activeBots ? activeBots : 0}}</div>
+          <div class="item-type">Active Bots</div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="overview-item mat-elevation-z4">
+      <mat-card-content class="overview-content">
+        <div class="item-info">
+          <div class="item-data">{{activeTables ? activeTables : 0}}</div>
+          <div class="item-type">Active Tables</div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="overview-item mat-elevation-z4">
+      <mat-card-content class="overview-content">
+        <div class="item-info">
+          <div class="item-data">{{activeUsers && usersWhoReferred && usersWhoReferred !== 0 ?
+            ((activeUsers / usersWhoReferred) * 100 | number:'1.0-0') : 0}}%
+          </div>
+          <div class="item-type">Referral Rate</div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="overview-item mat-elevation-z4">
+      <mat-card-content class="overview-content">
+        <div class="item-info">
+          <div class="item-data">{{referralsSent && referralsActivated && referralsActivated !== 0 ?
+            ((referralsSent / referralsActivated) * 100 | number:'1.0-0') : 0}}%
+          </div>
+          <div class="item-type">Referral Activation Rate</div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="overview-item mat-elevation-z4">
+      <mat-card-content class="overview-content">
+        <div class="item-info">
+          <div class="item-data">{{accountsCreated && accountsActivated && accountsActivated !== 0 ?
+            ((accountsCreated / accountsActivated) * 100 | number:'1.0-0') : 0}}%
+          </div>
+          <div class="item-type">Activation Rate</div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <div fxLayout="row wrap" fxLayoutAlign="center">
+    <div class="chart-container">
+        <div class="bot-analytics-header">
+          <div class="section-header analytics-title">Analytics</div>
+          <form class="bot-data-form">
+            <mat-form-field class="bot-analytics-input">
+              <mat-label>Metric</mat-label>
+              <mat-select [(ngModel)]="metricType" name="metricType" (selectionChange)="getMetrics()">
+                <mat-option *ngFor="let metric of metrics" [value]="metric[1]">
+                  {{metric[0]}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <mat-form-field class="bot-analytics-input">
+              <mat-label>Time Period</mat-label>
+              <mat-select [(ngModel)]="metricTimePeriod" name="metricTime" (selectionChange)="getMetrics()">
+                <mat-option *ngFor="let period of timePeriods" [value]="period[1]">
+                  {{period[0]}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </form>
+        </div>
+        <mat-card class="chart mat-elevation-z4">
+          <google-chart
+            #metricsChart
+            id="metricsChart"
+            [data]="metricsData"></google-chart>
+        </mat-card>
+      </div>
+  </div>
+</div>
+

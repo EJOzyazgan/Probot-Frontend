@@ -1,6 +1,6 @@
 export class Table {
   constructor(
-    public id?: string,
+    public id?: number,
     public buyIn?: number,
   ) {
   }
