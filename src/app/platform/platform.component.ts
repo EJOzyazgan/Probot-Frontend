@@ -10,11 +10,10 @@ import {User} from '../models/user.model';
 })
 
 export class PlatformComponent implements OnInit {
-  showLogout = false;
-
   user = new User();
 
-  constructor(private router: Router, private authService: AuthService) {
+  constructor(private router: Router,
+              private authService: AuthService) {
   }
 
   ngOnInit() {
@@ -25,12 +24,6 @@ export class PlatformComponent implements OnInit {
     this.authService.getUser().subscribe(user => {
       this.user = user;
     });
-  }
-
-  toggle(view) {
-    if (view === 'logout') {
-      this.showLogout = !this.showLogout;
-    }
   }
 
   logout() {

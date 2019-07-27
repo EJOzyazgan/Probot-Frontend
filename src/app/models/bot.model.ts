@@ -5,14 +5,17 @@ export class Bot {
     public id?: string,
     public name?: string,
     public serviceUrl?: string,
-    public userId?: string,
+    public userId?: number,
     public handsPlayed?: number,
     public handsWon?: number,
     public lastPlayed?: Date,
     public tournaments?: [string],
     public currentTable?: string,
     public tablesPlayed?: [Table],
-    public totalWinnings?: number
+    public totalWinnings?: number,
+    public isSystemBot?: boolean,
+    public botType?: string,
+    public isActive?: boolean
   ) {
   }
 }

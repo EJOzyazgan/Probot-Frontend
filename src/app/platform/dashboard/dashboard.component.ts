@@ -6,6 +6,7 @@ import * as moment from 'moment';
 import {MetricService} from '../../services/metric.service';
 import {AlertService} from 'ngx-alerts';
 import {MatTableDataSource} from '@angular/material/table';
+import {Router} from '@angular/router';
 
 
 @Component({
@@ -54,7 +55,8 @@ export class DashboardComponent implements OnInit {
 
   constructor(private authService: AuthService,
               private metricService: MetricService,
-              private alertService: AlertService) {
+              private alertService: AlertService,
+              private router: Router) {
   }
 
   ngOnInit() {
@@ -64,6 +66,10 @@ export class DashboardComponent implements OnInit {
   getUser() {
     this.authService.getUser().subscribe(user => {
       this.user = user;
+
+      if (this.user.isAdmin) {
+        return this.router.navigate(['platform/admin-dashboard']);
+      }
 
       if (this.user.friends.length > 0) {
         this.getFriends();
