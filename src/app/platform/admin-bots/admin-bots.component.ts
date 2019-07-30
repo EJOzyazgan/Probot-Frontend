@@ -18,6 +18,11 @@ export class AdminBotsComponent implements OnInit {
 
   isEditing = false;
 
+  botTypes = [
+    ['Sandbox', 'sandbox'],
+    ['PvP', 'pvp']
+  ];
+
   displayedColumns: string[] = ['name', 'url', 'type', 'active'];
   dataSource = new MatTableDataSource();
 
@@ -25,12 +30,21 @@ export class AdminBotsComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.getBots();
+  }
+
+  getBots() {
+    this.botService.getAdmin().subscribe((bots: Array<Bot>) => {
+      this.bots = bots;
+      this.dataSource.data = this.bots;
+    });
   }
 
   createBot() {
-    this.bot.userId = -1;
     this.botService.create(this.bot).subscribe(bot => {
       this.bot = bot;
+      this.bots.push(this.bot);
+      this.dataSource.data = this.bots;
     });
   }
 
@@ -41,17 +55,12 @@ export class AdminBotsComponent implements OnInit {
     });
   }
 
-  populateBots() {
-    const bots = [];
-    for (let i = 0; i < this.bots.length; i++) {
-      bots.push({
-        url: this.bots[i].serviceUrl,
-        name: this.bots[i].name,
-        type: this.bots[i].botType,
-        active: this.bots[i].isActive
-      });
-    }
-    this.dataSource.data = bots;
+  botSelected(bot) {
+    this.bot = bot;
+  }
+
+  deselect() {
+    this.bot = new Bot();
   }
 
   formCompleted() {

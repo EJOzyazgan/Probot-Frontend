@@ -13,7 +13,6 @@ export class Bot {
     public currentTable?: string,
     public tablesPlayed?: [Table],
     public totalWinnings?: number,
-    public isSystemBot?: boolean,
     public botType?: string,
     public isActive?: boolean
   ) {

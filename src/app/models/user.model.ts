@@ -12,6 +12,7 @@ export class User {
     public daysLoggedIn?: number,
     public chips?: number,
     public referralCode?: string,
+    public refferals?:  number,
     public referredBy?: string,
     public rankClass?: number,
     public rank?: number,
