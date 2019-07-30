@@ -15,7 +15,15 @@ export class MetricService {
       .set('Content-Type', 'application/json')
   };
 
-  getMetrics(body, botId) {
-    return this.http.post(this.metricUrl + `/get/${botId}`, body, this.options);
+  getMetrics(body) {
+    return this.http.post(this.metricUrl + `/get/metric`, body, this.options);
+  }
+
+  getPlatformAnalytics() {
+    return this.http.get(this.metricUrl + `/platform-analytics`, this.options);
+  }
+
+  getUserAnalytics() {
+    return this.http.get(this.metricUrl + `/user-analytics`, this.options);
   }
 }

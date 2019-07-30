@@ -7,6 +7,7 @@ import {MetricService} from '../../services/metric.service';
 import {AlertService} from 'ngx-alerts';
 import {MatTableDataSource} from '@angular/material/table';
 import {Router} from '@angular/router';
+import {BotService} from '../../services/bot.service';
 
 
 @Component({
@@ -56,7 +57,8 @@ export class DashboardComponent implements OnInit {
   constructor(private authService: AuthService,
               private metricService: MetricService,
               private alertService: AlertService,
-              private router: Router) {
+              private router: Router,
+              private botService: BotService) {
   }
 
   ngOnInit() {
@@ -67,17 +69,16 @@ export class DashboardComponent implements OnInit {
     this.authService.getUser().subscribe(user => {
       this.user = user;
 
+      if (this.user) {
+        this.getBot();
+      }
+
       if (this.user.isAdmin) {
         return this.router.navigate(['platform/admin-dashboard']);
       }
 
       if (this.user.friends.length > 0) {
         this.getFriends();
-      }
-
-      if (this.user.bots[0]) {
-        this.bot = this.user.bots[0];
-        this.getTotalWinnings();
       }
 
       if (!this.user.firstLoggedIn ||
@@ -102,11 +103,12 @@ export class DashboardComponent implements OnInit {
 
   getTotalWinnings() {
     const body = {
+      botId: this.bot.id,
       metricType: 'totalWinnings',
       period: 'month'
     };
 
-    this.metricService.getMetrics(body, this.bot.id).subscribe((metrics: Array<any>) => {
+    this.metricService.getMetrics(body).subscribe((metrics: Array<any>) => {
       this.updateMetricsChart(metrics);
     });
   }
@@ -133,6 +135,15 @@ export class DashboardComponent implements OnInit {
     this.authService.getFriends(friendIds).subscribe((friends: Array<User>) => {
       this.friends = friends['friends'];
       this.populateFriends();
+    });
+  }
+
+  getBot() {
+    this.botService.getByUser().subscribe(bot => {
+      if (bot) {
+        this.bot = bot;
+        this.getTotalWinnings();
+      }
     });
   }
 

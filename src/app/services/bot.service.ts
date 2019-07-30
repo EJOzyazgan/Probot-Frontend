@@ -15,8 +15,12 @@ export class BotService {
       .set('Content-Type', 'application/json')
   };
 
-  getBotByUser() {
+  getByUser() {
     return this.http.get(this.botUrl + '/get/user', this.options);
+  }
+
+  getAdmin() {
+    return this.http.get(this.botUrl + '/get/admin', this.options);
   }
 
   create(bot) {

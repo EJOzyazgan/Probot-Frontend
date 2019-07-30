@@ -4,6 +4,7 @@ import * as moment from 'moment';
 import {User} from '../../models/user.model';
 import {AuthService} from '../../services/auth.service';
 import DurationConstructor = moment.unitOfTime.DurationConstructor;
+import {MetricService} from '../../services/metric.service';
 
 @Component({
   selector: 'app-admin-dashboard',
@@ -43,7 +44,7 @@ export class AdminDashboardComponent implements OnInit {
     ['Activation Rate', 'activationRate'],
   ];
 
-  metricType = 'totalWinnings';
+  metricType = 'platformHandPlayed';
   metricTimePeriod: DurationConstructor = 'month';
 
   metricsData = {
@@ -65,7 +66,8 @@ export class AdminDashboardComponent implements OnInit {
   };
 
   constructor(private router: Router,
-              private authService: AuthService) {
+              private authService: AuthService,
+              private metricService: MetricService) {
   }
 
   ngOnInit() {
@@ -79,15 +81,37 @@ export class AdminDashboardComponent implements OnInit {
       if (!this.user.isAdmin) {
         return this.router.navigate(['/auth/login']);
       }
+
+      this.getAnalytics();
+    });
+  }
+
+  getAnalytics() {
+    this.metricService.getPlatformAnalytics().subscribe(platformAnalytics => {
+      this.activeBots = platformAnalytics['activeBots'];
+      this.activeTables = platformAnalytics['activeTables'];
+      this.handsPlayed = platformAnalytics['platformHandsPlayed'];
+    });
+
+    this.metricService.getUserAnalytics().subscribe(userAnalytics => {
+      this.activeUsers = userAnalytics['activeUsers'];
+      this.usersWhoReferred = userAnalytics['usersWhoReferred'];
+      this.referralsSent = userAnalytics['referralsSent'];
+      this.referralsActivated = userAnalytics['referralsActivated'];
+      this.accountsCreated = userAnalytics['accountsCreated'];
+      this.accountsActivated = userAnalytics['accountsActivated'];
     });
   }
 
   getMetrics() {
-    // let body = {};
-    //
-    // this.metricService.getMetrics(body, this.bot.id).subscribe((metrics: Array<any>) => {
-    //   this.updateMetricsChart(metrics);
-    // });
+    const body = {
+      metricType: this.metricType,
+      period: this.metricTimePeriod
+    };
+
+    this.metricService.getMetrics(body).subscribe((metrics: Array<any>) => {
+      this.updateMetricsChart(metrics);
+    });
   }
 
   updateMetricsChart(metrics) {
@@ -107,12 +131,14 @@ export class AdminDashboardComponent implements OnInit {
   }
 
   getTag() {
-    if (this.metricType === 'totalWinnings') {
-      return 'Total Winnings';
-    } else if (this.metricType === 'handWon') {
-      return 'Hands Won';
+    if (this.metricType === 'platformHandPlayed') {
+      return 'Platform Hands Played';
+    } else if (this.metricType === 'referralRate') {
+      return 'Referral Rate';
+    } else if (this.metricType === 'referralActivationRate') {
+      return 'Referral Activation Rate';
     }
-    return 'Hands Played';
+    return 'Activation Rate';
   }
 
   mockData() {

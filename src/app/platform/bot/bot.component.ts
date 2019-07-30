@@ -81,8 +81,16 @@ export class BotComponent implements OnInit {
     this.authService.getUser().subscribe(user => {
       this.user = user;
 
-      if (this.user.bots.length > 0) {
-        this.bot = this.user.bots[0];
+      if (this.user) {
+        this.getBot();
+      }
+    });
+  }
+
+  getBot() {
+    this.botService.getByUser().subscribe(bot => {
+      if (bot) {
+        this.bot = bot;
         this.getMetrics();
       }
     });
@@ -91,11 +99,12 @@ export class BotComponent implements OnInit {
   getMetrics() {
     if (this.bot.id) {
       const body = {
+        botId: this.bot.id,
         metricType: this.metricType,
         period: this.metricTimePeriod
       };
 
-      this.metricService.getMetrics(body, this.bot.id).subscribe((metrics: Array<any>) => {
+      this.metricService.getMetrics(body).subscribe((metrics: Array<any>) => {
         this.updateMetricsChart(metrics);
       });
     }
