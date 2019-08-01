@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {environment} from '../../environments/environment';
+import * as moment from 'moment';
 
 @Injectable()
 export class AuthService {
@@ -67,5 +68,14 @@ export class AuthService {
 
   patchUser(user) {
     return this.http.patch(this.authUrl + '/patch', user, this.options);
+  }
+
+  isLoggedIn() {
+    if (localStorage.getItem(environment.userTokenExpire) && moment().isBefore(localStorage.getItem(environment.userTokenExpire))) {
+      return true;
+    }
+    localStorage.removeItem(environment.userTokenKey);
+    localStorage.removeItem(environment.userTokenExpire);
+    return false;
   }
 }

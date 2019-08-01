@@ -15,7 +15,7 @@ export class AuthGuard implements CanActivate {
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
-    if (localStorage.getItem(environment.userTokenKey) !== null) {
+    if (localStorage.getItem(environment.userTokenKey)) {
       return true;
     } else {
       this.alertService.warning('You must be logged in to access this page');
