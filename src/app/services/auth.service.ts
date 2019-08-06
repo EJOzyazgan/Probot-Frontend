@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {environment} from '../../environments/environment';
+import {tap} from 'rxjs/operators';
 
 @Injectable()
 export class AuthService {
@@ -8,12 +9,6 @@ export class AuthService {
 
   constructor(private http: HttpClient) {
   }
-
-  options = {
-    headers: new HttpHeaders()
-      .set('Authorization', 'Bearer ' + localStorage.getItem(environment.userTokenKey))
-      .set('Content-Type', 'application/json')
-  };
 
   signUp(user) {
     return this.http.post(this.authUrl + '/create', user);
@@ -32,13 +27,13 @@ export class AuthService {
   }
 
   validateResetPassword(token) {
-    this.options = {
+    const options = {
       headers: new HttpHeaders()
         .set('Authorization', 'Bearer ' + token)
         .set('Content-Type', 'application/json')
     };
 
-    return this.http.get(this.authUrl + `/validate/reset-password/${token}`, this.options);
+    return this.http.get(this.authUrl + `/validate/reset-password/${token}`, options);
   }
 
   validateEmail(token) {
@@ -50,22 +45,54 @@ export class AuthService {
   }
 
   getUser() {
-    return this.http.get(this.authUrl + '/get', this.options);
+    return this.http.get(this.authUrl + '/get');
   }
 
   sendReferralEmail(email) {
-    return this.http.get(this.authUrl + `/referral/${email}`, this.options);
+    return this.http.get(this.authUrl + `/referral/${email}`);
   }
 
   addFriend(email) {
-    return this.http.get(this.authUrl + `/add/friend/${email}`, this.options);
+    return this.http.get(this.authUrl + `/add/friend/${email}`);
   }
 
   getFriends(friends) {
-    return this.http.post(this.authUrl + '/get/friends', friends, this.options);
+    return this.http.post(this.authUrl + '/get/friends', friends);
   }
 
   patchUser(user) {
-    return this.http.patch(this.authUrl + '/patch', user, this.options);
+    return this.http.patch(this.authUrl + '/patch', user);
+  }
+
+  setTokens(tokens) {
+    localStorage.setItem(environment.userTokenKey, tokens.token);
+    localStorage.setItem(environment.userTokenExpire, tokens.expiresAt);
+    localStorage.setItem(environment.userRefreshToken, tokens.refreshToken);
+  }
+
+  removeTokens() {
+    localStorage.removeItem(environment.userTokenKey);
+    localStorage.removeItem(environment.userTokenExpire);
+    localStorage.removeItem(environment.userRefreshToken);
+  }
+
+  getJwtToken() {
+    return localStorage.getItem(environment.userTokenKey);
+  }
+
+  refreshToken() {
+    const refreshToken = localStorage.getItem(environment.userRefreshToken);
+    return this.http.get(this.authUrl + `/refresh-token/${refreshToken}`)
+      .pipe(tap(tokens => {
+        this.setTokens(tokens);
+      }));
+  }
+
+  isLoggedIn() {
+    if (localStorage.getItem(environment.userTokenKey)) {
+      return true;
+    }
+    this.removeTokens();
+    return false;
   }
 }

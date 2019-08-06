@@ -1,9 +1,8 @@
 import {Injectable} from '@angular/core';
-import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {HttpClient} from '@angular/common/http';
 import {environment} from '../../environments/environment';
 import {Tournament} from '../models/tournament.model';
 import {Bracket} from '../models/bracket.model';
-import {browser} from 'protractor';
 
 @Injectable()
 export class TournamentService {
@@ -11,10 +10,6 @@ export class TournamentService {
 
   constructor(private http: HttpClient) {
   }
-
-  options = {
-    headers: new HttpHeaders().set('auth', localStorage.getItem('token'))
-  };
 
   getTournaments() {
     return this.http.get(this.tournamentUrl + '/all');

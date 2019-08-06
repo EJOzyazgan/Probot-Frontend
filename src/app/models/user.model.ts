@@ -20,7 +20,8 @@ export class User {
     public friends?: Array<any>,
     public icon?: string,
     public bots?: [Bot],
-    public isAdmin?: boolean
+    public isAdmin?: boolean,
+    public refreshToken?: string,
   ) {
   }
 }

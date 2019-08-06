@@ -5,7 +5,9 @@
 export const environment = {
   production: false,
   apiUrl: 'http://localhost:3000/api/',
-  userTokenKey: 'probot-user-token'
+  userTokenKey: 'probot-user-token',
+  userTokenExpire: 'probot-user-expire',
+  userRefreshToken: 'probot-user-refresh',
 };
 
 /*
