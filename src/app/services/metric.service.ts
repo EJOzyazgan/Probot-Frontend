@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {HttpClient} from '@angular/common/http';
 import {environment} from '../../environments/environment';
 
 @Injectable()
@@ -9,21 +9,15 @@ export class MetricService {
   constructor(private http: HttpClient) {
   }
 
-  options = {
-    headers: new HttpHeaders()
-      .set('Authorization', 'Bearer ' + localStorage.getItem(environment.userTokenKey))
-      .set('Content-Type', 'application/json')
-  };
-
   getMetrics(body) {
-    return this.http.post(this.metricUrl + `/get/metric`, body, this.options);
+    return this.http.post(this.metricUrl + `/get/metric`, body);
   }
 
   getPlatformAnalytics() {
-    return this.http.get(this.metricUrl + `/platform-analytics`, this.options);
+    return this.http.get(this.metricUrl + `/platform-analytics`);
   }
 
   getUserAnalytics() {
-    return this.http.get(this.metricUrl + `/user-analytics`, this.options);
+    return this.http.get(this.metricUrl + `/user-analytics`);
   }
 }

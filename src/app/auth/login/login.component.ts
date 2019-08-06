@@ -32,9 +32,8 @@ export class LoginComponent implements OnInit {
       return this.alertService.warning('Please Fill In Email and Password');
     }
 
-    this.authService.login(this.email, this.password).subscribe(token => {
-      localStorage.setItem(environment.userTokenKey, token['token']);
-      localStorage.setItem(environment.userTokenExpire, token['expiresAt']);
+    this.authService.login(this.email, this.password).subscribe(tokens => {
+      this.authService.setTokens(tokens);
       return this.router.navigate(['/platform']);
     }, err => {
       return this.alertService.danger(err['error']['msg']);

@@ -3,7 +3,7 @@ import {NgModule} from '@angular/core';
 import {AppComponent} from './app.component';
 import {AppRoutingModule, RoutingComponents} from './app-routing.module';
 import {FormsModule} from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule, HttpInterceptor} from '@angular/common/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {AlertModule} from 'ngx-alerts';
 import {GameTableComponent} from './game-table/game-table.component';
@@ -20,6 +20,7 @@ import {TableService} from './services/table.service';
 import {MetricService} from './services/metric.service';
 import { Ng2GoogleChartsModule } from 'ng2-google-charts';
 import { FlexLayoutModule} from '@angular/flex-layout';
+import {AuthInterceptor} from './services/authInterceptor.service';
 
 const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
 
@@ -49,7 +50,12 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     TableService,
     MetricService,
     GoogleAnalyticsService,
-    AuthGuard
+    AuthGuard,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true,
+    },
   ],
   bootstrap: [AppComponent]
 })

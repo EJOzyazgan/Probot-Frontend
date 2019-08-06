@@ -28,8 +28,7 @@ export class PlatformComponent implements OnInit {
   }
 
   logout() {
-    localStorage.removeItem(environment.userTokenKey);
-    localStorage.removeItem(environment.userTokenExpire);
+    this.authService.removeTokens();
     return this.router.navigate(['/auth']);
   }
 
