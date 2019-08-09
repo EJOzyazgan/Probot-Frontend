@@ -133,7 +133,7 @@ export class DashboardComponent implements OnInit {
     const friendIds = this.user.friends.map(f => f.friendId);
 
     this.authService.getFriends(friendIds).subscribe((friends: Array<User>) => {
-      this.friends = friends['friends'];
+      this.friends = friends;
       this.populateFriends();
     });
   }
