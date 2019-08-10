@@ -24,4 +24,8 @@ export class MetricService {
   getTopPlayers() {
     return this.http.get(this.metricUrl + '/top-players');
   }
+
+  getUserStanding() {
+    return this.http.get(this.metricUrl + '/user-standing');
+  }
 }

@@ -11,16 +11,18 @@ import {MetricService} from '../../services/metric.service';
 export class LeaderboardComponent implements OnInit {
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
 
-  displayedColumns: string[] = ['position', 'name', 'class', 'rank'];
+  displayedColumns: string[] = ['name', 'class', 'rank'];
   dataSource = new MatTableDataSource();
 
   topPlayers: Array<User>;
 
+  user = new User();
   constructor(private metricService: MetricService) {
   }
 
   ngOnInit() {
     this.dataSource.paginator = this.paginator;
+    this.getUserStanding();
     this.getTopPlayers();
   }
 
@@ -33,11 +35,16 @@ export class LeaderboardComponent implements OnInit {
     });
   }
 
+  getUserStanding() {
+    this.metricService.getUserStanding().subscribe( (user: User) => {
+      this.user = user;
+    });
+  }
+
   populateLeaderboard() {
     const topPlayers = [];
     for (let i = 0; i < this.topPlayers.length; i++) {
       topPlayers.push({
-        position: i + 1,
         icon: this.topPlayers[i].icon,
         name: this.topPlayers[i].username,
         class: this.topPlayers[i].rankClass,
