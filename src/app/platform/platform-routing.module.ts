@@ -9,6 +9,7 @@ import {ProfileComponent} from './profile/profile.component';
 import {AdminDashboardComponent} from './admin-dashboard/admin-dashboard.component';
 import {AdminBotsComponent} from './admin-bots/admin-bots.component';
 import {LeaderboardComponent} from './leaderboard/leaderboard.component';
+import {SupportComponent} from './support/support.component';
 
 
 const platformRoutes: Routes = [
@@ -21,7 +22,8 @@ const platformRoutes: Routes = [
       {path: 'admin-bots', component: AdminBotsComponent},
       {path: 'lobby', component: LobbyComponent},
       {path: 'profile', component: ProfileComponent},
-      {path: 'leader-board', component: LeaderboardComponent}
+      {path: 'leader-board', component: LeaderboardComponent},
+      {path: 'support', component: SupportComponent},
       // {path: 'tournament', component: TournamentComponent}
     ]
   }

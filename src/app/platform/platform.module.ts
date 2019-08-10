@@ -15,6 +15,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { AdminBotsComponent } from './admin-bots/admin-bots.component';
 import { LeaderboardComponent } from './leaderboard/leaderboard.component';
+import { SupportComponent } from './support/support.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { LeaderboardComponent } from './leaderboard/leaderboard.component';
     ProfileComponent,
     AdminDashboardComponent,
     AdminBotsComponent,
-    LeaderboardComponent
+    LeaderboardComponent,
+    SupportComponent
   ],
   imports: [
     CommonModule,

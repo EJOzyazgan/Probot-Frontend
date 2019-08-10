@@ -64,6 +64,10 @@ export class AuthService {
     return this.http.patch(this.authUrl + '/patch', user);
   }
 
+  sendSupport(body) {
+    return this.http.post(this.authUrl + '/support', body);
+  }
+
   setTokens(tokens) {
     localStorage.setItem(environment.userTokenKey, tokens.token);
     localStorage.setItem(environment.userTokenExpire, tokens.expiresAt);

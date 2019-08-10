@@ -1,0 +1,29 @@
+<div class="main-container">
+  <div class="user-fields">
+    <div class="section">
+      <div class="section-header">Contact Us</div>
+      <form name="contactForm">
+        <mat-form-field class="full-input">
+        <mat-label>Name</mat-label>
+        <input matInput type="text" placeholder="Enter Name"
+               [(ngModel)]="name" required name="name">
+      </mat-form-field><br>
+
+      <mat-form-field class="full-input">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" placeholder="Enter Email"
+               [(ngModel)]="email" required name="email">
+      </mat-form-field><br>
+
+      <mat-form-field class="full-input">
+        <mat-label>Message</mat-label>
+        <textarea matInput placeholder="Enter Message"
+                  [(ngModel)]="message" required name="message"></textarea>
+      </mat-form-field><br>
+
+      <button mat-raised-button (click)="submit()" class="btn-1"
+              [disabled]="!validForm()">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
