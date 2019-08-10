@@ -1,0 +1,53 @@
+<div class="main-container">
+  <div class="container">
+    <div class="section-title">Leaderboard</div>
+    <mat-card class="leader-board-wrapper mat-elevation-z4">
+      <table mat-table [dataSource]="dataSource" class="leader-board">
+
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef>Name</th>
+          <td mat-cell *matCellDef="let element" class="name-cell">
+            <svg-icon *ngIf="element.icon" class="name-icon" [applyCss]="true"
+                      src="'../../assets/icons/{{element.icon}}.svg"></svg-icon>
+            <div class="name">{{element.name}}</div>
+          </td>
+          <td mat-footer-cell *matFooterCellDef class="name-cell footer-cell">
+            <svg-icon *ngIf="user.icon" class="name-icon" [applyCss]="true"
+                      src="'../../assets/icons/{{user.icon}}.svg"></svg-icon>
+            <div class="name">{{user.username}}</div>
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="class">
+          <th mat-header-cell *matHeaderCellDef>Class</th>
+          <td mat-cell *matCellDef="let element">
+            <div class="class-cell">
+              <svg-icon *ngIf="element.class" [applyCss]="true"
+                        src="../../assets/{{element.class}}-rank.svg"></svg-icon>
+              <div *ngIf="!element.class" class="name">{{element.class}}</div>
+            </div>
+          </td>
+          <td mat-footer-cell *matFooterCellDef class="footer-cell">
+            <div class="class-cell">
+              <svg-icon *ngIf="user.rankClass" [applyCss]="true"
+                        src="'../../assets/{{user.rankClass}}-rank.svg"></svg-icon>
+              <div *ngIf="!user.rankClass" class="name">{{user.rankClass}}</div>
+            </div>
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="rank">
+          <th mat-header-cell *matHeaderCellDef>Rank</th>
+          <td mat-cell *matCellDef="let element"> {{element.rank | number: 0}} </td>
+          <td mat-footer-cell *matFooterCellDef class="footer-cell">{{user.rank | number: 0}}</td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        <tr mat-footer-row *matFooterRowDef="displayedColumns"></tr>
+      </table>
+
+      <mat-paginator [pageSizeOptions]="[10]" showFirstLastButtons></mat-paginator>
+    </mat-card>
+  </div>
+</div>

@@ -49,7 +49,7 @@ export class DashboardComponent implements OnInit {
     }
   };
 
-  displayedColumns: string[] = ['position', 'name', 'class', 'rank'];
+  displayedColumns: string[] = ['name', 'class', 'rank'];
   dataSource = new MatTableDataSource();
 
   MINUTE_DAY = 1440;
@@ -133,7 +133,7 @@ export class DashboardComponent implements OnInit {
     const friendIds = this.user.friends.map(f => f.friendId);
 
     this.authService.getFriends(friendIds).subscribe((friends: Array<User>) => {
-      this.friends = friends['friends'];
+      this.friends = friends;
       this.populateFriends();
     });
   }
@@ -151,7 +151,6 @@ export class DashboardComponent implements OnInit {
     const friends = [];
     for (let i = 0; i < this.friends.length; i++) {
       friends.push({
-        position: i + 1,
         icon: this.friends[i].icon,
         name: this.friends[i].username,
         class: this.friends[i].rankClass,

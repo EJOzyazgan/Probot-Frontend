@@ -14,6 +14,7 @@ import {Ng2GoogleChartsModule} from 'ng2-google-charts';
 import { ProfileComponent } from './profile/profile.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { AdminBotsComponent } from './admin-bots/admin-bots.component';
+import { LeaderboardComponent } from './leaderboard/leaderboard.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { AdminBotsComponent } from './admin-bots/admin-bots.component';
     TournamentComponent,
     ProfileComponent,
     AdminDashboardComponent,
-    AdminBotsComponent
+    AdminBotsComponent,
+    LeaderboardComponent
   ],
   imports: [
     CommonModule,
