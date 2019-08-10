@@ -22,6 +22,8 @@ export class User {
     public bots?: [Bot],
     public isAdmin?: boolean,
     public refreshToken?: string,
+    public gender?: string,
+    public dob?: Date,
   ) {
   }
 }
