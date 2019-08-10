@@ -2,7 +2,7 @@
   <form [formGroup]="inputForm">
     <mat-form-field class="full-input">
       <mat-label>{{label}}</mat-label>
-      <input matInput type="{{type}}" name="new-password" [formControlName]="getController()"
+      <input matInput type="{{type}}" name="new-password" [formControlName]="getController()" required
              placeholder="{{placeholder}}" (focus)="show=true" (blur)="show=false" (ngModelChange)="emitValue()">
       <button *ngIf="toggleEdit" mat-icon-button matSuffix (click)="reset()" [attr.aria-label]="'label'"
               [attr.aria-pressed]="toggle()">

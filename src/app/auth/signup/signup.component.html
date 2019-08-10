@@ -9,7 +9,7 @@
             <mat-form-field class="field-input">
               <mat-label>Username</mat-label>
               <input matInput name="username" placeholder="Enter Username" type="text" id="username"
-                     [(ngModel)]="user.username">
+                     [(ngModel)]="user.username" required>
             </mat-form-field>
           </div>
 
@@ -24,6 +24,26 @@
               [position]="'bottom'"
               (valueEmitter)="setValue($event, 'email')"
             ></app-custom-input>
+          </div>
+
+          <div class="input-container">
+            <mat-form-field class="field-input">
+              <mat-label>Gender</mat-label>
+              <mat-select [(ngModel)]="user.gender" name="gender" required>
+                <mat-option *ngFor="let gender of genders" [value]="gender.toLowerCase()">
+                  {{gender}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+
+          <div class="input-container">
+            <mat-form-field class="field-input">
+              <input matInput [max]="maxDate" [matDatepicker]="picker" placeholder="Select Date of Birth"
+                     (dateChange)="setDob($event)" [formControl]="date">
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker touchUi disabled="false"></mat-datepicker>
+            </mat-form-field>
           </div>
 
           <div class="input-container">
@@ -55,7 +75,8 @@
 
         <div class="button-container">
           <button mat-button type="submit" class="button btn-1" (click)="signUp()"
-          [disabled]="!user.password || !confirmPassword || user.password !== confirmPassword || !user.email || !user.username">Sign Up
+                  [disabled]="!user.password || !confirmPassword || user.password !== confirmPassword || !user.email || !user.username">
+            Sign Up
           </button>
           <button mat-button type="submit" class="button btn-2" [routerLink]="'/auth/login'">
             Login

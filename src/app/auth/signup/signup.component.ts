@@ -4,11 +4,20 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {AuthService} from '../../services/auth.service';
 import {AlertService} from 'ngx-alerts';
 import {DataService} from '../../services/data.service';
+import * as moment from 'moment';
+import {MatDatepickerInputEvent} from '@angular/material';
+import {MAT_MOMENT_DATE_FORMATS, MomentDateAdapter} from '@angular/material-moment-adapter';
+import {DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE} from '@angular/material/core';
+import {FormControl, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
-  styleUrls: ['../login-signup.scss']
+  styleUrls: ['../login-signup.scss'],
+  providers: [
+    {provide: DateAdapter, useClass: MomentDateAdapter, deps: [MAT_DATE_LOCALE]},
+    {provide: MAT_DATE_FORMATS, useValue: MAT_MOMENT_DATE_FORMATS},
+  ],
 })
 export class SignupComponent implements OnInit {
   user = new User(null);
@@ -16,6 +25,14 @@ export class SignupComponent implements OnInit {
   agreeTos = true;
 
   referralCode;
+
+  genders = ['Female', 'Male', 'Other'];
+
+  maxDate = moment().subtract(18, 'y');
+  date = new FormControl({
+    value: this.maxDate,
+    disabled: true,
+  }, Validators.required);
 
   constructor(private route: ActivatedRoute,
               private alertService: AlertService,
@@ -27,6 +44,10 @@ export class SignupComponent implements OnInit {
   ngOnInit() {
     this.referralCode = this.route.snapshot.paramMap.get('referralCode');
     this.user.referredBy = this.referralCode;
+  }
+  setDob(event: MatDatepickerInputEvent<Date>) {
+    this.user.dob = event.value.format();
+    console.log(this.user);
   }
 
   signUp() {

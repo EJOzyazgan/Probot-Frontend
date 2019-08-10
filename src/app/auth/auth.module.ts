@@ -1,5 +1,5 @@
 import {NgModule} from '@angular/core';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {CommonModule} from '@angular/common';
 import {SignupComponent} from './signup/signup.component';
 import {AuthRoutingModule} from './auth-routing.module';
@@ -23,6 +23,7 @@ import { FriendRequestComponent } from './friend-request/friend-request.componen
   imports: [
     CommonModule,
     FormsModule,
+    ReactiveFormsModule,
     AuthRoutingModule,
     SharedModule
   ]
