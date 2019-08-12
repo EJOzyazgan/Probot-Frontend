@@ -16,14 +16,17 @@ export class LeaderboardComponent implements OnInit {
 
   topPlayers: Array<User>;
 
+  top100 = false;
+  loaded = false;
+
   user = new User();
+
   constructor(private metricService: MetricService) {
   }
 
   ngOnInit() {
     this.dataSource.paginator = this.paginator;
     this.getUserStanding();
-    this.getTopPlayers();
   }
 
   getTopPlayers() {
@@ -36,8 +39,12 @@ export class LeaderboardComponent implements OnInit {
   }
 
   getUserStanding() {
-    this.metricService.getUserStanding().subscribe( (user: User) => {
+    this.metricService.getUserStanding().subscribe((user: User) => {
       this.user = user;
+
+      if (user) {
+        this.getTopPlayers();
+      }
     });
   }
 
@@ -46,12 +53,28 @@ export class LeaderboardComponent implements OnInit {
     for (let i = 0; i < this.topPlayers.length; i++) {
       topPlayers.push({
         icon: this.topPlayers[i].icon,
-        name: this.topPlayers[i].username,
-        class: this.topPlayers[i].rankClass,
+        username: this.topPlayers[i].username,
+        rankClass: this.topPlayers[i].rankClass,
         rank: this.topPlayers[i].rank
       });
+
+      if (this.top100 === false) {
+        this.top100 = this.user.username === this.topPlayers[i].username;
+      }
     }
     this.dataSource.data = topPlayers;
+    this.loaded = true;
   }
 
+  isUserCellStyle(username) {
+    let style = {};
+
+    if (username === this.user.username) {
+      style = {
+        'background': 'rgba(204, 0, 0, 0.3)'
+      };
+    }
+
+    return style;
+  }
 }
