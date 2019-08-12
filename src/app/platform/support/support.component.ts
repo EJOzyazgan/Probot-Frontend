@@ -48,6 +48,7 @@ export class SupportComponent implements OnInit {
 
     this.authService.sendSupport(body).subscribe(email => {
       this.alertService.success(email['msg']);
+      this.message = '';
     }, error => {
       this.alertService.danger(error['error']['error']['msg']);
     });
