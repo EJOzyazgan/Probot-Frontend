@@ -1,5 +1,5 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {MatPaginator, MatTableDataSource} from '@angular/material';
+import {MatPaginator, MatTable, MatTableDataSource} from '@angular/material';
 import {User} from '../../models/user.model';
 import {MetricService} from '../../services/metric.service';
 
@@ -16,7 +16,7 @@ export class LeaderboardComponent implements OnInit {
 
   topPlayers: Array<User>;
 
-  top100 = false;
+  userOnPage = false;
   loaded = false;
 
   user = new User();
@@ -57,13 +57,9 @@ export class LeaderboardComponent implements OnInit {
         rankClass: this.topPlayers[i].rankClass,
         rank: this.topPlayers[i].rank
       });
-
-      if (this.top100 === false) {
-        this.top100 = this.user.username === this.topPlayers[i].username;
-      }
     }
     this.dataSource.data = topPlayers;
-    this.loaded = true;
+    this.isUserPage({pageIndex: 0, pageSize: 10});
   }
 
   isUserCellStyle(username) {
@@ -76,5 +72,20 @@ export class LeaderboardComponent implements OnInit {
     }
 
     return style;
+  }
+
+  isUserPage(event) {
+    const pageRange = (event.pageIndex + 1) * event.pageSize;
+    this.userOnPage = false;
+    this.loaded = false;
+
+    for (let i = event.pageIndex * event.pageIndex; i < pageRange && i < this.topPlayers.length; i++) {
+      if (this.user.username === this.topPlayers[i].username) {
+        this.userOnPage = true;
+        break;
+      }
+    }
+
+    this.loaded = true;
   }
 }
