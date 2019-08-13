@@ -34,7 +34,10 @@ export class EmailVerificationComponent implements OnInit {
       this.validating = true;
       this.authService.validateEmail(this.token).subscribe(valid => {
         this.isValid = true;
-      }, err => {});
+      }, err => {
+        this.alertService.warning('Invalid Email');
+        return this.router.navigate(['/auth']);
+      });
     }
   }
 

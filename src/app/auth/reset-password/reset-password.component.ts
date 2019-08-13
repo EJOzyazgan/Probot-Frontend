@@ -23,7 +23,8 @@ export class ResetPasswordComponent implements OnInit {
 
   ngOnInit() {
     this.token = this.route.snapshot.paramMap.get('token');
-    this.authService.validateResetPassword(this.token).subscribe(user => {
+    this.authService.setJWT(this.token);
+    this.authService.validateResetPassword().subscribe(user => {
       this.user = user;
       this.user.password = null;
     }, (err) => {
@@ -47,6 +48,7 @@ export class ResetPasswordComponent implements OnInit {
 
       this.authService.patchUser(this.user).subscribe(user => {
         this.alertService.success('Password reset successfully');
+        this.authService.removeTokens();
         return this.router.navigate(['/auth/login']);
       });
     } else {

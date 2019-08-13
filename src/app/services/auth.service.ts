@@ -26,14 +26,8 @@ export class AuthService {
     return this.http.get(this.authUrl + `/reset-password/${email}`);
   }
 
-  validateResetPassword(token) {
-    const options = {
-      headers: new HttpHeaders()
-        .set('Authorization', 'Bearer ' + token)
-        .set('Content-Type', 'application/json')
-    };
-
-    return this.http.get(this.authUrl + `/validate/reset-password/${token}`, options);
+  validateResetPassword() {
+    return this.http.get(this.authUrl + `/validate/reset-password/`);
   }
 
   validateEmail(token) {
@@ -68,6 +62,10 @@ export class AuthService {
     localStorage.setItem(environment.userTokenKey, tokens.token);
     localStorage.setItem(environment.userTokenExpire, tokens.expiresAt);
     localStorage.setItem(environment.userRefreshToken, tokens.refreshToken);
+  }
+
+  setJWT(token) {
+    localStorage.setItem(environment.userTokenKey, token);
   }
 
   removeTokens() {
