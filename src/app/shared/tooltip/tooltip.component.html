@@ -1,11 +1,12 @@
 <div *ngIf="shouldShow" [ngStyle]="getPosition()">
-  <div *ngIf="getShow('password')" class="tooltip">
-    1) At-least 1 uppercase and lowercase<br>
-    2) At-least 1 number<br>
-    3) At-least 1 symbol (!@#$%^&*)
+  <div *ngIf="getShow('password')" class="tooltip" [style.color]="controller.valid ? 'green' : 'red'">
+    <div>1) At-least 1 uppercase and lowercase</div>
+    <div>2) At-least 1 number</div>
+    <div>3) At-least 1 symbol (!@#$%^&*)</div>
+    <div>4) At-least 8 characters long</div>
   </div>
 
-  <div *ngIf="getShow('email')" class="tooltip">
-    Must be a valid email
+  <div *ngIf="getShow('email')" class="tooltip" [style.color]="controller.valid ? 'green' : 'red'">
+    <div>Must be a valid email</div>
   </div>
 </div>

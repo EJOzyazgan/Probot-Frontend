@@ -11,6 +11,7 @@ export class TooltipComponent implements OnInit {
   @Input() position;
   @Input() show;
   @Input() shouldShow;
+  @Input() controller;
 
   constructor() {
   }
