@@ -22,15 +22,18 @@ import {FormControl, Validators} from '@angular/forms';
 export class SignupComponent implements OnInit {
   user = new User(null);
   confirmPassword = '';
-  agreeTos = true;
+  agreeTos = false;
+  confirmAge = false;
+
+  showTos = false;
 
   referralCode;
 
   genders = ['Female', 'Male', 'Other'];
 
-  maxDate = moment().subtract(18, 'y');
+  minDate = moment().subtract(18, 'y');
   date = new FormControl({
-    value: this.maxDate,
+    value: this.minDate,
     disabled: true,
   }, Validators.required);
 
@@ -45,40 +48,39 @@ export class SignupComponent implements OnInit {
     this.referralCode = this.route.snapshot.paramMap.get('referralCode');
     this.user.referredBy = this.referralCode;
   }
+
   setDob(event: MatDatepickerInputEvent<Date>) {
-    this.user.dob = event.value.format();
-    console.log(this.user);
+    this.user.dob = event.value;
   }
 
   signUp() {
-    if (this.user.email && this.user.email.trim() !== '' &&
+    if (this.user.password !== this.confirmPassword) {
+      return this.alertService.warning('Passwords Do Not Match');
+    } else if (this.user.password.length < 8) {
+      return this.alertService.warning('Password must be at least 8 characters long');
+    }
+    this.authService.checkExists(this.user.email, this.user.username).subscribe(user => {
+      if (user['exists']) {
+        return this.alertService.warning(user['msg']);
+      }
+
+      this.authService.signUp(this.user).subscribe(() => {
+        this.dataService.changeEmail(this.user.email);
+        return this.router.navigate(['/auth/email-verification']);
+      }, err => {
+        this.alertService.danger(err['error']['errors']['email']['message']);
+      });
+    });
+  }
+
+  isValid() {
+    return this.user.email && this.user.email.trim() !== '' &&
       this.user.password && this.user.password.trim() !== '' &&
       this.user.username && this.user.username.trim() !== '' &&
       this.confirmPassword && this.confirmPassword.trim() !== '' &&
-      this.agreeTos) {
-
-
-      if (this.user.password !== this.confirmPassword) {
-        return this.alertService.warning('Passwords Do Not Match');
-      } else if (this.user.password.length < 8) {
-        return this.alertService.warning('Password must be at least 8 characters long');
-      }
-      this.authService.checkExists(this.user.email, this.user.username).subscribe(user => {
-        if (user['exists']) {
-          return this.alertService.warning(user['msg']);
-        }
-
-        this.authService.signUp(this.user).subscribe(() => {
-          this.dataService.changeEmail(this.user.email);
-          return this.router.navigate(['/auth/email-verification']);
-        }, err => {
-          this.alertService.danger(err['error']['errors']['email']['message']);
-        });
-      });
-    } else {
-      this.alertService.warning('Please Fill In All Fields');
-    }
+      this.agreeTos && this.confirmAge;
   }
+
 
   setValue(value, field) {
     switch (field) {
@@ -92,5 +94,10 @@ export class SignupComponent implements OnInit {
         this.user.email = value;
         break;
     }
+  }
+
+  toggleTos() {
+    this.showTos = !this.showTos;
+    console.log(this.showTos);
   }
 }
