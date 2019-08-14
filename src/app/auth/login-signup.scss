@@ -69,6 +69,47 @@
   margin: auto;
 }
 
+.center-content {
+  width: fit-content;
+  margin: auto;
+}
+
+.popup-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  z-index: 100;
+}
+
+.tos-header {
+  color: #cc0000;
+  margin: auto;
+  width: fit-content;
+}
+
+.close-btn {
+  top: -5px;
+  right: -5px;
+  position: absolute;
+  color: #cc0000;
+}
+
+.checkbox-label {
+  margin-left: 10px;
+}
+
+.label-button {
+  color: dodgerblue;
+  text-decoration: underline;
+}
+
+.label-button:hover {
+  cursor: pointer;
+  color: blue;
+}
+
 .field-input {
   width: 100%;
 }
