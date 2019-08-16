@@ -98,6 +98,5 @@ export class SignupComponent implements OnInit {
 
   toggleTos() {
     this.showTos = !this.showTos;
-    console.log(this.showTos);
   }
 }
