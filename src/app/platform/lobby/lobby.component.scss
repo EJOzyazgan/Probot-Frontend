@@ -50,6 +50,25 @@
   font-size: 16px;
 }
 
+.checks-container {
+
+}
+
+.check-item {
+  margin: 10px;
+  font-size: 18px;
+  display: flex;
+  text-align: left;
+}
+
+.check {
+  width: 130px;
+}
+
+.check-spinner {
+  stroke: blue;
+}
+
 @media only screen and (max-width: 950px) {
   .games-container {
     display: block;
