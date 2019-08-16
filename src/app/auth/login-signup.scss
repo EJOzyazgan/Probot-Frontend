@@ -75,18 +75,25 @@
 }
 
 .popup-container {
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 10px;
   z-index: 100;
+  max-height: 90%;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .tos-header {
   color: #cc0000;
   margin: auto;
   width: fit-content;
+}
+
+.tos-container {
+  max-height: 100%;
 }
 
 .close-btn {
