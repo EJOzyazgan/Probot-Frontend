@@ -7,6 +7,32 @@
         </mat-card-title>
         <mat-card-content>
           <button mat-raised-button class="play-btn" (click)="startSandBox()">Play</button>
+          <div class="checks-container" *ngIf="checkingSandbox">
+            <div class="check-item" [style.color]="checkingBot ? 'blue' : botConnected ? 'green' : 'red'">
+              <div *ngIf="!checkingBot">
+                <mat-icon *ngIf="!botConnected">close</mat-icon>
+                <mat-icon *ngIf="botConnected">check</mat-icon>
+              </div>
+              <mat-spinner *ngIf="checkingBot"
+                           class="check-spinner"
+                           [diameter]="20"
+                           [color]="'accent'"></mat-spinner>
+              <div class="check">Bot Connected</div>
+            </div>
+            <div *ngIf="botMessage" [style.color]="'red'">{{botMessage}}</div>
+            <div class="check-item" [style.color]="checkingGame ? 'blue' : gameCompleted ? 'green' : 'red'">
+              <div *ngIf="!checkingGame">
+                <mat-icon *ngIf="!gameCompleted">close</mat-icon>
+                <mat-icon *ngIf="gameCompleted">check</mat-icon>
+              </div>
+              <mat-spinner *ngIf="checkingGame"
+                           class="check-spinner"
+                           [diameter]="20"
+                           [color]="'accent'"></mat-spinner>
+              <div class="check">Game Complete</div>
+              <div class="check" *ngIf="gameMessage" [style.color]="'red'">{{gameMessage}}</div>
+            </div>
+          </div>
         </mat-card-content>
       </div>
     </mat-card>
