@@ -42,6 +42,8 @@ export class AdminDashboardComponent implements OnInit {
     ['Referral Rate', 'referralRate'],
     ['Referral Activation Rate', 'referralActivationRate'],
     ['Activation Rate', 'activationRate'],
+    ['Active Bots', 'activeBots'],
+    ['Active Tables', 'activeTables'],
   ];
 
   metricType = 'platformHandPlayed';
@@ -131,14 +133,12 @@ export class AdminDashboardComponent implements OnInit {
   }
 
   getTag() {
-    if (this.metricType === 'platformHandPlayed') {
-      return 'Platform Hands Played';
-    } else if (this.metricType === 'referralRate') {
-      return 'Referral Rate';
-    } else if (this.metricType === 'referralActivationRate') {
-      return 'Referral Activation Rate';
+    for (let i = 0; i < this.metrics.length; i++) {
+      if (this.metricType === this.metrics[i][1]) {
+        return this.metrics[i][0];
+      }
     }
-    return 'Activation Rate';
+    return 'Value';
   }
 
   mockData() {
@@ -146,7 +146,7 @@ export class AdminDashboardComponent implements OnInit {
     const end = moment();
 
     const data = [];
-    data.push(['Date', 'Winnings']);
+    data.push(['Date', 'Platform Hands Played']);
 
     while (start.diff(end) < 0) {
       data.push([start.format('M-D-YY'), 0]);
