@@ -38,9 +38,18 @@ export class DashboardComponent implements OnInit {
       series: {
         0: {color: '#cc0000'}
       },
+      hAxis: {
+        showTextEvery: 2,
+        slantedText: true,
+      },
       legend: {position: 'none'},
-      width: 950,
+      width:1000,
       height: 325,
+      chartArea: {
+        width: '90%',
+        height: '70%',
+        right: 5,
+      },
       animation: {
         startup: true,
         duration: 800,
@@ -165,7 +174,7 @@ export class DashboardComponent implements OnInit {
     const end = moment();
 
     const data = [];
-    data.push(['Date', 'Winnings']);
+    data.push(['Date', 'Total Winnings']);
 
     while (start.diff(end) < 0) {
       data.push([start.format('M-D-YY'), 0]);

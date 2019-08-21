@@ -59,6 +59,15 @@ export class BotComponent implements OnInit {
       legend: {position: 'none'},
       width: 1300,
       height: 730,
+      hAxis: {
+        showTextEvery: 2,
+        slantedText: true,
+      },
+      chartArea: {
+        width: '90%',
+        height: '80%',
+        right: 10,
+      },
       animation: {
         startup: true,
         duration: 800,
