@@ -146,7 +146,7 @@ export class BotComponent implements OnInit {
     data.push(['Date', this.getTag()]);
 
     for (let i = 0; i < metrics.length; i++) {
-      const date = moment(metrics[i].createdAt).format('M-D HH:mm');
+      const date = moment(metrics[i].createdAt).format(this.getFormat());
       data.push([date, metrics[i].value]);
     }
 
@@ -157,13 +157,20 @@ export class BotComponent implements OnInit {
     }
   }
 
-  getTag() {
-    if (this.metricType === 'totalWinnings') {
-      return 'Total Winnings';
-    } else if (this.metricType === 'handWon') {
-      return 'Hands Won';
+  getFormat() {
+    if (this.metricTimePeriod === 'day') {
+      return 'hh:mm a';
     }
-    return 'Hands Played';
+    return 'M-D-YY'
+  }
+
+  getTag() {
+    for (let i = 0; i < this.metrics.length; i++) {
+      if (this.metricType === this.metrics[i][1]) {
+        return this.metrics[i][0];
+      }
+    }
+    return 'Value';
   }
 
   mockData() {
