@@ -127,7 +127,7 @@ export class DashboardComponent implements OnInit {
     data.push(['Date', 'Total Winnings']);
 
     for (let i = 0; i < metrics.length; i++) {
-      const date = moment(metrics[i].createdAt).format('M-D HH:mm');
+      const date = moment(metrics[i].createdAt).format('M-D-YY');
       data.push([date, metrics[i].value]);
     }
 
