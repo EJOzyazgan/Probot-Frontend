@@ -1,11 +1,11 @@
-import {Component, OnInit} from '@angular/core';
-import {TableService} from '../../services/table.service';
-import {AlertService} from 'ngx-alerts';
-import {Bot} from '../../models/bot.model';
-import {BotService} from '../../services/bot.service';
-import {User} from '../../models/user.model';
-import {AuthService} from '../../services/auth.service';
-import {Socket} from 'ngx-socket-io';
+import { Component, OnInit } from '@angular/core';
+import { TableService } from '../../services/table.service';
+import { AlertService } from 'ngx-alerts';
+import { Bot } from '../../models/bot.model';
+import { BotService } from '../../services/bot.service';
+import { User } from '../../models/user.model';
+import { AuthService } from '../../services/auth.service';
+import { Socket } from 'ngx-socket-io';
 
 @Component({
   selector: 'app-lobby',
@@ -20,19 +20,19 @@ export class LobbyComponent implements OnInit {
 
   checkingSandbox = false;
 
-  checkingBot = true;
+  checkingBot = false;
   botConnected = false;
   botMessage;
 
-  checkingGame = true;
+  checkingGame = false;
   gameCompleted = false;
   gameMessage;
 
   constructor(private botService: BotService,
-              private authService: AuthService,
-              private tableService: TableService,
-              private alertService: AlertService,
-              private socket: Socket) {
+    private authService: AuthService,
+    private tableService: TableService,
+    private alertService: AlertService,
+    private socket: Socket) {
   }
 
   ngOnInit() {
@@ -60,11 +60,15 @@ export class LobbyComponent implements OnInit {
     if (this.bot.id !== null) {
       this.checkingGame = true;
       this.checkingBot = true;
+      this.botMessage= null;
+      this.gameMessage = null;
       this.tableService.startSandboxTable(this.bot).subscribe(res => {
         this.checkingSandbox = true;
         this.alertService.success(res['msg']);
       }, error => {
         this.alertService.danger(error.error.msg);
+        this.checkingGame = false;
+        this.checkingBot = false;
       });
     }
   }

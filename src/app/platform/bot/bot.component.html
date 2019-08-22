@@ -4,6 +4,7 @@
       <mat-card class="bot-info-container mat-elevation-z6">
         <mat-card-title class="section-header">
           Bot
+          <mat-icon *ngIf="bot.isActive" [style.color]="'green'">offline_pin</mat-icon>
           <fa *ngIf="bot.id !== undefined" name="edit" class="edit-btn" (click)="toggleEdit()"></fa>
         </mat-card-title>
         <mat-card-content>

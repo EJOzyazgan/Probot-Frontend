@@ -10,12 +10,12 @@
           <form class="bot-info-form">
             <mat-form-field class="bot-info-input">
               <input matInput [disabled]="!isEditing && bot.id !== undefined" name="bot-name" placeholder="Bot Name"
-                     [(ngModel)]="bot.name">
+                [(ngModel)]="bot.name">
             </mat-form-field>
 
             <mat-form-field class="bot-info-input">
               <input matInput [disabled]="!isEditing && bot.id !== undefined" name="bot-url" placeholder="Bot URL"
-                     [(ngModel)]="bot.serviceUrl">
+                [(ngModel)]="bot.serviceUrl">
             </mat-form-field>
 
             <mat-form-field class="bot-analytics-input">
@@ -31,12 +31,12 @@
             <button *ngIf="bot.id === undefined" [disabled]="formCompleted()" mat-raised-button (click)="createBot()">
               Add Bot
             </button>
-            <button   mat-raised-button *ngIf="!isEditing && bot.id !== undefined" (click)="deselect()">Deselect</button>
+            <button mat-raised-button *ngIf="!isEditing && bot.id !== undefined" (click)="deselect()">Deselect</button>
 
             <div *ngIf="isEditing">
               <button *ngIf="isEditing" mat-raised-button [disabled]="formCompleted()" (click)="patchBot()">Save
-            </button>
-            <button *ngIf="isEditing" mat-raised-button class="bot-action-btn" (click)="toggleEdit()">Cancel</button>
+              </button>
+              <button *ngIf="isEditing" mat-raised-button class="bot-action-btn" (click)="toggleEdit()">Cancel</button>
             </div>
           </div>
         </mat-card-content>
@@ -69,11 +69,14 @@
 
           <ng-container matColumnDef="active">
             <th mat-header-cell *matHeaderCellDef>Active</th>
-            <td mat-cell *matCellDef="let element"> {{element.isActive}} </td>
+            <td mat-cell *matCellDef="let element">
+              <mat-icon *ngIf="element.isActive" [style.color]="'green'">offline_pin</mat-icon>
+            </td>
           </ng-container>
 
           <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
-          <tr mat-row class="selectable-row" *matRowDef="let row; columns: displayedColumns;" (click)="botSelected(row)"></tr>
+          <tr mat-row class="selectable-row" *matRowDef="let row; columns: displayedColumns;"
+            (click)="botSelected(row)"></tr>
         </table>
       </mat-card>
     </div>
