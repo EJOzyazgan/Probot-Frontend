@@ -18,6 +18,8 @@ export class LobbyComponent implements OnInit {
 
   buyin;
 
+  buyins = [100, 200, 300, 400, 500];
+
   checkingSandbox = false;
 
   checkingBot = false;
@@ -37,8 +39,7 @@ export class LobbyComponent implements OnInit {
 
   ngOnInit() {
     this.socket.on('connect', (data) => {
-      this.getUser();
-      this.getBot();
+
     });
 
     this.socket.on('sandboxUpdate', data => {
@@ -54,13 +55,16 @@ export class LobbyComponent implements OnInit {
         this.gameMessage = data.gameMessage;
       }
     });
+
+    this.getUser();
+    this.getBot();
   }
 
   startSandBox() {
     if (this.bot.id !== null) {
       this.checkingGame = true;
       this.checkingBot = true;
-      this.botMessage= null;
+      this.botMessage = null;
       this.gameMessage = null;
       this.tableService.startSandboxTable(this.bot).subscribe(res => {
         this.checkingSandbox = true;
