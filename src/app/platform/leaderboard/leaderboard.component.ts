@@ -79,7 +79,7 @@ export class LeaderboardComponent implements OnInit {
     this.userOnPage = false;
     this.loaded = false;
 
-    for (let i = event.pageIndex * event.pageIndex; i < pageRange && i < this.topPlayers.length; i++) {
+    for (let i = event.pageIndex * event.pageSize; i < pageRange && i < this.topPlayers.length; i++) {
       if (this.user.username === this.topPlayers[i].username) {
         this.userOnPage = true;
         break;
