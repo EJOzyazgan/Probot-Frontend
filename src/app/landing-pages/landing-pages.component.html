@@ -1,48 +1,44 @@
 <div>
   <mat-toolbar>
-    <div class="nav-bar" [ngStyle]="navStyle()">
-      <div class="menu-btn">
-        <!--<button mat-icon-button (click)="sidenav.toggle()">-->
-        <!--<mat-icon class="md-36">menu</mat-icon>-->
-        <!--</button>-->
+    <div class="nav-bar">
+      <div class="menu-btn" fxShow="true" fxHide.gt-sm="true">
+        <button mat-icon-button [matMenuTriggerFor]="appMenu">
+          <i class="material-icons">menu</i>
+        </button>
       </div>
       <a class="home-link" [routerLink]="['./home']">
         <img class="companyLogo" src="../../assets/img/logo.png">
       </a>
       <div class="toolbar-btns">
-        <!--<div class="toolbar-btn">-->
-          <!--<a class="toolbar-link" [routerLink]="['../auth/login']">Login</a>-->
-          <!--or-->
-          <!--<a class="toolbar-link" [style.color]="'#cc0000'" [style.font-weight]="'bold'" [routerLink]="['../auth/signup']">Sign Up</a>-->
-        <!--</div>-->
-        <!--<div class="toolbar-btn" [routerLinkActive]="['active-link']">-->
-        <!--<a class="toolbar-link" [routerLink]="['./events']">Events</a>-->
-        <!--</div>-->
-        <!--<div class="toolbar-btn" [routerLinkActive]="['active-link']">-->
-        <!--<a class="toolbar-link" [routerLink]="['./about']">About</a>-->
-        <!--</div>-->
+        <div class="toolbar-btn" [routerLinkActive]="['active-link']">
+          <a class="toolbar-link" [routerLink]="['./home']">Home</a>
+        </div>
+        <div class="toolbar-btn" [routerLinkActive]="['active-link']">
+          <a class="toolbar-link" [routerLink]="['./getting-started']">Getting Started</a>
+        </div>
+        <!-- <div class="toolbar-btn">
+          <a class="toolbar-link" [routerLink]="['../auth/login']">Login</a>
+          <a class="toolbar-link" [style.color]="'#cc0000'" [style.font-weight]="'bold'"
+            [routerLink]="['../auth/signup']">Sign Up</a>
+        </div> -->
       </div>
     </div>
   </mat-toolbar>
 
-  <mat-sidenav-container fxFlexFill class="example-container">
-    <mat-sidenav #sidenav mode="over" opened="false">
-      <div class="side-nav-btns">
-        <!--<div class="side-nav-btn" [routerLinkActive]="['active-link']">-->
-        <!--<a class="toolbar-link" (click)="sidenav.toggle()" [routerLink]="['./home']">Home</a>-->
-        <!--</div>-->
-        <!--<div class="side-nav-btn" [routerLinkActive]="['active-link']">-->
-        <!--<a class="toolbar-link" (click)="sidenav.toggle()" [routerLink]="['./events']">Events</a>-->
-        <!--</div>-->
-        <!--<div class="side-nav-btn" [routerLinkActive]="['active-link']">-->
-        <!--<a class="toolbar-link" (click)="sidenav.toggle()" [routerLink]="['./about']">About</a>-->
-        <!--</div>-->
-      </div>
-    </mat-sidenav>
-    <mat-sidenav-content fxFlexFill>
+  <mat-menu #appMenu="matMenu">
+    <div class="menu-item" [routerLink]="['./home']" [routerLinkActive]="['active-link']">
+      Home
+    </div>
+    <div class="menu-item" [routerLink]="['./getting-started']" [routerLinkActive]="['active-link']">
+      Getting Started
+    </div>
+  </mat-menu>
+
+  <div class="main-content" fxLayout="row">
+    <div fxFlex="grow">
       <router-outlet></router-outlet>
-    </mat-sidenav-content>
-  </mat-sidenav-container>
+    </div>
+  </div>
 
   <div class="footer">
     <div class="contact-section">
@@ -67,17 +63,17 @@
         <div class="contact-icons">
           <div class="contact-icon" (click)="SendSocialEvent('twitter')">
             <a href="https://twitter.com/probotplay">
-              <fa name="twitter"></fa>
+              <fa name="twitter" class="fa-lg"></fa>
             </a>
           </div>
           <div class="contact-icon" (click)="SendSocialEvent('facebook')">
             <a href="https://www.facebook.com/probotplayground/">
-              <fa name="facebook-f"></fa>
+              <fa name="facebook-f" class="fa-lg"></fa>
             </a>
           </div>
           <div class="contact-icon" (click)="SendSocialEvent('linkedin')">
             <a href="https://www.linkedin.com/company/probot-playground-inc/">
-              <fa name="linkedin"></fa>
+              <fa name="linkedin" class="fa-lg"></fa>
             </a>
           </div>
         </div>

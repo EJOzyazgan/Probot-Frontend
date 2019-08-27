@@ -9,6 +9,7 @@ const landingPagesRoutes: Routes = [
   { path: '', component: LandingPagesComponent, children: [
       { path: '', redirectTo: 'home', pathMatch: 'full'},
       { path: 'home', component: HomeComponent},
+      {path: 'getting-started', loadChildren: () => import('./getting-started/getting-started.module').then(m => m.GettingStartedModule)},
       // { path: 'about', component: AboutComponent},
       // { path: 'events', component: EventComponent}
     ]}

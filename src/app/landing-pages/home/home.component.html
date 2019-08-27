@@ -1,38 +1,44 @@
 <div class="main-container">
-  <div class="banner">
-    <div class="banner-content">
-      <div class="banner-header">
-        Next Generation Gaming
-      </div>
-      <div class="banner-sub-text">
-        Revolutionizing online poker <br>
-        through automated gameplay
-      </div>
-    </div>
+  <div class="slideshow-container" [ngStyle]="getSlideshowHeight()">
+    <slideshow [autoPlay]="true" [imageUrls]="imageUrls" [autoPlayInterval]=5000 [showDots]=true>
+    </slideshow>
   </div>
 
-  <div class="social-media">
-    <div class="social-header">Stay in Touch</div>
-    <div class="social-sub-text">Follow our social media to stay up to date on platform news</div>
-    <div class="social-icons">
-      <div class="social-icon" (click)="SendSocialEvent('twitter')">
-        <a href="https://twitter.com/probotplay">
-          <fa name="twitter" size="3x"></fa>
-        </a>
+  <div class="signup-action">
+    <div class="countdown-title" *ngIf="!canSignup && countLoaded">Tables Live In!!!</div>
+    <div class="countdown-clock" *ngIf="!canSignup && countLoaded">
+      <div class="time-unit">
+        <div class="value">
+          {{days}}
+        </div>
+        <div class="unit">
+          Days
+        </div>
       </div>
-      <div class="social-icon" (click)="SendSocialEvent('facebook')">
-        <a href="https://www.facebook.com/probotplayground/">
-          <fa name="facebook-f" size="3x"></fa>
-        </a>
+      <div class="time-unit">
+        <div class="value">
+          {{hours}}
+        </div>
+        <div class="unit">
+          Hours
+        </div>
       </div>
-      <div class="social-icon" (click)="SendSocialEvent('linkedin')">
-        <a href="https://www.linkedin.com/company/probot-playground-inc/">
-          <fa name="linkedin" size="3x"></fa>
-        </a>
+      <div class="time-unit">
+        <div class="value">
+          {{minutes}}
+        </div>
+        <div class="unit">
+          Minutes
+        </div>
       </div>
-    </div>
-    <div class="bounce">
-      <fa name="chevron-down" size="2x"></fa>
+      <div class="time-unit last">
+        <div class="value">
+          {{seconds}}
+        </div>
+        <div class="unit">
+          Seconds
+        </div>
+      </div>
     </div>
   </div>
 
