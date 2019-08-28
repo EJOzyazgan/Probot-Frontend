@@ -1,0 +1,71 @@
+.active {
+    color: #cc0000;
+    text-decoration: underline;
+}
+
+.menu-btn {
+    margin: 10px;
+    width: fit-content;
+}
+
+.menu-btn:hover {
+    cursor: pointer;
+}
+
+.menu {
+    width: fit-content;
+    margin: auto;
+    display: flex;
+    font-size: 24px;
+}
+
+.header {
+    width: fit-content;
+    margin: auto;
+}
+
+.main-container {
+    max-width: 700px;
+    margin: auto;
+    font-size: 18px;
+}
+
+.sub-cat {
+    width: fit-content;
+    margin: 10px auto;
+}
+
+.betting-liast {
+    width: 95%;
+    margin: auto;
+}
+
+.item {
+    margin: 10px
+}
+
+.languages {
+    display: flex;
+    width: fit-content;
+    margin: 20px auto;
+}
+
+.language-icon {
+    width: 100px;
+    margin: 10px;
+}
+
+.game-data {
+    margin: auto;
+    width: fit-content;
+}
+
+.video {
+    width: 100%;
+}
+
+@media only screen and (max-width: 700px) {
+    .main-container {
+        margin: auto 10px;
+    }
+  }

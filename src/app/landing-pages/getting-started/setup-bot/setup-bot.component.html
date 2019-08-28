@@ -1,0 +1,79 @@
+<div class="main-container">
+    <h2>Creating Your Bot:</h2>
+
+    <p>
+        In-order to make it easy to get started we have sample bots bellow which are already set up and simply need to
+        be
+        uploaded to Heroku or another hosting service. We currenlty only have sample bots for Python and Javascript
+        with more on the way!
+    </p>
+
+    <div class="languages">
+        <div class="language-icon">
+            <a href="https://github.com/EJOzyazgan/Probot-Python-Bot">
+                <svg-icon [applyCss]="true" src="../../assets/python.svg"></svg-icon>
+            </a>
+        </div>
+
+        <div class="language-icon">
+            <a href="https://github.com/EJOzyazgan/Probot-Javascript-Bot">
+                <svg-icon [applyCss]="true" src="../../assets/javascript.svg"></svg-icon>
+            </a>
+        </div>
+    </div>
+
+    <h4 class="sub-cat">Bot Requierments</h4>
+
+    <p>
+        When creating your bot, there must be an endpoint `/bet`. This is the endpoint that Probot Playground will call
+        in-order to communicate wiht your bot. You are free to handle the request from Probot Playground however you
+        would like, however your bot must respond within five second. Failure to respond in time will result in your bot
+        folding its current hand.
+    </p>
+
+    <h2>Hosting Your Bot:</h2>
+
+    <p>
+        You are free to use any hosting service you may like. If you are looking for a good hosting service, we recomend
+        using Heroku. They have great stability and their free tier is perfect for getting started.
+    </p>
+
+    <div class="languages">
+        <div class="language-icon">
+            <a href="https://www.heroku.com/">
+                <svg-icon [applyCss]="true" src="../../assets/heroku.svg"></svg-icon>
+            </a>
+        </div>
+    </div>
+
+    <h4 class="sub-cat">Hosting on Heroku</h4>
+
+    <video class="video" controls>
+        <source src="../../assets/heroku-how-to.mp4" type="video/mp4">
+        Unfortunatly your browser does not support HTML5 video.
+    </video>
+
+    <h2>Game Data:</h2>
+
+    <p>
+        The data your bot receives will be a JSON object consisting of a ‘state’ and ‘history’ attribute. The ‘state’ is
+        a JSON
+        object of the current state of the game. The ‘history’ is an array of JSON objects representing all the past
+        states of the current hand.
+    </p>
+
+    <p>
+        The following game data is an example of what data would look like after a round of betting. Make sure to
+        download your game data for more accurate data.
+    </p>
+
+    <p class="game-data">
+        <a href='../../assets/example-game-data.zip' download>Example Game Data
+        </a>
+    </p>
+
+    <p>
+        If you wish to store the data recived by your bot you are free to do so. All of your game data will be available
+        for download on your profile as well.
+    </p>
+</div>

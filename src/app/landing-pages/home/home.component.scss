@@ -3,28 +3,43 @@
   background-color: #f6f6f6;
 }
 
-.banner {
-  background-image: url(../../../assets/img/banner.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 70vh;
+.slideshow-container {
+
 }
 
-.banner-content {
+.signup-action {
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+
+.image-slider {
+  background: black;
+}
+
+.countdown-title {
+  font-size: 48px;
+  margin-bottom: 15px;
   color: #cc0000;
-  text-align: left;
-  float: left;
-  margin-left: 30px;
-  margin-top: 20vh;
 }
 
-.banner-header {
-  font-size: 80px;
+.countdown-clock {
+  font-size: 40px;
+  display: flex;
+  width: fit-content;
+  margin: auto;
 }
 
-.banner-sub-text {
-  margin-top: 20px;
-  font-size: 50px;
+.time-unit {
+  padding: 15px;
+  border-left: 2px solid black;
+}
+
+.last {
+  border-right: 2px solid black;
+}
+
+.value {
+  color: #cc0000;
 }
 
 .social-media {
@@ -153,7 +168,7 @@
 .feature-1, .feature-2 {
   margin: auto;
   border-radius: 20px;
-  box-shadow: 0 0 15px 5px #cc0000;
+  border: 3px solid #cc0000;
   padding: 20px;
   width: 30%;
   cursor: pointer;
@@ -267,5 +282,59 @@
 
   .logo-robot {
     width: 400px;
+  }
+
+  .countdown-title {
+    font-size: 32px;
+  }
+  
+  .countdown-clock {
+    font-size: 28px;
+  }
+
+  .description-header {
+    font-size: 28px;
+  }
+
+  .description-sub-text {
+    font-size: 22px;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .countdown-title {
+    font-size: 26px;
+  }
+  
+  .countdown-clock {
+    font-size: 20px;
+  }
+
+  .logo-robot {
+    width: 200px;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  .countdown-title {
+    font-size: 22px;
+  }
+  
+  .countdown-clock {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .countdown-title {
+    font-size: 22px;
+  }
+  
+  .countdown-clock {
+    font-size: 14px;
+  }
+
+  .feature-img {
+    height: 150px;
   }
 }

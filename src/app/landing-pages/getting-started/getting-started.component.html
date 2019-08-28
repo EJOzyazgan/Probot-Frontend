@@ -1,0 +1,10 @@
+<div class="menu">
+    <div [routerLink]="[ './setup' ]" [routerLinkActive]="['active']" class="menu-btn">Get Setup</div>
+    <div [routerLink]="[ './poker-rules' ]" [routerLinkActive]="['active']" class="menu-btn">Poker Rules</div>
+</div>
+
+<div class="main-content" fxLayout="row">
+    <div fxFlex="grow">
+        <router-outlet></router-outlet>
+    </div>
+</div>

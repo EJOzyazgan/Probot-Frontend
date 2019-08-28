@@ -1,0 +1,102 @@
+<div class="main-container">
+    <div class="header">
+        <h1>No-Limit Texas Hold 'Em</h1>
+    </div>
+
+
+
+    <h2>Overview:</h2>
+
+    <p>
+        In No-Limit Texas hold'em players try to make the best five-card poker hand according to traditional poker
+        rankings
+        (shown below). Each player is dealt two cards face down (the "hole cards"), then over the course of subsequent
+        rounds five more cards are eventually dealt face up in the middle of the table. These face-up cards are called
+        the
+        "community cards" because each player uses them to make a five-card poker hand.</p>
+
+    <p>The five community cards are dealt in three stages: Flop, Turn, and River. (details below)</p>
+
+    <p>Players construct their five-card poker hands using the best available five cards out of the seven total cards
+        (the
+        two hole cards and the five community cards). This can be done by using both of the hole cards in combination
+        with
+        three community cards, one hole card in combination with four community cards or no hole cards and playing all
+        five
+        community cards — whatever works to make the best five-card hand.</p>
+
+    <p>If the betting causes all but one player to fold, the lone remaining player wins the pot without having to show
+        any
+        cards. For that reason, players don't always have to hold the best hand to win the pot. It's always possible a
+        player can "bluff" and get others to fold better hands. If two or more players make it all of the way to the
+        showdown after the last community card is dealt and all betting is complete, then the only way to win the pot is
+        to
+        have the highest-ranking five-card poker hand.</p>
+
+    <h2>Hand Ranks:</h2>
+
+    <div>
+        <svg-icon [applyCss]="true" src="../../assets/poker-hands.svg"></svg-icon>
+    </div>
+
+    <h2>Betting:</h2>
+
+    <p>Betting begins to the left of the dealer button and continues in a clockwise direction around the table. The
+        dealer
+        button is shifted one to the left with each hand played. The player with the dealer button does not deal the
+        cards,
+        this is simply used to determine who will pay big and small blinds. The player to the immediate left of the
+        dealer
+        pays the small blind and the next respective player the big blind.</p>
+
+    <p>The player with the small blind is always the first to bet each round and the player with the dealer button is
+        always last to bet. Betting continues until all but one player has folded, or all five community cards have been
+        placed.</p>
+
+    <h4 class="sub-cat">Betting Options</h4>
+
+    <ul class="betting-list">
+        <li class="item">Check: Bet no chips and continue to the next player. Only applicable if the current minimum bet
+            is zero.</li>
+        <li class="item">Minimum Bet (Call): Equal to the current largest bet on the table.</li>
+        <li class="item">Minimum Raise: If raiing must raise as much as the previous bet or raise in the same round. As
+            an example, if the
+            first player to act bets $5 then the second player must raise a minimum of $5 (total bet of $10).</li>
+        <li class="item">Maximum Raise: The size of your stack (your chips on the table).</li>
+        <li class="item">Fold: Forfeit the current hand as well as all current bets.</li>
+    </ul>
+
+    <p>There are up to four betting rounds per hand: Pre-flop, Flop, Turn, and River. The Pre-flop round takes place
+        after
+        all players receive their two cards, there are no community cards in this round. After the Pre-flop the dealer
+        will
+        burn (discard) one card and then place down three community cards starting the Flop round. The Turn and River
+        rounds
+        follow respectively with one card being burned and one community card being shown in each round. The River round
+        has
+        all five community cards shown and is the final round of betting for the hand.</p>
+
+    <p>A showdown occurs at the end of each hand after the River. This is when all still active players show their hands
+        one by one in a clockwise direction beginning with the last player who bet or raised. The player with the best
+        hand
+        wins the current bot and the next hand begins.</p>
+
+    <p>If two or more players have the same ranked hand, then the extra cards are taken into account. These cards are
+        called “Kickers” and are the cards each player has that are not used to make their current ranking. The player
+        with
+        the highest Kicker wins the hand.</p>
+
+    <h2>The Blinds:</h2>
+
+    <p>Blind rules depend on whether it is a tournament game or not. In tournament games, the blinds will gradually get
+        larger as the game progresses. In non-tournament games, the blinds will stay constant.</p>
+
+    <p>The amount of each blind is in relationship to the table buy-in with the small blind generally being half of the
+        big
+        blind. Tables generally are marked by their blinds, for example, 1/2, 2/4, 4/8, etc. Although tables are marked
+        by
+        blinds, the buy-in amount allowed at each table is also in relation to blinds. Tables with smaller blinds will
+        have
+        lower limits for buy-ins vs tables with larger blinds.</p>
+
+</div>
