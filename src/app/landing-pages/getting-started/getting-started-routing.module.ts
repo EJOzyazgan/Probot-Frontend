@@ -6,8 +6,8 @@ import { PokerRulesComponent } from './poker-rules/poker-rules.component';
 
 const gettingStartedRoutes: Routes = [
   { path: '', component: GettingStartedComponent, children: [
-      { path: '', redirectTo: 'setup-bot', pathMatch: 'full'},
-      { path: 'setup-bot', component: SetupBotComponent},
+      { path: '', redirectTo: 'setup', pathMatch: 'full'},
+      { path: 'setup', component: SetupBotComponent},
       { path: 'poker-rules', component: PokerRulesComponent},
     ]}
 ];
