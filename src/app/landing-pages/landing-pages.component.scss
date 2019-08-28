@@ -118,52 +118,43 @@ button {
 
 .footer {
   background-color: #D2D2D2;
-  padding-top: 50px;
+  // padding-top: 20px;
   padding-bottom: 20px;
 }
 
-.contact-type {
-  display: flex;
-  margin-bottom: 10px;
-}
-
-.contact-header {
-  font-size: 30px;
-  margin-bottom: 30px;
-}
-
-.contact-info {
-  font-size: 20px;
-  margin: auto;
+.footer-content {
   width: fit-content;
+  margin: auto;
+  display: flex;
+}
+
+.footer-column {
+  margin: 20px;
+  text-align: center;
+}
+
+.footer-nav {
+  color: inherit;
+  font-size: 14px
+}
+
+.footer-nav:hover {
+ cursor: pointer;
+ color: #cc0000;
+}
+
+.footer-link {
+  color: inherit;
+}
+
+.margin-top-20 {
+  margin-top: 20px;
 }
 
 .type {
   color: #cc0000;
 }
 
-.contact {
-  margin-left: 20px;
-}
-
-.contact-section {
-  text-align: center;
-}
-
-.contact-icons {
-  color: #cc0000;
-  width: fit-content;
-  margin: auto;
-  display: flex;
-}
-
-.contact-icon {
-  margin: 0 20px;
-}
-
-.contact-icon a {
-  color: inherit;
-}
 
 @media only screen and (max-width: 900px) {
   .menu-btn {
@@ -179,11 +170,4 @@ button {
     margin: auto;
   }
 
-  .contact {
-    margin-left: 0;
-  }
-
-  .contact-type {
-    display: block;
-  }
 }

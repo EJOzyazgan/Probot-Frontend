@@ -41,42 +41,31 @@
   </div>
 
   <div class="footer">
-    <div class="contact-section">
-      <div class="contact-header">Contact</div>
-      <div class="contact-info">
-        <div class="contact-type">
-          <div class="type">
-            <fa name="phone"></fa>
-          </div>
-          <div class="contact">
-            (678) 488-4333
-          </div>
+    <div class="footer-content">
+      <div class="footer-column">
+        <h4>Getting Started</h4>
+
+        <div [routerLink]="[ './getting-started/setup' ]" class="footer-nav margin-top-20">Get Setup</div>
+        <div [routerLink]="[ './getting-started/poker-rules' ]" class="footer-nav margin-top-20">Poker Rules</div>
+      </div>
+      <div class="footer-column">
+        <h4>Social</h4>
+
+        <div class="margin-top-20">
+          <a class="footer-nav" href="https://www.facebook.com/probotplayground">Facebook</a>
         </div>
-        <div class="contact-type">
-          <div class="type">
-            <fa name="envelope"></fa>
-          </div>
-          <div class="contact">
-            team@probotplayground.com
-          </div>
+        <div class="margin-top-20">
+          <a class="footer-nav" href="https://twitter.com/probotplay">Twitter</a>
         </div>
-        <div class="contact-icons">
-          <div class="contact-icon" (click)="SendSocialEvent('twitter')">
-            <a href="https://twitter.com/probotplay">
-              <fa name="twitter" class="fa-lg"></fa>
-            </a>
-          </div>
-          <div class="contact-icon" (click)="SendSocialEvent('facebook')">
-            <a href="https://www.facebook.com/probotplayground/">
-              <fa name="facebook-f" class="fa-lg"></fa>
-            </a>
-          </div>
-          <div class="contact-icon" (click)="SendSocialEvent('linkedin')">
-            <a href="https://www.linkedin.com/company/probot-playground-inc/">
-              <fa name="linkedin" class="fa-lg"></fa>
-            </a>
-          </div>
+        <div class="margin-top-20">
+          <a class="footer-nav" href="https://www.linkedin.com/company/probot-playground-inc">Linkedin</a>
         </div>
+      </div>
+      <div class="footer-column">
+        <h4>Contact</h4>
+
+        <div class="margin-top-20">Tele: (678) 488-4333</div>
+        <div class="margin-top-20">email: support@probotplayground.com</div>
       </div>
     </div>
   </div>
