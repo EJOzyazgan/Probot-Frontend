@@ -9,13 +9,13 @@
     </p>
 
     <div class="languages">
-        <div class="language-icon">
+        <div class="language-icon" (click)="SendRepoEvent('python')">
             <a href="https://github.com/EJOzyazgan/Probot-Python-Bot">
                 <svg-icon [applyCss]="true" src="../../assets/python.svg"></svg-icon>
             </a>
         </div>
 
-        <div class="language-icon">
+        <div class="language-icon" (click)="SendRepoEvent('js')">
             <a href="https://github.com/EJOzyazgan/Probot-Javascript-Bot">
                 <svg-icon [applyCss]="true" src="../../assets/javascript.svg"></svg-icon>
             </a>

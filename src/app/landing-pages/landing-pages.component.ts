@@ -16,14 +16,6 @@ export class LandingPagesComponent implements OnInit {
   ngOnInit() {
   }
 
-  // @HostListener('window:scroll', [])
-  // onWindowScroll() {
-
-  //   const number = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-  //   this.isScroll = number > 75;
-
-  // }
-
   navStyle() {
     if (!this.isScroll) {
       return {
