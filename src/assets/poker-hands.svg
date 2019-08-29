@@ -12,19 +12,19 @@
    x="0px"
    id="Layer_1"
    version="1.0"><metadata
-   id="metadata7831"><rdf:RDF><cc:Work
+   id="metadata2068"><rdf:RDF><cc:Work
        rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
          rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
-   id="defs7829" />
+   id="defs2066" />
 <text
    transform="matrix(1 0 0 1 70.2776 12.2777)"
    id="XMLID_1_"><tspan
-     id="tspan5773"
+     id="tspan10"
      font-size="14px"
      font-family="'Xirod'"
      y="0"
      x="0">Poker Hand </tspan><tspan
-     id="tspan5775"
+     id="tspan12"
      font-size="14px"
      font-family="'Xirod'"
      fill="#CB2027"
@@ -40,8 +40,8 @@
 <text
    font-size="12px"
    font-family="'Xirod'"
-   transform="matrix(1 0 0 1 269.7325 50.7861)"
-   id="XMLID_8_">6. StraIt</text>
+   transform="matrix(1 0 0 1 257.9261 50.7861)"
+   id="XMLID_8_">6. StraIght</text>
 
 <g
    id="royal-flush-cards">
@@ -104,11 +104,11 @@
    cx="-31.6858"
    id="hl_10_">
 					<stop
-   id="stop5792"
+   id="stop29"
    style="stop-color:#DD1F26"
    offset="0" />
 					<stop
-   id="stop5794"
+   id="stop31"
    style="stop-color:#DD1F26;stop-opacity:0.6718"
    offset="1" />
 				</radialGradient>
@@ -126,19 +126,19 @@
    r="45.1313"
    cy="14105.6055"
    cx="6210.1172"
-   id="XMLID_98_">
+   id="XMLID_471_">
 					<stop
-   id="stop5799"
+   id="stop36"
    style="stop-color:#FFFFFF;stop-opacity:0.313"
    offset="0" />
 					<stop
-   id="stop5801"
+   id="stop38"
    style="stop-color:#010101;stop-opacity:0"
    offset="1" />
 				</radialGradient>
 				<path
    d="M59.99,508.25c0,0-6.6-80.42,18.69-104.06c28.43-26.57,114.5-9.68,114.5-9.68      s-58.51,21.04-81.79,41.14C89.15,454.87,59.99,508.25,59.99,508.25z"
-   fill="url(#XMLID_98_)"
+   fill="url(#XMLID_471_)"
    id="XMLID_70_" />
 			</g>
 			<g
@@ -150,19 +150,19 @@
    r="45.1313"
    cy="16885.957"
    cx="4694.5605"
-   id="XMLID_106_">
+   id="XMLID_472_">
 					<stop
-   id="stop5806"
+   id="stop43"
    style="stop-color:#FFFFFF;stop-opacity:0.2901"
    offset="0" />
 					<stop
-   id="stop5808"
+   id="stop45"
    style="stop-color:#010101;stop-opacity:0"
    offset="1" />
 				</radialGradient>
 				<path
    d="M206.47,484.26c0,0,12.1-74.84,36.82-90.63      c27.78-17.76,91.04,17.23,91.04,17.23s-46.82,16.89-69.21,29.92C243.71,453.24,206.47,484.26,206.47,484.26z"
-   fill="url(#XMLID_106_)"
+   fill="url(#XMLID_472_)"
    id="XMLID_76_" />
 			</g>
 		</g>
@@ -250,11 +250,11 @@
    cx="-32.0866"
    id="hl_11_">
 					<stop
-   id="stop5833"
+   id="stop70"
    style="stop-color:#DD1F26"
    offset="0" />
 					<stop
-   id="stop5835"
+   id="stop72"
    style="stop-color:#DD1F26;stop-opacity:0.6718"
    offset="1" />
 				</radialGradient>
@@ -272,19 +272,19 @@
    r="45.1313"
    cy="13896.2598"
    cx="6419.9512"
-   id="XMLID_111_">
+   id="XMLID_476_">
 					<stop
-   id="stop5840"
+   id="stop77"
    style="stop-color:#FFFFFF;stop-opacity:0.313"
    offset="0" />
 					<stop
-   id="stop5842"
+   id="stop79"
    style="stop-color:#010101;stop-opacity:0"
    offset="1" />
 				</radialGradient>
 				<path
    d="M154.84,508.25c0,0-6.6-80.42,18.69-104.06c28.43-26.57,114.5-9.68,114.5-9.68      s-58.51,21.04-81.79,41.14C183.99,454.87,154.84,508.25,154.84,508.25z"
-   fill="url(#XMLID_111_)"
+   fill="url(#XMLID_476_)"
    id="XMLID_84_" />
 			</g>
 			<g
@@ -296,19 +296,19 @@
    r="45.1313"
    cy="16714.9414"
    cx="4983.2217"
-   id="XMLID_119_">
+   id="XMLID_477_">
 					<stop
-   id="stop5847"
+   id="stop84"
    style="stop-color:#FFFFFF;stop-opacity:0.2901"
    offset="0" />
 					<stop
-   id="stop5849"
+   id="stop86"
    style="stop-color:#010101;stop-opacity:0"
    offset="1" />
 				</radialGradient>
 				<path
    d="M301.32,484.26c0,0,12.1-74.84,36.82-90.63      c27.78-17.76,91.04,17.23,91.04,17.23s-46.82,16.89-69.21,29.92C338.56,453.24,301.32,484.26,301.32,484.26z"
-   fill="url(#XMLID_119_)"
+   fill="url(#XMLID_477_)"
    id="XMLID_89_" />
 			</g>
 		</g>
@@ -396,11 +396,11 @@
    cx="-32.499"
    id="hl_12_">
 					<stop
-   id="stop5874"
+   id="stop111"
    style="stop-color:#DD1F26"
    offset="0" />
 					<stop
-   id="stop5876"
+   id="stop113"
    style="stop-color:#DD1F26;stop-opacity:0.6718"
    offset="1" />
 				</radialGradient>
@@ -418,19 +418,19 @@
    r="45.1313"
    cy="13681.5"
    cx="6636.0391"
-   id="XMLID_124_">
+   id="XMLID_478_">
 					<stop
-   id="stop5881"
+   id="stop118"
    style="stop-color:#FFFFFF;stop-opacity:0.313"
    offset="0" />
 					<stop
-   id="stop5883"
+   id="stop120"
    style="stop-color:#010101;stop-opacity:0"
    offset="1" />
 				</radialGradient>
 				<path
    d="M252.42,508.08c0,0-6.6-80.42,18.69-104.06c28.43-26.57,114.5-9.68,114.5-9.68      s-58.51,21.04-81.79,41.14C281.57,454.7,252.42,508.08,252.42,508.08z"
-   fill="url(#XMLID_124_)"
+   fill="url(#XMLID_478_)"
    id="XMLID_96_" />
 			</g>
 			<g
@@ -442,19 +442,19 @@
    r="45.1313"
    cy="16539.7148"
    cx="5280.3394"
-   id="XMLID_128_">
+   id="XMLID_479_">
 					<stop
-   id="stop5888"
+   id="stop125"
    style="stop-color:#FFFFFF;stop-opacity:0.2901"
    offset="0" />
 					<stop
-   id="stop5890"
+   id="stop127"
    style="stop-color:#010101;stop-opacity:0"
    offset="1" />
 				</radialGradient>
 				<path
    d="M398.9,484.09c0,0,12.1-74.84,36.82-90.63c27.78-17.76,91.04,17.23,91.04,17.23      s-46.82,16.89-69.21,29.92C436.14,453.07,398.9,484.09,398.9,484.09z"
-   fill="url(#XMLID_128_)"
+   fill="url(#XMLID_479_)"
    id="XMLID_91_" />
 			</g>
 		</g>
@@ -542,11 +542,11 @@
    cx="-32.9276"
    id="hl_13_">
 					<stop
-   id="stop5915"
+   id="stop152"
    style="stop-color:#DD1F26"
    offset="0" />
 					<stop
-   id="stop5917"
+   id="stop154"
    style="stop-color:#DD1F26;stop-opacity:0.6718"
    offset="1" />
 				</radialGradient>
@@ -564,19 +564,19 @@
    r="45.1313"
    cy="13460.165"
    cx="6861.3091"
-   id="XMLID_132_">
+   id="XMLID_480_">
 					<stop
-   id="stop5922"
+   id="stop159"
    style="stop-color:#FFFFFF;stop-opacity:0.313"
    offset="0" />
 					<stop
-   id="stop5924"
+   id="stop161"
    style="stop-color:#010101;stop-opacity:0"
    offset="1" />
 				</radialGradient>
 				<path
    d="M353.85,507.39c0,0-6.6-80.42,18.69-104.06c28.43-26.57,114.5-9.68,114.5-9.68      s-58.51,21.04-81.79,41.14C383,454.01,353.85,507.39,353.85,507.39z"
-   fill="url(#XMLID_132_)"
+   fill="url(#XMLID_480_)"
    id="XMLID_79_" />
 			</g>
 			<g
@@ -588,19 +588,19 @@
    r="45.1313"
    cy="16359.7842"
    cx="5589.6294"
-   id="XMLID_133_">
+   id="XMLID_482_">
 					<stop
-   id="stop5929"
+   id="stop166"
    style="stop-color:#FFFFFF;stop-opacity:0.2901"
    offset="0" />
 					<stop
-   id="stop5931"
+   id="stop168"
    style="stop-color:#010101;stop-opacity:0"
    offset="1" />
 				</radialGradient>
 				<path
    d="M500.33,483.39c0,0,12.1-74.84,36.82-90.63C564.93,375,628.19,410,628.19,410      s-46.82,16.89-69.21,29.92C537.57,452.38,500.33,483.39,500.33,483.39z"
-   fill="url(#XMLID_133_)"
+   fill="url(#XMLID_482_)"
    id="XMLID_86_" />
 			</g>
 		</g>
@@ -797,12 +797,12 @@
 <text
    transform="matrix(1 0 0 1 6.9999 202.9853)"
    id="XMLID_40_"><tspan
-     id="tspan5985"
+     id="tspan222"
      font-size="12px"
      font-family="'ArialMT'"
      y="0"
      x="0">Best hand, consists of </tspan><tspan
-     id="tspan5987"
+     id="tspan224"
      font-size="12px"
      font-family="'ArialMT'"
      y="14.4"
@@ -1454,12 +1454,12 @@
 <text
    transform="matrix(1 0 0 1 232.7808 202.9855)"
    id="XMLID_54_"><tspan
-     id="tspan6158"
+     id="tspan395"
      font-size="12px"
      font-family="'ArialMT'"
      y="0"
      x="0">Five consecutive cards not all the</tspan><tspan
-     id="tspan6160"
+     id="tspan397"
      font-size="12px"
      font-family="'ArialMT'"
      y="14.4"
@@ -1478,8 +1478,8 @@
 <text
    font-size="12px"
    font-family="'Xirod'"
-   transform="matrix(1 0 0 1 12.4306 245.2537)"
-   id="XMLID_3_">2. StraIt Flush</text>
+   transform="matrix(1 0 0 1 -1.716614e-004 245.2538)"
+   id="XMLID_3_">2. StraIght Flush</text>
 
 <g
    id="strait-flush-cards">
@@ -2172,12 +2172,12 @@
 <text
    transform="matrix(1 0 0 1 7.4348 398.4813)"
    id="XMLID_103_"><tspan
-     id="tspan6343"
+     id="tspan580"
      font-size="12px"
      font-family="'ArialMT'"
      y="0"
      x="0">Five consecutive cards of the</tspan><tspan
-     id="tspan6345"
+     id="tspan582"
      font-size="12px"
      font-family="'ArialMT'"
      y="14.4"
@@ -2257,11 +2257,11 @@
    cx="-36.5885"
    id="hl_14_">
 					<stop
-   id="stop6363"
+   id="stop600"
    style="stop-color:#DD1F26"
    offset="0" />
 					<stop
-   id="stop6365"
+   id="stop602"
    style="stop-color:#DD1F26;stop-opacity:0.6718"
    offset="1" />
 				</radialGradient>
@@ -2279,19 +2279,19 @@
    r="45.1136"
    cy="7945.8325"
    cx="7544.6157"
-   id="XMLID_137_">
+   id="XMLID_491_">
 					<stop
-   id="stop6370"
+   id="stop607"
    style="stop-color:#FFFFFF;stop-opacity:0.313"
    offset="0" />
 					<stop
-   id="stop6372"
+   id="stop609"
    style="stop-color:#010101;stop-opacity:0"
    offset="1" />
 				</radialGradient>
 				<path
    d="M1220.25,1495.19c0,0-6.6-80.39,18.69-104.02      c28.42-26.56,114.46-9.68,114.46-9.68s-58.49,21.03-81.76,41.12C1249.39,1441.83,1220.25,1495.19,1220.25,1495.19z"
-   fill="url(#XMLID_137_)"
+   fill="url(#XMLID_491_)"
    id="XMLID_203_" />
 			</g>
 			<g
@@ -2303,19 +2303,19 @@
    r="45.1136"
    cy="10608.2764"
    cx="7387.2588"
-   id="XMLID_154_">
+   id="XMLID_503_">
 					<stop
-   id="stop6377"
+   id="stop614"
    style="stop-color:#FFFFFF;stop-opacity:0.2901"
    offset="0" />
 					<stop
-   id="stop6379"
+   id="stop616"
    style="stop-color:#010101;stop-opacity:0"
    offset="1" />
 				</radialGradient>
 				<path
    d="M1366.67,1471.2c0,0,12.1-74.81,36.8-90.6      c27.77-17.75,91.01,17.23,91.01,17.23s-46.8,16.88-69.19,29.91C1403.9,1440.2,1366.67,1471.2,1366.67,1471.2z"
-   fill="url(#XMLID_154_)"
+   fill="url(#XMLID_503_)"
    id="XMLID_199_" />
 			</g>
 		</g>
@@ -2412,11 +2412,11 @@
    cx="-37.5275"
    id="sl-5_5_">
 					<stop
-   id="stop6405"
+   id="stop642"
    style="stop-color:#010101"
    offset="0" />
 					<stop
-   id="stop6407"
+   id="stop644"
    style="stop-color:#010101;stop-opacity:0.6489"
    offset="1" />
 				</radialGradient>
@@ -2434,19 +2434,19 @@
    r="45.1136"
    cy="-853.9852"
    cx="6354.311"
-   id="XMLID_159_">
+   id="XMLID_505_">
 					<stop
-   id="stop6412"
+   id="stop649"
    style="stop-color:#FFFFFF;stop-opacity:0.4351"
    offset="0" />
 					<stop
-   id="stop6414"
+   id="stop651"
    style="stop-color:#010101;stop-opacity:0"
    offset="1" />
 				</radialGradient>
 				<path
    d="M1356.48,1642.19c0,0-60.07-48.79-52.76-91.5      c8.21-48.02,83.07-151.44,83.07-151.44s-11.2,122.29-19.37,159.91C1359.61,1595.12,1356.48,1642.19,1356.48,1642.19z"
-   fill="url(#XMLID_159_)"
+   fill="url(#XMLID_505_)"
    id="XMLID_195_" />
 			</g>
 			<g
@@ -2458,19 +2458,19 @@
    r="45.1136"
    cy="2987.4441"
    cx="5213.0449"
-   id="XMLID_169_">
+   id="XMLID_507_">
 					<stop
-   id="stop6419"
+   id="stop656"
    style="stop-color:#FFFFFF;stop-opacity:0.4885"
    offset="0" />
 					<stop
-   id="stop6421"
+   id="stop658"
    style="stop-color:#010101;stop-opacity:0"
    offset="1" />
 				</radialGradient>
 				<path
    d="M1367.92,1609.58c0,0-58.44-102.76-33.38-149.33      c28.17-52.34,161.59-123.65,161.59-123.65s-59.38,140.35-83.65,180.1C1389.28,1554.7,1367.92,1609.58,1367.92,1609.58z"
-   fill="url(#XMLID_169_)"
+   fill="url(#XMLID_507_)"
    id="XMLID_190_" />
 			</g>
 			<g
@@ -2482,19 +2482,19 @@
    r="45.1136"
    cy="4452.8838"
    cx="6052.2466"
-   id="XMLID_193_">
+   id="XMLID_508_">
 					<stop
-   id="stop6426"
+   id="stop663"
    style="stop-color:#FFFFFF;stop-opacity:0.2366"
    offset="0" />
 					<stop
-   id="stop6428"
+   id="stop665"
    style="stop-color:#010101;stop-opacity:0"
    offset="1" />
 				</radialGradient>
 				<path
    d="M1404.29,1520.43c0,0-34.59-69.22-10.32-105.12      c27.29-40.35,138.14-103.68,138.14-103.68s-60.65,106.78-83.61,137.68C1426.55,1478.84,1404.29,1520.43,1404.29,1520.43z"
-   fill="url(#XMLID_193_)"
+   fill="url(#XMLID_508_)"
    id="XMLID_186_" />
 			</g>
 			<path
@@ -2587,11 +2587,11 @@
    cx="-42.908"
    id="dl_7_">
 					<stop
-   id="stop6454"
+   id="stop691"
    style="stop-color:#DD1F26"
    offset="0" />
 					<stop
-   id="stop6456"
+   id="stop693"
    style="stop-color:#DD1F26;stop-opacity:0.6412"
    offset="1" />
 				</radialGradient>
@@ -2609,19 +2609,19 @@
    r="45.1136"
    cy="-4540.4224"
    cx="-10860.2549"
-   id="XMLID_207_">
+   id="XMLID_519_">
 					<stop
-   id="stop6461"
+   id="stop698"
    style="stop-color:#FFFFFF;stop-opacity:0.4351"
    offset="0" />
 					<stop
-   id="stop6463"
+   id="stop700"
    style="stop-color:#010101;stop-opacity:0"
    offset="1" />
 				</radialGradient>
 				<path
    d="M1727.55,1536.73c0,0,19.34,78.31-1.84,105.67      c-23.81,30.76-111.44,27.82-111.44,27.82s54.38-30.1,74.14-53.65C1707.3,1594.06,1727.55,1536.73,1727.55,1536.73z"
-   fill="url(#XMLID_207_)"
+   fill="url(#XMLID_519_)"
    id="XMLID_196_" />
 			</g>
 		</g>
@@ -2708,11 +2708,11 @@
    cx="-43.3636"
    id="dl_8_">
 					<stop
-   id="stop6486"
+   id="stop723"
    style="stop-color:#DD1F26"
    offset="0" />
 					<stop
-   id="stop6488"
+   id="stop725"
    style="stop-color:#DD1F26;stop-opacity:0.6412"
    offset="1" />
 				</radialGradient>
@@ -2730,19 +2730,19 @@
    r="45.1136"
    cy="-4196.5342"
    cx="-11103.5322"
-   id="XMLID_213_">
+   id="XMLID_527_">
 					<stop
-   id="stop6493"
+   id="stop730"
    style="stop-color:#FFFFFF;stop-opacity:0.4351"
    offset="0" />
 					<stop
-   id="stop6495"
+   id="stop732"
    style="stop-color:#010101;stop-opacity:0"
    offset="1" />
 				</radialGradient>
 				<path
    d="M1834.1,1537.59c0,0,19.34,78.31-1.84,105.67      c-23.81,30.75-111.44,27.82-111.44,27.82s54.38-30.1,74.14-53.65C1813.85,1594.92,1834.1,1537.59,1834.1,1537.59z"
-   fill="url(#XMLID_213_)"
+   fill="url(#XMLID_527_)"
    id="XMLID_201_" />
 			</g>
 		</g>
@@ -2980,11 +2980,11 @@
    cx="-31.7607"
    id="hl_15_">
 					<stop
-   id="stop6559"
+   id="stop796"
    style="stop-color:#DD1F26"
    offset="0" />
 					<stop
-   id="stop6561"
+   id="stop798"
    style="stop-color:#DD1F26;stop-opacity:0.6718"
    offset="1" />
 				</radialGradient>
@@ -3002,19 +3002,19 @@
    r="45.1136"
    cy="6832.812"
    cx="3772.408"
-   id="XMLID_224_">
+   id="XMLID_531_">
 					<stop
-   id="stop6566"
+   id="stop803"
    style="stop-color:#FFFFFF;stop-opacity:0.313"
    offset="0" />
 					<stop
-   id="stop6568"
+   id="stop805"
    style="stop-color:#010101;stop-opacity:0"
    offset="1" />
 				</radialGradient>
 				<path
    d="M77.77,2491.98c0,0-6.6-80.39,18.69-104.02      c28.42-26.56,114.46-9.68,114.46-9.68s-58.49,21.03-81.75,41.12C106.91,2438.62,77.77,2491.98,77.77,2491.98z"
-   fill="url(#XMLID_224_)"
+   fill="url(#XMLID_531_)"
    id="XMLID_295_" />
 			</g>
 			<g
@@ -3026,19 +3026,19 @@
    r="45.1136"
    cy="8440.8486"
    cx="3063.5586"
-   id="XMLID_227_">
+   id="XMLID_536_">
 					<stop
-   id="stop6573"
+   id="stop810"
    style="stop-color:#FFFFFF;stop-opacity:0.2901"
    offset="0" />
 					<stop
-   id="stop6575"
+   id="stop812"
    style="stop-color:#010101;stop-opacity:0"
    offset="1" />
 				</radialGradient>
 				<path
    d="M224.2,2467.99c0,0,12.1-74.81,36.8-90.6c27.77-17.75,91.01,17.23,91.01,17.23      s-46.8,16.88-69.19,29.91C261.42,2436.99,224.2,2467.99,224.2,2467.99z"
-   fill="url(#XMLID_227_)"
+   fill="url(#XMLID_536_)"
    id="XMLID_291_" />
 			</g>
 		</g>
@@ -3135,11 +3135,11 @@
    cx="-34.001"
    id="sl-5_6_">
 					<stop
-   id="stop6601"
+   id="stop838"
    style="stop-color:#010101"
    offset="0" />
 					<stop
-   id="stop6603"
+   id="stop840"
    style="stop-color:#010101;stop-opacity:0.6489"
    offset="1" />
 				</radialGradient>
@@ -3157,19 +3157,19 @@
    r="45.1136"
    cy="1704.0315"
    cx="3955.1807"
-   id="XMLID_232_">
+   id="XMLID_541_">
 					<stop
-   id="stop6608"
+   id="stop845"
    style="stop-color:#FFFFFF;stop-opacity:0.4351"
    offset="0" />
 					<stop
-   id="stop6610"
+   id="stop847"
    style="stop-color:#010101;stop-opacity:0"
    offset="1" />
 				</radialGradient>
 				<path
    d="M224.01,2630.24c0,0-60.07-48.79-52.76-91.5      c8.21-48.02,83.07-151.44,83.07-151.44s-11.2,122.29-19.37,159.91C227.14,2583.17,224.01,2630.24,224.01,2630.24z"
-   fill="url(#XMLID_232_)"
+   fill="url(#XMLID_541_)"
    id="XMLID_287_" />
 			</g>
 			<g
@@ -3181,19 +3181,19 @@
    r="45.1136"
    cy="3352.8889"
    cx="2914.2373"
-   id="XMLID_234_">
+   id="XMLID_543_">
 					<stop
-   id="stop6615"
+   id="stop852"
    style="stop-color:#FFFFFF;stop-opacity:0.4885"
    offset="0" />
 					<stop
-   id="stop6617"
+   id="stop854"
    style="stop-color:#010101;stop-opacity:0"
    offset="1" />
 				</radialGradient>
 				<path
    d="M235.46,2597.63c0,0-58.44-102.76-33.38-149.33      c28.17-52.34,161.59-123.65,161.59-123.65s-59.38,140.35-83.65,180.1C256.81,2542.75,235.46,2597.63,235.46,2597.63z"
-   fill="url(#XMLID_234_)"
+   fill="url(#XMLID_543_)"
    id="XMLID_283_" />
 			</g>
 			<g
@@ -3205,19 +3205,19 @@
    r="45.1136"
    cy="4748.6592"
    cx="3337.1572"
-   id="XMLID_237_">
+   id="XMLID_544_">
 					<stop
-   id="stop6622"
+   id="stop859"
    style="stop-color:#FFFFFF;stop-opacity:0.2366"
    offset="0" />
 					<stop
-   id="stop6624"
+   id="stop861"
    style="stop-color:#010101;stop-opacity:0"
    offset="1" />
 				</radialGradient>
 				<path
    d="M271.82,2508.48c0,0-34.59-69.22-10.32-105.12      c27.29-40.35,138.14-103.68,138.14-103.68s-60.65,106.78-83.61,137.68C294.09,2466.89,271.82,2508.48,271.82,2508.48z"
-   fill="url(#XMLID_237_)"
+   fill="url(#XMLID_544_)"
    id="XMLID_279_" />
 			</g>
 			<path
@@ -3310,11 +3310,11 @@
    cx="-37.2261"
    id="dl_9_">
 					<stop
-   id="stop6650"
+   id="stop887"
    style="stop-color:#DD1F26"
    offset="0" />
 					<stop
-   id="stop6652"
+   id="stop889"
    style="stop-color:#DD1F26;stop-opacity:0.6412"
    offset="1" />
 				</radialGradient>
@@ -3332,19 +3332,19 @@
    r="45.1136"
    cy="-4429.8291"
    cx="-5700.3755"
-   id="XMLID_242_">
+   id="XMLID_545_">
 					<stop
-   id="stop6657"
+   id="stop894"
    style="stop-color:#FFFFFF;stop-opacity:0.4351"
    offset="0" />
 					<stop
-   id="stop6659"
+   id="stop896"
    style="stop-color:#010101;stop-opacity:0"
    offset="1" />
 				</radialGradient>
 				<path
    d="M404.6,2690.98c0,0,19.34,78.31-1.84,105.67      c-23.81,30.76-111.44,27.82-111.44,27.82s54.38-30.1,74.14-53.65C384.35,2748.3,404.6,2690.98,404.6,2690.98z"
-   fill="url(#XMLID_242_)"
+   fill="url(#XMLID_545_)"
    id="XMLID_275_" />
 			</g>
 		</g>
@@ -3424,11 +3424,11 @@
    cx="19.4316"
    id="cl_11_">
 						<stop
-   id="stop6682"
+   id="stop919"
    style="stop-color:#010101"
    offset="0" />
 						<stop
-   id="stop6684"
+   id="stop921"
    style="stop-color:#010101;stop-opacity:0.6565"
    offset="1" />
 					</radialGradient>
@@ -3446,19 +3446,19 @@
    r="45.0585"
    cy="7189.772"
    cx="5328.5176"
-   id="XMLID_245_">
+   id="XMLID_571_">
 						<stop
-   id="stop6689"
+   id="stop926"
    style="stop-color:#FFFFFF;stop-opacity:0.5344"
    offset="0" />
 						<stop
-   id="stop6691"
+   id="stop928"
    style="stop-color:#010101;stop-opacity:0"
    offset="1" />
 					</radialGradient>
 					<path
    d="M346.46,2471.12c0,0-4.92-63.06,13.95-81.59       c21.21-20.83,85.43-7.59,85.43-7.59s-43.65,16.5-61.02,32.26C368.21,2429.27,346.46,2471.12,346.46,2471.12z"
-   fill="url(#XMLID_245_)"
+   fill="url(#XMLID_571_)"
    id="XMLID_209_" />
 				</g>
 				<g
@@ -3470,19 +3470,19 @@
    r="45.0585"
    cy="6945.2793"
    cx="4980.978"
-   id="XMLID_246_">
+   id="XMLID_592_">
 						<stop
-   id="stop6696"
+   id="stop933"
    style="stop-color:#FFFFFF;stop-opacity:0.5191"
    offset="0" />
 						<stop
-   id="stop6698"
+   id="stop935"
    style="stop-color:#010101;stop-opacity:0"
    offset="1" />
 					</radialGradient>
 					<path
    d="M431.51,2349.58c0,0-4.92-63.06,13.95-81.59       c21.21-20.83,85.43-7.59,85.43-7.59s-43.65,16.5-61.02,32.26C453.26,2307.73,431.51,2349.58,431.51,2349.58z"
-   fill="url(#XMLID_246_)"
+   fill="url(#XMLID_592_)"
    id="XMLID_250_" />
 				</g>
 				<g
@@ -3494,19 +3494,19 @@
    r="45.0585"
    cy="8761.5186"
    cx="1451.239"
-   id="XMLID_247_">
+   id="XMLID_593_">
 						<stop
-   id="stop6703"
+   id="stop940"
    style="stop-color:#FFFFFF;stop-opacity:0.7023"
    offset="0" />
 						<stop
-   id="stop6705"
+   id="stop942"
    style="stop-color:#010101;stop-opacity:0"
    offset="1" />
 					</radialGradient>
 					<path
    d="M490.52,2463.31c0,0,38.91-74.57,71.26-83.61       c36.37-10.16,93.25,45.54,93.25,45.54s-56.45-8.97-85.33-2.12C542.11,2429.67,490.52,2463.31,490.52,2463.31z"
-   fill="url(#XMLID_247_)"
+   fill="url(#XMLID_593_)"
    id="XMLID_171_" />
 				</g>
 				<path
@@ -3692,12 +3692,12 @@
 <text
    transform="matrix(1 0 0 1 239.402 594.8616)"
    id="XMLID_355_"><tspan
-     id="tspan6758"
+     id="tspan995"
      font-size="12px"
      font-family="'ArialMT'"
      y="0"
      x="0">Two sets of two cards with</tspan><tspan
-     id="tspan6760"
+     id="tspan997"
      font-size="12px"
      font-family="'ArialMT'"
      y="14.4"
@@ -3765,11 +3765,11 @@
    cx="-36.6877"
    id="hl_16_">
 					<stop
-   id="stop6776"
+   id="stop1013"
    style="stop-color:#DD1F26"
    offset="0" />
 					<stop
-   id="stop6778"
+   id="stop1015"
    style="stop-color:#DD1F26;stop-opacity:0.6718"
    offset="1" />
 				</radialGradient>
@@ -3787,19 +3787,19 @@
    r="45.1136"
    cy="4259.3281"
    cx="6351.9072"
-   id="XMLID_248_">
+   id="XMLID_596_">
 					<stop
-   id="stop6783"
+   id="stop1020"
    style="stop-color:#FFFFFF;stop-opacity:0.313"
    offset="0" />
 					<stop
-   id="stop6785"
+   id="stop1022"
    style="stop-color:#010101;stop-opacity:0"
    offset="1" />
 				</radialGradient>
 				<path
    d="M1243.72,2491.98c0,0-6.6-80.39,18.69-104.02      c28.42-26.56,114.46-9.68,114.46-9.68s-58.49,21.03-81.76,41.12C1272.86,2438.62,1243.72,2491.98,1243.72,2491.98z"
-   fill="url(#XMLID_248_)"
+   fill="url(#XMLID_596_)"
    id="XMLID_392_" />
 			</g>
 			<g
@@ -3811,19 +3811,19 @@
    r="45.1136"
    cy="6338.5474"
    cx="6612.0786"
-   id="XMLID_251_">
+   id="XMLID_599_">
 					<stop
-   id="stop6790"
+   id="stop1027"
    style="stop-color:#FFFFFF;stop-opacity:0.2901"
    offset="0" />
 					<stop
-   id="stop6792"
+   id="stop1029"
    style="stop-color:#010101;stop-opacity:0"
    offset="1" />
 				</radialGradient>
 				<path
    d="M1390.15,2467.99c0,0,12.1-74.81,36.8-90.6      c27.77-17.75,91.01,17.23,91.01,17.23s-46.8,16.88-69.19,29.91C1427.37,2436.99,1390.15,2467.99,1390.15,2467.99z"
-   fill="url(#XMLID_251_)"
+   fill="url(#XMLID_599_)"
    id="XMLID_388_" />
 			</g>
 		</g>
@@ -3920,11 +3920,11 @@
    cx="-37.643"
    id="sl-5_7_">
 					<stop
-   id="stop6818"
+   id="stop1055"
    style="stop-color:#010101"
    offset="0" />
 					<stop
-   id="stop6820"
+   id="stop1057"
    style="stop-color:#010101;stop-opacity:0.6489"
    offset="1" />
 				</radialGradient>
@@ -3942,19 +3942,19 @@
    r="45.1136"
    cy="-2271.4329"
    cx="4696.3105"
-   id="XMLID_252_">
+   id="XMLID_600_">
 					<stop
-   id="stop6825"
+   id="stop1062"
    style="stop-color:#FFFFFF;stop-opacity:0.4351"
    offset="0" />
 					<stop
-   id="stop6827"
+   id="stop1064"
    style="stop-color:#010101;stop-opacity:0"
    offset="1" />
 				</radialGradient>
 				<path
    d="M1379.74,2630.24c0,0-60.07-48.79-52.76-91.5      c8.21-48.02,83.07-151.44,83.07-151.44s-11.2,122.29-19.37,159.91C1382.87,2583.17,1379.74,2630.24,1379.74,2630.24z"
-   fill="url(#XMLID_252_)"
+   fill="url(#XMLID_600_)"
    id="XMLID_384_" />
 			</g>
 			<g
@@ -3966,19 +3966,19 @@
    r="45.1136"
    cy="1315.3884"
    cx="4193.1548"
-   id="XMLID_254_">
+   id="XMLID_605_">
 					<stop
-   id="stop6832"
+   id="stop1069"
    style="stop-color:#FFFFFF;stop-opacity:0.4885"
    offset="0" />
 					<stop
-   id="stop6834"
+   id="stop1071"
    style="stop-color:#010101;stop-opacity:0"
    offset="1" />
 				</radialGradient>
 				<path
    d="M1391.19,2597.63c0,0-58.44-102.76-33.38-149.33      c28.17-52.34,161.59-123.65,161.59-123.65s-59.38,140.35-83.65,180.1C1412.54,2542.75,1391.19,2597.63,1391.19,2597.63z"
-   fill="url(#XMLID_254_)"
+   fill="url(#XMLID_605_)"
    id="XMLID_380_" />
 			</g>
 			<g
@@ -3990,19 +3990,19 @@
    r="45.1136"
    cy="1772.5936"
    cx="4819.5347"
-   id="XMLID_255_">
+   id="XMLID_609_">
 					<stop
-   id="stop6839"
+   id="stop1076"
    style="stop-color:#FFFFFF;stop-opacity:0.2366"
    offset="0" />
 					<stop
-   id="stop6841"
+   id="stop1078"
    style="stop-color:#010101;stop-opacity:0"
    offset="1" />
 				</radialGradient>
 				<path
    d="M1427.55,2508.48c0,0-34.59-69.22-10.32-105.12      c27.29-40.35,138.14-103.68,138.14-103.68s-60.65,106.78-83.61,137.68C1449.82,2466.89,1427.55,2508.48,1427.55,2508.48z"
-   fill="url(#XMLID_255_)"
+   fill="url(#XMLID_609_)"
    id="XMLID_376_" />
 			</g>
 			<path
@@ -4087,11 +4087,11 @@
    cx="15.6438"
    id="cl_13_">
 					<stop
-   id="stop6866"
+   id="stop1103"
    style="stop-color:#010101"
    offset="0" />
 					<stop
-   id="stop6868"
+   id="stop1105"
    style="stop-color:#010101;stop-opacity:0.6565"
    offset="1" />
 				</radialGradient>
@@ -4109,19 +4109,19 @@
    r="45.1328"
    cy="4304.5107"
    cx="8219.5449"
-   id="XMLID_260_">
+   id="XMLID_610_">
 					<stop
-   id="stop6873"
+   id="stop1110"
    style="stop-color:#FFFFFF;stop-opacity:0.5344"
    offset="0" />
 					<stop
-   id="stop6875"
+   id="stop1112"
    style="stop-color:#010101;stop-opacity:0"
    offset="1" />
 				</radialGradient>
 				<path
    d="M1369.01,2471.4c0,0-4.93-63.16,13.97-81.73c21.25-20.87,85.57-7.6,85.57-7.6      s-43.72,16.52-61.12,32.31C1390.79,2429.48,1369.01,2471.4,1369.01,2471.4z"
-   fill="url(#XMLID_260_)"
+   fill="url(#XMLID_610_)"
    id="XMLID_264_" />
 			</g>
 			<g
@@ -4133,19 +4133,19 @@
    r="45.1328"
    cy="4060.511"
    cx="7872.7061"
-   id="XMLID_265_">
+   id="XMLID_622_">
 					<stop
-   id="stop6880"
+   id="stop1117"
    style="stop-color:#FFFFFF;stop-opacity:0.5191"
    offset="0" />
 					<stop
-   id="stop6882"
+   id="stop1119"
    style="stop-color:#010101;stop-opacity:0"
    offset="1" />
 				</radialGradient>
 				<path
    d="M1454.2,2349.66c0,0-4.93-63.16,13.97-81.73c21.25-20.87,85.57-7.6,85.57-7.6      s-43.72,16.52-61.12,32.31C1475.99,2307.73,1454.2,2349.66,1454.2,2349.66z"
-   fill="url(#XMLID_265_)"
+   fill="url(#XMLID_622_)"
    id="XMLID_262_" />
 			</g>
 			<g
@@ -4157,19 +4157,19 @@
    r="45.1328"
    cy="8515.5332"
    cx="4100.3188"
-   id="XMLID_267_">
+   id="XMLID_626_">
 					<stop
-   id="stop6887"
+   id="stop1124"
    style="stop-color:#FFFFFF;stop-opacity:0.7023"
    offset="0" />
 					<stop
-   id="stop6889"
+   id="stop1126"
    style="stop-color:#010101;stop-opacity:0"
    offset="1" />
 				</radialGradient>
 				<path
    d="M1513.31,2463.58c0,0,38.97-74.69,71.38-83.75      c36.43-10.18,93.41,45.61,93.41,45.61s-56.54-8.99-85.47-2.12C1564.98,2429.88,1513.31,2463.58,1513.31,2463.58z"
-   fill="url(#XMLID_267_)"
+   fill="url(#XMLID_626_)"
    id="XMLID_256_" />
 			</g>
 			<path
@@ -4268,11 +4268,11 @@
    cx="-43.4807"
    id="dl_10_">
 					<stop
-   id="stop6914"
+   id="stop1151"
    style="stop-color:#DD1F26"
    offset="0" />
 					<stop
-   id="stop6916"
+   id="stop1153"
    style="stop-color:#DD1F26;stop-opacity:0.6412"
    offset="1" />
 				</radialGradient>
@@ -4290,19 +4290,19 @@
    r="45.1136"
    cy="249.3923"
    cx="-9059.9648"
-   id="XMLID_270_">
+   id="XMLID_627_">
 					<stop
-   id="stop6921"
+   id="stop1158"
    style="stop-color:#FFFFFF;stop-opacity:0.4351"
    offset="0" />
 					<stop
-   id="stop6923"
+   id="stop1160"
    style="stop-color:#010101;stop-opacity:0"
    offset="1" />
 				</radialGradient>
 				<path
    d="M1867.16,2691.84c0,0,19.34,78.31-1.84,105.67      c-23.81,30.75-111.44,27.82-111.44,27.82s54.38-30.1,74.14-53.65C1846.91,2749.16,1867.16,2691.84,1867.16,2691.84z"
-   fill="url(#XMLID_270_)"
+   fill="url(#XMLID_627_)"
    id="XMLID_368_" />
 			</g>
 		</g>
@@ -4475,12 +4475,12 @@
 <text
    transform="matrix(1 0 0 1 8.9442 799.9145)"
    id="XMLID_429_"><tspan
-     id="tspan6973"
+     id="tspan1210"
      font-size="12px"
      font-family="'ArialMT'"
      y="0"
      x="0">Consists of a set of a three equal</tspan><tspan
-     id="tspan6975"
+     id="tspan1212"
      font-size="12px"
      font-family="'ArialMT'"
      y="14.4"
@@ -4548,11 +4548,11 @@
    cx="20.4776"
    id="cl_14_">
 					<stop
-   id="stop6991"
+   id="stop1228"
    style="stop-color:#010101"
    offset="0" />
 					<stop
-   id="stop6993"
+   id="stop1230"
    style="stop-color:#010101;stop-opacity:0.6565"
    offset="1" />
 				</radialGradient>
@@ -4570,19 +4570,19 @@
    r="45.0585"
    cy="3563.0857"
    cx="3059.1648"
-   id="XMLID_271_">
+   id="XMLID_629_">
 					<stop
-   id="stop6998"
+   id="stop1235"
    style="stop-color:#FFFFFF;stop-opacity:0.5344"
    offset="0" />
 					<stop
-   id="stop7000"
+   id="stop1237"
    style="stop-color:#010101;stop-opacity:0"
    offset="1" />
 				</radialGradient>
 				<path
    d="M75.6,3461.34c0,0-4.92-63.06,13.95-81.59c21.21-20.83,85.43-7.59,85.43-7.59      s-43.65,16.5-61.02,32.26C97.35,3419.49,75.6,3461.34,75.6,3461.34z"
-   fill="url(#XMLID_271_)"
+   fill="url(#XMLID_629_)"
    id="XMLID_349_" />
 			</g>
 			<g
@@ -4594,19 +4594,19 @@
    r="45.0585"
    cy="3318.593"
    cx="2711.625"
-   id="XMLID_288_">
+   id="XMLID_630_">
 					<stop
-   id="stop7005"
+   id="stop1242"
    style="stop-color:#FFFFFF;stop-opacity:0.5191"
    offset="0" />
 					<stop
-   id="stop7007"
+   id="stop1244"
    style="stop-color:#010101;stop-opacity:0"
    offset="1" />
 				</radialGradient>
 				<path
    d="M160.65,3339.8c0,0-4.92-63.06,13.95-81.59c21.21-20.83,85.43-7.59,85.43-7.59      s-43.65,16.5-61.02,32.26C182.4,3297.95,160.65,3339.8,160.65,3339.8z"
-   fill="url(#XMLID_288_)"
+   fill="url(#XMLID_630_)"
    id="XMLID_341_" />
 			</g>
 			<g
@@ -4618,19 +4618,19 @@
    r="45.0585"
    cy="4805.2612"
    cx="1001.194"
-   id="XMLID_293_">
+   id="XMLID_631_">
 					<stop
-   id="stop7012"
+   id="stop1249"
    style="stop-color:#FFFFFF;stop-opacity:0.7023"
    offset="0" />
 					<stop
-   id="stop7014"
+   id="stop1251"
    style="stop-color:#010101;stop-opacity:0"
    offset="1" />
 				</radialGradient>
 				<path
    d="M219.66,3453.53c0,0,38.91-74.57,71.26-83.61      c36.37-10.16,93.25,45.54,93.25,45.54s-56.45-8.97-85.33-2.12C271.25,3419.89,219.66,3453.53,219.66,3453.53z"
-   fill="url(#XMLID_293_)"
+   fill="url(#XMLID_631_)"
    id="XMLID_330_" />
 			</g>
 			<path
@@ -4723,11 +4723,11 @@
    cx="-32.1494"
    id="hl_17_">
 					<stop
-   id="stop7040"
+   id="stop1277"
    style="stop-color:#DD1F26"
    offset="0" />
 					<stop
-   id="stop7042"
+   id="stop1279"
    style="stop-color:#DD1F26;stop-opacity:0.6718"
    offset="1" />
 				</radialGradient>
@@ -4745,19 +4745,19 @@
    r="45.1136"
    cy="2834.2024"
    cx="2676.1953"
-   id="XMLID_296_">
+   id="XMLID_632_">
 					<stop
-   id="stop7047"
+   id="stop1284"
    style="stop-color:#FFFFFF;stop-opacity:0.313"
    offset="0" />
 					<stop
-   id="stop7049"
+   id="stop1286"
    style="stop-color:#010101;stop-opacity:0"
    offset="1" />
 				</radialGradient>
 				<path
    d="M169.76,3532.88c0,0-6.6-80.39,18.69-104.02      c28.42-26.56,114.46-9.68,114.46-9.68s-58.49,21.03-81.75,41.12C198.9,3479.53,169.76,3532.88,169.76,3532.88z"
-   fill="url(#XMLID_296_)"
+   fill="url(#XMLID_632_)"
    id="XMLID_474_" />
 			</g>
 			<g
@@ -4769,19 +4769,19 @@
    r="45.1136"
    cy="3860.4692"
    cx="2459.436"
-   id="XMLID_297_">
+   id="XMLID_633_">
 					<stop
-   id="stop7054"
+   id="stop1291"
    style="stop-color:#FFFFFF;stop-opacity:0.2901"
    offset="0" />
 					<stop
-   id="stop7056"
+   id="stop1293"
    style="stop-color:#010101;stop-opacity:0"
    offset="1" />
 				</radialGradient>
 				<path
    d="M316.18,3508.9c0,0,12.1-74.81,36.8-90.6c27.77-17.75,91.01,17.23,91.01,17.23      s-46.8,16.88-69.19,29.91C353.41,3477.9,316.18,3508.9,316.18,3508.9z"
-   fill="url(#XMLID_297_)"
+   fill="url(#XMLID_633_)"
    id="XMLID_470_" />
 			</g>
 		</g>
@@ -4878,11 +4878,11 @@
    cx="-34.3324"
    id="sl-5_8_">
 					<stop
-   id="stop7082"
+   id="stop1319"
    style="stop-color:#010101"
    offset="0" />
 					<stop
-   id="stop7084"
+   id="stop1321"
    style="stop-color:#010101;stop-opacity:0.6489"
    offset="1" />
 				</radialGradient>
@@ -4900,19 +4900,19 @@
    r="45.1136"
    cy="-6.2301"
    cx="2266.6882"
-   id="XMLID_298_">
+   id="XMLID_636_">
 					<stop
-   id="stop7089"
+   id="stop1326"
    style="stop-color:#FFFFFF;stop-opacity:0.4351"
    offset="0" />
 					<stop
-   id="stop7091"
+   id="stop1328"
    style="stop-color:#010101;stop-opacity:0"
    offset="1" />
 				</radialGradient>
 				<path
    d="M315.2,3662.02c0,0-60.07-48.79-52.76-91.5      c8.21-48.02,83.07-151.44,83.07-151.44s-11.2,122.29-19.37,159.91C318.32,3614.95,315.2,3662.02,315.2,3662.02z"
-   fill="url(#XMLID_298_)"
+   fill="url(#XMLID_636_)"
    id="XMLID_466_" />
 			</g>
 			<g
@@ -4924,19 +4924,19 @@
    r="45.1136"
    cy="1488.9084"
    cx="1923.2225"
-   id="XMLID_299_">
+   id="XMLID_637_">
 					<stop
-   id="stop7096"
+   id="stop1333"
    style="stop-color:#FFFFFF;stop-opacity:0.4885"
    offset="0" />
 					<stop
-   id="stop7098"
+   id="stop1335"
    style="stop-color:#010101;stop-opacity:0"
    offset="1" />
 				</radialGradient>
 				<path
    d="M326.64,3629.41c0,0-58.44-102.76-33.38-149.33      c28.17-52.34,161.59-123.65,161.59-123.65s-59.38,140.35-83.65,180.1C347.99,3574.54,326.64,3629.41,326.64,3629.41z"
-   fill="url(#XMLID_299_)"
+   fill="url(#XMLID_637_)"
    id="XMLID_462_" />
 			</g>
 			<g
@@ -4948,19 +4948,19 @@
    r="45.1136"
    cy="1777.5001"
    cx="2135.6758"
-   id="XMLID_302_">
+   id="XMLID_638_">
 					<stop
-   id="stop7103"
+   id="stop1340"
    style="stop-color:#FFFFFF;stop-opacity:0.2366"
    offset="0" />
 					<stop
-   id="stop7105"
+   id="stop1342"
    style="stop-color:#010101;stop-opacity:0"
    offset="1" />
 				</radialGradient>
 				<path
    d="M363.01,3540.27c0,0-34.59-69.22-10.32-105.12      c27.29-40.35,138.14-103.68,138.14-103.68s-60.65,106.78-83.61,137.68C385.27,3498.68,363.01,3540.27,363.01,3540.27z"
-   fill="url(#XMLID_302_)"
+   fill="url(#XMLID_638_)"
    id="XMLID_458_" />
 			</g>
 			<path
@@ -5045,11 +5045,11 @@
    cx="19.4712"
    id="cl_15_">
 					<stop
-   id="stop7130"
+   id="stop1367"
    style="stop-color:#010101"
    offset="0" />
 					<stop
-   id="stop7132"
+   id="stop1369"
    style="stop-color:#010101;stop-opacity:0.6565"
    offset="1" />
 				</radialGradient>
@@ -5067,19 +5067,19 @@
    r="45.1328"
    cy="2776.7209"
    cx="3820.1682"
-   id="XMLID_316_">
+   id="XMLID_639_">
 					<stop
-   id="stop7137"
+   id="stop1374"
    style="stop-color:#FFFFFF;stop-opacity:0.5344"
    offset="0" />
 					<stop
-   id="stop7139"
+   id="stop1376"
    style="stop-color:#010101;stop-opacity:0"
    offset="1" />
 				</radialGradient>
 				<path
    d="M347.15,3466.02c0,0-4.93-63.16,13.97-81.73c21.25-20.87,85.57-7.6,85.57-7.6      s-43.72,16.52-61.12,32.31C368.94,3424.09,347.15,3466.02,347.15,3466.02z"
-   fill="url(#XMLID_316_)"
+   fill="url(#XMLID_639_)"
    id="XMLID_449_" />
 			</g>
 			<g
@@ -5091,19 +5091,19 @@
    r="45.1328"
    cy="2532.7214"
    cx="3473.3291"
-   id="XMLID_328_">
+   id="XMLID_640_">
 					<stop
-   id="stop7144"
+   id="stop1381"
    style="stop-color:#FFFFFF;stop-opacity:0.5191"
    offset="0" />
 					<stop
-   id="stop7146"
+   id="stop1383"
    style="stop-color:#010101;stop-opacity:0"
    offset="1" />
 				</radialGradient>
 				<path
    d="M432.35,3344.28c0,0-4.93-63.16,13.97-81.73c21.25-20.87,85.57-7.6,85.57-7.6      s-43.72,16.52-61.12,32.31C454.13,3302.35,432.35,3344.28,432.35,3344.28z"
-   fill="url(#XMLID_328_)"
+   fill="url(#XMLID_640_)"
    id="XMLID_444_" />
 			</g>
 			<g
@@ -5115,19 +5115,19 @@
    r="45.1328"
    cy="4721.6743"
    cx="1706.5815"
-   id="XMLID_331_">
+   id="XMLID_641_">
 					<stop
-   id="stop7151"
+   id="stop1388"
    style="stop-color:#FFFFFF;stop-opacity:0.7023"
    offset="0" />
 					<stop
-   id="stop7153"
+   id="stop1390"
    style="stop-color:#010101;stop-opacity:0"
    offset="1" />
 				</radialGradient>
 				<path
    d="M491.45,3458.2c0,0,38.97-74.69,71.38-83.75      c36.43-10.18,93.41,45.61,93.41,45.61s-56.54-8.99-85.47-2.12C543.12,3424.5,491.45,3458.2,491.45,3458.2z"
-   fill="url(#XMLID_331_)"
+   fill="url(#XMLID_641_)"
    id="XMLID_440_" />
 			</g>
 			<path
@@ -5226,11 +5226,11 @@
    cx="-38.1567"
    id="dl_11_">
 					<stop
-   id="stop7178"
+   id="stop1415"
    style="stop-color:#DD1F26"
    offset="0" />
 					<stop
-   id="stop7180"
+   id="stop1417"
    style="stop-color:#DD1F26;stop-opacity:0.6412"
    offset="1" />
 				</radialGradient>
@@ -5248,19 +5248,19 @@
    r="45.1136"
    cy="822.9101"
    cx="-3997.9263"
-   id="XMLID_334_">
+   id="XMLID_642_">
 					<stop
-   id="stop7185"
+   id="stop1422"
    style="stop-color:#FFFFFF;stop-opacity:0.4351"
    offset="0" />
 					<stop
-   id="stop7187"
+   id="stop1424"
    style="stop-color:#010101;stop-opacity:0"
    offset="1" />
 				</radialGradient>
 				<path
    d="M628.14,3897.84c0,0,19.34,78.31-1.84,105.67      c-23.81,30.76-111.44,27.82-111.44,27.82s54.38-30.1,74.14-53.65C607.89,3955.16,628.14,3897.84,628.14,3897.84z"
-   fill="url(#XMLID_334_)"
+   fill="url(#XMLID_642_)"
    id="XMLID_436_" />
 			</g>
 		</g>
@@ -5291,12 +5291,12 @@
 <text
    transform="matrix(1 0 0 1 240.0059 799.9144)"
    id="XMLID_538_"><tspan
-     id="tspan7200"
+     id="tspan1437"
      font-size="12px"
      font-family="'ArialMT'"
      y="0"
      x="0">One set of two cards with</tspan><tspan
-     id="tspan7202"
+     id="tspan1439"
      font-size="12px"
      font-family="'ArialMT'"
      y="14.4"
@@ -5364,11 +5364,11 @@
    cx="16.3266"
    id="cl_16_">
 					<stop
-   id="stop7218"
+   id="stop1455"
    style="stop-color:#010101"
    offset="0" />
 					<stop
-   id="stop7220"
+   id="stop1457"
    style="stop-color:#010101;stop-opacity:0.6565"
    offset="1" />
 				</radialGradient>
@@ -5386,19 +5386,19 @@
    r="45.0585"
    cy="401.3622"
    cx="6228.2813"
-   id="XMLID_344_">
+   id="XMLID_643_">
 					<stop
-   id="stop7225"
+   id="stop1462"
    style="stop-color:#FFFFFF;stop-opacity:0.5344"
    offset="0" />
 					<stop
-   id="stop7227"
+   id="stop1464"
    style="stop-color:#010101;stop-opacity:0"
    offset="1" />
 				</radialGradient>
 				<path
    d="M1196.46,3461.34c0,0-4.92-63.06,13.95-81.59      c21.21-20.83,85.43-7.59,85.43-7.59s-43.65,16.5-61.02,32.26C1218.21,3419.49,1196.46,3461.34,1196.46,3461.34z"
-   fill="url(#XMLID_344_)"
+   fill="url(#XMLID_643_)"
    id="XMLID_595_" />
 			</g>
 			<g
@@ -5410,19 +5410,19 @@
    r="45.0585"
    cy="156.8696"
    cx="5880.7412"
-   id="XMLID_352_">
+   id="XMLID_644_">
 					<stop
-   id="stop7232"
+   id="stop1469"
    style="stop-color:#FFFFFF;stop-opacity:0.5191"
    offset="0" />
 					<stop
-   id="stop7234"
+   id="stop1471"
    style="stop-color:#010101;stop-opacity:0"
    offset="1" />
 				</radialGradient>
 				<path
    d="M1281.52,3339.8c0,0-4.92-63.06,13.95-81.59      c21.21-20.83,85.43-7.59,85.43-7.59s-43.65,16.5-61.02,32.26C1303.27,3297.95,1281.52,3339.8,1281.52,3339.8z"
-   fill="url(#XMLID_352_)"
+   fill="url(#XMLID_644_)"
    id="XMLID_591_" />
 			</g>
 			<g
@@ -5434,19 +5434,19 @@
    r="45.0585"
    cy="4536.2275"
    cx="3903.8391"
-   id="XMLID_357_">
+   id="XMLID_645_">
 					<stop
-   id="stop7239"
+   id="stop1476"
    style="stop-color:#FFFFFF;stop-opacity:0.7023"
    offset="0" />
 					<stop
-   id="stop7241"
+   id="stop1478"
    style="stop-color:#010101;stop-opacity:0"
    offset="1" />
 				</radialGradient>
 				<path
    d="M1340.52,3453.53c0,0,38.91-74.57,71.26-83.61      c36.37-10.16,93.25,45.54,93.25,45.54s-56.45-8.97-85.33-2.12C1392.11,3419.89,1340.52,3453.53,1340.52,3453.53z"
-   fill="url(#XMLID_357_)"
+   fill="url(#XMLID_645_)"
    id="XMLID_587_" />
 			</g>
 			<path
@@ -5539,11 +5539,11 @@
    cx="-37.109"
    id="hl_18_">
 					<stop
-   id="stop7267"
+   id="stop1504"
    style="stop-color:#DD1F26"
    offset="0" />
 					<stop
-   id="stop7269"
+   id="stop1506"
    style="stop-color:#DD1F26;stop-opacity:0.6718"
    offset="1" />
 				</radialGradient>
@@ -5561,19 +5561,19 @@
    r="45.1136"
    cy="243.6654"
    cx="5272.79"
-   id="XMLID_385_">
+   id="XMLID_646_">
 					<stop
-   id="stop7274"
+   id="stop1511"
    style="stop-color:#FFFFFF;stop-opacity:0.313"
    offset="0" />
 					<stop
-   id="stop7276"
+   id="stop1513"
    style="stop-color:#010101;stop-opacity:0"
    offset="1" />
 				</radialGradient>
 				<path
    d="M1343.44,3532.88c0,0-6.6-80.39,18.69-104.02      c28.42-26.56,114.46-9.68,114.46-9.68s-58.49,21.03-81.76,41.12C1372.58,3479.53,1343.44,3532.88,1343.44,3532.88z"
-   fill="url(#XMLID_385_)"
+   fill="url(#XMLID_646_)"
    id="XMLID_583_" />
 			</g>
 			<g
@@ -5585,19 +5585,19 @@
    r="45.1136"
    cy="1744.2379"
    cx="6031.4731"
-   id="XMLID_393_">
+   id="XMLID_647_">
 					<stop
-   id="stop7281"
+   id="stop1518"
    style="stop-color:#FFFFFF;stop-opacity:0.2901"
    offset="0" />
 					<stop
-   id="stop7283"
+   id="stop1520"
    style="stop-color:#010101;stop-opacity:0"
    offset="1" />
 				</radialGradient>
 				<path
    d="M1489.86,3508.9c0,0,12.1-74.81,36.8-90.6      c27.77-17.75,91.01,17.23,91.01,17.23s-46.8,16.88-69.19,29.91C1527.08,3477.9,1489.86,3508.9,1489.86,3508.9z"
-   fill="url(#XMLID_393_)"
+   fill="url(#XMLID_647_)"
    id="XMLID_579_" />
 			</g>
 		</g>
@@ -5686,11 +5686,11 @@
    cx="15.6436"
    id="cl_17_">
 					<stop
-   id="stop7308"
+   id="stop1545"
    style="stop-color:#010101"
    offset="0" />
 					<stop
-   id="stop7310"
+   id="stop1547"
    style="stop-color:#010101;stop-opacity:0.6565"
    offset="1" />
 				</radialGradient>
@@ -5708,19 +5708,19 @@
    r="45.1328"
    cy="-138.7"
    cx="6742.4063"
-   id="XMLID_398_">
+   id="XMLID_648_">
 					<stop
-   id="stop7315"
+   id="stop1552"
    style="stop-color:#FFFFFF;stop-opacity:0.5344"
    offset="0" />
 					<stop
-   id="stop7317"
+   id="stop1554"
    style="stop-color:#010101;stop-opacity:0"
    offset="1" />
 				</radialGradient>
 				<path
    d="M1380.7,3466.02c0,0-4.93-63.16,13.97-81.73c21.25-20.87,85.57-7.6,85.57-7.6      s-43.72,16.52-61.12,32.31C1402.49,3424.09,1380.7,3466.02,1380.7,3466.02z"
-   fill="url(#XMLID_398_)"
+   fill="url(#XMLID_648_)"
    id="XMLID_563_" />
 			</g>
 			<g
@@ -5732,19 +5732,19 @@
    r="45.1328"
    cy="-382.6996"
    cx="6395.5674"
-   id="XMLID_401_">
+   id="XMLID_649_">
 					<stop
-   id="stop7322"
+   id="stop1559"
    style="stop-color:#FFFFFF;stop-opacity:0.5191"
    offset="0" />
 					<stop
-   id="stop7324"
+   id="stop1561"
    style="stop-color:#010101;stop-opacity:0"
    offset="1" />
 				</radialGradient>
 				<path
    d="M1465.9,3344.28c0,0-4.93-63.16,13.97-81.73c21.25-20.87,85.57-7.6,85.57-7.6      s-43.72,16.52-61.12,32.31C1487.68,3302.35,1465.9,3344.28,1465.9,3344.28z"
-   fill="url(#XMLID_401_)"
+   fill="url(#XMLID_649_)"
    id="XMLID_559_" />
 			</g>
 			<g
@@ -5756,19 +5756,19 @@
    r="45.1328"
    cy="4473.5986"
    cx="4383.1069"
-   id="XMLID_402_">
+   id="XMLID_650_">
 					<stop
-   id="stop7329"
+   id="stop1566"
    style="stop-color:#FFFFFF;stop-opacity:0.7023"
    offset="0" />
 					<stop
-   id="stop7331"
+   id="stop1568"
    style="stop-color:#010101;stop-opacity:0"
    offset="1" />
 				</radialGradient>
 				<path
    d="M1525,3458.2c0,0,38.97-74.69,71.38-83.75      c36.43-10.18,93.41,45.61,93.41,45.61s-56.54-8.99-85.47-2.12C1576.67,3424.5,1525,3458.2,1525,3458.2z"
-   fill="url(#XMLID_402_)"
+   fill="url(#XMLID_650_)"
    id="XMLID_555_" />
 			</g>
 			<path
@@ -6120,11 +6120,11 @@
    cx="20.5144"
    id="cl_18_">
 					<stop
-   id="stop7424"
+   id="stop1661"
    style="stop-color:#010101"
    offset="0" />
 					<stop
-   id="stop7426"
+   id="stop1663"
    style="stop-color:#010101;stop-opacity:0.6565"
    offset="1" />
 				</radialGradient>
@@ -6142,19 +6142,19 @@
    r="45.0585"
    cy="-764.5161"
    cx="1582.9128"
-   id="XMLID_406_">
+   id="XMLID_651_">
 					<stop
-   id="stop7431"
+   id="stop1668"
    style="stop-color:#FFFFFF;stop-opacity:0.5344"
    offset="0" />
 					<stop
-   id="stop7433"
+   id="stop1670"
    style="stop-color:#010101;stop-opacity:0"
    offset="1" />
 				</radialGradient>
 				<path
    d="M77.09,4436.38c0,0-4.92-63.06,13.95-81.59c21.21-20.83,85.43-7.59,85.43-7.59      s-43.65,16.5-61.02,32.26C98.84,4394.52,77.09,4436.38,77.09,4436.38z"
-   fill="url(#XMLID_406_)"
+   fill="url(#XMLID_651_)"
    id="XMLID_612_" />
 			</g>
 			<g
@@ -6166,19 +6166,19 @@
    r="45.0585"
    cy="-1009.0087"
    cx="1235.373"
-   id="XMLID_408_">
+   id="XMLID_652_">
 					<stop
-   id="stop7438"
+   id="stop1675"
    style="stop-color:#FFFFFF;stop-opacity:0.5191"
    offset="0" />
 					<stop
-   id="stop7440"
+   id="stop1677"
    style="stop-color:#010101;stop-opacity:0"
    offset="1" />
 				</radialGradient>
 				<path
    d="M162.14,4314.84c0,0-4.92-63.06,13.95-81.59      c21.21-20.83,85.43-7.59,85.43-7.59s-43.65,16.5-61.02,32.26C183.9,4272.98,162.14,4314.84,162.14,4314.84z"
-   fill="url(#XMLID_408_)"
+   fill="url(#XMLID_652_)"
    id="XMLID_608_" />
 			</g>
 			<g
@@ -6190,19 +6190,19 @@
    r="45.0585"
    cy="845.2993"
    cx="1252.5898"
-   id="XMLID_417_">
+   id="XMLID_653_">
 					<stop
-   id="stop7445"
+   id="stop1682"
    style="stop-color:#FFFFFF;stop-opacity:0.7023"
    offset="0" />
 					<stop
-   id="stop7447"
+   id="stop1684"
    style="stop-color:#010101;stop-opacity:0"
    offset="1" />
 				</radialGradient>
 				<path
    d="M221.15,4428.57c0,0,38.91-74.57,71.26-83.61      c36.37-10.16,93.25,45.54,93.25,45.54s-56.45-8.97-85.33-2.12C272.74,4394.93,221.15,4428.57,221.15,4428.57z"
-   fill="url(#XMLID_417_)"
+   fill="url(#XMLID_653_)"
    id="XMLID_604_" />
 			</g>
 			<path
@@ -6294,11 +6294,11 @@
    cx="20.0209"
    id="cl_19_">
 					<stop
-   id="stop7473"
+   id="stop1710"
    style="stop-color:#010101"
    offset="0" />
 					<stop
-   id="stop7475"
+   id="stop1712"
    style="stop-color:#010101;stop-opacity:0.6565"
    offset="1" />
 				</radialGradient>
@@ -6316,19 +6316,19 @@
    r="44.7137"
    cy="18258.0469"
    cx="7574.7227"
-   id="XMLID_418_">
+   id="XMLID_654_">
 					<stop
-   id="stop7480"
+   id="stop1717"
    style="stop-color:#FFFFFF;stop-opacity:0.5344"
    offset="0" />
 					<stop
-   id="stop7482"
+   id="stop1719"
    style="stop-color:#010101;stop-opacity:0"
    offset="1" />
 				</radialGradient>
 				<path
    d="M167.24,4438.39c0,0-4.88-62.58,13.84-80.97      c21.05-20.67,84.77-7.53,84.77-7.53s-43.32,16.37-60.55,32.01C188.82,4396.86,167.24,4438.39,167.24,4438.39z"
-   fill="url(#XMLID_418_)"
+   fill="url(#XMLID_654_)"
    id="XMLID_522_" />
 			</g>
 			<g
@@ -6340,19 +6340,19 @@
    r="44.7137"
    cy="18011.2676"
    cx="7223.9307"
-   id="XMLID_420_">
+   id="XMLID_660_">
 					<stop
-   id="stop7487"
+   id="stop1724"
    style="stop-color:#FFFFFF;stop-opacity:0.5191"
    offset="0" />
 					<stop
-   id="stop7489"
+   id="stop1726"
    style="stop-color:#010101;stop-opacity:0"
    offset="1" />
 				</radialGradient>
 				<path
    d="M251.64,4317.78c0,0-4.89-62.58,13.84-80.97      c21.05-20.67,84.77-7.53,84.77-7.53s-43.32,16.37-60.55,32.01C273.23,4276.25,251.64,4317.78,251.64,4317.78z"
-   fill="url(#XMLID_420_)"
+   fill="url(#XMLID_660_)"
    id="XMLID_528_" />
 			</g>
 			<g
@@ -6364,19 +6364,19 @@
    r="44.7137"
    cy="18689.457"
    cx="522.0974"
-   id="XMLID_423_">
+   id="XMLID_661_">
 					<stop
-   id="stop7494"
+   id="stop1731"
    style="stop-color:#FFFFFF;stop-opacity:0.7023"
    offset="0" />
 					<stop
-   id="stop7496"
+   id="stop1733"
    style="stop-color:#010101;stop-opacity:0"
    offset="1" />
 				</radialGradient>
 				<path
    d="M310.2,4430.64c0,0,38.61-74,70.72-82.97c36.09-10.09,92.54,45.19,92.54,45.19      s-56.02-8.91-84.67-2.1C361.39,4397.26,310.2,4430.64,310.2,4430.64z"
-   fill="url(#XMLID_423_)"
+   fill="url(#XMLID_661_)"
    id="XMLID_520_" />
 			</g>
 			<path
@@ -6469,11 +6469,11 @@
    cx="19.8314"
    id="cl_20_">
 					<stop
-   id="stop7522"
+   id="stop1759"
    style="stop-color:#010101"
    offset="0" />
 					<stop
-   id="stop7524"
+   id="stop1761"
    style="stop-color:#010101;stop-opacity:0.6565"
    offset="1" />
 				</radialGradient>
@@ -6491,19 +6491,19 @@
    r="45.1328"
    cy="-1304.5782"
    cx="2097.0381"
-   id="XMLID_424_">
+   id="XMLID_662_">
 					<stop
-   id="stop7529"
+   id="stop1766"
    style="stop-color:#FFFFFF;stop-opacity:0.5344"
    offset="0" />
 					<stop
-   id="stop7531"
+   id="stop1768"
    style="stop-color:#010101;stop-opacity:0"
    offset="1" />
 				</radialGradient>
 				<path
    d="M261.33,4441.05c0,0-4.93-63.16,13.97-81.73c21.25-20.87,85.57-7.6,85.57-7.6      s-43.72,16.52-61.12,32.31C283.12,4399.13,261.33,4441.05,261.33,4441.05z"
-   fill="url(#XMLID_424_)"
+   fill="url(#XMLID_662_)"
    id="XMLID_575_" />
 			</g>
 			<g
@@ -6515,19 +6515,19 @@
    r="45.1328"
    cy="-1548.5779"
    cx="1750.1991"
-   id="XMLID_431_">
+   id="XMLID_663_">
 					<stop
-   id="stop7536"
+   id="stop1773"
    style="stop-color:#FFFFFF;stop-opacity:0.5191"
    offset="0" />
 					<stop
-   id="stop7538"
+   id="stop1775"
    style="stop-color:#010101;stop-opacity:0"
    offset="1" />
 				</radialGradient>
 				<path
    d="M346.52,4319.31c0,0-4.93-63.16,13.97-81.73c21.25-20.87,85.57-7.6,85.57-7.6      s-43.72,16.52-61.12,32.31C368.31,4277.39,346.52,4319.31,346.52,4319.31z"
-   fill="url(#XMLID_431_)"
+   fill="url(#XMLID_663_)"
    id="XMLID_569_" />
 			</g>
 			<g
@@ -6539,19 +6539,19 @@
    r="45.1328"
    cy="782.6705"
    cx="1731.8577"
-   id="XMLID_441_">
+   id="XMLID_664_">
 					<stop
-   id="stop7543"
+   id="stop1780"
    style="stop-color:#FFFFFF;stop-opacity:0.7023"
    offset="0" />
 					<stop
-   id="stop7545"
+   id="stop1782"
    style="stop-color:#010101;stop-opacity:0"
    offset="1" />
 				</radialGradient>
 				<path
    d="M405.63,4433.23c0,0,38.97-74.69,71.38-83.75      c36.43-10.18,93.41,45.61,93.41,45.61s-56.54-8.99-85.47-2.12C457.3,4399.54,405.63,4433.23,405.63,4433.23z"
-   fill="url(#XMLID_441_)"
+   fill="url(#XMLID_664_)"
    id="XMLID_564_" />
 			</g>
 			<path
@@ -6838,12 +6838,12 @@
 <text
    transform="matrix(1 0 0 1 237.5001 999.7933)"
    id="XMLID_681_"><tspan
-     id="tspan7624"
+     id="tspan1861"
      font-size="12px"
      font-family="'ArialMT'"
      y="0"
      x="0">Five cards not fitting any other</tspan><tspan
-     id="tspan7626"
+     id="tspan1863"
      font-size="12px"
      font-family="'ArialMT'"
      y="14.4"
@@ -6911,11 +6911,11 @@
    cx="16.4137"
    id="cl_21_">
 					<stop
-   id="stop7642"
+   id="stop1879"
    style="stop-color:#010101"
    offset="0" />
 					<stop
-   id="stop7644"
+   id="stop1881"
    style="stop-color:#010101;stop-opacity:0.6565"
    offset="1" />
 				</radialGradient>
@@ -6933,19 +6933,19 @@
    r="45.0585"
    cy="-3863.6343"
    cx="4721.7002"
-   id="XMLID_453_">
+   id="XMLID_665_">
 					<stop
-   id="stop7649"
+   id="stop1886"
    style="stop-color:#FFFFFF;stop-opacity:0.5344"
    offset="0" />
 					<stop
-   id="stop7651"
+   id="stop1888"
    style="stop-color:#010101;stop-opacity:0"
    offset="1" />
 				</radialGradient>
 				<path
    d="M1184.31,4430.94c0,0-4.92-63.06,13.95-81.59      c21.21-20.83,85.43-7.59,85.43-7.59s-43.65,16.5-61.02,32.26C1206.06,4389.09,1184.31,4430.94,1184.31,4430.94z"
-   fill="url(#XMLID_453_)"
+   fill="url(#XMLID_665_)"
    id="XMLID_726_" />
 			</g>
 			<g
@@ -6957,19 +6957,19 @@
    r="45.0585"
    cy="-4108.127"
    cx="4374.1606"
-   id="XMLID_454_">
+   id="XMLID_667_">
 					<stop
-   id="stop7656"
+   id="stop1893"
    style="stop-color:#FFFFFF;stop-opacity:0.5191"
    offset="0" />
 					<stop
-   id="stop7658"
+   id="stop1895"
    style="stop-color:#010101;stop-opacity:0"
    offset="1" />
 				</radialGradient>
 				<path
    d="M1269.36,4309.4c0,0-4.92-63.06,13.95-81.59      c21.21-20.83,85.43-7.59,85.43-7.59s-43.65,16.5-61.02,32.26C1291.11,4267.55,1269.36,4309.4,1269.36,4309.4z"
-   fill="url(#XMLID_454_)"
+   fill="url(#XMLID_667_)"
    id="XMLID_722_" />
 			</g>
 			<g
@@ -6981,19 +6981,19 @@
    r="45.0585"
    cy="601.6226"
    cx="4118.5137"
-   id="XMLID_467_">
+   id="XMLID_668_">
 					<stop
-   id="stop7663"
+   id="stop1900"
    style="stop-color:#FFFFFF;stop-opacity:0.7023"
    offset="0" />
 					<stop
-   id="stop7665"
+   id="stop1902"
    style="stop-color:#010101;stop-opacity:0"
    offset="1" />
 				</radialGradient>
 				<path
    d="M1328.37,4423.13c0,0,38.91-74.57,71.26-83.61      c36.37-10.16,93.25,45.54,93.25,45.54s-56.45-8.97-85.33-2.12C1379.95,4389.49,1328.37,4423.13,1328.37,4423.13z"
-   fill="url(#XMLID_467_)"
+   fill="url(#XMLID_668_)"
    id="XMLID_718_" />
 			</g>
 			<path
@@ -7094,11 +7094,11 @@
    cx="-42.5679"
    id="dl_12_">
 					<stop
-   id="stop7692"
+   id="stop1929"
    style="stop-color:#DD1F26"
    offset="0" />
 					<stop
-   id="stop7694"
+   id="stop1931"
    style="stop-color:#DD1F26;stop-opacity:0.6412"
    offset="1" />
 				</radialGradient>
@@ -7116,19 +7116,19 @@
    r="45.2607"
    cy="-5712.8403"
    cx="-12598.1221"
-   id="XMLID_471_">
+   id="XMLID_669_">
 					<stop
-   id="stop7699"
+   id="stop1936"
    style="stop-color:#FFFFFF;stop-opacity:0.4351"
    offset="0" />
 					<stop
-   id="stop7701"
+   id="stop1938"
    style="stop-color:#010101;stop-opacity:0"
    offset="1" />
 				</radialGradient>
 				<path
    d="M1642.81,5068.79c0,0,19.41,78.56-1.85,106.01      c-23.89,30.86-111.81,27.92-111.81,27.92s54.56-30.19,74.38-53.82C1622.49,5126.3,1642.81,5068.79,1642.81,5068.79z"
-   fill="url(#XMLID_471_)"
+   fill="url(#XMLID_669_)"
    id="XMLID_570_" />
 			</g>
 		</g>
@@ -7209,11 +7209,11 @@
    cx="15.7307"
    id="cl_22_">
 					<stop
-   id="stop7725"
+   id="stop1962"
    style="stop-color:#010101"
    offset="0" />
 					<stop
-   id="stop7727"
+   id="stop1964"
    style="stop-color:#010101;stop-opacity:0.6565"
    offset="1" />
 				</radialGradient>
@@ -7231,19 +7231,19 @@
    r="45.1328"
    cy="-4403.6963"
    cx="5235.8257"
-   id="XMLID_472_">
+   id="XMLID_670_">
 					<stop
-   id="stop7732"
+   id="stop1969"
    style="stop-color:#FFFFFF;stop-opacity:0.5344"
    offset="0" />
 					<stop
-   id="stop7734"
+   id="stop1971"
    style="stop-color:#010101;stop-opacity:0"
    offset="1" />
 				</radialGradient>
 				<path
    d="M1368.55,4435.62c0,0-4.93-63.16,13.97-81.73c21.25-20.87,85.57-7.6,85.57-7.6      s-43.72,16.52-61.12,32.31C1390.33,4393.69,1368.55,4435.62,1368.55,4435.62z"
-   fill="url(#XMLID_472_)"
+   fill="url(#XMLID_670_)"
    id="XMLID_635_" />
 			</g>
 			<g
@@ -7255,19 +7255,19 @@
    r="45.1328"
    cy="-4647.6958"
    cx="4888.9863"
-   id="XMLID_476_">
+   id="XMLID_671_">
 					<stop
-   id="stop7739"
+   id="stop1976"
    style="stop-color:#FFFFFF;stop-opacity:0.5191"
    offset="0" />
 					<stop
-   id="stop7741"
+   id="stop1978"
    style="stop-color:#010101;stop-opacity:0"
    offset="1" />
 				</radialGradient>
 				<path
    d="M1453.74,4313.88c0,0-4.93-63.16,13.97-81.73c21.25-20.87,85.57-7.6,85.57-7.6      s-43.72,16.52-61.12,32.31C1475.53,4271.95,1453.74,4313.88,1453.74,4313.88z"
-   fill="url(#XMLID_476_)"
+   fill="url(#XMLID_671_)"
    id="XMLID_625_" />
 			</g>
 			<g
@@ -7279,19 +7279,19 @@
    r="45.1328"
    cy="538.9939"
    cx="4597.7817"
-   id="XMLID_477_">
+   id="XMLID_672_">
 					<stop
-   id="stop7746"
+   id="stop1983"
    style="stop-color:#FFFFFF;stop-opacity:0.7023"
    offset="0" />
 					<stop
-   id="stop7748"
+   id="stop1985"
    style="stop-color:#010101;stop-opacity:0"
    offset="1" />
 				</radialGradient>
 				<path
    d="M1512.84,4427.8c0,0,38.97-74.69,71.38-83.75      c36.43-10.18,93.41,45.61,93.41,45.61s-56.54-8.99-85.47-2.12C1564.52,4394.1,1512.84,4427.8,1512.84,4427.8z"
-   fill="url(#XMLID_477_)"
+   fill="url(#XMLID_672_)"
    id="XMLID_620_" />
 			</g>
 			<path
