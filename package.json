@@ -1,6 +1,6 @@
 {
-  "name": "ace-code-frontend",
-  "version": "0.0.0",
+  "name": "probot-frontend",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
