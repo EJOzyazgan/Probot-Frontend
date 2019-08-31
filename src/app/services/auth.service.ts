@@ -8,6 +8,7 @@ export class AuthService {
   authUrl = environment.apiUrl + 'user';
 
   constructor(private http: HttpClient) {
+
   }
 
   signUp(user) {
@@ -15,6 +16,7 @@ export class AuthService {
   }
 
   login(email, password) {
+    console.log(this.authUrl);
     return this.http.post(this.authUrl + '/login', {email: email, password: password});
   }
 
