@@ -6,7 +6,7 @@
           SANDBOX
         </mat-card-title>
         <mat-card-content>
-          <button mat-raised-button [disabled]="checkingGame || checkingBot" class="play-btn" (click)="startSandBox()">Play</button>
+          <button mat-raised-button [disabled]="checkingGame || checkingBot || !bot.id" class="play-btn" (click)="startSandBox()">Play</button>
           <div class="checks-container" *ngIf="checkingSandbox">
             <div class="check-item" [style.color]="checkingBot ? 'blue' : botConnected ? 'green' : 'red'">
               <div *ngIf="!checkingBot">
@@ -51,7 +51,7 @@
               </mat-select>
             </mat-form-field>
           </form>
-          <button mat-raised-button class="play-btn" (click)="startPVP()">Play</button>
+          <button mat-raised-button class="play-btn" [disabled]="!bot.id" (click)="startPVP()">Play</button>
         </mat-card-content>
       </div>
     </mat-card>

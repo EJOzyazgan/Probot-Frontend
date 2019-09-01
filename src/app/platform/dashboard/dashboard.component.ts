@@ -1,13 +1,13 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
-import {AuthService} from '../../services/auth.service';
-import {User} from '../../models/user.model';
-import {Bot} from '../../models/bot.model';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { AuthService } from '../../services/auth.service';
+import { User } from '../../models/user.model';
+import { Bot } from '../../models/bot.model';
 import * as moment from 'moment';
-import {MetricService} from '../../services/metric.service';
-import {AlertService} from 'ngx-alerts';
-import {MatTableDataSource} from '@angular/material/table';
-import {Router} from '@angular/router';
-import {BotService} from '../../services/bot.service';
+import { MetricService } from '../../services/metric.service';
+import { AlertService } from 'ngx-alerts';
+import { MatTableDataSource } from '@angular/material/table';
+import { Router } from '@angular/router';
+import { BotService } from '../../services/bot.service';
 
 
 @Component({
@@ -17,7 +17,7 @@ import {BotService} from '../../services/bot.service';
 })
 
 export class DashboardComponent implements OnInit {
-  @ViewChild('totalWinningsChart', {static: false}) totalWinningsChart;
+  @ViewChild('totalWinningsChart', { static: false }) totalWinningsChart;
 
   user = new User();
   bot = new Bot();
@@ -36,14 +36,14 @@ export class DashboardComponent implements OnInit {
     dataTable: this.mockData(),
     options: {
       series: {
-        0: {color: '#cc0000'}
+        0: { color: '#cc0000' }
       },
       hAxis: {
         showTextEvery: 2,
         slantedText: true,
       },
-      legend: {position: 'none'},
-      width:1000,
+      legend: { position: 'none' },
+      width: 1000,
       height: 325,
       chartArea: {
         width: '90%',
@@ -64,10 +64,10 @@ export class DashboardComponent implements OnInit {
   MINUTE_DAY = 1440;
 
   constructor(private authService: AuthService,
-              private metricService: MetricService,
-              private alertService: AlertService,
-              private router: Router,
-              private botService: BotService) {
+    private metricService: MetricService,
+    private alertService: AlertService,
+    private router: Router,
+    private botService: BotService) {
   }
 
   ngOnInit() {
@@ -230,10 +230,17 @@ export class DashboardComponent implements OnInit {
   }
 
   addFriend() {
-    this.authService.addFriend(this.friendsEmail).subscribe(email => {
-      this.alertService.success(email['msg']);
-      this.toggleView('invite');
-    });
+    if (this.friendsEmail !== null && this.friendsEmail.trim() !== '') {
+      this.authService.addFriend(this.friendsEmail).subscribe(email => {
+        this.alertService.success(email['msg']);
+        this.toggleView('invite');
+      }, err => {
+        console.log(err);
+        this.alertService.danger(err['error']['error']['msg'])
+      });
+    } else {
+      this.alertService.warning('Must provide friend\'s email');
+    }
   }
 
   toggleView(view) {
