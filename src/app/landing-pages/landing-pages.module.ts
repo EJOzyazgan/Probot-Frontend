@@ -9,7 +9,6 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 import {EventComponent} from './event/event.component';
 import {AngularFontAwesomeModule} from 'angular-font-awesome';
 import { SharedModule } from '../shared/shared.module';
-import { GettingStartedComponent } from './getting-started/getting-started.component';
 import {SlideshowModule} from 'ng-simple-slideshow';
 
 @NgModule({

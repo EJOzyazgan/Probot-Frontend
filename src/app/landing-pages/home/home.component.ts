@@ -26,6 +26,7 @@ export class HomeComponent implements OnInit {
   canSignup = false;
   countLoaded = false;
 
+  tableMessage = 'Tables Live In...';
 
   days;
   hours;
@@ -90,6 +91,10 @@ export class HomeComponent implements OnInit {
       // If the count down is over, write some text 
       this_.canSignup = distance < 0;
       this_.countLoaded = true;
+
+      if (this_.canSignup) {
+        this_.tableMessage = 'Tables Now Live!!!';
+      }
     }, 1000);
   }
 }

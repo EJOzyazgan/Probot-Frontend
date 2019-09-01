@@ -2,7 +2,8 @@
   <div class="container">
     <div class="section-title">Leaderboard</div>
     <mat-card class="leader-board-wrapper mat-elevation-z4">
-      <table mat-table [dataSource]="dataSource" class="leader-board" *ngIf="loaded">
+      <div *ngIf="noLeaders">Calculating top players...</div>
+      <table mat-table [dataSource]="dataSource" class="leader-board" *ngIf="loaded && !noLeaders">
 
         <ng-container matColumnDef="name">
           <th mat-header-cell *matHeaderCellDef>Name</th>

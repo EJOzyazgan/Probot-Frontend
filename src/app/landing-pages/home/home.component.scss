@@ -38,6 +38,29 @@
   border-right: 2px solid black;
 }
 
+.signup-btn {
+  max-width: 500px;
+  height: 75px;
+  width: 90%;
+  border-radius: 20px;
+  background-color: #cc0000;
+  margin: 10px auto;
+  font-size: 30px;
+  color: white;
+  border: none;
+}
+
+.signup-step:hover {
+  cursor: pointer;
+}
+
+.signup-btn:hover {
+  cursor: pointer;
+  border: #cc0000 solid 2px;
+  background-color: transparent;
+  color: #cc0000;
+}
+
 .value {
   color: #cc0000;
 }

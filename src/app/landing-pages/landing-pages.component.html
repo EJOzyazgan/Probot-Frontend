@@ -10,17 +10,19 @@
         <img class="companyLogo" src="../../assets/img/logo.png">
       </a>
       <div class="toolbar-btns">
-        <div class="toolbar-btn" [routerLinkActive]="['active-link']">
+        <div class="toolbar-btn last" [routerLinkActive]="['active-link']">
           <a class="toolbar-link" [routerLink]="['./home']">Home</a>
         </div>
-        <div class="toolbar-btn" [routerLinkActive]="['active-link']">
+        <div class="toolbar-btn time-unit" [routerLinkActive]="['active-link']">
           <a class="toolbar-link" [routerLink]="['./getting-started']">Getting Started</a>
         </div>
-        <!-- <div class="toolbar-btn">
+        <div class="toolbar-btn time-unit" *ngIf="canSignup">
           <a class="toolbar-link" [routerLink]="['../auth/login']">Login</a>
+        </div>
+        <div class="toolbar-btn time-unit" *ngIf="canSignup">
           <a class="toolbar-link" [style.color]="'#cc0000'" [style.font-weight]="'bold'"
             [routerLink]="['../auth/signup']">Sign Up</a>
-        </div> -->
+        </div>
       </div>
     </div>
   </mat-toolbar>
@@ -59,6 +61,14 @@
         </div>
         <div class="margin-top-20">
           <a class="footer-nav" href="https://www.linkedin.com/company/probot-playground-inc">Linkedin</a>
+        </div>
+      </div>
+      <div class="footer-column">
+        <h4>Legal</h4>
+
+        <div [routerLink]="[ './legal/tos' ]" class="footer-nav margin-top-20">Terms of Service</div>
+        <div [routerLink]="[ './legal/privacy-policy' ]" class="footer-nav margin-top-20">Privacy Policy</div>
+        <div [routerLink]="[ './legal/ccpa' ]" class="footer-nav margin-top-20">California Residents Privacy Notice
         </div>
       </div>
       <div class="footer-column">

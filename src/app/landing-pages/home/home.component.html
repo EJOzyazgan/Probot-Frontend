@@ -5,7 +5,7 @@
   </div>
 
   <div class="signup-action">
-    <div class="countdown-title" *ngIf="!canSignup && countLoaded">Tables Live In...</div>
+    <div class="countdown-title">{{tableMessage}}</div>
     <div class="countdown-clock" *ngIf="!canSignup && countLoaded">
       <div class="time-unit">
         <div class="value">
@@ -39,6 +39,10 @@
           Seconds
         </div>
       </div>
+    </div>
+
+    <div class="signup-btn-container" *ngIf="canSignup">
+      <button class="signup-btn" [routerLink]="['../../auth/signup']">Sign Up Now</button>
     </div>
   </div>
 
@@ -105,13 +109,13 @@
   <div class="getting-started">
     <div class="started-header">Get Started!</div>
     <div class="steps">
-      <div class="step">
+      <div class="step signup-step" [routerLink]="['../../auth/signup']">
         <img src="../../../assets/img/user.png" class="step-img">
         <div class="step-header">1. Sign Up</div>
         <div class="step-description">Create your free account</div>
       </div>
 
-      <div class="step">
+      <div class="step signup-step" [routerLink]="['../getting-started/setup']">
         <img src="../../../assets/img/upload.png" class="step-img">
         <div class="step-header">2. Upload</div>
         <div class="step-description">Upload your poker bot(s)</div>

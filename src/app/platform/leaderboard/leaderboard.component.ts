@@ -19,6 +19,8 @@ export class LeaderboardComponent implements OnInit {
   userOnPage = false;
   loaded = false;
 
+  noLeaders  = false;
+
   user = new User();
 
   constructor(private metricService: MetricService) {
@@ -32,8 +34,10 @@ export class LeaderboardComponent implements OnInit {
   getTopPlayers() {
     this.metricService.getTopPlayers().subscribe((topPlayers: Array<User>) => {
       this.topPlayers = topPlayers;
-      if (this.topPlayers) {
+      if (this.topPlayers && this.topPlayers.length > 0) {
         this.populateLeaderboard();
+      } else {
+        this.noLeaders = true;
       }
     });
   }

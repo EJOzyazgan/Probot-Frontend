@@ -31,7 +31,7 @@ export class SignupComponent implements OnInit {
 
   genders = ['Female', 'Male', 'Other'];
 
-  minDate = moment().subtract(18, 'y');
+  minDate = moment().subtract(16, 'y');
   date = new FormControl({
     value: this.minDate,
     disabled: true,

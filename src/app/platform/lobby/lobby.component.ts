@@ -39,7 +39,6 @@ export class LobbyComponent implements OnInit {
 
   ngOnInit() {
     this.socket.on('connect', (data) => {
-
     });
 
     this.socket.on('sandboxUpdate', data => {

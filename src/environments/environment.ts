@@ -5,6 +5,7 @@
 export const environment = {
   production: false,
   apiUrl: 'http://localhost:3000/api/',
+  domain: 'localhost:3000',
   userTokenKey: 'probot-user-token',
   userTokenExpire: 'probot-user-expire',
   userRefreshToken: 'probot-user-refresh',

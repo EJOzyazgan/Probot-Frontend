@@ -8,6 +8,7 @@ import {MetricService} from '../../services/metric.service';
 import DurationConstructor = moment.unitOfTime.DurationConstructor;
 import {AlertService} from 'ngx-alerts';
 import * as fileSaver from 'file-saver';
+import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 
 @Component({
   selector: 'app-bot',
@@ -121,20 +122,41 @@ export class BotComponent implements OnInit {
 
   createBot() {
     this.bot.userId = this.user.id;
+    this.addEnd();
     this.botService.create(this.bot).subscribe(bot => {
       this.bot = bot;
     });
   }
 
   patchBot() {
+    this.addEnd();
     this.botService.patchBot(this.bot).subscribe(patchedBot => {
       this.bot = patchedBot;
       this.toggleEdit();
     });
   }
 
+  addEnd() {
+    if (this.bot.serviceUrl.substr(this.bot.serviceUrl.length - 1) !== '/') {
+      this.bot.serviceUrl = this.bot.serviceUrl + '/';
+    }
+
+    this.bot.serviceUrl = this.bot.serviceUrl.trim();
+  }
+
   formCompleted() {
-    return this.bot.name === undefined || this.bot.serviceUrl === undefined;
+    return this.bot.name === undefined || this.bot.serviceUrl === undefined ||
+    !this.validURL(this.bot.serviceUrl);
+  }
+
+  validURL(str) {
+    var pattern = new RegExp('^(https?:\\/\\/)?'+ // protocol
+      '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|'+ // domain name
+      '((\\d{1,3}\\.){3}\\d{1,3}))'+ // OR ip (v4) address
+      '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*'+ // port and path
+      '(\\?[;&a-z\\d%_.~+=-]*)?'+ // query string
+      '(\\#[-a-z\\d_]*)?$','i'); // fragment locator
+    return !!pattern.test(str);
   }
 
   toggleEdit() {

@@ -21,8 +21,9 @@ import {MetricService} from './services/metric.service';
 import { Ng2GoogleChartsModule } from 'ng2-google-charts';
 import { FlexLayoutModule} from '@angular/flex-layout';
 import {AuthInterceptor} from './services/authInterceptor.service';
+import {environment} from '../environments/environment';
 
-const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
+const config: SocketIoConfig = { url: `${environment.domain}`, options: {} };
 
 @NgModule({
   declarations: [
