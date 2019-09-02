@@ -16,10 +16,10 @@
         <div class="toolbar-btn time-unit" [routerLinkActive]="['active-link']">
           <a class="toolbar-link" [routerLink]="['./getting-started']">Getting Started</a>
         </div>
-        <div class="toolbar-btn time-unit" *ngIf="canSignup">
+        <div class="toolbar-btn time-unit">
           <a class="toolbar-link" [routerLink]="['../auth/login']">Login</a>
         </div>
-        <div class="toolbar-btn time-unit" *ngIf="canSignup">
+        <div class="toolbar-btn time-unit">
           <a class="toolbar-link" [style.color]="'#cc0000'" [style.font-weight]="'bold'"
             [routerLink]="['../auth/signup']">Sign Up</a>
         </div>
@@ -33,6 +33,12 @@
     </div>
     <div class="menu-item" [routerLink]="['./getting-started']" [routerLinkActive]="['active-link']">
       Getting Started
+    </div>
+    <div class="menu-item" [routerLink]="['../auth/login']" [routerLinkActive]="['active-link']">
+      Login
+    </div>
+    <div class="menu-item" [routerLink]="['../auth/signup']" [routerLinkActive]="['active-link']">
+      Sign Up
     </div>
   </mat-menu>
 
