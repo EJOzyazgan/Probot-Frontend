@@ -26,6 +26,7 @@ import {AngularFontAwesomeModule} from 'angular-font-awesome';
 import {AngularSvgIconModule} from 'angular-svg-icon';
 import { TooltipComponent } from './tooltip/tooltip.component';
 import { CustomInputComponent } from './custom-input/custom-input.component';
+import { MatExpansionModule } from '@angular/material';
 
 
 @NgModule({
@@ -59,6 +60,7 @@ import { CustomInputComponent } from './custom-input/custom-input.component';
     MatMenuModule,
     AngularFontAwesomeModule,
     AngularSvgIconModule,
+    MatExpansionModule,
   ],
   providers: [],
   entryComponents: [],
@@ -88,7 +90,8 @@ import { CustomInputComponent } from './custom-input/custom-input.component';
     AngularFontAwesomeModule,
     AngularSvgIconModule,
     TooltipComponent,
-    CustomInputComponent
+    CustomInputComponent,
+    MatExpansionModule,
   ]
 })
 export class SharedModule {}
