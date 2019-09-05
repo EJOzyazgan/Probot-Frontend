@@ -66,10 +66,7 @@
 
 .mat-sidenav {
   background: #C1C1C1;
-}
-
-.side-nav-btns {
-  width: 30px;
+  padding: 10px;
 }
 
 .menu-btn {
@@ -82,7 +79,7 @@
 }
 
 .item {
-  margin: 30px auto;
+  margin: 20px auto;
 }
 
 .item:hover {
@@ -91,9 +88,15 @@
 
 .side-nav-btn {
   width: 30px;
+  margin: auto
 }
 
 .active-nav-btn {
   fill: #cc0000;
 }
 
+.side-nav-label {
+  font-size: 10px;
+  width: fit-content;
+  margin: auto;
+}

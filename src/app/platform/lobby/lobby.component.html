@@ -6,17 +6,15 @@
           SANDBOX
         </mat-card-title>
         <mat-card-content>
-          <button mat-raised-button [disabled]="checkingGame || checkingBot || !bot.id" class="play-btn" (click)="startSandBox()">Play</button>
+          <button mat-raised-button [disabled]="checkingGame || checkingBot || !bot.id" class="play-btn"
+            (click)="startSandBox()">Play</button>
           <div class="checks-container" *ngIf="checkingSandbox">
             <div class="check-item" [style.color]="checkingBot ? 'blue' : botConnected ? 'green' : 'red'">
               <div *ngIf="!checkingBot">
                 <mat-icon *ngIf="!botConnected">close</mat-icon>
                 <mat-icon *ngIf="botConnected">check</mat-icon>
               </div>
-              <mat-spinner *ngIf="checkingBot"
-                           class="check-spinner"
-                           [diameter]="20"
-                           [color]="'accent'"></mat-spinner>
+              <mat-spinner *ngIf="checkingBot" class="check-spinner" [diameter]="20" [color]="'accent'"></mat-spinner>
               <div class="check">Bot Connected</div>
             </div>
             <div *ngIf="botMessage" [style.color]="'red'">{{botMessage}}</div>
@@ -25,10 +23,7 @@
                 <mat-icon *ngIf="!gameCompleted">close</mat-icon>
                 <mat-icon *ngIf="gameCompleted">check</mat-icon>
               </div>
-              <mat-spinner *ngIf="checkingGame"
-                           class="check-spinner"
-                           [diameter]="20"
-                           [color]="'accent'"></mat-spinner>
+              <mat-spinner *ngIf="checkingGame" class="check-spinner" [diameter]="20" [color]="'accent'"></mat-spinner>
               <div class="check">Game Complete</div>
               <div class="check" *ngIf="gameMessage" [style.color]="'red'">{{gameMessage}}</div>
             </div>
@@ -45,13 +40,24 @@
         <mat-card-content>
           <form>
             <mat-form-field>
-              <mat-label class="select-label">Buy In</mat-label>
-              <mat-select class="buyin-select" [(ngModel)]="buyin" name="buyin-select">
-                <mat-option *ngFor="let amount of buyins" [value]=amount>${{amount}}</mat-option>
+              <mat-label class="select-label">Select Stakes</mat-label>
+              <mat-select class="buyin-select" [(ngModel)]="table" name="table-select" (ngModelChange)="tableSelect()">
+                <mat-option *ngFor="let table of tables" [disabled]="table.minBuyin > user.chips" [value]=table>
+                  {{table.stakes}}</mat-option>
               </mat-select>
             </mat-form-field>
+            <div *ngIf="table">
+              <div>Buyin range: {{table.minBuyin | number}} - {{table.maxBuyin | number}}</div>
+              <mat-form-field>
+                <mat-label class="select-label">Select Initial Buyin</mat-label>
+                <input matInput type="number" min="table.minBuyin" max="tanle.maxBuyin" required placeholder="Buyin"
+                  name="buyin-input" [formControl]="buyinControl">
+                <mat-error>Buyin must be betweet {{table.minBuyin | number}} - {{table.maxBuyin | number}}</mat-error>
+              </mat-form-field>
+            </div>
           </form>
-          <button mat-raised-button class="play-btn" [disabled]="!bot.id" (click)="startPVP()">Play</button>
+          <button mat-raised-button class="play-btn" [disabled]="!bot.id || !buyinControl.valid"
+            (click)="startPVP()">Play</button>
         </mat-card-content>
       </div>
     </mat-card>
