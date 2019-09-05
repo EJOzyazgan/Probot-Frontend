@@ -1,5 +1,5 @@
 <div class="main-container">
-  <div fxLayout="row wrap" fxLayoutAlign="center" class="content-container">
+  <div fxLayout="row wrap" fxLayoutAlign="let" class="content-container">
     <div class="left-container">
       <mat-card class="bot-info-container mat-elevation-z6">
         <mat-card-title class="section-header">
@@ -11,12 +11,12 @@
           <form class="bot-info-form">
             <mat-form-field class="bot-info-input">
               <input matInput [disabled]="!isEditing && bot.id !== undefined" name="bot-name" placeholder="Bot Name"
-                     [(ngModel)]="bot.name">
+                [(ngModel)]="bot.name">
             </mat-form-field>
 
             <mat-form-field class="bot-info-input">
               <input matInput [disabled]="!isEditing && bot.id !== undefined" name="bot-url" placeholder="Bot URL"
-                     [(ngModel)]="bot.serviceUrl">
+                [(ngModel)]="bot.serviceUrl">
             </mat-form-field>
           </form>
           <div class="btn-container">
@@ -45,6 +45,14 @@
           </form>
         </mat-card-content>
       </mat-card>
+      <mat-card *ngIf="showNotMobile" class="bot-info-container bot-data-container mat-elevation-z6">
+        <mat-card-title class="section-header">
+          Analytics not available in mobile
+        </mat-card-title>
+        <mat-card-content>
+          Please use a non mobile device to view your bot analytics.
+        </mat-card-content>
+      </mat-card>
     </div>
     <div class="right-container">
       <div class="chart-container">
@@ -71,10 +79,7 @@
           </form>
         </div>
         <mat-card class="chart mat-elevation-z4">
-          <google-chart
-            #metricsChart
-            id="metricsChart"
-            [data]="metricsData"></google-chart>
+          <google-chart #metricsChart id="metricsChart" [data]="metricsData"></google-chart>
         </mat-card>
       </div>
     </div>

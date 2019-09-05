@@ -9,8 +9,8 @@
       <img class="company-logo" src="../../assets/img/logo.png" fxShow.gt-sm="true" fxHide="true">
       <div class="toolbar">
         <div class="user-info">
-          <svg-icon *ngIf="user.icon" class="user-icon" [applyCss]="true"
-                    src="../assets/icons/{{user.icon}}.svg"></svg-icon>
+          <svg-icon *ngIf="user.icon" class="user-icon" [applyCss]="true" src="../assets/icons/{{user.icon}}.svg">
+          </svg-icon>
           <div class="user-name">{{user.username}}</div>
           <fa class="arrow-icon" name="chevron-down" [matMenuTriggerFor]="userMenu"></fa>
         </div>
@@ -19,24 +19,16 @@
   </mat-toolbar>
 
   <mat-menu #appMenu="matMenu">
-    <div class="menu-item"
-         [routerLink]="['./dashboard']"
-         [routerLinkActive]="['active-nav-btn']">
+    <div class="menu-item" [routerLink]="['./dashboard']" [routerLinkActive]="['active-nav-btn']">
       <svg-icon class="menu-btn" [applyCss]="true" src="../../assets/dashboard.svg"></svg-icon>
     </div>
-    <div class="menu-item"
-         [routerLink]="['./bot']"
-         [routerLinkActive]="['active-nav-btn']">
+    <div class="menu-item" [routerLink]="['./bot']" [routerLinkActive]="['active-nav-btn']">
       <svg-icon class="menu-btn" [applyCss]="true" src="../../assets/circuit.svg"></svg-icon>
     </div>
-    <div class="menu-item"
-         [routerLink]="['./lobby']"
-         [routerLinkActive]="['active-nav-btn']">
+    <div class="menu-item" [routerLink]="['./lobby']" [routerLinkActive]="['active-nav-btn']">
       <svg-icon class="menu-btn" [applyCss]="true" src="../../assets/poker-table.svg"></svg-icon>
     </div>
-    <div class="menu-item"
-         [routerLink]="['./leader-board']"
-         [routerLinkActive]="['active-nav-btn']">
+    <div class="menu-item" [routerLink]="['./leader-board']" [routerLinkActive]="['active-nav-btn']">
       <svg-icon class="menu-btn" [applyCss]="true" src="../../assets/ranking.svg"></svg-icon>
     </div>
     <!--<div class="menu-item"-->
@@ -53,39 +45,41 @@
   </mat-menu>
 
   <div class="main-content" fxLayout="row">
-    <mat-card class="mat-elevation-z6 mat-sidenav" fxShow.gt-sm="true" fxHide="true">
-      <mat-card-content class="side-nav-btns">
-        <div class="item"
-             [routerLink]="[user.isAdmin ? './admin-dashboard' : './dashboard']"
-             [routerLinkActive]="['active-nav-btn']">
-          <svg-icon class="side-nav-btn" [applyCss]="true" src="../../assets/dashboard.svg"></svg-icon>
+    <div class="mat-elevation-z6 mat-sidenav" fxShow.gt-sm="true" fxHide="true">
+      <div class="item" [routerLink]="[user.isAdmin ? './admin-dashboard' : './dashboard']"
+        [routerLinkActive]="['active-nav-btn']">
+        <div class="side-nav-btn">
+          <svg-icon [applyCss]="true" src="../../assets/dashboard.svg"></svg-icon>
         </div>
-        <div class="item"
-             [routerLink]="[user.isAdmin ? './admin-bots' : './bot']"
-             [routerLinkActive]="['active-nav-btn']">
-          <svg-icon class="side-nav-btn" [applyCss]="true" src="../../assets/circuit.svg"></svg-icon>
+        <div class="side-nav-label">Dashboard</div>
+      </div>
+      <div class="item" [routerLink]="[user.isAdmin ? './admin-bots' : './bot']"
+        [routerLinkActive]="['active-nav-btn']">
+        <div class="side-nav-btn">
+          <svg-icon [applyCss]="true" src="../../assets/circuit.svg"></svg-icon>
         </div>
-        <div class="item"
-             *ngIf="!user.isAdmin"
-             [routerLink]="['./lobby']"
-             [routerLinkActive]="['active-nav-btn']">
+        <div class="side-nav-label">Bot</div>
+      </div>
+      <div class="item" *ngIf="!user.isAdmin" [routerLink]="['./lobby']" [routerLinkActive]="['active-nav-btn']">
+        <div class="side-nav-btn">
           <svg-icon class="side-nav-btn" [applyCss]="true" src="../../assets/poker-table.svg"></svg-icon>
         </div>
-        <div class="item"
-             [routerLink]="['./leader-board']"
-             [routerLinkActive]="['active-nav-btn']">
+        <div class="side-nav-label">Lobby</div>
+      </div>
+      <div class="item" [routerLink]="['./leader-board']" [routerLinkActive]="['active-nav-btn']">
+        <div class="side-nav-btn">
           <svg-icon class="side-nav-btn" [applyCss]="true" src="../../assets/ranking.svg"></svg-icon>
         </div>
-        <!--<div class="item"-->
-        <!--[routerLink]="['./tournament']"-->
-        <!--[routerLinkActive]="['active-nav-btn']">-->
-        <!--<svg-icon class="side-nav-btn" [applyCss]="true" src="../../assets/tournament.svg"></svg-icon>-->
-        <!--</div>-->
-      </mat-card-content>
-    </mat-card>
+        <div class="side-nav-label">Leaderboard</div>
+      </div>
+      <!--<div class="item"-->
+      <!--[routerLink]="['./tournament']"-->
+      <!--[routerLinkActive]="['active-nav-btn']">-->
+      <!--<svg-icon class="side-nav-btn" [applyCss]="true" src="../../assets/tournament.svg"></svg-icon>-->
+      <!--</div>-->
+    </div>
     <div fxFlex="grow">
       <router-outlet></router-outlet>
     </div>
   </div>
 </div>
-

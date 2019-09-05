@@ -1,12 +1,12 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
-import {User} from '../../models/user.model';
-import {AuthService} from '../../services/auth.service';
-import {BotService} from '../../services/bot.service';
-import {Bot} from '../../models/bot.model';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { User } from '../../models/user.model';
+import { AuthService } from '../../services/auth.service';
+import { BotService } from '../../services/bot.service';
+import { Bot } from '../../models/bot.model';
 import * as moment from 'moment';
-import {MetricService} from '../../services/metric.service';
+import { MetricService } from '../../services/metric.service';
 import DurationConstructor = moment.unitOfTime.DurationConstructor;
-import {AlertService} from 'ngx-alerts';
+import { AlertService } from 'ngx-alerts';
 import * as fileSaver from 'file-saver';
 import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 
@@ -16,7 +16,7 @@ import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
   styleUrls: ['./bot.component.scss']
 })
 export class BotComponent implements OnInit {
-  @ViewChild('metricsChart', {static: false}) metricsChart;
+  @ViewChild('metricsChart', { static: false }) metricsChart;
 
   user = new User();
   bot = new Bot();
@@ -55,9 +55,9 @@ export class BotComponent implements OnInit {
     dataTable: this.mockData(),
     options: {
       series: {
-        0: {color: '#cc0000'}
+        0: { color: '#cc0000' }
       },
-      legend: {position: 'none'},
+      legend: { position: 'none' },
       width: 1300,
       height: 730,
       hAxis: {
@@ -77,14 +77,24 @@ export class BotComponent implements OnInit {
     }
   };
 
+  showNotMobile = false;
+
   constructor(private authService: AuthService,
-              private botService: BotService,
-              private metricService: MetricService,
-              private alertService: AlertService) {
+    private botService: BotService,
+    private metricService: MetricService,
+    private alertService: AlertService) {
   }
 
   ngOnInit() {
     this.getUser();
+
+    if (window.innerWidth < 1800) {
+      this.metricsData.options.width = (window.innerWidth * 0.85);
+    } else {
+      this.metricsData.options.width = (window.innerWidth * 0.7);
+    }
+
+    this.showNotMobile = window.innerWidth < 600;
   }
 
   getUser() {
@@ -146,16 +156,16 @@ export class BotComponent implements OnInit {
 
   formCompleted() {
     return this.bot.name === undefined || this.bot.serviceUrl === undefined ||
-    !this.validURL(this.bot.serviceUrl);
+      !this.validURL(this.bot.serviceUrl);
   }
 
   validURL(str) {
-    var pattern = new RegExp('^(https?:\\/\\/)?'+ // protocol
-      '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|'+ // domain name
-      '((\\d{1,3}\\.){3}\\d{1,3}))'+ // OR ip (v4) address
-      '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*'+ // port and path
-      '(\\?[;&a-z\\d%_.~+=-]*)?'+ // query string
-      '(\\#[-a-z\\d_]*)?$','i'); // fragment locator
+    var pattern = new RegExp('^(https?:\\/\\/)?' + // protocol
+      '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' + // domain name
+      '((\\d{1,3}\\.){3}\\d{1,3}))' + // OR ip (v4) address
+      '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*' + // port and path
+      '(\\?[;&a-z\\d%_.~+=-]*)?' + // query string
+      '(\\#[-a-z\\d_]*)?$', 'i'); // fragment locator
     return !!pattern.test(str);
   }
 
@@ -227,7 +237,7 @@ export class BotComponent implements OnInit {
         return this.alertService.info(`No data for ${this.dataPeriods[this.dataTimePeriod][0]}`);
       }
 
-      const blob: any = new Blob([JSON.stringify(data, null, 2)], {type: 'text/json; charset=utf-8'});
+      const blob: any = new Blob([JSON.stringify(data, null, 2)], { type: 'text/json; charset=utf-8' });
       fileSaver.saveAs(blob, 'data.json');
     }, err => {
       this.alertService.danger(err['error']['error']['msg']);

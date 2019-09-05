@@ -28,7 +28,7 @@ export class DashboardComponent implements OnInit {
 
   friendsEmail = null;
 
-  rewards = [500, 1000, 1750, 3000, 5000];
+  rewards = [500, 1000, 1500, 2000, 2500];
   friends: Array<User>;
 
   totalWinningsData = {
@@ -72,6 +72,12 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit() {
     this.getUser();
+
+    if (window.innerWidth < 400) {
+      this.totalWinningsData.options.width = (window.innerWidth * 0.70);
+    } else if (window.innerWidth < 1100) {
+      this.totalWinningsData.options.width = (window.innerWidth * 0.80);
+    }
   }
 
   getUser() {

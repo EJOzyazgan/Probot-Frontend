@@ -5,6 +5,7 @@
 
 .content-container {
   margin-top: 15px;
+  margin-left: 15px;
 }
 
 .section-header {
@@ -75,8 +76,8 @@
 
 .chart-container {
   border-radius: 20px;
-  width: 1400px;
-  height: 850px;
+  width: fit-content;
+  height: fit-content;
 }
 
 .chart {
@@ -101,11 +102,6 @@
   }
 }
 
-@media only screen and (max-width: 1500px) {
-  .chart-container {
-    display: none;
-  }
-}
 
 @media only screen and (max-width: 800px) {
   .left-container {
@@ -115,6 +111,13 @@
   .bot-data-container {
     margin-top: 30px;
     margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .chart-container {
+    display: none;
+    margin-bottom: 30px;
   }
 }
 
