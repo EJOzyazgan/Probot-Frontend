@@ -1,6 +1,6 @@
 .main-container {
   text-align: center;
-  background-color: #f6f6f6;
+  background-color: #EFEFEF;
 }
 
 .slideshow-container {
@@ -14,28 +14,6 @@
 
 .image-slider {
   background: black;
-}
-
-.countdown-title {
-  font-size: 48px;
-  margin-bottom: 15px;
-  color: #cc0000;
-}
-
-.countdown-clock {
-  font-size: 40px;
-  display: flex;
-  width: fit-content;
-  margin: auto;
-}
-
-.time-unit {
-  padding: 15px;
-  border-left: 2px solid black;
-}
-
-.last {
-  border-right: 2px solid black;
 }
 
 .signup-btn {
@@ -61,303 +39,125 @@
   color: #cc0000;
 }
 
-.value {
+.section {
+  padding: 50px 0;
+  margin: 0 auto;
+}
+
+.section-header {
+  color: black;
+  font-size: 40px;
+  font-family: 'xirod', sans-serif;
+  margin-bottom: 20px;
+}
+
+.emphasis-header {
   color: #cc0000;
-}
-
-.social-media {
-  padding: 50px;
-}
-
-.social-header {
   font-size: 50px;
 }
 
-.social-sub-text {
-  margin-top: 10px;
-  font-size: 30px;
-}
-
-.social-icons {
+.content-header {
+  font-size: 25px;
   color: #cc0000;
-  width: fit-content;
+  max-width: 300px;
   margin: auto;
-  display: flex;
+  font-family: 'xirod', sans-serif;
 }
 
-.social-icon {
-  margin: 20px 20px;
+.content-label {
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 20px;
+  max-width: 150px;
 }
 
-.social-icon a {
-  color: inherit;
-}
-
-.bounce {
-  animation: bounce 2s infinite;
-}
-
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-30px);
-  }
-  60% {
-    transform: translateY(-15px);
-  }
-}
-
-.description-section {
-  display: flex;
-  width: 100%;
+.content-item {
+  margin-top: 15px;
+  width: fit-content;
 }
 
 .description {
-  width: 60%;
-  background: #cc0000;
-  color: #f6f6f6;
-  text-align: left;
-  padding: 50px;
-}
-
-.description-header {
-  font-size: 60px;
-}
-
-.description-sub-text {
-  margin-top: 15px;
-  font-size: 30px;
-}
-
-.coming-soon {
-  margin-top: 50px;
-  text-align: center;
-  font-size: 40px;
-}
-
-.logo-robot {
-  height: 100%;
-  display: block;
+  margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
-}
-
-.benefits-section {
-  background: #D2D2D2;
-  padding: 50px;
-}
-
-.benefits-header {
-  font-size: 40px;
-}
-
-.benefits {
-  display: flex;
-  margin-top: 30px;
-}
-
-.benefit {
-  width: 25%;
-  padding: 20px
-}
-
-.benefit-header {
-  color: #cc0000;
-  font-size: 25px;
-}
-
-.benefit-description {
-  margin-top: 10px;
   font-size: 20px;
   text-align: left;
+  max-width: 325px;
 }
 
-.features-section {
+.game-mode-icon {
+  width: 250px;
+  margin: 0 auto;
+}
+
+.benefit-icon {
+  width: 125px;
+  margin: 0 auto;
+}
+
+.red-icon {
+  fill: #cc0000;
+}
+
+.white-icon {
+  fill: #ffffff;
+}
+
+.white-text {
+  color: #ffffff;
+}
+
+.alighn-center {
+  text-align: center;
+}
+
+.get-started-item {
+  margin: 10px;
+  width: fit-content;
+  color: #ffffff;
+}
+
+.get-started-icon {
+  width: 200px;
+  margin: 0 auto;
+}
+
+.gray-background {
+  background-color: #D6D6D6;
   padding: 50px;
 }
 
-.features {
-  display: flex;
+.red-gradient {
+  background-color: #cc0000;
+  background-image: linear-gradient(to top left,#B50505, #550202);
 }
 
-.features-header {
-  font-size: 40px;
-  color: #cc0000;
-  margin-bottom: 50px;
-}
-
-.feature-1, .feature-2 {
-  margin: auto;
-  border-radius: 20px;
-  border: 3px solid #cc0000;
-  padding: 20px;
-  width: 30%;
+.link-div:hover {
   cursor: pointer;
 }
 
-.feature-1:hover .description-1 {
-  display: block;
-}
-
-.feature-2:hover .description-2 {
-  display: block;
-}
-
-.description-1, .description-2 {
-  margin-top: 20px;
-  display: none;
-  font-size: 20px;
-  text-align: left;
-}
-
-.feature-img {
-  height: 200px;
-}
-
-.feature-header {
-  color: #cc0000;
-  font-size: 25px;
-}
-
-.getting-started {
-  background-color: #cc0000;
-  padding: 50px;
-  color: #f6f6f6;
-}
-
-.steps {
-  display: flex;
-}
-
-.step {
-  margin: 30px auto;
-  width: 25%;
-  text-align: center;
-}
-
-.step-img {
-  height: 150px;
-}
-
-.started-header {
-  font-size: 30px;
-  margin-bottom: 30px;
-}
-
-.step-header {
-  font-size: 20px;
-}
-
-@media only screen and (max-width: 900px) {
-  .description-section {
-    display: block;
-  }
-
-  .description {
-    width: fit-content;
-  }
-
-  .benefits {
-    display: block;
-  }
-
-  .benefit {
-    width: 75%;
-    margin: auto;
-  }
-
-  .features {
-    display: block;
-  }
-
-  .feature-1, .feature-2 {
-    width: 80%;
-    margin-bottom: 50px;
-  }
-
-  .steps {
-    display: block;
-  }
-
-  .step {
-    width: 80%;
-  }
-}
-
-@media only screen and (max-width: 700px) {
-  .banner {
-    height: 100vh;
-  }
-
-  .banner-header {
-    font-size: 50px;
-  }
-
-  .description {
-    padding: 20px;
-  }
-
-  .banner-sub-text {
-    font-size: 25px;
-  }
-
-  .logo-robot {
-    width: 400px;
-  }
-
-  .countdown-title {
-    font-size: 32px;
+@media only screen and (max-width: 875px) {
+  .section-header {
+    font-size: 30px;
   }
   
-  .countdown-clock {
-    font-size: 28px;
-  }
-
-  .description-header {
-    font-size: 28px;
-  }
-
-  .description-sub-text {
-    font-size: 22px;
-  }
-}
-
-@media only screen and (max-width: 520px) {
-  .countdown-title {
-    font-size: 26px;
+  .emphasis-header {
+    font-size: 30px;
   }
   
-  .countdown-clock {
-    font-size: 20px;
-  }
+}
 
-  .logo-robot {
+@media only screen and (max-width: 500px) {
+  .game-mode-icon {
     width: 200px;
   }
-}
 
-@media only screen and (max-width: 430px) {
-  .countdown-title {
-    font-size: 22px;
+  .section-header {
+    font-size: 25px;
   }
   
-  .countdown-clock {
-    font-size: 18px;
-  }
-}
-
-@media only screen and (max-width: 360px) {
-  .countdown-title {
-    font-size: 22px;
-  }
-  
-  .countdown-clock {
-    font-size: 14px;
-  }
-
-  .feature-img {
-    height: 150px;
+  .emphasis-header {
+    font-size: 25px;
   }
 }

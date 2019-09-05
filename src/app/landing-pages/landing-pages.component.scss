@@ -117,8 +117,8 @@ button {
 }
 
 .footer {
-  background-color: #D2D2D2;
-  // padding-top: 20px;
+  background-image: url(../../assets/img/metal-mesh.jpg);
+  padding-top: 20px;
   padding-bottom: 20px;
 }
 
@@ -128,9 +128,16 @@ button {
   display: flex;
 }
 
+.footer-header {
+  font-family: 'xirod', sans-serif;
+  color: #cc0000;
+}
+
 .footer-column {
   margin: 20px;
   text-align: center;
+  color: #ffff;
+  max-width: 200px;
 }
 
 .footer-nav {
