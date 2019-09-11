@@ -86,6 +86,15 @@
   max-width: 325px;
 }
 
+.description-main {
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 26px;
+  text-align: left;
+  max-width: 700px;
+}
+
 .game-mode-icon {
   width: 250px;
   margin: 0 auto;
@@ -98,6 +107,10 @@
 
 .red-icon {
   fill: #cc0000;
+}
+
+.red-text {
+  color: #cc0000;
 }
 
 .white-icon {

@@ -1,8 +1,10 @@
-import {Component, OnInit, isDevMode} from '@angular/core';
-import {Socket} from 'ngx-socket-io';
-import {CardGroup, OddsCalculator} from 'poker-odds-calculator';
-import {DataService} from '../services/data.service';
-import {TournamentService} from '../services/tournament.service';
+import { Component, OnInit, isDevMode } from '@angular/core';
+import { Socket } from 'ngx-socket-io';
+import { CardGroup, OddsCalculator } from 'poker-odds-calculator';
+import { DataService } from '../services/data.service';
+import { TournamentService } from '../services/tournament.service';
+import { Router } from '@angular/router';
+import { AlertService } from 'ngx-alerts';
 
 @Component({
   selector: 'app-game-table',
@@ -10,12 +12,12 @@ import {TournamentService} from '../services/tournament.service';
   styleUrls: ['./game-table.component.scss']
 })
 export class GameTableComponent implements OnInit {
-  players = [{name: 'marvin', cards: {rank: 3, type: 'K'}},
-    {name: 'I am the best', cards: {rank: 3, type: 'K'}},
-    {name: 'p3', cards: {rank: 3, type: 'K'}},
-    {name: 'p4', cards: {rank: 3, type: 'K'}},
-    {name: 'p5', cards: {rank: 3, type: 'K'}},
-    {name: 'i have a really long name', cards: {rank: 3, type: 'K'}}];
+  players = [{ name: 'marvin', cards: { rank: 3, type: 'K' } },
+  { name: 'I am the best', cards: { rank: 3, type: 'K' } },
+  { name: 'p3', cards: { rank: 3, type: 'K' } },
+  { name: 'p4', cards: { rank: 3, type: 'K' } },
+  { name: 'p5', cards: { rank: 3, type: 'K' } },
+  { name: 'i have a really long name', cards: { rank: 3, type: 'K' } }];
   player;
   commonCards = [];
   data;
@@ -25,12 +27,12 @@ export class GameTableComponent implements OnInit {
   pot = 0;
   odds = [10, 10, 10, 10, 10, 10];
 
-  playerPos = [{top: 15, left: 10}, // top left
-    {top: 60, left: 10}, // bottom left
-    {top: 68, left: 45}, // bottom middle
-    {top: 60, left: 78}, // bottom right
-    {top: 15, left: 78}, // top right
-    {top: 8, left: 50}]; // top middle
+  playerPos = [{ top: 15, left: 10 }, // top left
+  { top: 60, left: 10 }, // bottom left
+  { top: 68, left: 45 }, // bottom middle
+  { top: 60, left: 78 }, // bottom right
+  { top: 15, left: 78 }, // top right
+  { top: 8, left: 50 }]; // top middle
 
 
   tournamentId;
@@ -40,85 +42,113 @@ export class GameTableComponent implements OnInit {
   round;
   match;
 
+  gameData;
+  currentDataIndex = 0;
+
+  dataLoaded = true;
+
+  timerId;
+  playRate;
+
   constructor(private socket: Socket,
-              private dataService: DataService,
-              private tournamentService: TournamentService) {
+    private dataService: DataService,
+    private tournamentService: TournamentService,
+    private router: Router,
+    private alertService: AlertService) {
   }
 
   ngOnInit() {
-    this.socket.on('gameDataUpdated', (data) => {
-      this.updateGame(data);
+    // this.socket.on('gameDataUpdated', (data) => {
+    //   this.updateGame(data);
+    // });
+
+    // this.socket.on('gameOver', (data) => {
+    //   this.resetGame(data);
+    // });
+
+    // this.socket.on('test', (data) => {
+    //   console.log(data.data);
+    // });
+
+    // this.socket.on('connect', (data) => {
+    //   this.dataService.currentTournamentId.subscribe(tournamentId => {
+    //     this.tournamentId = tournamentId;
+    //     this.socket.emit('room', this.tournamentId);
+    //   });
+    // });
+
+    // this.dataService.currentBracket.subscribe(bracketId => {
+    //   this.bracketId = bracketId;
+    //   this.tournamentService.getBracket(this.bracketId).subscribe(bracket => {
+    //     this.bracket = bracket;
+    //     console.log('bracket', this.bracket);
+    //   });
+    // });
+
+    // this.dataService.currentDivId.subscribe(divId => {
+    //   this.div = divId;
+    //   console.log('div', this.div);
+    // });
+
+    // this.dataService.currentRoundId.subscribe(roundId => {
+    //   this.round = roundId;
+    //   console.log('round', this.round);
+    // });
+
+    // this.dataService.currentMatchId.subscribe(matchId => {
+    //   this.match = matchId;
+    //   console.log('match', this.match);
+    // });
+
+    this.dataService.currentGameData.subscribe(gameData => {
+      this.gameData = gameData;
+      if (!this.gameData || this.gameData.length < 1) {
+        this.alertService.warning('No data found');
+        return this.router.navigate(['./platform/lobby']);
+      }
+      this.updateGame(gameData[this.currentDataIndex]);
     });
 
-    this.socket.on('gameOver', (data) => {
-      this.resetGame(data);
-    });
-
-    this.socket.on('test', (data) => {
-      console.log(data.data);
-    });
-
-    this.socket.on('connect', (data) => {
-      this.dataService.currentTournamentId.subscribe(tournamentId => {
-        this.tournamentId = tournamentId;
-        this.socket.emit('room', this.tournamentId);
-      });
-    });
-
-    this.dataService.currentBracket.subscribe(bracketId => {
-      this.bracketId = bracketId;
-      this.tournamentService.getBracket(this.bracketId).subscribe(bracket => {
-        this.bracket = bracket;
-        console.log('bracket', this.bracket);
-      });
-    });
-
-    this.dataService.currentDivId.subscribe(divId => {
-      this.div = divId;
-      console.log('div', this.div);
-    });
-
-    this.dataService.currentRoundId.subscribe(roundId => {
-      this.round = roundId;
-      console.log('round', this.round);
-    });
-
-    this.dataService.currentMatchId.subscribe(matchId => {
-      this.match = matchId;
-      console.log('match', this.match);
-    });
+    clearInterval(this.timerId);
   }
 
   updateGame(data) {
-    this.data = data.data;
-    this.players = data.data.players;
+    this.data = data;
+    this.players = data.players;
     this.player = this.getPlayer(this.players, this.data.playerId);
     this.session = this.data.session;
 
-    for (const card of this.data.commonCards) {
-      if (this.commonCards.length === 5) {
-        this.commonCards = [];
+    if (this.data.commonCards) {
+      for (const card of this.data.commonCards) {
+        if (this.commonCards.length === 5) {
+          this.commonCards = [];
+        }
+        this.commonCards.push(card);
       }
-      this.commonCards.push(card);
+    }
+
+    if (this.data.pot) {
+      this.pot = this.data.pot;
     }
 
     if (this.data.type === 'setup') {
       this.message = `Starting hand ${this.data.handId} of game ${this.data.gameId}`;
       this.smallBlind = this.data.sb;
       this.pot = this.data.pot;
-      this.odds = this.getOdds(this.players, this.commonCards);
+      // this.odds = this.getOdds(this.players, this.commonCards);
     } else if (this.data.type === 'status') {
       if (this.data.status === 'folded') {
         this.message = `${this.player.name} Has Folded`;
       } else {
         this.message = `${this.player.name} Is Out`;
       }
+      // this.odds = this.getOdds(this.players, this.commonCards);
     } else if (this.data.type === 'bet') {
       this.message = `${this.player.name} Bet ${this.data.amount}`;
-      this.pot += this.data.amount;
+      this.pot = this.data.pot;
     } else if (this.data.type === 'cards') {
       this.message = `${this.data.session} Card(s): ${this.getCards(this.data.commonCards)}`;
-      this.odds = this.getOdds(this.players, this.commonCards);
+      // this.odds = this.getOdds(this.players, this.commonCards);
     } else if (this.data.type === 'win') {
       this.player = this.getPlayer(this.players, this.data.winners[0].id);
       this.message = `${this.player.name} is the Winner!!!`;
@@ -129,7 +159,21 @@ export class GameTableComponent implements OnInit {
     }
   }
 
+  autoPlay(speed) {
+    clearInterval(this.timerId);
+    this.playRate = speed;
+    this.timerId = setInterval(() => this.nextData(1), speed);
+    console.log(this.timerId);
+  }
+
+  stopAutoPlay() {
+    console.log(this.timerId);
+    clearInterval(this.timerId);
+    this.playRate = null;
+  }
+
   getOdds(players, commonCards) {
+    this.dataLoaded = false;
     const hands = [];
     const board = CardGroup.fromString(this.getCardString(commonCards));
     const odds = [];
@@ -140,18 +184,25 @@ export class GameTableComponent implements OnInit {
       }
     }
 
-    let count = 0;
-    const equity = OddsCalculator.calculate(hands, board);
+    if (commonCards.length > 2) {
+      let count = 0;
+      const equity = OddsCalculator.calculate(hands, board);
 
-    for (const player of players) {
-      if (player.status === 'active') {
-        odds.push(equity.equities[count].getEquity());
-        count++;
-      } else {
+      for (const player of players) {
+        if (player.status === 'active') {
+          odds.push(equity.equities[count].getEquity());
+          count++;
+        } else {
+          odds.push(0);
+        }
+      }
+    } else {
+      for (const player of players) {
         odds.push(0);
       }
     }
 
+    this.dataLoaded = true;
     return odds;
   }
 
@@ -168,16 +219,18 @@ export class GameTableComponent implements OnInit {
   }
 
   getCards(cards) {
+    this.dataLoaded = false;
     const cardString = [];
     for (const card of cards) {
       cardString.push(card.rank + card.type.toLowerCase());
     }
+    this.dataLoaded = true;
     return cardString;
   }
 
   getPlayer(players, id) {
     for (const player of players) {
-      if (player.id === id) {
+      if (player.id == id) {
         return player;
       }
     }
@@ -273,6 +326,17 @@ export class GameTableComponent implements OnInit {
       };
     }
     return style;
+  }
+
+  nextData(direction) {
+    if (this.currentDataIndex + direction > this.gameData.length - 1) {
+      this.currentDataIndex = 0;
+    } else if (this.currentDataIndex + direction < 0) {
+      this.currentDataIndex = this.gameData.length - 1;
+    } else {
+      this.currentDataIndex += direction;
+    }
+    this.updateGame(this.gameData[this.currentDataIndex]);
   }
 
 }

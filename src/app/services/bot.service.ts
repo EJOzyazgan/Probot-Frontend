@@ -25,6 +25,10 @@ export class BotService {
     return this.http.patch(this.botUrl + '/patch/' + bot.id, bot);
   }
 
+  getCleanData(body) {
+    return this.http.post(this.botUrl + '/get/data/clean', body);
+  }
+
   getData(body) {
     return this.http.post(this.botUrl + '/get/data', body);
   }

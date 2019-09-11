@@ -96,3 +96,25 @@
 .odd {
   margin-left: 10px;
 }
+
+.game-btns {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.game-btn {
+  color: white;
+  font-size: 24px;
+  margin-left: 10px;
+}
+
+.auto-btn {
+  font-size: 24px;
+  margin-left: 10px;
+}
+
+.auto-btn-active {
+  color: #cc0000;
+}

@@ -1,5 +1,5 @@
 <div class="main-container">
-  <div class="games-container">
+  <div class="games-container" fxLayout="row wrap" fxLayoutAlign="center">
     <mat-card class="game-card mat-elevation-z6">
       <div class="center-content">
         <mat-card-title class="section-header">
@@ -56,8 +56,31 @@
               </mat-form-field>
             </div>
           </form>
-          <button mat-raised-button class="play-btn" [disabled]="!bot.id || !buyinControl.valid"
+          <button mat-raised-button class="play-btn" [disabled]="!inputsReady()"
             (click)="startPVP()">Play</button>
+            <div *ngIf="pvpMessage" [style.color]="'red'">{{pvpMessage}}</div>
+        </mat-card-content>
+      </div>
+    </mat-card>
+
+    <mat-card class="game-card margin-left mat-elevation-z6">
+      <div class="center-content">
+        <mat-card-title class="section-header">
+          Visualize Game
+        </mat-card-title>
+        <mat-card-content>
+          <form>
+            <mat-form-field>
+              <mat-label class="select-label">Select Interval</mat-label>
+              <mat-select [(ngModel)]="dataTimePeriod" name="dataPeriod">
+                <mat-option *ngFor="let period of dataPeriods; let i = index " [value]="i">
+                  {{period[0]}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </form>
+          <button mat-raised-button class="play-btn" [disabled]="!bot.id || dataTimePeriod === undefined"
+            (click)="watchGame()">Watch</button>
         </mat-card-content>
       </div>
     </mat-card>
