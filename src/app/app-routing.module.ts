@@ -9,8 +9,8 @@ const appRoutes: Routes = [
   {path: '', pathMatch: 'full', redirectTo: 'landing-pages'},
   {path: 'landing-pages', loadChildren: () => import('./landing-pages/landing-pages.module').then(m => m.LandingPagesModule)},
   {path: 'auth', loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)},
-  {path: 'platform', loadChildren: () => import('./platform/platform.module').then(m => m.PlatformModule), canActivate: [AuthGuard]}
-  // {path: 'game-view', component: GameViewComponent},
+  {path: 'platform', loadChildren: () => import('./platform/platform.module').then(m => m.PlatformModule), canActivate: [AuthGuard]},
+  {path: 'game-view', component: GameViewComponent},
   // {path: 'bracket-view', component: BracketViewComponent},
   // {path: 'tournament-manager', component: TournamentManagerComponent}
 ];

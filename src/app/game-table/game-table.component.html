@@ -6,7 +6,7 @@
     <div class="table-data">
       <div class="table-cards">
         <div *ngFor="let card of commonCards" class="card-holder">
-          <img class="card" src="../../assets/img/cards/{{card.rank + card.type}}.png">
+          <img class="card" src="../../assets/img/cards/{{card.rank + card.type}}.svg">
         </div>
       </div>
       <p class="table-pot">${{pot}}</p>
@@ -16,20 +16,44 @@
       <p class="player-name">{{player.name}}</p>
       <div class="player-cards">
         <div *ngIf="player.status === 'active'" class="card-holder">
-          <img *ngFor="let card of player.cards" class="card" src="../../assets/img/cards/{{card.rank + card.type}}.png">
+          <img *ngFor="let card of player.cards" class="card"
+            src="../../assets/img/cards/{{card.rank + card.type}}.svg">
         </div>
         <div *ngIf="player.status !== 'active'" class="card-holder">
-          <img *ngFor="let card of [0,1]"  class="card" src="../../assets/img/cards/purple_back.png">
+          <img *ngFor="let card of [0,1]" class="card" src="../../assets/img/cards/probot_back.svg">
         </div>
       </div>
       <p class="player-chips">${{player.chips}}</p>
     </div>
   </div>
 
-  <div class="odds-view">
+  <!-- <div class="odds-view">
     <div class="player-odds" *ngFor="let player of players; let i = index">
       <div>{{player.name}}:</div>
       <div class="odd">{{odds[i]}}%</div>
+    </div>
+  </div> -->
+
+  <div class="game-btns">
+    <div>
+      <!-- <button mat-raised-button [disabled]="!dataLoaded" color="primary" class="game-btn"
+        (click)="nextData(-1)">Back</button> -->
+      <button mat-raised-button [disabled]="!dataLoaded" color="primary" class="game-btn"
+        (click)="nextData(1)">Next</button>
+      <span *ngIf="gameData" class="game-btn">{{currentDataIndex+1}} / {{gameData.length}}</span>
+      <button mat-raised-button class="auto-btn" (click)="autoPlay(1000)"
+        [ngClass]="{'auto-btn-active': playRate === 1000}">1s</button>
+      <button mat-raised-button class="auto-btn" (click)="autoPlay(2000)"
+        [ngClass]="{'auto-btn-active': playRate === 2000}">2s</button>
+      <button mat-raised-button class="auto-btn" (click)="autoPlay(3000)"
+        [ngClass]="{'auto-btn-active': playRate === 3000}">3s</button>
+      <button mat-raised-button class="auto-btn" (click)="autoPlay(5000)"
+        [ngClass]="{'auto-btn-active': playRate === 5000}">5s</button>
+      <button mat-raised-button class="auto-btn" (click)="autoPlay(10000)"
+        [ngClass]="{'auto-btn-active': playRate === 10000}">10s</button>
+      <button mat-icon-button color="primary" aria-label="Stop Auto Play" *ngIf="playRate" (click)="stopAutoPlay()">
+        <mat-icon>timer_off</mat-icon>
+      </button>
     </div>
   </div>
 </div>

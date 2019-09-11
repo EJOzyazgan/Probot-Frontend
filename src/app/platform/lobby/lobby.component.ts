@@ -7,6 +7,8 @@ import { User } from '../../models/user.model';
 import { AuthService } from '../../services/auth.service';
 import { Socket } from 'ngx-socket-io';
 import { FormControl, Validators } from '@angular/forms';
+import { DataService } from 'src/app/services/data.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-lobby',
@@ -127,11 +129,27 @@ export class LobbyComponent implements OnInit {
   gameCompleted = false;
   gameMessage;
 
+  pvpMessage;
+
+  gameData;
+  dataTimePeriod;
+
+  dataPeriods = [
+    ['10Minutes', 'minute', 10],
+    ['30Minutes', 'minute', 30],
+    ['1Hour', 'hour', 1],
+    ['1.5Hour', 'hour', 1.5],
+    ['2Hour', 'hour', 2],
+    ['5Hour', 'hour', 5],
+  ];
+
   constructor(private botService: BotService,
     private authService: AuthService,
     private tableService: TableService,
     private alertService: AlertService,
-    private socket: Socket) {
+    private socket: Socket,
+    private dataService: DataService,
+    private router: Router) {
   }
 
   ngOnInit() {
@@ -187,11 +205,48 @@ export class LobbyComponent implements OnInit {
     });
   }
 
+  inputsReady() {
+    if (this.bot.id && this.buyinControl.valid && this.table) {
+      if (this.buyinControl.value > this.user.chips) {
+        this.pvpMessage = `Not enough chips, you have ${this.user.chips} chips.`
+        return false;
+      } else {
+        this.pvpMessage = null;
+      }
+      return true;
+    }
+    return false;
+  }
+
   tableSelect() {
     this.buyinControl = new FormControl('', Validators.compose(
       [Validators.required, Validators.min(this.table.minBuyin), Validators.max(this.table.maxBuyin)]
     ));
     this.buyinControl.setValue((this.table.maxBuyin + this.table.minBuyin) / 2);
+  }
+
+  watchGame() {
+    if (this.dataTimePeriod < 0) {
+      return this.alertService.warning('Please select time period');
+    } else if (!this.bot) {
+      return this.alertService.warning('No data available');
+    }
+
+    const body = {
+      botId: this.bot.id,
+      timePeriod: this.dataPeriods[this.dataTimePeriod]
+    };
+
+    this.botService.getData(body).subscribe((data: Array<JSON>) => {
+      if (data.length < 1) {
+        return this.alertService.info(`No data for ${this.dataPeriods[this.dataTimePeriod][0]}`);
+      }
+      
+      this.dataService.changeGameData(data);
+      this.router.navigate(['./game-view']);
+    }, err => {
+      this.alertService.danger(err['error']['error']['msg']);
+    });
   }
 
   getUser() {

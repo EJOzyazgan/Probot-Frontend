@@ -22,6 +22,9 @@ export class DataService {
   private email = new BehaviorSubject(null);
   currentEmail = this.email.asObservable();
 
+  private gameData = new BehaviorSubject(null);
+  currentGameData = this.gameData.asObservable();
+
   constructor() {
   }
 
@@ -47,6 +50,10 @@ export class DataService {
 
   changeMatch(matchId: string) {
     this.matchId.next(matchId);
+  }
+
+  changeGameData(gameData: Array<JSON>) {
+    this.gameData.next(gameData);
   }
 
 }

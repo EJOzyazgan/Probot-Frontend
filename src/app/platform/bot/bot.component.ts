@@ -232,7 +232,7 @@ export class BotComponent implements OnInit {
       timePeriod: this.dataPeriods[this.dataTimePeriod]
     };
 
-    this.botService.getData(body).subscribe((data: Array<any>) => {
+    this.botService.getCleanData(body).subscribe((data: Array<any>) => {
       if (data.length < 1) {
         return this.alertService.info(`No data for ${this.dataPeriods[this.dataTimePeriod][0]}`);
       }
