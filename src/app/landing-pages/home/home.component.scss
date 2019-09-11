@@ -95,6 +95,18 @@
   max-width: 700px;
 }
 
+.sign-up-text {
+  color: #cc0000;
+  font-size: 40px;
+  width: fit-content;
+  margin: auto;
+
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
+
 .game-mode-icon {
   width: 250px;
   margin: 0 auto;
