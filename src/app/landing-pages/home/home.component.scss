@@ -3,8 +3,8 @@
   background-color: #EFEFEF;
 }
 
-.slideshow-container {
-
+.main-svg {
+  width: 500px;
 }
 
 .signup-action {
@@ -95,15 +95,18 @@
   max-width: 700px;
 }
 
-.sign-up-text {
-  color: #cc0000;
-  font-size: 40px;
+.sign-up-text-btn {
+  color: white;
+  background: #cc0000;
+  font-size: 45px;
+  font-family: 'xirod', sans-serif;
   width: fit-content;
+  padding: 30px;
   margin: auto;
+  text-align: center;
 
   &:hover {
     cursor: pointer;
-    text-decoration: underline;
   }
 }
 
@@ -171,6 +174,9 @@
     font-size: 30px;
   }
   
+  .main-svg {
+    width: 400px;
+  }
 }
 
 @media only screen and (max-width: 500px) {
@@ -184,5 +190,9 @@
   
   .emphasis-header {
     font-size: 25px;
+  }
+
+  .main-svg {
+    width: 250px;
   }
 }

@@ -5,21 +5,32 @@
   </div>
 
   <div class="section">
-    <div class="section-header red-text">
-      <div>WHAT WE DO</div>
+    <div class="section-header">
+      <div>What is</div>
+      <div class="emphasis-header">Probot playground</div>
     </div>
-    <div class="section-content">
-      <p class="description-main">
-        Probot Playground is a bot-only, fully automated gaming platform where users upload their own poker bot in
-        order to compete against other user’s bots in real-time automated poker games.
-      </p>
-      <p class="description-main">
-        If you are not sure where to start when creating your bot we can help! Checkout out our <a [routerLink]="['../getting-started']">getting started</a> page to
-        learn how to set up your own bot and start playing!
-      </p>
+    <div class="section-content" fxLayout="row wrap" fxLayoutAlign="space-evenly">
+      <div class="main-svg">
+          <svg-icon [applyCss]="true" src="../../assets/poker-table-fancy.svg"></svg-icon>
+      </div>
+      <div>
+        <p class="description-main">
+          Probot Playground is a bot-only, fully
+          automated gaming platform where users
+          upload their own poker bot in order to
+          compete against other user’s bots in real-time
+          automated poker games.
+        </p>
+        <p class="description-main">
+          If you are not sure where to start when
+          creating your bot we can help! Checkout out
+          our Getting Started page to learn how to set up
+          your own bot and start playing!
+        </p>
 
-      <div class="sign-up-text" [routerLink]="['../../auth/signup']">
-        Sign Up Now
+        <div class="sign-up-text-btn" [routerLink]="['../../auth/signup']">
+          Sign-up
+        </div>
       </div>
     </div>
   </div>

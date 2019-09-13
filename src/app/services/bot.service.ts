@@ -32,4 +32,8 @@ export class BotService {
   getData(body) {
     return this.http.post(this.botUrl + '/get/data', body);
   }
+
+  getSessions(id) {
+    return this.http.get(this.botUrl + `/get/sessions/${id}`);
+  }
 }

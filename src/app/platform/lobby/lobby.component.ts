@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { TableService } from '../../services/table.service';
 import { AlertService } from 'ngx-alerts';
 import { Bot } from '../../models/bot.model';
@@ -9,6 +9,8 @@ import { Socket } from 'ngx-socket-io';
 import { FormControl, Validators } from '@angular/forms';
 import { DataService } from 'src/app/services/data.service';
 import { Router } from '@angular/router';
+import { Session } from 'src/app/models/session.model';
+import { MatTableDataSource, MatPaginator } from '@angular/material';
 
 @Component({
   selector: 'app-lobby',
@@ -16,8 +18,14 @@ import { Router } from '@angular/router';
   styleUrls: ['./lobby.component.scss']
 })
 export class LobbyComponent implements OnInit {
+  @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
   bot = new Bot();
   user = new User();
+
+  displayedColumns: string[] = ['type', 'start', 'end'];
+  dataSource = new MatTableDataSource();
+
+  session;
 
   table;
 
@@ -132,16 +140,9 @@ export class LobbyComponent implements OnInit {
   pvpMessage;
 
   gameData;
-  dataTimePeriod;
 
-  dataPeriods = [
-    ['10Minutes', 'minute', 10],
-    ['30Minutes', 'minute', 30],
-    ['1Hour', 'hour', 1],
-    ['1.5Hour', 'hour', 1.5],
-    ['2Hour', 'hour', 2],
-    ['5Hour', 'hour', 5],
-  ];
+  showNotMobile = false;
+  loaded = false;
 
   constructor(private botService: BotService,
     private authService: AuthService,
@@ -153,6 +154,10 @@ export class LobbyComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.dataSource.paginator = this.paginator;
+
+    this.showNotMobile = window.innerWidth < 1200;
+
     this.socket.on('connect', (data) => {
     });
 
@@ -225,23 +230,12 @@ export class LobbyComponent implements OnInit {
     this.buyinControl.setValue((this.table.maxBuyin + this.table.minBuyin) / 2);
   }
 
+  sessionSelected(session) {
+    this.session = session;
+  }
+
   watchGame() {
-    if (this.dataTimePeriod < 0) {
-      return this.alertService.warning('Please select time period');
-    } else if (!this.bot) {
-      return this.alertService.warning('No data available');
-    }
-
-    const body = {
-      botId: this.bot.id,
-      timePeriod: this.dataPeriods[this.dataTimePeriod]
-    };
-
-    this.botService.getData(body).subscribe((data: Array<JSON>) => {
-      if (data.length < 1) {
-        return this.alertService.info(`No data for ${this.dataPeriods[this.dataTimePeriod][0]}`);
-      }
-      
+    this.botService.getData(this.session).subscribe((data: Array<JSON>) => {
       this.dataService.changeGameData(data);
       this.router.navigate(['./game-view']);
     }, err => {
@@ -262,7 +256,17 @@ export class LobbyComponent implements OnInit {
       if (bot) {
         this.bot = bot;
         this.socket.emit('room', `${this.bot.id}-sandbox`);
+        this.getSessions();
       }
     });
+  }
+
+  getSessions() {
+    this.botService.getSessions(this.bot.id).subscribe((sessions: Array<Session>) => {
+      if (sessions) {
+        this.dataSource.data = sessions;
+        this.loaded = true;
+      }
+    })
   }
 }
