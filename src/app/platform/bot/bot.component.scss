@@ -90,6 +90,14 @@
 
 }
 
+.selectable-row:hover {
+  cursor: pointer;
+}
+
+.selected-row {
+  background: rgba(204, 0, 0, 0.3);
+}
+
 @media only screen and (max-width: 1800px) {
   .left-container {
     display: flex;

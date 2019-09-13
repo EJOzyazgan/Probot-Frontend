@@ -1,4 +1,7 @@
 <div class="game-container">
+  <button mat-icon-button color="primary" class="stop-watch" aria-label="Stop Watching" [routerLink]="['../platform/lobby']">
+    <mat-icon class="stop-auto-btn">close</mat-icon>
+  </button>
   <span class="game-messages">{{message}}</span>
   <div class="game-table">
     <img src="../../assets/img/table-top.png" class="table-image">
@@ -52,7 +55,7 @@
       <button mat-raised-button class="auto-btn" (click)="autoPlay(10000)"
         [ngClass]="{'auto-btn-active': playRate === 10000}">10s</button>
       <button mat-icon-button color="primary" aria-label="Stop Auto Play" *ngIf="playRate" (click)="stopAutoPlay()">
-        <mat-icon>timer_off</mat-icon>
+        <mat-icon class="stop-auto-btn">timer_off</mat-icon>
       </button>
     </div>
   </div>

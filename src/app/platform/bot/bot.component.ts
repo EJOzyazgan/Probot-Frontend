@@ -9,6 +9,8 @@ import DurationConstructor = moment.unitOfTime.DurationConstructor;
 import { AlertService } from 'ngx-alerts';
 import * as fileSaver from 'file-saver';
 import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
+import { MatTableDataSource, MatPaginator } from '@angular/material';
+import { Session } from 'src/app/models/session.model';
 
 @Component({
   selector: 'app-bot',
@@ -17,20 +19,17 @@ import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 })
 export class BotComponent implements OnInit {
   @ViewChild('metricsChart', { static: false }) metricsChart;
+  @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
 
   user = new User();
   bot = new Bot();
 
   isEditing = false;
 
-  dataPeriods = [
-    ['1Hour', 'hour', 1],
-    ['3Hours', 'hour', 3],
-    ['1Week', 'week', 1],
-    ['1Month', 'month', 1],
-    ['3Months', 'month', 3],
-    ['1Year', 'year', 1],
-  ];
+  displayedColumns: string[] = ['type', 'start', 'end'];
+  dataSource = new MatTableDataSource();
+
+  session;
 
   timePeriods = [
     ['1Day', 'day'],
@@ -86,6 +85,7 @@ export class BotComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.dataSource.paginator = this.paginator;
     this.getUser();
 
     if (window.innerWidth < 1800) {
@@ -112,8 +112,17 @@ export class BotComponent implements OnInit {
       if (bot) {
         this.bot = bot;
         this.getMetrics();
+        this.getSessions();
       }
     });
+  }
+
+  getSessions() {
+    this.botService.getSessions(this.bot.id).subscribe((sessions: Array<Session>) => {
+      if (sessions) {
+        this.dataSource.data = sessions;
+      }
+    })
   }
 
   getMetrics() {
@@ -144,6 +153,10 @@ export class BotComponent implements OnInit {
       this.bot = patchedBot;
       this.toggleEdit();
     });
+  }
+
+  sessionSelected(session) {
+    this.session = session;
   }
 
   addEnd() {
@@ -221,24 +234,14 @@ export class BotComponent implements OnInit {
   }
 
   getDataCSV() {
-    if (this.dataTimePeriod < 0) {
-      return this.alertService.warning('Please select time period');
-    } else if (!this.bot) {
-      return this.alertService.warning('No data available');
-    }
-
-    const body = {
-      botId: this.bot.id,
-      timePeriod: this.dataPeriods[this.dataTimePeriod]
-    };
-
-    this.botService.getCleanData(body).subscribe((data: Array<any>) => {
-      if (data.length < 1) {
-        return this.alertService.info(`No data for ${this.dataPeriods[this.dataTimePeriod][0]}`);
+    this.botService.getCleanData(this.session).subscribe((data: Array<any>) => {
+      try {
+        const blob: any = new Blob([JSON.stringify(data, null, 2)], { type: 'text/json; charset=utf-8' });
+        const date = moment(this.session.createdAt).format('YY-M-D_HH-mm')
+        fileSaver.saveAs(blob, `${this.bot.name}-data-${date}.json`);
+      } catch (err) {
+      
       }
-
-      const blob: any = new Blob([JSON.stringify(data, null, 2)], { type: 'text/json; charset=utf-8' });
-      fileSaver.saveAs(blob, 'data.json');
     }, err => {
       this.alertService.danger(err['error']['error']['msg']);
     });

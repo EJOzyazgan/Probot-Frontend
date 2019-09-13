@@ -10,10 +10,20 @@
   transform: translate(-50%, -50%);
 }
 
+.section-header {
+  font-size: 30px;
+  color: #cc0000;
+}
+
+.text-left {
+  width: 100%;
+  text-align: left;
+}
+
 .game-card {
   text-align: center;
   width: 300px;
-  height: 300px;
+  height: 350px;
   position: relative;
   border: #cc0000 3px solid;
 }
@@ -35,11 +45,11 @@
 }
 
 .center-content {
-  vertical-align: middle;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  // vertical-align: middle;
+  // position: absolute;
+  // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%, -50%);
 }
 
 .buyin-select {
@@ -51,7 +61,8 @@
 }
 
 .checks-container {
-
+  width: fit-content;
+  margin: auto;
 }
 
 .check-item {
@@ -67,6 +78,14 @@
 
 .check-spinner {
   stroke: blue;
+}
+
+.selected-row {
+  background: rgba(204, 0, 0, 0.3);
+}
+
+.selectable-row:hover {
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 950px) {
@@ -90,6 +109,5 @@
 @media only screen and (max-width: 400px) {
   .game-card {
     width: 250px;
-    height: 250px;
   }
 }
