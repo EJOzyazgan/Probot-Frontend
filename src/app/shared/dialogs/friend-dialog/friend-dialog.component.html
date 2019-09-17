@@ -1,0 +1,15 @@
+<h1 mat-dialog-title>Add Friend</h1>
+<div mat-dialog-content>
+    <form (ngSubmit)="referFriend()">
+        <mat-form-field>
+            <input matInput type="email" name="email" placeholder="Friend's Email" class="input"
+            [formControl]="emailControl">
+            <mat-error>Must be valid email</mat-error>
+        </mat-form-field>
+    </form>
+</div>
+<div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Close</button>
+    <button mat-raised-button [mat-dialog-close]="emailControl.value" [disabled]="!emailControl.valid" color="primary">Send
+        Request</button>
+</div>

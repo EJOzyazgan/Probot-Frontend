@@ -171,41 +171,5 @@
     </mat-card-content>
   </mat-card>
 
-  <mat-card class="popup-container mat-elevation-z24" *ngIf="referralView">
-    <button mat-icon-button (click)="toggleView('refer')" class="close-btn">
-      <i class="material-icons">close</i>
-    </button>
-    <mat-card-title class="reward-header large-header">Invite a Friend!</mat-card-title>
-    <mat-card-subtitle class="sub-header">You will both receive an additional <span class="bold">30,000 chips</span> on
-      account activation!!!
-    </mat-card-subtitle>
-    <mat-card-content class="center">
-      <form (ngSubmit)="referFriend()">
-        <mat-form-field>
-          <input matInput type="email" name="email" placeholder="Friend's Email" class="input"
-                 [(ngModel)]="friendsEmail">
-        </mat-form-field>
-      </form>
-
-      <button mat-raised-button (click)="referFriend()" class="send-invite-btn btn-1">Send Invite</button>
-    </mat-card-content>
-  </mat-card>
-
-  <mat-card class="popup-container mat-elevation-z24" *ngIf="addFriendView">
-    <button mat-icon-button (click)="toggleView('invite')" class="close-btn">
-      <i class="material-icons">close</i>
-    </button>
-    <mat-card-title class="reward-header large-header">Add Friend!</mat-card-title>
-    <mat-card-content class="center">
-      <form (ngSubmit)="referFriend()">
-        <mat-form-field>
-          <input matInput type="email" name="email" placeholder="Friend's Email" class="input"
-                 [(ngModel)]="friendsEmail">
-        </mat-form-field>
-      </form>
-
-      <button mat-raised-button (click)="addFriend()" class="send-invite-btn btn-1">Send Request</button>
-    </mat-card-content>
-  </mat-card>
 </div>
 

@@ -5,10 +5,11 @@ import {AuthService} from '../../services/auth.service';
 import {AlertService} from 'ngx-alerts';
 import {DataService} from '../../services/data.service';
 import * as moment from 'moment';
-import {MatDatepickerInputEvent} from '@angular/material';
+import {MatDatepickerInputEvent, MatDialog} from '@angular/material';
 import {MAT_MOMENT_DATE_FORMATS, MomentDateAdapter} from '@angular/material-moment-adapter';
 import {DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE} from '@angular/material/core';
 import {FormControl, Validators} from '@angular/forms';
+import { TosDialogComponent } from 'src/app/shared/dialogs/tos-dialog/tos-dialog.component';
 
 @Component({
   selector: 'app-signup',
@@ -41,7 +42,8 @@ export class SignupComponent implements OnInit {
               private alertService: AlertService,
               private authService: AuthService,
               private router: Router,
-              private dataService: DataService) {
+              private dataService: DataService,
+              public dialog: MatDialog) {
   }
 
   ngOnInit() {
@@ -97,6 +99,12 @@ export class SignupComponent implements OnInit {
   }
 
   toggleTos() {
-    this.showTos = !this.showTos;
+    const dialogRef = this.dialog.open(TosDialogComponent, {
+      width: '90%'
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      this.agreeTos = result;
+    });
   }
 }

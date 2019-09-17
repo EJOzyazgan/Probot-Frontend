@@ -27,10 +27,21 @@ import {AngularSvgIconModule} from 'angular-svg-icon';
 import { TooltipComponent } from './tooltip/tooltip.component';
 import { CustomInputComponent } from './custom-input/custom-input.component';
 import { MatExpansionModule } from '@angular/material';
+import { TosComponent } from './tos/tos.component';
+import { TosDialogComponent } from './dialogs/tos-dialog/tos-dialog.component';
+import { FriendDialogComponent } from './dialogs/friend-dialog/friend-dialog.component';
+import { RefferalDialogComponent } from './dialogs/refferal-dialog/refferal-dialog.component';
 
 
 @NgModule({
-  declarations: [TooltipComponent, CustomInputComponent],
+  declarations: [
+    TooltipComponent,
+    CustomInputComponent,
+    TosComponent,
+    TosDialogComponent,
+    FriendDialogComponent,
+    RefferalDialogComponent,
+  ],
   imports: [
     CommonModule,
     FormsModule,
@@ -63,7 +74,11 @@ import { MatExpansionModule } from '@angular/material';
     MatExpansionModule,
   ],
   providers: [],
-  entryComponents: [],
+  entryComponents: [
+    TosDialogComponent,
+    FriendDialogComponent,
+    RefferalDialogComponent,
+  ],
   exports: [
     CommonModule,
     MatFormFieldModule,
@@ -91,7 +106,11 @@ import { MatExpansionModule } from '@angular/material';
     AngularSvgIconModule,
     TooltipComponent,
     CustomInputComponent,
+    TosComponent,
     MatExpansionModule,
+    TosDialogComponent,
+    FriendDialogComponent,
+    RefferalDialogComponent,
   ]
 })
 export class SharedModule {}
