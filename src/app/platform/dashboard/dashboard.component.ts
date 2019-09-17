@@ -8,6 +8,9 @@ import { AlertService } from 'ngx-alerts';
 import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
 import { BotService } from '../../services/bot.service';
+import { FriendDialogComponent } from 'src/app/shared/dialogs/friend-dialog/friend-dialog.component';
+import { MatDialog } from '@angular/material';
+import { RefferalDialogComponent } from 'src/app/shared/dialogs/refferal-dialog/refferal-dialog.component';
 
 
 @Component({
@@ -27,6 +30,8 @@ export class DashboardComponent implements OnInit {
   addFriendView = false;
 
   friendsEmail = null;
+
+  rewardChips  = 30000;
 
   rewards = [500, 1000, 1500, 2000, 2500];
   friends: Array<User>;
@@ -67,7 +72,8 @@ export class DashboardComponent implements OnInit {
     private metricService: MetricService,
     private alertService: AlertService,
     private router: Router,
-    private botService: BotService) {
+    private botService: BotService,
+    public dialog: MatDialog) {
   }
 
   ngOnInit() {
@@ -221,41 +227,38 @@ export class DashboardComponent implements OnInit {
     this.toggleView('rewards');
   }
 
-  referFriend() {
-    if (this.friendsEmail !== null && this.friendsEmail.trim() !== '') {
-      this.authService.sendReferralEmail(this.friendsEmail).subscribe(email => {
-        this.alertService.success(email['msg']);
-        this.toggleView('refer');
-      }, err => {
-        this.alertService.danger(err['error']['error']['msg']);
-        this.toggleView('refer');
-      });
-    } else {
-      this.alertService.warning('Must provide friend\'s email');
-    }
-  }
-
-  addFriend() {
-    if (this.friendsEmail !== null && this.friendsEmail.trim() !== '') {
-      this.authService.addFriend(this.friendsEmail).subscribe(email => {
-        this.alertService.success(email['msg']);
-        this.toggleView('invite');
-      }, err => {
-        console.log(err);
-        this.alertService.danger(err['error']['error']['msg'])
-      });
-    } else {
-      this.alertService.warning('Must provide friend\'s email');
-    }
-  }
-
   toggleView(view) {
     if (view === 'rewards') {
       this.dailyRewardView = !this.dailyRewardView;
     } else if (view === 'refer') {
-      this.referralView = !this.referralView;
+      const dialogRef = this.dialog.open(RefferalDialogComponent, {
+        width: '250px',
+        data: {chips: this.rewardChips},
+      });
+
+      dialogRef.afterClosed().subscribe(result => {
+        if (result) {
+          this.authService.sendReferralEmail(result).subscribe(email => {
+            this.alertService.success(email['msg']);
+          }, err => {
+            this.alertService.danger(err['error']['error']['msg']);
+          });
+        }
+      });
     } else if (view === 'invite') {
-      this.addFriendView = !this.addFriendView;
+      const dialogRef = this.dialog.open(FriendDialogComponent, {
+        width: '250px'
+      });
+
+      dialogRef.afterClosed().subscribe(result => {
+        if (result) {
+          this.authService.addFriend(result).subscribe(email => {
+            this.alertService.success(email['msg']);
+          }, err => {
+            this.alertService.danger(err['error']['error']['msg'])
+          });
+        }
+      });
     }
   }
 }
