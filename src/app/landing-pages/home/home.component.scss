@@ -4,7 +4,11 @@
 }
 
 .main-svg {
-  width: 500px;
+  width: 800px;
+}
+
+.video {
+  width: 100%;
 }
 
 .signup-action {
@@ -175,7 +179,13 @@
   }
   
   .main-svg {
-    width: 400px;
+    width: 700px;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .main-svg {
+    width: 500px;
   }
 }
 
@@ -193,6 +203,12 @@
   }
 
   .main-svg {
-    width: 250px;
+    width: 400px;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .main-svg {
+    width: 300px;
   }
 }
