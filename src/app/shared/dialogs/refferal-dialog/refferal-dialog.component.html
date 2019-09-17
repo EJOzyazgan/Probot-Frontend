@@ -2,7 +2,7 @@
 <div mat-dialog-content>
     <div>You will both receive an additional <span class="bold">{{data.chips | number}} chips</span> on
         account activation!!!</div>
-    <form (ngSubmit)="referFriend()">
+    <form>
         <mat-form-field>
             <input matInput type="email" name="email" placeholder="Friend's Email" class="input"
             [formControl]="emailControl">
