@@ -5,5 +5,5 @@ export const environment = {
   userTokenKey: 'probot-user-token',
   userTokenExpire: 'probot-user-expire',
   userRefreshToken: 'probot-user-refresh',
-  paypalClientId: 'AXPXM6dI9D_hYhI3J7uKVw-OxSrGvF6U3AC5-vO9xEhulXx5Zfv6i6aIDwkgEUmtk_EE9Gk2hjN4Lzt1',
+  paypalClientId: 'ARDKIhfxX3G73zEqGVayw2lj8T9fpVLA_aIswhL4dXnQuUhMIIs0y7jtEnxiUqSZkdzrykjZLUXjE9I2',
 };

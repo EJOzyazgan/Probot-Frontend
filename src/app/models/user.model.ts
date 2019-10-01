@@ -24,6 +24,7 @@ export class User {
     public refreshToken?: string,
     public gender?: string,
     public dob?: Date,
+    public numPurchases?: number,
   ) {
   }
 }

@@ -3,6 +3,7 @@ import { IPayPalConfig, ICreateOrderRequest } from 'ngx-paypal';
 import { User } from 'src/app/models/user.model';
 import { AuthService } from 'src/app/services/auth.service';
 import { environment } from 'src/environments/environment';
+import { PurchaseService } from 'src/app/services/purchase.service';
 
 @Component({
   selector: 'app-market-place',
@@ -76,7 +77,8 @@ export class MarketPlaceComponent implements OnInit {
   user = new User();
   processingPayment = false;
 
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService,
+    private purchaseService: PurchaseService) { }
 
   ngOnInit() {
     this.initConfig();
@@ -125,30 +127,42 @@ export class MarketPlaceComponent implements OnInit {
         shape: 'pill',
       },
       onApprove: (data, actions) => {
-        console.log('onApprove - transaction was approved, but not authorized', data, actions);
+        // console.log('onApprove - transaction was approved, but not authorized', data, actions);
         actions.order.get().then(details => {
-          console.log('onApprove - you can get full order details inside onApprove: ', details);
+          // console.log('onApprove - you can get full order details inside onApprove: ', details);
         });
       },
       onClientAuthorization: (data) => {
-        console.log('onClientAuthorization - you should probably inform your server about completed transaction at this point', data);
+        // console.log('onClientAuthorization - you should probably inform your server about completed transaction at this point', data);
         // this.showSuccess = true;
         this.user.chips += this.selectedItem.package.chips;
+        this.user.numPurchases++;
         this.authService.patchUser(this.user).subscribe(patchedUser => {
           this.user = patchedUser;
           this.processingPayment = false;
         });
+
+        const body = {
+          paypalId: data.id,
+          payer: data.payer,
+          purchaseUnits: data.purchase_units,
+          userId: this.user.id,
+        }
+
+        this.purchaseService.save(body).subscribe(message => {
+          
+        });
       },
       onCancel: (data, actions) => {
-        console.log('OnCancel', data, actions);
+        // console.log('OnCancel', data, actions);
         this.processingPayment = false;
       },
       onError: err => {
-        console.log('OnError', err);
+        // console.log('OnError', err);
         this.processingPayment = false;
       },
       onClick: (data, actions) => {
-        console.log('onClick', data, actions);
+        // console.log('onClick', data, actions);
         this.processingPayment = true;
       },
     };
