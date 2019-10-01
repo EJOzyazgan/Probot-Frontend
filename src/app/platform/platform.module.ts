@@ -16,6 +16,8 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
 import { AdminBotsComponent } from './admin-bots/admin-bots.component';
 import { LeaderboardComponent } from './leaderboard/leaderboard.component';
 import { SupportComponent } from './support/support.component';
+import { MarketPlaceComponent } from './market-place/market-place.component';
+import { NgxPayPalModule } from 'ngx-paypal';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import { SupportComponent } from './support/support.component';
     AdminDashboardComponent,
     AdminBotsComponent,
     LeaderboardComponent,
-    SupportComponent
+    SupportComponent,
+    MarketPlaceComponent
   ],
   imports: [
     CommonModule,
@@ -38,7 +41,8 @@ import { SupportComponent } from './support/support.component';
     PlatformRoutingModule,
     AngularFontAwesomeModule,
     Ng2GoogleChartsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxPayPalModule,
   ]
 })
 export class PlatformModule {

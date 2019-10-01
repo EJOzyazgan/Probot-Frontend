@@ -31,6 +31,9 @@
     <div class="menu-item" [routerLink]="['./leader-board']" [routerLinkActive]="['active-nav-btn']">
       <svg-icon class="menu-btn" [applyCss]="true" src="../../assets/ranking.svg"></svg-icon>
     </div>
+    <div class="menu-item" [routerLink]="['./store']" [routerLinkActive]="['active-nav-btn']">
+      <svg-icon class="menu-btn" [applyCss]="true" src="../../assets/market.svg"></svg-icon>
+    </div>
     <!--<div class="menu-item"-->
     <!--[routerLink]="['./tournament']"-->
     <!--[routerLinkActive]="['active-nav-btn']">-->
@@ -71,6 +74,12 @@
           <svg-icon class="side-nav-btn" [applyCss]="true" src="../../assets/ranking.svg"></svg-icon>
         </div>
         <div class="side-nav-label">Leaderboard</div>
+      </div>
+      <div class="item" [routerLink]="['./store']" [routerLinkActive]="['active-nav-btn']">
+        <div class="side-nav-btn">
+          <svg-icon class="side-nav-btn" [applyCss]="true" src="../../assets/market.svg"></svg-icon>
+        </div>
+        <div class="side-nav-label">Store</div>
       </div>
       <!--<div class="item"-->
       <!--[routerLink]="['./tournament']"-->

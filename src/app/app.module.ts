@@ -22,6 +22,7 @@ import { Ng2GoogleChartsModule } from 'ng2-google-charts';
 import { FlexLayoutModule} from '@angular/flex-layout';
 import {AuthInterceptor} from './services/authInterceptor.service';
 import {environment} from '../environments/environment';
+import { PurchaseService } from './services/purchase.service';
 
 const config: SocketIoConfig = { url: `${environment.domain}`, options: {} };
 
@@ -51,6 +52,7 @@ const config: SocketIoConfig = { url: `${environment.domain}`, options: {} };
     TableService,
     MetricService,
     GoogleAnalyticsService,
+    PurchaseService,
     AuthGuard,
     {
       provide: HTTP_INTERCEPTORS,

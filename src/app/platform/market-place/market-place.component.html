@@ -1,0 +1,38 @@
+<div class="main-container" fxLayout="row wrap" fxLayoutAlign="center">
+  <mat-card class="chips-card">
+    <mat-card-title class="item-title">Current Chips</mat-card-title>
+    <mat-card-content class="current-chips">{{user.chips | number}}</mat-card-content>
+  </mat-card>
+  <div>
+    <div fxLayout="row wrap" fxLayoutAlign="space-around" class="items-container">
+      <mat-card (click)="selectItem(i)" class="item mat-elevation-z4" *ngFor="let item of items; let i = index">
+        <mat-icon class="selected-icon" *ngIf="item.package.chips === selectedItem.package.chips">check_circle_outline
+        </mat-icon>
+        <mat-card-title class="item-title" fxLayout="row" fxLayoutAlign="center">
+          <div>
+            {{item.title}}
+          </div>
+        </mat-card-title>
+        <mat-card-content class="overview-content">
+          <div class="item-icon-container">
+            <svg-icon class="item-icon" [applyCss]="true" src="../../assets/poker-chip.svg"></svg-icon>
+          </div>
+          <div class="item-info">
+            <div class="item-data">{{item.package.chips | number}}</div>
+            <div class="item-type">Chips</div>
+          </div>
+          <div fxLayout="row" fxLayoutAlign="space-between">
+            <span class="price-container">
+              ${{item.package.price}} {{item.package.currency}}
+            </span>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <div class="paypal-container">
+      <ngx-paypal [config]="payPalConfig"></ngx-paypal>
+    </div>
+  </div>
+
+</div>

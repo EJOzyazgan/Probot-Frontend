@@ -57,7 +57,7 @@
             </div>
           </form>
           <button mat-raised-button class="play-btn" [disabled]="!inputsReady()" (click)="startPVP()">Play</button>
-          <div *ngIf="pvpMessage" [style.color]="'red'">{{pvpMessage}}</div>
+          <div *ngIf="pvpMessage" [style.color]="'red'">Not enough chips, you have {{user.chips | number}} chips.</div>
         </mat-card-content>
       </div>
     </mat-card>

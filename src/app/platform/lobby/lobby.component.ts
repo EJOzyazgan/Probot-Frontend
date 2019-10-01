@@ -213,10 +213,10 @@ export class LobbyComponent implements OnInit {
   inputsReady() {
     if (this.bot.id && this.buyinControl.valid && this.table) {
       if (this.buyinControl.value > this.user.chips) {
-        this.pvpMessage = `Not enough chips, you have ${this.user.chips} chips.`
+        this.pvpMessage = true;
         return false;
       } else {
-        this.pvpMessage = null;
+        this.pvpMessage = false;
       }
       return true;
     }

@@ -1,0 +1,79 @@
+.item-data {
+    color: #cc0000;
+    margin: auto;
+    font-size: 40px;
+    font-weight: bold;
+  }
+  
+.item-type {
+    font-size: 30px;
+}
+
+.item-info {
+    margin: auto;
+    text-align: center;
+}
+
+.item-icon-container {
+    width: 100px;
+    vertical-align: middle;
+    margin: auto;
+}
+
+.items-container {
+    max-width: 850px;
+    margin: auto;
+}
+
+.item-title {
+    color: #cc0000;
+    font-weight: bold;
+    text-align: center;
+}
+
+.item {
+    width: 225px;
+    margin-top: 20px;
+    border: #cc0000 3px solid;
+
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+.price-container {
+    margin: 10px auto 0 auto;
+    text-align: center;
+    font-size: 24px;
+}
+
+.paypal-container {
+    margin: 20px auto;
+    width: 50%;
+}
+
+.selected-icon {
+    color: #30de00;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    font-size: 26px;
+}
+
+.current-chips {
+    text-align: center;
+    font-size: 20px;
+}
+
+.chips-card {
+    width: fit-content;
+    height: fit-content;
+    margin: 20px;
+    border: #cc0000 3px solid;
+}
+
+@media only screen and (max-width: 500px) {
+    .paypal-container {
+        width: 75%;
+    }
+  }

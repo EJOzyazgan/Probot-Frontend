@@ -6,7 +6,7 @@
           <svg-icon class="item-icon" [applyCss]="true" src="../../assets/poker-chip.svg"></svg-icon>
         </div>
         <div class="item-info">
-          <div class="item-data">${{user.chips}}</div>
+          <div class="item-data">{{user.chips | number}}</div>
           <div class="item-type">Chips</div>
         </div>
       </mat-card-content>
@@ -18,7 +18,7 @@
           <svg-icon class="item-icon" [applyCss]="true" src="../../assets/poker-cards.svg"></svg-icon>
         </div>
         <div class="item-info">
-          <div class="item-data">{{bot.id === undefined ? '0' : bot.handsPlayed}}</div>
+          <div class="item-data">{{bot.id === undefined ? '0' : bot.handsPlayed | number}}</div>
           <div class="item-type">Hands Played</div>
         </div>
       </mat-card-content>
@@ -45,7 +45,7 @@
           <svg-icon class="item-icon" [applyCss]="true" src="../../assets/chip-stack.svg"></svg-icon>
         </div>
         <div class="item-info">
-          <div class="item-data">${{bot.id === undefined ? '0' : bot.totalWinnings}}</div>
+          <div class="item-data">{{bot.id === undefined ? '0' : bot.totalWinnings | number}}</div>
           <div class="item-type">Total Winnings</div>
         </div>
       </mat-card-content>
