@@ -20,6 +20,16 @@
 
 }
 
+.sign-up-text-btn {
+  color: white;
+  background: #cc0000;
+  font-size: 20px;
+  font-family: 'xirod', sans-serif;
+  width: fit-content;
+  // padding: 8px;
+  margin: auto;
+}
+
 .active-link {
   color: #cc0000;
   text-decoration: underline
@@ -43,7 +53,7 @@
 
 .companyLogo {
   margin-top: 15px;
-  margin-left: 40px;
+  margin-left: 50px;
   width: 250px;
 }
 
@@ -53,12 +63,10 @@
 
 .mat-toolbar {
   background: transparent;
-  height: 75px;
+  height: 70px;
   width: 100vw;
   position: fixed;
   top: 0;
-  right: 0;
-  left: 0;
   z-index: 9;
   margin: 0;
   padding: 0;

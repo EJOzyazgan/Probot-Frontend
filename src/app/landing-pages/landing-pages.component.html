@@ -3,7 +3,7 @@
     <div class="nav-bar">
       <div class="menu-btn" fxShow="true" fxHide.gt-sm="true">
         <button mat-icon-button [matMenuTriggerFor]="appMenu">
-          <i class="material-icons">menu</i>
+          <mat-icon>menu</mat-icon>
         </button>
       </div>
       <a class="home-link" [routerLink]="['./home']">
@@ -20,8 +20,9 @@
           <a class="toolbar-link" [routerLink]="['../auth/login']">Login</a>
         </div>
         <div class="toolbar-btn time-unit">
-          <a class="toolbar-link" [style.color]="'#cc0000'" [style.font-weight]="'bold'"
-            [routerLink]="['../auth/signup']">Sign Up</a>
+            <button mat-raised-button class="sign-up-text-btn" [routerLink]="['../auth/signup']">
+              Join
+            </button>
         </div>
       </div>
     </div>
