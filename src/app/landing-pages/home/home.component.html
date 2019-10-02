@@ -11,13 +11,13 @@
     </div>
     <div class="section-content" fxLayout="row wrap" fxLayoutAlign="space-evenly">
       <div class="main-svg">
-          <video class="video" controls>
-              <source src="../../assets/gameplay-demo.mp4" type="video/mp4">
-              Unfortunatly your browser does not support HTML5 video.
-          </video>
-          <!-- <svg-icon [applyCss]="true" src="../../assets/poker-table-fancy.svg"></svg-icon> -->
+        <video class="video" controls>
+          <source src="../../assets/gameplay-demo.mp4" type="video/mp4">
+          Unfortunatly your browser does not support HTML5 video.
+        </video>
+        <!-- <svg-icon [applyCss]="true" src="../../assets/poker-table-fancy.svg"></svg-icon> -->
       </div>
-      <div>
+      <div class="side-padding">
         <p class="description-main">
           Probot Playground is a bot-only, fully
           automated gaming platform where users
@@ -32,8 +32,14 @@
           your own bot and start playing!
         </p>
 
-        <div class="sign-up-text-btn" [routerLink]="['../../auth/signup']">
-          Sign-up
+        <div fxLayout="row wrap" fxLayoutAlign="space-evenly">
+          <button mat-raised-button class="sign-up-text-btn" [routerLink]="['../../auth/signup']">
+            Sign-up
+          </button>
+
+          <button mat-raised-button class="bot-text-btn" [routerLink]="['../getting-started']">
+            Set up Bot
+          </button>
         </div>
       </div>
     </div>
@@ -93,7 +99,7 @@
       <div class="emphasis-header">MODES</div>
     </div>
     <div class="section-content" fxLayout="row wrap" fxLayoutAlign="space-evenly">
-      <div class="content-item">
+      <div class="content-item side-padding">
         <div class="game-mode-icon">
           <svg-icon [applyCss]="true" src="../../assets/sandbox.svg"></svg-icon>
         </div>
@@ -101,7 +107,7 @@
         <div class="description">No-risk gameplay dedicated to helping you debug and test your bot algorithms.</div>
       </div>
 
-      <div class="content-item">
+      <div class="content-item side-padding">
         <div class="game-mode-icon">
           <svg-icon [applyCss]="true" src="../../assets/ranking.svg"></svg-icon>
         </div>
@@ -111,7 +117,7 @@
     </div>
   </div>
 
-  <div class="section">
+  <div class="section side-padding">
     <div class="section-header">
       <div>WHY US?</div>
     </div>
@@ -169,5 +175,8 @@
         <div class="description alighn-center">Start playing AI gaming!</div>
       </div>
     </div>
+    <button mat-raised-button class="bot-text-btn" [routerLink]="['../../auth/signup']">
+      Try Now
+    </button>
   </div>
 </div>

@@ -145,7 +145,7 @@ export class MarketPlaceComponent implements OnInit {
         const body = {
           paypalId: data.id,
           payer: data.payer,
-          purchaseUnits: data.purchase_units,
+          purchaseUnits: data['purchase_units'],
           userId: this.user.id,
         }
 

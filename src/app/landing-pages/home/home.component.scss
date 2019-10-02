@@ -81,6 +81,10 @@
   width: fit-content;
 }
 
+.side-padding {
+  padding: 10px;
+}
+
 .description {
   margin-top: 20px;
   margin-left: auto;
@@ -104,14 +108,17 @@
   background: #cc0000;
   font-size: 45px;
   font-family: 'xirod', sans-serif;
-  width: fit-content;
   padding: 30px;
   margin: auto;
-  text-align: center;
+}
 
-  &:hover {
-    cursor: pointer;
-  }
+.bot-text-btn {
+  color: #cc0000;
+  background: white;
+  font-size: 30px;
+  font-family: 'xirod', sans-serif;
+  padding: 24px;
+  margin: 10px auto;
 }
 
 .game-mode-icon {
@@ -181,6 +188,18 @@
   .main-svg {
     width: 700px;
   }
+
+  .benefit-icon {
+    width: 75px;
+  }
+
+  .gray-background {
+    padding: 30px;
+  }
+
+  .get-started-icon {
+    width: 125px;
+  }
 }
 
 @media only screen and (max-width: 750px) {
@@ -204,6 +223,16 @@
 
   .main-svg {
     width: 400px;
+  }
+
+  .sign-up-text-btn {
+    font-size: 30px;
+    padding: 24px;
+  }
+
+  .bot-text-btn {
+    font-size: 22px;
+    padding: 18px;
   }
 }
 

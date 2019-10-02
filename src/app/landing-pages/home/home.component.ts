@@ -12,14 +12,17 @@ export class HomeComponent implements OnInit {
     {
       url: '../../../assets/img/next-gen-gaming.png',
       caption: 'Next Generation Gaming',
+      backgroundSize: 'contain',
     },
     {
       url: '../../../assets/img/referral-bonus.png',
       caption: 'Referral Bonus!',
+      backgroundSize: 'contain',
     },
     {
       url: '../../../assets/img/signup-bonus.png',
-      caption: 'Signup Bonus!'
+      caption: 'Signup Bonus!',
+      backgroundSize: 'contain',
     }
   ];
 
