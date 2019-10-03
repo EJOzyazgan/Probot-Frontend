@@ -4,6 +4,8 @@ import { User } from 'src/app/models/user.model';
 import { AuthService } from 'src/app/services/auth.service';
 import { environment } from 'src/environments/environment';
 import { PurchaseService } from 'src/app/services/purchase.service';
+import { MatDialog } from '@angular/material';
+import { PurchaseDialogComponent } from 'src/app/shared/dialogs/purchase-dialog/purchase-dialog.component';
 
 @Component({
   selector: 'app-market-place',
@@ -78,14 +80,22 @@ export class MarketPlaceComponent implements OnInit {
   processingPayment = false;
 
   constructor(private authService: AuthService,
-    private purchaseService: PurchaseService) { }
+    private purchaseService: PurchaseService,
+    public dialog: MatDialog) { }
 
   ngOnInit() {
     this.initConfig();
     this.getUser();
   }
 
-  private initConfig(): void {
+  openDialog() {
+    this.dialog.open(PurchaseDialogComponent, {
+      width: '250px',
+      data: { chips: this.selectedItem.package.chips, totalChips: this.user.chips },
+    });
+  }
+
+  initConfig() {
     this.payPalConfig = {
       currency: 'USD',
       clientId: environment.paypalClientId,
@@ -133,12 +143,22 @@ export class MarketPlaceComponent implements OnInit {
         });
       },
       onClientAuthorization: (data) => {
-        // console.log('onClientAuthorization - you should probably inform your server about completed transaction at this point', data);
+        console.log('onClientAuthorization - you should probably inform your server about completed transaction at this point', data);
         // this.showSuccess = true;
         this.user.chips += this.selectedItem.package.chips;
         this.user.numPurchases++;
+
+        const chips = this.selectedItem.package.chips;
+        const totalChips = this.user.chips;
+
+        this.dialog.open(PurchaseDialogComponent, {
+          width: '250px',
+          data: { chips, totalChips },
+        });
+
         this.authService.patchUser(this.user).subscribe(patchedUser => {
           this.user = patchedUser;
+          this.openDialog();
           this.processingPayment = false;
         });
 
@@ -150,7 +170,7 @@ export class MarketPlaceComponent implements OnInit {
         }
 
         this.purchaseService.save(body).subscribe(message => {
-          
+
         });
       },
       onCancel: (data, actions) => {

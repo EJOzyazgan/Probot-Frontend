@@ -16,7 +16,6 @@ export class AuthService {
   }
 
   login(email, password) {
-    console.log(this.authUrl);
     return this.http.post(this.authUrl + '/login', {email: email, password: password});
   }
 

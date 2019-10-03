@@ -1,0 +1,9 @@
+<h1 mat-dialog-title class="center">Purchase Summary</h1>
+<div mat-dialog-content class="main-content">
+    <p>Thank you for your purchase!</p>
+    <p>Your <span class="emphasize-text">{{data.chips | number}}</span> chips have been added to your account.</p>
+    <p>You know have <span class="emphasize-text">{{data.totalChips | number}}</span> total chips.</p>
+</div>
+<div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Close</button>
+</div>
