@@ -163,11 +163,9 @@ export class GameTableComponent implements OnInit {
     clearInterval(this.timerId);
     this.playRate = speed;
     this.timerId = setInterval(() => this.nextData(1), speed);
-    console.log(this.timerId);
   }
 
   stopAutoPlay() {
-    console.log(this.timerId);
     clearInterval(this.timerId);
     this.playRate = null;
   }
@@ -254,7 +252,6 @@ export class GameTableComponent implements OnInit {
       while (topTwo.length < 2) {
         let max = this.deepCopy(this.bracket.divisions[this.div].rounds[this.round].matches[this.match].bots[0]);
         for (const bot of this.bracket.divisions[this.div].rounds[this.round].matches[this.match].bots) {
-          console.log(bot.score, firstMax);
           if (bot.score >= max.score && bot.bot.name !== firstMax) {
             max = this.deepCopy(bot);
           }
@@ -297,7 +294,6 @@ export class GameTableComponent implements OnInit {
 
   alreadySelected(bot, topTwo) {
     for (const b of topTwo) {
-      console.log(b.bot.name, bot.bot.name);
       if (b.bot.name === bot.bot.name) {
         return true;
       }
