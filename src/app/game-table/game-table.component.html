@@ -12,7 +12,7 @@
           <img class="card" src="../../assets/img/cards/{{card.rank + card.type}}.svg">
         </div>
       </div>
-      <p class="table-pot">${{pot}}</p>
+      <p class="table-pot">${{pot | number: '1.2-2'}}</p>
     </div>
 
     <div class="player" *ngFor="let player of players; let i = index" [ngStyle]="getPlayerStyle(i)">
@@ -26,7 +26,7 @@
           <img *ngFor="let card of [0,1]" class="card" src="../../assets/img/cards/probot_back.svg">
         </div>
       </div>
-      <p class="player-chips">${{player.chips}}</p>
+      <p class="player-chips">{{player.chips | number: '1.2-2'}}</p>
     </div>
   </div>
 

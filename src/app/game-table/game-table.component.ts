@@ -144,7 +144,7 @@ export class GameTableComponent implements OnInit {
       }
       // this.odds = this.getOdds(this.players, this.commonCards);
     } else if (this.data.type === 'bet') {
-      this.message = `${this.player.name} Bet ${this.data.amount}`;
+      this.message = `${this.player.name} Bet ${this.data.amount.toFixed(2)}`;
       this.pot = this.data.pot;
     } else if (this.data.type === 'cards') {
       this.message = `${this.data.session} Card(s): ${this.getCards(this.data.commonCards)}`;
