@@ -15,7 +15,7 @@ export class EmailVerificationComponent implements OnInit {
   email;
   token;
   isValid = false;
-  validating = true;
+  validating = false;
 
   constructor(private route: ActivatedRoute,
               private alertService: AlertService,
@@ -29,7 +29,7 @@ export class EmailVerificationComponent implements OnInit {
     this.token = this.route.snapshot.paramMap.get('token');
     this.dataService.currentEmail.subscribe(email => this.email = email);
 
-    // this.validate();
+    this.validate();
   }
 
   validate() {
@@ -41,6 +41,8 @@ export class EmailVerificationComponent implements OnInit {
         this.alertService.warning('Invalid Email');
         return this.router.navigate(['/auth']);
       });
+    } else {
+      this.router.navigate(['./auth/login'])
     }
   }
 
