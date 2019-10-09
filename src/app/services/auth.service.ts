@@ -47,6 +47,10 @@ export class AuthService {
     return this.http.get(this.authUrl + `/referral/${email}`);
   }
 
+  resendVerification(email) {
+    return this.http.get(`${this.authUrl}/validate/send/${email}`);
+  }
+
   addFriend(email) {
     return this.http.get(this.authUrl + `/add/friend/${email}`);
   }

@@ -1,0 +1,14 @@
+<h1 mat-dialog-title>Account Email</h1>
+<div mat-dialog-content>
+    <form>
+        <mat-form-field>
+            <input matInput type="email" name="email" placeholder="Account Email" class="input"
+            [formControl]="emailControl">
+            <mat-error>Must be valid email</mat-error>
+        </mat-form-field>
+    </form>
+</div>
+<div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Close</button>
+    <button mat-raised-button [mat-dialog-close]="emailControl.value" [disabled]="!emailControl.valid" color="primary">Verify</button>
+</div>

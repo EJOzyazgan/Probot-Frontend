@@ -32,6 +32,7 @@ import { TosDialogComponent } from './dialogs/tos-dialog/tos-dialog.component';
 import { FriendDialogComponent } from './dialogs/friend-dialog/friend-dialog.component';
 import { RefferalDialogComponent } from './dialogs/refferal-dialog/refferal-dialog.component';
 import { PurchaseDialogComponent } from './dialogs/purchase-dialog/purchase-dialog.component';
+import { VerificationDialogComponent } from './dialogs/verification-dialog/verification-dialog.component';
 
 
 @NgModule({
@@ -43,6 +44,7 @@ import { PurchaseDialogComponent } from './dialogs/purchase-dialog/purchase-dial
     FriendDialogComponent,
     RefferalDialogComponent,
     PurchaseDialogComponent,
+    VerificationDialogComponent,
   ],
   imports: [
     CommonModule,
@@ -81,6 +83,7 @@ import { PurchaseDialogComponent } from './dialogs/purchase-dialog/purchase-dial
     FriendDialogComponent,
     RefferalDialogComponent,
     PurchaseDialogComponent,
+    VerificationDialogComponent,
   ],
   exports: [
     CommonModule,
@@ -115,6 +118,7 @@ import { PurchaseDialogComponent } from './dialogs/purchase-dialog/purchase-dial
     FriendDialogComponent,
     RefferalDialogComponent,
     PurchaseDialogComponent,
+    VerificationDialogComponent,
   ]
 })
 export class SharedModule {}
