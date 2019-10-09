@@ -3,6 +3,8 @@ import {AuthService} from '../../services/auth.service';
 import {AlertService} from 'ngx-alerts';
 import {Router} from '@angular/router';
 import {environment} from '../../../environments/environment';
+import { MatDialog } from '@angular/material';
+import { VerificationDialogComponent } from 'src/app/shared/dialogs/verification-dialog/verification-dialog.component';
 
 @Component({
   selector: 'app-login',
@@ -16,7 +18,8 @@ export class LoginComponent implements OnInit {
 
   constructor(private authService: AuthService,
               private alertService: AlertService,
-              private router: Router) {
+              private router: Router,
+              public dialog: MatDialog) {
   }
 
   ngOnInit() {
@@ -38,6 +41,25 @@ export class LoginComponent implements OnInit {
     }, err => {
       console.log(err);
       return this.alertService.danger(err['error']['msg']);
+    });
+  }
+
+  toggleDialog(){
+    const dialogRef = this.dialog.open(VerificationDialogComponent, {
+      width: '280px',
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        this.authService.resendVerification(result).subscribe(res => {
+          if (res['msg']) {
+            return this.alertService.warning(res['msg']);
+          }
+          this.alertService.success('Verification Email Sent');
+        }, err => {
+          this.alertService.danger('Could not send email');
+        }); 
+      }
     });
   }
 

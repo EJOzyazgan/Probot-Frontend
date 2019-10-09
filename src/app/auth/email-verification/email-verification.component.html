@@ -8,7 +8,11 @@
       </div>
       <div *ngIf="validating">
         <p *ngIf="isValid">Email verified successfully!. Have fun on the Playground!</p>
-        <p *ngIf="!isValid">Email verification invalid</p>
+        <div *ngIf="!isValid">
+          <div class="msg">Email verification invalid</div>
+          <div class="msg">Your link may have expired, you may get a new one below.</div>
+          <div class="forgot-password" (click)="toggleDialog()">Resend Verification Email</div>
+        </div>
       </div>
       <button mat-button type="submit" class="button btn-1" [routerLink]="'/auth/login'">Login</button>
     </mat-card-content>
