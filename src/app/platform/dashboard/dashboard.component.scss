@@ -152,6 +152,7 @@
   transform: translate(-50%, -50%);
   border-radius: 10px;
   z-index: 100;
+  min-width: 280px;
 }
 
 .close-btn {
@@ -178,20 +179,15 @@
 }
 
 .rewards-container {
-  display: flex;
-  padding: 10px;
+  padding: 5px;
 }
 
 .reward-container {
-  margin: 0 10px;
+  margin: 5px;
   text-align: center;
   height: 100px;
   width: 100px;
   border: #cc0000 3px solid;
-}
-
-.reward-container:hover {
-  cursor: pointer;
 }
 
 .reward {
@@ -201,6 +197,13 @@
 
 .send-invite-btn {
   font-size: 18px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color: #cc0000;
 }
 
 @media only screen and (max-width: 1800px) {
@@ -222,6 +225,19 @@
 @media only screen and (max-width: 720px) {
   .leader-board-wrapper {
     width: 500px;
+  }
+
+  .reward-container {
+    height: 70px;
+    width: 70px;
+  }
+
+  .large-header {
+    font-size: 26px;
+  }
+
+  .input {
+    font-size: 18px; 
   }
 }
 
@@ -286,6 +302,29 @@
   .invite-friend-btns {
     display: block;
     text-align: center;
+  }
+
+  .reward-container {
+    height: 70px;
+    width: 70px;
+  }
+
+  .large-header {
+    font-size: 22px;
+  }
+
+  .input {
+    font-size: 16px; 
+  }
+
+  .popup-container {
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+  }
+
+  .reward-header {
+    font-size: 20px;
   }
 }
 

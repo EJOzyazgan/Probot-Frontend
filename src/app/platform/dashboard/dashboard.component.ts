@@ -31,9 +31,10 @@ export class DashboardComponent implements OnInit {
 
   friendsEmail = null;
 
-  rewardChips  = 30000;
+  rewardChips = 30000;
 
   rewards = [500, 1000, 1500, 2000, 2500];
+  dailyReward = 500;
   friends: Array<User>;
 
   totalWinningsData = {
@@ -107,11 +108,16 @@ export class DashboardComponent implements OnInit {
           moment(this.user.firstLoggedIn).diff(moment(), 'minutes') > -(2 * this.MINUTE_DAY))) {
         this.user.daysLoggedIn++;
         this.user.firstLoggedIn = moment().toDate();
-        this.dailyRewardView = true;
+
+        if (this.user.daysLoggedIn < 5) {
+          this.getReward(this.user.daysLoggedIn-1);
+        } else {
+          this.getReward(4);
+        }
       } else if (moment(this.user.firstLoggedIn).diff(moment(), 'minutes') <= -(2 * this.MINUTE_DAY)) {
         this.user.daysLoggedIn = 1;
         this.user.firstLoggedIn = moment().toDate();
-        this.dailyRewardView = true;
+        this.getReward(this.user.daysLoggedIn-1);
       }
 
       this.user.lastLoggedIn = moment().toDate();
@@ -199,13 +205,13 @@ export class DashboardComponent implements OnInit {
   getRewardStyle(reward) {
     let style;
 
-    if (this.user.daysLoggedIn > reward && (reward < 5)) {
+    if (this.user.daysLoggedIn >= reward) {
       style = {
         'background': '#cc0000',
         'color': 'white',
         'pointer-events': 'none'
       };
-    } else if (this.user.daysLoggedIn < reward) {
+    } else {
       style = {
         'background': '#C1C1C1',
         'color': 'black',
@@ -217,7 +223,8 @@ export class DashboardComponent implements OnInit {
   }
 
   getReward(reward) {
-    this.user.chips += this.rewards[reward];
+    this.dailyReward = this.rewards[reward];
+    this.user.chips += this.dailyReward;
     this.authService.patchUser(this.user).subscribe(updatedUser => {
       if (updatedUser) {
         this.user = updatedUser;
@@ -233,7 +240,7 @@ export class DashboardComponent implements OnInit {
     } else if (view === 'refer') {
       const dialogRef = this.dialog.open(RefferalDialogComponent, {
         width: '250px',
-        data: {chips: this.rewardChips},
+        data: { chips: this.rewardChips },
       });
 
       dialogRef.afterClosed().subscribe(result => {
