@@ -23,6 +23,11 @@ export class HomeComponent implements OnInit {
       url: '../../../assets/img/signup-bonus.png',
       caption: 'Signup Bonus!',
       backgroundSize: 'contain',
+    },
+    {
+      url: '../../../assets/img/social.png',
+      caption: 'Social',
+      backgroundSize: 'contain',
     }
   ];
 
