@@ -81,6 +81,11 @@
   width: fit-content;
 }
 
+.content-item-in {
+  margin-top: 15px;
+  width: fit-content;
+}
+
 .side-padding {
   padding: 10px;
 }
@@ -176,6 +181,36 @@
   cursor: pointer;
 }
 
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 175px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px;
+  border-radius: 6px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 50%;
+  margin-top: 5px;
+  margin-left: -88px;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
 @media only screen and (max-width: 875px) {
   .section-header {
     font-size: 30px;
@@ -240,4 +275,50 @@
   .main-svg {
     width: 300px;
   }
+
+  .gray-background {
+    padding: 30px 10px;
+  }
+
+  .benefit-icon {
+    width: 50px;
+  }
+
+  .content-item-in {
+    width: 100px;
+  }
+
+  .description-main {
+    font-size: 18px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .game-mode-icon {
+    width: 150px;
+  }
+
+  .content-label {
+    font-size: 16px;
+  }
+
+  .emphasis-header {
+    font-size: 20px;
+  }
+
+  .headr {
+    font-size: 22px;
+  }
+
+  .content-header {
+    font-size: 18px;
+  }
+
+  .tooltip .tooltiptext {
+    width: 120px;
+    margin-left: -60px;
+  }
+
 }
