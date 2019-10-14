@@ -9,14 +9,14 @@ import {FriendRequestComponent} from './friend-request/friend-request.component'
 
 const authRoutes: Routes = [
   {path: '', redirectTo: 'login', pathMatch: 'full'},
-  {path: 'signup', component: SignupComponent},
-  {path: 'signup/:referralCode', component: SignupComponent},
-  {path: 'login', component: LoginComponent},
-  {path: 'email-verification', component: EmailVerificationComponent},
-  {path: 'email-verification/:token', component: EmailVerificationComponent},
-  {path: 'forgot-password', component: ForgotPasswordComponent},
-  {path: 'reset-password/:token', component: ResetPasswordComponent},
-  {path: 'friend-request/:userReferral/:friendReferral', component: FriendRequestComponent}
+  {path: 'signup', component: SignupComponent, data: {title: 'Sign-Up'}},
+  {path: 'signup/:referralCode', component: SignupComponent, data: {title: 'Sign-Up'}},
+  {path: 'login', component: LoginComponent, data: {title: 'Login'}},
+  {path: 'email-verification', component: EmailVerificationComponent, data: {title: 'Email Verification'}},
+  {path: 'email-verification/:token', component: EmailVerificationComponent, data: {title: 'Email Verification'}},
+  {path: 'forgot-password', component: ForgotPasswordComponent, data: {title: 'Forgot Password'}},
+  {path: 'reset-password/:token', component: ResetPasswordComponent, data: {title: 'Reset Password'}},
+  {path: 'friend-request/:userReferral/:friendReferral', component: FriendRequestComponent, data: {title: 'Friend Request'}}
 ];
 
 @NgModule({
