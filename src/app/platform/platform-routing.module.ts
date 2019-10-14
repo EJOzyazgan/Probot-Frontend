@@ -17,15 +17,15 @@ const platformRoutes: Routes = [
   {
     path: '', component: PlatformComponent, children: [
       {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
-      {path: 'dashboard', component: DashboardComponent},
-      {path: 'admin-dashboard', component: AdminDashboardComponent},
-      {path: 'bot', component: BotComponent},
-      {path: 'admin-bots', component: AdminBotsComponent},
-      {path: 'lobby', component: LobbyComponent},
-      {path: 'profile', component: ProfileComponent},
-      {path: 'leader-board', component: LeaderboardComponent},
-      {path: 'support', component: SupportComponent},
-      {path: 'store', component: MarketPlaceComponent},
+      {path: 'dashboard', component: DashboardComponent, data: {title: 'Dashboard'}},
+      {path: 'admin-dashboard', component: AdminDashboardComponent, data: {title: 'Admin Dashboard'}},
+      {path: 'bot', component: BotComponent, data: {title: 'Bot Dashboard'}},
+      {path: 'admin-bots', component: AdminBotsComponent, data: {title: 'Admin Bot Dashboard'}},
+      {path: 'lobby', component: LobbyComponent, data: {title: 'Lobby'}},
+      {path: 'profile', component: ProfileComponent, data: {title: 'Profile'}},
+      {path: 'leader-board', component: LeaderboardComponent, data: {title: 'Leaderboard'}},
+      {path: 'support', component: SupportComponent, data: {title: 'Support'}},
+      {path: 'store', component: MarketPlaceComponent, data: {title: 'Store'}},
       // {path: 'tournament', component: TournamentComponent}
     ]
   }

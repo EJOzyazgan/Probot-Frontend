@@ -8,9 +8,9 @@ import { CcpaComponent } from './ccpa/ccpa.component';
 const legalRoutes: Routes = [
   { path: '', component: LegalComponent, children: [
       { path: '', redirectTo: 'tos', pathMatch: 'full'},
-      { path: 'tos', component: TosComponent},
-      { path: 'privacy-policy', component: PrivacyPolicyComponent},
-      { path: 'ccpa', component: CcpaComponent}
+      { path: 'tos', component: TosComponent, data: {title: 'Terms of Service'}},
+      { path: 'privacy-policy', component: PrivacyPolicyComponent, data: {title: 'Privacy Policy'}},
+      { path: 'ccpa', component: CcpaComponent, data: {title: 'CCPA'}}
     ]}
 ];
 
