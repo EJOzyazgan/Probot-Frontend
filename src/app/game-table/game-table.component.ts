@@ -272,7 +272,7 @@ export class GameTableComponent implements OnInit {
 
     this.tournamentService.updateBracket(this.bracket).subscribe(newBracket => {
       this.bracket = newBracket['bracket'];
-      console.log(this.bracket);
+      // console.log(this.bracket);
     });
 
   }

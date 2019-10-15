@@ -39,7 +39,6 @@ export class LoginComponent implements OnInit {
       this.authService.setTokens(tokens);
       return this.router.navigate(['/platform']);
     }, err => {
-      console.log(err);
       return this.alertService.danger(err['error']['msg']);
     });
   }

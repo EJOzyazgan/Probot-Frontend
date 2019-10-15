@@ -143,7 +143,7 @@ export class MarketPlaceComponent implements OnInit {
         });
       },
       onClientAuthorization: (data) => {
-        console.log('onClientAuthorization - you should probably inform your server about completed transaction at this point', data);
+        // console.log('onClientAuthorization - you should probably inform your server about completed transaction at this point', data);
         // this.showSuccess = true;
         this.user.chips += this.selectedItem.package.chips;
         this.user.numPurchases++;
