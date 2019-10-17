@@ -148,7 +148,7 @@ export class BotComponent implements OnInit {
   }
 
   patchBot() {
-    this.addEnd();
+    this.bot.serviceUrl = this.bot.serviceUrl.trim();
     this.botService.patchBot(this.bot).subscribe(patchedBot => {
       this.bot = patchedBot;
       this.toggleEdit();
@@ -157,14 +157,6 @@ export class BotComponent implements OnInit {
 
   sessionSelected(session) {
     this.session = session;
-  }
-
-  addEnd() {
-    if (this.bot.serviceUrl.substr(this.bot.serviceUrl.length - 1) !== '/') {
-      this.bot.serviceUrl = this.bot.serviceUrl + '/';
-    }
-
-    this.bot.serviceUrl = this.bot.serviceUrl.trim();
   }
 
   formCompleted() {

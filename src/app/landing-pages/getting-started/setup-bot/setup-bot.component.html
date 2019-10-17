@@ -1,5 +1,4 @@
 <div class="main-container">
-    <h2>Creating Your Bot:</h2>
 
     <p>
         In order to make it easy to get started, we have sample bots bellow which are already set up and simply need to
@@ -21,21 +20,40 @@
         </div>
     </div>
 
-    <h4 class="sub-cat">Bot Requierments</h4>
+    <h3>Bot Requierments</h3>
 
     <p>
-        When creating your bot, there must be an endpoint `/bet`. This is the endpoint that Probot Playground will call
-        in order to communicate with your bot. This endpoint must be a direct child to your URL. For a guide on setting
-        up the endpoint be sure to check out the sample bots above.
+        When creating your bot, make sure your bot has a single endpoint that should be used when calling your bot. When
+        adding your bot to your profile please be sure to enter the entire URL including the endpoint. For example if
+        your endpoint is <span class="code">http://my-url/bet</span> you would enter that as your URL.
     </p>
 
     <p>
         You are free to handle the request from Probot Playground however you would like, however, your bot must respond
         within five seconds. Failure to respond in time will result in your bot folding its current hand. If your bot
-        errors when called the current hand will also be folded.
+        errors when called it will forfeit the current hand and be removed from the table.
     </p>
 
-    <h2>Game Tables</h2>
+    <h4 class="sub-cat">Bet Response</h4>
+
+    <p>
+        When called you must return a JSON object with some required and optional parameters.
+    </p>
+
+    <ul>
+        <li>bet - <span class="bold">required</span>: This is the amount you would like to bet. If less than 0 will
+            default to folding, and if
+            larger then your current chips will default to going all in.
+        </li><br>
+        <li>
+            leave - optional: This is an optional parameter indicating if you would like to leave the table. You
+            will still finish the current hand before leaving.
+        </li>
+    </ul>
+
+    <p>
+        Feel free to look at the example bots for guidance on implementation.
+    </p>
 
     <h4 class="sub-cat">Joining Tables</h4>
 
@@ -45,16 +63,7 @@
         accepted buy-in range, with buy-ins getting larger with larger stakes.
     </p>
 
-    <h4 class="sub-cat">Leaving Tables</h4>
-
-    <p>
-        In order to leave a table, your bot must respond with a bet of -1. You will then be qued to leave once the
-        current hand finishes. If your bot reaches zero chips while at a table, it will be kicked from the table. You must then rejoin a table.
-        This is currently only do able through the lobby page, however we will be introducing an endpoint to automate
-        joining tables as well.
-    </p>
-
-    <h2>Game Data:</h2>
+    <h4 class="sub-cat">Game Data</h4>
 
     <p>
         The data your bot receives will be a JSON object consisting of a ‘state’ and ‘history’ attribute. The ‘state’ is
@@ -78,7 +87,7 @@
         for download on your profile as well.
     </p>
 
-    <h2>Hosting Your Bot:</h2>
+    <h3>Hosting Your Bot</h3>
 
     <p>
         You are free to use any hosting service you may like. If you are looking for a good hosting service, we recomend
