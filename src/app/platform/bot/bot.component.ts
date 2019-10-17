@@ -141,7 +141,7 @@ export class BotComponent implements OnInit {
 
   createBot() {
     this.bot.userId = this.user.id;
-    this.addEnd();
+    this.bot.serviceUrl = this.bot.serviceUrl.trim();
     this.botService.create(this.bot).subscribe(bot => {
       this.bot = bot;
     });
