@@ -227,7 +227,9 @@ export class LobbyComponent implements OnInit {
     this.buyinControl = new FormControl('', Validators.compose(
       [Validators.required, Validators.min(this.table.minBuyin), Validators.max(this.table.maxBuyin)]
     ));
-    this.buyinControl.setValue((this.table.maxBuyin + this.table.minBuyin) / 2);
+
+    let defaultBuyin = (this.table.maxBuyin + this.table.minBuyin) / 2;
+    this.buyinControl.setValue(defaultBuyin < this.user.chips ? defaultBuyin : this.user.chips);
   }
 
   sessionSelected(session) {
