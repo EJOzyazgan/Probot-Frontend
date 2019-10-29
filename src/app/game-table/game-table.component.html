@@ -1,5 +1,5 @@
 <div class="game-container">
-  <button mat-icon-button color="primary" class="stop-watch" aria-label="Stop Watching" [routerLink]="['../platform/lobby']">
+  <button *ngIf="!demo" mat-icon-button color="primary" class="stop-watch" aria-label="Stop Watching" [routerLink]="['../platform/lobby']">
     <mat-icon class="stop-auto-btn">close</mat-icon>
   </button>
   <span class="game-messages">{{message}}</span>

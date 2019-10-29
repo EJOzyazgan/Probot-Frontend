@@ -1,6 +1,6 @@
 <div>
   <mat-toolbar>
-    <div class="nav-bar">
+    <div class="nav-bar" [ngStyle]="navStyle()">
       <div class="menu-btn" fxShow="true" fxHide.gt-sm="true">
         <button mat-icon-button [matMenuTriggerFor]="appMenu">
           <mat-icon>menu</mat-icon>
@@ -10,18 +10,21 @@
         <img class="companyLogo" src="../../assets/img/logo.png">
       </a>
       <div class="toolbar-btns">
-        <div class="toolbar-btn last" [routerLinkActive]="['active-link']">
-          <a class="toolbar-link" [routerLink]="['./home']">Home</a>
+        <div class="toolbar-btn" [routerLinkActive]="['active-link']">
+          <a class="toolbar-link" [routerLink]="['./home']">HOME</a>
         </div>
-        <div class="toolbar-btn time-unit" [routerLinkActive]="['active-link']">
-          <a class="toolbar-link" [routerLink]="['./getting-started']">Getting Started</a>
+        <div class="toolbar-btn" [routerLinkActive]="['active-link']">
+          <a class="toolbar-link" [routerLink]="['./about-us']">ABOUT US</a>
         </div>
-        <div class="toolbar-btn time-unit">
-          <a class="toolbar-link" [routerLink]="['../auth/login']">Login</a>
+        <div class="toolbar-btn" [routerLinkActive]="['active-link']">
+          <a class="toolbar-link" [routerLink]="['./getting-started']">GET STARTED</a>
         </div>
-        <div class="toolbar-btn time-unit">
+        <div class="toolbar-btn">
+          <a class="toolbar-link" [routerLink]="['../auth/login']">LOGIN</a>
+        </div>
+        <div class="toolbar-btn">
             <button mat-raised-button class="sign-up-text-btn" [routerLink]="['../auth/signup']">
-              Join
+              JOIN
             </button>
         </div>
       </div>
@@ -30,16 +33,19 @@
 
   <mat-menu #appMenu="matMenu">
     <div class="menu-item" [routerLink]="['./home']" [routerLinkActive]="['active-link']">
-      Home
+      HOME
+    </div>
+    <div class="menu-item" [routerLinkActive]="['active-link']" [routerLink]="['./about-us']">
+      ABOUT US
     </div>
     <div class="menu-item" [routerLink]="['./getting-started']" [routerLinkActive]="['active-link']">
-      Getting Started
+      GET STARTED
     </div>
     <div class="menu-item" [routerLink]="['../auth/login']" [routerLinkActive]="['active-link']">
-      Login
+      LOGIN
     </div>
     <div class="menu-item" [routerLink]="['../auth/signup']" [routerLinkActive]="['active-link']">
-      Sign Up
+      JOIN
     </div>
   </mat-menu>
 
@@ -50,9 +56,9 @@
   </div>
 
   <div class="footer">
-    <div class="footer-content">
+    <div class="footer-content" fxLayout="row wrap" fxLayoutAlign="space-evenly">
       <div class="footer-column">
-        <div class="footer-header">Getting Started</div>
+        <div class="footer-header">Get Started</div>
 
         <div [routerLink]="[ './getting-started/setup' ]" class="footer-nav margin-top-20">Get Setup</div>
         <div [routerLink]="[ './getting-started/poker-rules' ]" class="footer-nav margin-top-20">Poker Rules</div>
