@@ -10,8 +10,8 @@ const landingPagesRoutes: Routes = [
       { path: '', redirectTo: 'home', pathMatch: 'full'},
       { path: 'home', component: HomeComponent, data: {title: 'Home'}},
       {path: 'getting-started', loadChildren: () => import('./getting-started/getting-started.module').then(m => m.GettingStartedModule)},
-      {path: 'legal', loadChildren: () => import('./legal/legal.module').then(m => m.LegalModule)}
-      // { path: 'about', component: AboutComponent},
+      {path: 'legal', loadChildren: () => import('./legal/legal.module').then(m => m.LegalModule)},
+      { path: 'about-us', component: AboutComponent, data: {title: 'About Us'}},
       // { path: 'events', component: EventComponent}
     ]}
 ];

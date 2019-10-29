@@ -30,7 +30,6 @@ const config: SocketIoConfig = { url: `${environment.domain}`, options: {} };
   declarations: [
     AppComponent,
     RoutingComponents,
-    GameTableComponent
   ],
   imports: [
     AppRoutingModule,

@@ -1,4 +1,4 @@
-import { Component, OnInit, isDevMode } from '@angular/core';
+import { Component, OnInit, isDevMode, Input } from '@angular/core';
 import { Socket } from 'ngx-socket-io';
 import { CardGroup, OddsCalculator } from 'poker-odds-calculator';
 import { DataService } from '../services/data.service';
@@ -12,6 +12,10 @@ import { AlertService } from 'ngx-alerts';
   styleUrls: ['./game-table.component.scss']
 })
 export class GameTableComponent implements OnInit {
+
+  @Input() demo;
+  @Input() botName;
+
   players = [{ name: 'marvin', cards: { rank: 3, type: 'K' } },
   { name: 'I am the best', cards: { rank: 3, type: 'K' } },
   { name: 'p3', cards: { rank: 3, type: 'K' } },
@@ -58,6 +62,7 @@ export class GameTableComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.players[0].name = this.botName;
     // this.socket.on('gameDataUpdated', (data) => {
     //   this.updateGame(data);
     // });
@@ -100,14 +105,16 @@ export class GameTableComponent implements OnInit {
     //   console.log('match', this.match);
     // });
 
-    this.dataService.currentGameData.subscribe(gameData => {
-      this.gameData = gameData;
-      if (!this.gameData || this.gameData.length < 1) {
-        this.alertService.warning('No data found');
-        return this.router.navigate(['./platform/lobby']);
-      }
-      this.updateGame(gameData[this.currentDataIndex]);
-    });
+    if (!this.demo) {
+      this.dataService.currentGameData.subscribe(gameData => {
+        this.gameData = gameData;
+        if (!this.gameData || this.gameData.length < 1) {
+          this.alertService.warning('No data found');
+          return this.router.navigate(['./platform/lobby']);
+        }
+        this.updateGame(gameData[this.currentDataIndex]);
+      });
+    }
 
     clearInterval(this.timerId);
   }

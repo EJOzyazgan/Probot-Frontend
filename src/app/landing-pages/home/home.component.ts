@@ -36,6 +36,8 @@ export class HomeComponent implements OnInit {
   imgWidth = 800;
   imgHeight = '200';
 
+  demoBotName = 'Demo Bot';
+  botType = 1;
 
   constructor(public googleAnalyticsService: GoogleAnalyticsService) {
   }

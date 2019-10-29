@@ -16,15 +16,25 @@ export class LandingPagesComponent implements OnInit {
   ngOnInit() {
   }
 
+  @HostListener("window:scroll", [])
+  onWindowScroll() {
+    const number = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    if (number > 100) {
+      this.isScroll = true;
+    } else {
+        this.isScroll = false;
+    }
+  }
+
   navStyle() {
     if (!this.isScroll) {
       return {
-        'background': 'transparent'
+        'background': 'transparent',
+        'color': 'white',
       };
     } else {
       return {
-        'background': '#f6f6f6',
-        'box-shadow': '0 0 15px 1px #cc0000'
+        'background': '#F5F5F5',
       };
     }
   }

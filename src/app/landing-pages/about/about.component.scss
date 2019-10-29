@@ -4,35 +4,20 @@
 }
 
 .keep-center {
-  width: 90%;
+  width: 75%;
   margin: auto;
 }
 
 .main-svg {
-  width: 75%;
+  // width: 800px;
 }
 
 .header-img {
-  height: 600px;
-  background: url(../../../assets//img//wave-strait.jpg);
+  height: 400px;
+  background: url(../../../assets//img//wave-curv1.jpg);
   object-fit: fill;
   position: relative;
   margin-bottom: 30px;
-}
-
-.header-text {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  color: white;
-  text-align: left;
-}
-
-.prompt {
-  color: #cc0000;
-  text-align: center;
-  font-size: 50px;
-  font-family: "Helvetica";
 }
 
 .main-text {
@@ -82,14 +67,12 @@
 }
 
 .section {
-  padding: 50px 0;
-  margin: 0 auto;
+  margin: 75px auto 0 auto;
 }
 
 .section-header {
   color: black;
-  text-align: left;
-  margin-bottom: 20px;
+  margin: 30px 0;
 }
 
 .header {
@@ -106,12 +89,19 @@
   font-size: 50px;
 }
 
-.content-header {
+.emphasis-header {
   font-size: 25px;
   color: #cc0000;
   max-width: 300px;
   margin: auto;
   font-family: 'xirod', sans-serif;
+}
+
+.content-header {
+  font-size: 25px;
+  color: #cc0000;
+  max-width: 300px;
+  margin: auto;
 }
 
 .content-label {
@@ -137,12 +127,10 @@
 }
 
 .description {
-  margin-top: 20px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 20px;
   font-size: 20px;
   text-align: left;
-  max-width: 325px;
+  max-width: 350px;
 }
 
 .description-main {
@@ -160,16 +148,6 @@
   font-size: 32px;
   font-family: 'xirod', sans-serif;
   padding: 30px;
-  margin: 10px;
-  border-radius: 10px;
-}
-
-.play-btn {
-  color: white;
-  background: #cc0000;
-  font-size: 20px;
-  font-family: 'xirod', sans-serif;
-  padding: 10px 20px;
   margin: auto;
   border-radius: 10px;
 }
@@ -214,7 +192,7 @@
 }
 
 .get-started-item {
-  margin: 10px;
+  margin: 20px;
   width: fit-content;
   color: #ffffff;
 }
@@ -225,13 +203,16 @@
 }
 
 .gray-background {
-  background-color: #D6D6D6;
+  background-color: #FFFFFF;
+  box-shadow: #2B2B2B 0 0 10px;
   padding: 50px;
+  border-radius: 10px;
+  margin: 30px;
 }
 
 .red-gradient {
   background-color: #cc0000;
-  background-image: linear-gradient(to top left,#B50505, #550202);
+  // background-image: linear-gradient(to top left,#B50505, #550202);
 }
 
 .link-div:hover {
@@ -268,30 +249,8 @@
   visibility: visible;
 }
 
-.demo-content {
-  background: #2C2A2A;
-  width: 100%;
-  height: 800px;
-}
-
-.demo-bot{
-  width: 15%;
-  height: 75%;
+.section-content {
   margin: auto;
-}
-
-.demo-table {
-  width: 80%;
-}
-
-.bot-types {
-  display: flex;
-  flex-direction: column;
-  margin: 10px auto;
-}
-
-.bot-type-btn {
-  margin: 5px;
 }
 
 @media only screen and (max-width: 875px) {
@@ -352,6 +311,11 @@
     font-size: 22px;
     padding: 18px;
   }
+
+  .keep-center {
+    width: 95%;
+    margin: auto;
+  }
 }
 
 @media only screen and (max-width: 425px) {
@@ -361,6 +325,7 @@
 
   .gray-background {
     padding: 30px 10px;
+    margin: 20px auto;
   }
 
   .benefit-icon {
@@ -391,12 +356,8 @@
     font-size: 20px;
   }
 
-  .header {
-    font-size: 26px;
-  }
-
-  .sub-header {
-    font-size: 18px;
+  .headr {
+    font-size: 22px;
   }
 
   .content-header {
@@ -406,27 +367,6 @@
   .tooltip .tooltiptext {
     width: 120px;
     margin-left: -60px;
-  }
-
-  .header-img {
-    height: 400px;
-  }
-
-  .main-text {
-    font-size: 26px;
-  }
-
-  .sub-text {
-    font-size: 20px;
-  }
-
-  .sign-up-text-btn {
-    font-size: 16px;
-    padding: 20px;
-  }
-
-  .prompt {
-    font-size: 32px;
   }
 
 }
