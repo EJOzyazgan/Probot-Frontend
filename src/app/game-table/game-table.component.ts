@@ -5,6 +5,9 @@ import { DataService } from '../services/data.service';
 import { TournamentService } from '../services/tournament.service';
 import { Router } from '@angular/router';
 import { AlertService } from 'ngx-alerts';
+import * as SafeDemo from '../../assets/safe-demo.json';
+import * as PassiveDemo from '../../assets/passive-demo.json';
+import * as AgressiveDemo from '../../assets/aggresive-demo.json';
 
 @Component({
   selector: 'app-game-table',
@@ -15,29 +18,29 @@ export class GameTableComponent implements OnInit {
 
   @Input() demo;
   @Input() botName;
+  @Input() botType;
 
-  players = [{ name: 'marvin', cards: { rank: 3, type: 'K' } },
-  { name: 'I am the best', cards: { rank: 3, type: 'K' } },
-  { name: 'p3', cards: { rank: 3, type: 'K' } },
-  { name: 'p4', cards: { rank: 3, type: 'K' } },
-  { name: 'p5', cards: { rank: 3, type: 'K' } },
-  { name: 'i have a really long name', cards: { rank: 3, type: 'K' } }];
+  players = [{ name: 'Demo Bot', cards: { rank: 3, type: 'K' } },
+  { name: 'Demo Bot', cards: { rank: 3, type: 'K' } },
+  { name: 'Demo Bot', cards: { rank: 3, type: 'K' } },
+  { name: 'Demo Bot', cards: { rank: 3, type: 'K' } },
+  { name: 'Demo Bot', cards: { rank: 3, type: 'K' } },
+  { name: 'Demo Bot', cards: { rank: 3, type: 'K' } }];
   player;
   commonCards = [];
   data;
-  message = 'i have a really long name Bet $40';
+  message = '';
   session;
   smallBlind;
   pot = 0;
   odds = [10, 10, 10, 10, 10, 10];
 
   playerPos = [{ top: 15, left: 10 }, // top left
-  { top: 60, left: 10 }, // bottom left
-  { top: 68, left: 45 }, // bottom middle
-  { top: 60, left: 78 }, // bottom right
-  { top: 15, left: 78 }, // top right
-  { top: 8, left: 50 }]; // top middle
-
+    { top: 65, left: 10 }, // bottom left
+    { top: 70, left: 45 }, // bottom middle
+    { top: 65, left: 80 }, // bottom right
+    { top: 15, left: 80 }, // top right
+    { top: 8, left: 50 }]; // top middle
 
   tournamentId;
   bracketId;
@@ -54,6 +57,10 @@ export class GameTableComponent implements OnInit {
   timerId;
   playRate;
 
+  demoData = [SafeDemo, PassiveDemo, AgressiveDemo];
+
+  screenWidth;
+
   constructor(private socket: Socket,
     private dataService: DataService,
     private tournamentService: TournamentService,
@@ -62,7 +69,6 @@ export class GameTableComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.players[0].name = this.botName;
     // this.socket.on('gameDataUpdated', (data) => {
     //   this.updateGame(data);
     // });
@@ -105,6 +111,9 @@ export class GameTableComponent implements OnInit {
     //   console.log('match', this.match);
     // });
 
+    this.screenWidth = window.innerWidth;
+    this.calcPlayerPos();
+
     if (!this.demo) {
       this.dataService.currentGameData.subscribe(gameData => {
         this.gameData = gameData;
@@ -112,11 +121,43 @@ export class GameTableComponent implements OnInit {
           this.alertService.warning('No data found');
           return this.router.navigate(['./platform/lobby']);
         }
-        this.updateGame(gameData[this.currentDataIndex]);
+        this.updateGame(this.gameData[this.currentDataIndex]);
       });
     }
 
     clearInterval(this.timerId);
+  }
+
+  calcPlayerPos() {
+    if (this.screenWidth < 425) {
+      this.playerPos = [{ top: 20, left: 5 }, // top left
+      { top: 60, left: 5 }, // bottom left
+      { top: 60, left: 50 }, // bottom middle
+      { top: 60, left: 70 }, // bottom right
+      { top: 20, left: 70 }, // top right
+      { top: 20, left: 50 }]; // top middle
+    } else if (this.screenWidth < 875) {
+      this.playerPos = [{ top: 20, left: 12 }, // top left
+      { top: 60, left: 12 }, // bottom left
+      { top: 60, left: 45 }, // bottom middle
+      { top: 60, left: 75 }, // bottom right
+      { top: 20, left: 75 }, // top right
+      { top: 18, left: 50 }]; // top middle
+    } else if(this.screenWidth < 1050) {
+      this.playerPos = [{ top: 15, left: 10 }, // top left
+        { top: 60, left: 10 }, // bottom left
+        { top: 65, left: 45 }, // bottom middle
+        { top: 60, left: 78 }, // bottom right
+        { top: 15, left: 78 }, // top right
+        { top: 8, left: 50 }]; // top middle
+    }
+  }
+
+  startDemo() {
+    this.currentDataIndex = 0;
+    this.gameData = this.demoData[parseInt(this.botType)]['default'];
+    this.updateGame(this.gameData[this.currentDataIndex]);
+    this.autoPlay(1000);
   }
 
   updateGame(data) {
@@ -234,9 +275,12 @@ export class GameTableComponent implements OnInit {
   }
 
   getPlayer(players, id) {
-    for (const player of players) {
-      if (player.id == id) {
-        return player;
+    for (let i = 0; i < players.length; i++) {
+      if (players[i].id == id) {
+        if (this.demo && i === 5) {
+          players[i].name = this.botName;
+        }
+        return players[i];
       }
     }
   }
@@ -328,6 +372,18 @@ export class GameTableComponent implements OnInit {
         'left': `${this.playerPos[player]['left']}%`
       };
     }
+    return style;
+  }
+
+  getDemoStyle(player) {
+    let style = {};
+
+    if (this.demo && player === 5) {
+      style = {
+        'color': '#cc0000',
+      }
+    }
+
     return style;
   }
 

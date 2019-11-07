@@ -1,0 +1,5474 @@
+[
+  {
+    "tournamentId": 6,
+    "gameId": 1,
+    "handId": 1,
+    "type": "setup",
+    "pot": 90,
+    "sb": 30,
+    "players": [
+      {
+        "status": "active",
+        "id": 5,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 250,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "5",
+            "type": "H"
+          },
+          {
+            "rank": "4",
+            "type": "H"
+          }
+        ],
+        "chipsBet": 0,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Spar Bot",
+        "hasDB": true
+      },
+      {
+        "status": "active",
+        "id": 3,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 220,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "3",
+            "type": "D"
+          },
+          {
+            "rank": "8",
+            "type": "S"
+          }
+        ],
+        "chipsBet": 30,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "One Hit Wonder",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 1,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 190,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "J",
+            "type": "H"
+          },
+          {
+            "rank": "Q",
+            "type": "D"
+          }
+        ],
+        "chipsBet": 60,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Spartin",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 2,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 250,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "6",
+            "type": "H"
+          },
+          {
+            "rank": "6",
+            "type": "S"
+          }
+        ],
+        "chipsBet": 0,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Mastermind"
+      },
+      {
+        "status": "active",
+        "id": 4,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 250,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "3",
+            "type": "H"
+          },
+          {
+            "rank": "2",
+            "type": "C"
+          }
+        ],
+        "chipsBet": 0,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Good Luck"
+      },
+      {
+        "status": "active",
+        "id": 6,
+        "sessionId": 14,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "userBot",
+        "buyIn": 250,
+        "chips": 250,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "7",
+            "type": "C"
+          },
+          {
+            "rank": "A",
+            "type": "D"
+          }
+        ],
+        "chipsBet": 0,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "My Bot"
+      }
+    ],
+    "session": null,
+    "commonCards": null,
+    "playerId": null,
+    "amount": null,
+    "status": null,
+    "winners": null,
+    "playerName": null,
+    "createdAt": "2019-11-05T06:38:36.336Z"
+  },
+  {
+    "tournamentId": 6,
+    "gameId": 1,
+    "handId": 1,
+    "type": "bet",
+    "pot": 150,
+    "sb": null,
+    "players": [
+      {
+        "status": "active",
+        "id": 5,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 250,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "5",
+            "type": "H"
+          },
+          {
+            "rank": "4",
+            "type": "H"
+          }
+        ],
+        "chipsBet": 0,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Spar Bot",
+        "hasDB": true
+      },
+      {
+        "status": "active",
+        "id": 3,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 220,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "3",
+            "type": "D"
+          },
+          {
+            "rank": "8",
+            "type": "S"
+          }
+        ],
+        "chipsBet": 30,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "One Hit Wonder",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 1,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 190,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "J",
+            "type": "H"
+          },
+          {
+            "rank": "Q",
+            "type": "D"
+          }
+        ],
+        "chipsBet": 60,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Spartin",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 2,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 190,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "6",
+            "type": "H"
+          },
+          {
+            "rank": "6",
+            "type": "S"
+          }
+        ],
+        "chipsBet": 60,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Mastermind",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 4,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 250,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "3",
+            "type": "H"
+          },
+          {
+            "rank": "2",
+            "type": "C"
+          }
+        ],
+        "chipsBet": 0,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Good Luck"
+      },
+      {
+        "status": "active",
+        "id": 6,
+        "sessionId": 14,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "userBot",
+        "buyIn": 250,
+        "chips": 250,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "7",
+            "type": "C"
+          },
+          {
+            "rank": "A",
+            "type": "D"
+          }
+        ],
+        "chipsBet": 0,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "My Bot"
+      }
+    ],
+    "session": "pre-flop",
+    "commonCards": null,
+    "playerId": 2,
+    "amount": 60,
+    "status": null,
+    "winners": null,
+    "playerName": null,
+    "createdAt": "2019-11-05T06:38:36.408Z"
+  },
+  {
+    "tournamentId": 6,
+    "gameId": 1,
+    "handId": 1,
+    "type": "bet",
+    "pot": 210,
+    "sb": null,
+    "players": [
+      {
+        "status": "active",
+        "id": 5,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 250,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "5",
+            "type": "H"
+          },
+          {
+            "rank": "4",
+            "type": "H"
+          }
+        ],
+        "chipsBet": 0,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Spar Bot",
+        "hasDB": true
+      },
+      {
+        "status": "active",
+        "id": 3,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 220,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "3",
+            "type": "D"
+          },
+          {
+            "rank": "8",
+            "type": "S"
+          }
+        ],
+        "chipsBet": 30,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "One Hit Wonder",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 1,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 190,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "J",
+            "type": "H"
+          },
+          {
+            "rank": "Q",
+            "type": "D"
+          }
+        ],
+        "chipsBet": 60,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Spartin",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 2,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 190,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "6",
+            "type": "H"
+          },
+          {
+            "rank": "6",
+            "type": "S"
+          }
+        ],
+        "chipsBet": 60,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Mastermind",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 4,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 190,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "3",
+            "type": "H"
+          },
+          {
+            "rank": "2",
+            "type": "C"
+          }
+        ],
+        "chipsBet": 60,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Good Luck",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 6,
+        "sessionId": 14,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "userBot",
+        "buyIn": 250,
+        "chips": 250,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "7",
+            "type": "C"
+          },
+          {
+            "rank": "A",
+            "type": "D"
+          }
+        ],
+        "chipsBet": 0,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "My Bot"
+      }
+    ],
+    "session": "pre-flop",
+    "commonCards": null,
+    "playerId": 4,
+    "amount": 60,
+    "status": null,
+    "winners": null,
+    "playerName": null,
+    "createdAt": "2019-11-05T06:38:36.438Z"
+  },
+  {
+    "tournamentId": 6,
+    "gameId": 1,
+    "handId": 1,
+    "type": "bet",
+    "pot": 270,
+    "sb": null,
+    "players": [
+      {
+        "status": "active",
+        "id": 5,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 250,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "5",
+            "type": "H"
+          },
+          {
+            "rank": "4",
+            "type": "H"
+          }
+        ],
+        "chipsBet": 0,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Spar Bot",
+        "hasDB": true
+      },
+      {
+        "status": "active",
+        "id": 3,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 220,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "3",
+            "type": "D"
+          },
+          {
+            "rank": "8",
+            "type": "S"
+          }
+        ],
+        "chipsBet": 30,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "One Hit Wonder",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 1,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 190,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "J",
+            "type": "H"
+          },
+          {
+            "rank": "Q",
+            "type": "D"
+          }
+        ],
+        "chipsBet": 60,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Spartin",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 2,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 190,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "6",
+            "type": "H"
+          },
+          {
+            "rank": "6",
+            "type": "S"
+          }
+        ],
+        "chipsBet": 60,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Mastermind",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 4,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 190,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "3",
+            "type": "H"
+          },
+          {
+            "rank": "2",
+            "type": "C"
+          }
+        ],
+        "chipsBet": 60,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Good Luck",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 6,
+        "sessionId": 14,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "userBot",
+        "buyIn": 250,
+        "chips": 190,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "7",
+            "type": "C"
+          },
+          {
+            "rank": "A",
+            "type": "D"
+          }
+        ],
+        "chipsBet": 60,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "My Bot",
+        "isAllin": false
+      }
+    ],
+    "session": "pre-flop",
+    "commonCards": null,
+    "playerId": 6,
+    "amount": 60,
+    "status": null,
+    "winners": null,
+    "playerName": null,
+    "createdAt": "2019-11-05T06:38:36.489Z"
+  },
+  {
+    "tournamentId": 6,
+    "gameId": 1,
+    "handId": 1,
+    "type": "bet",
+    "pot": 330,
+    "sb": null,
+    "players": [
+      {
+        "status": "active",
+        "id": 5,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 190,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "5",
+            "type": "H"
+          },
+          {
+            "rank": "4",
+            "type": "H"
+          }
+        ],
+        "chipsBet": 60,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Spar Bot",
+        "hasDB": true,
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 3,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 220,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "3",
+            "type": "D"
+          },
+          {
+            "rank": "8",
+            "type": "S"
+          }
+        ],
+        "chipsBet": 30,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "One Hit Wonder",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 1,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 190,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "J",
+            "type": "H"
+          },
+          {
+            "rank": "Q",
+            "type": "D"
+          }
+        ],
+        "chipsBet": 60,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Spartin",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 2,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 190,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "6",
+            "type": "H"
+          },
+          {
+            "rank": "6",
+            "type": "S"
+          }
+        ],
+        "chipsBet": 60,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Mastermind",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 4,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 190,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "3",
+            "type": "H"
+          },
+          {
+            "rank": "2",
+            "type": "C"
+          }
+        ],
+        "chipsBet": 60,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Good Luck",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 6,
+        "sessionId": 14,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "userBot",
+        "buyIn": 250,
+        "chips": 190,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "7",
+            "type": "C"
+          },
+          {
+            "rank": "A",
+            "type": "D"
+          }
+        ],
+        "chipsBet": 60,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "My Bot",
+        "isAllin": false
+      }
+    ],
+    "session": "pre-flop",
+    "commonCards": null,
+    "playerId": 5,
+    "amount": 60,
+    "status": null,
+    "winners": null,
+    "playerName": null,
+    "createdAt": "2019-11-05T06:38:36.551Z"
+  },
+  {
+    "tournamentId": 6,
+    "gameId": 1,
+    "handId": 1,
+    "type": "bet",
+    "pot": 360,
+    "sb": null,
+    "players": [
+      {
+        "status": "active",
+        "id": 5,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 190,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "5",
+            "type": "H"
+          },
+          {
+            "rank": "4",
+            "type": "H"
+          }
+        ],
+        "chipsBet": 60,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Spar Bot",
+        "hasDB": true,
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 3,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 190,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "3",
+            "type": "D"
+          },
+          {
+            "rank": "8",
+            "type": "S"
+          }
+        ],
+        "chipsBet": 60,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "One Hit Wonder",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 1,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 190,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "J",
+            "type": "H"
+          },
+          {
+            "rank": "Q",
+            "type": "D"
+          }
+        ],
+        "chipsBet": 60,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Spartin",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 2,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 190,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "6",
+            "type": "H"
+          },
+          {
+            "rank": "6",
+            "type": "S"
+          }
+        ],
+        "chipsBet": 60,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Mastermind",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 4,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 190,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "3",
+            "type": "H"
+          },
+          {
+            "rank": "2",
+            "type": "C"
+          }
+        ],
+        "chipsBet": 60,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Good Luck",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 6,
+        "sessionId": 14,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "userBot",
+        "buyIn": 250,
+        "chips": 190,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "7",
+            "type": "C"
+          },
+          {
+            "rank": "A",
+            "type": "D"
+          }
+        ],
+        "chipsBet": 60,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "My Bot",
+        "isAllin": false
+      }
+    ],
+    "session": "pre-flop",
+    "commonCards": null,
+    "playerId": 3,
+    "amount": 30,
+    "status": null,
+    "winners": null,
+    "playerName": null,
+    "createdAt": "2019-11-05T06:38:36.587Z"
+  },
+  {
+    "tournamentId": 6,
+    "gameId": 1,
+    "handId": 1,
+    "type": "bet",
+    "pot": 450,
+    "sb": null,
+    "players": [
+      {
+        "status": "active",
+        "id": 5,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 190,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "5",
+            "type": "H"
+          },
+          {
+            "rank": "4",
+            "type": "H"
+          }
+        ],
+        "chipsBet": 60,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Spar Bot",
+        "hasDB": true,
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 3,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 190,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "3",
+            "type": "D"
+          },
+          {
+            "rank": "8",
+            "type": "S"
+          }
+        ],
+        "chipsBet": 60,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "One Hit Wonder",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 1,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 100,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "J",
+            "type": "H"
+          },
+          {
+            "rank": "Q",
+            "type": "D"
+          }
+        ],
+        "chipsBet": 150,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Spartin",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 2,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 190,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "6",
+            "type": "H"
+          },
+          {
+            "rank": "6",
+            "type": "S"
+          }
+        ],
+        "chipsBet": 60,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Mastermind",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 4,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 190,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "3",
+            "type": "H"
+          },
+          {
+            "rank": "2",
+            "type": "C"
+          }
+        ],
+        "chipsBet": 60,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Good Luck",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 6,
+        "sessionId": 14,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "userBot",
+        "buyIn": 250,
+        "chips": 190,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "7",
+            "type": "C"
+          },
+          {
+            "rank": "A",
+            "type": "D"
+          }
+        ],
+        "chipsBet": 60,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "My Bot",
+        "isAllin": false
+      }
+    ],
+    "session": "pre-flop",
+    "commonCards": null,
+    "playerId": 1,
+    "amount": 90,
+    "status": null,
+    "winners": null,
+    "playerName": null,
+    "createdAt": "2019-11-05T06:38:36.638Z"
+  },
+  {
+    "tournamentId": 6,
+    "gameId": 1,
+    "handId": 1,
+    "type": "bet",
+    "pot": 540,
+    "sb": null,
+    "players": [
+      {
+        "status": "active",
+        "id": 5,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 190,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "5",
+            "type": "H"
+          },
+          {
+            "rank": "4",
+            "type": "H"
+          }
+        ],
+        "chipsBet": 60,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Spar Bot",
+        "hasDB": true,
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 3,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 190,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "3",
+            "type": "D"
+          },
+          {
+            "rank": "8",
+            "type": "S"
+          }
+        ],
+        "chipsBet": 60,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "One Hit Wonder",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 1,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 100,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "J",
+            "type": "H"
+          },
+          {
+            "rank": "Q",
+            "type": "D"
+          }
+        ],
+        "chipsBet": 150,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Spartin",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 2,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 100,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "6",
+            "type": "H"
+          },
+          {
+            "rank": "6",
+            "type": "S"
+          }
+        ],
+        "chipsBet": 150,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Mastermind",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 4,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 190,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "3",
+            "type": "H"
+          },
+          {
+            "rank": "2",
+            "type": "C"
+          }
+        ],
+        "chipsBet": 60,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Good Luck",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 6,
+        "sessionId": 14,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "userBot",
+        "buyIn": 250,
+        "chips": 190,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "7",
+            "type": "C"
+          },
+          {
+            "rank": "A",
+            "type": "D"
+          }
+        ],
+        "chipsBet": 60,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "My Bot",
+        "isAllin": false
+      }
+    ],
+    "session": "pre-flop",
+    "commonCards": null,
+    "playerId": 2,
+    "amount": 90,
+    "status": null,
+    "winners": null,
+    "playerName": null,
+    "createdAt": "2019-11-05T06:38:36.670Z"
+  },
+  {
+    "tournamentId": 6,
+    "gameId": 1,
+    "handId": 1,
+    "type": "bet",
+    "pot": 630,
+    "sb": null,
+    "players": [
+      {
+        "status": "active",
+        "id": 5,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 190,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "5",
+            "type": "H"
+          },
+          {
+            "rank": "4",
+            "type": "H"
+          }
+        ],
+        "chipsBet": 60,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Spar Bot",
+        "hasDB": true,
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 3,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 190,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "3",
+            "type": "D"
+          },
+          {
+            "rank": "8",
+            "type": "S"
+          }
+        ],
+        "chipsBet": 60,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "One Hit Wonder",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 1,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 100,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "J",
+            "type": "H"
+          },
+          {
+            "rank": "Q",
+            "type": "D"
+          }
+        ],
+        "chipsBet": 150,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Spartin",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 2,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 100,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "6",
+            "type": "H"
+          },
+          {
+            "rank": "6",
+            "type": "S"
+          }
+        ],
+        "chipsBet": 150,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Mastermind",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 4,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 100,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "3",
+            "type": "H"
+          },
+          {
+            "rank": "2",
+            "type": "C"
+          }
+        ],
+        "chipsBet": 150,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Good Luck",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 6,
+        "sessionId": 14,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "userBot",
+        "buyIn": 250,
+        "chips": 190,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "7",
+            "type": "C"
+          },
+          {
+            "rank": "A",
+            "type": "D"
+          }
+        ],
+        "chipsBet": 60,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "My Bot",
+        "isAllin": false
+      }
+    ],
+    "session": "pre-flop",
+    "commonCards": null,
+    "playerId": 4,
+    "amount": 90,
+    "status": null,
+    "winners": null,
+    "playerName": null,
+    "createdAt": "2019-11-05T06:38:36.718Z"
+  },
+  {
+    "tournamentId": 6,
+    "gameId": 1,
+    "handId": 1,
+    "type": "bet",
+    "pot": 720,
+    "sb": null,
+    "players": [
+      {
+        "status": "active",
+        "id": 5,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 190,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "5",
+            "type": "H"
+          },
+          {
+            "rank": "4",
+            "type": "H"
+          }
+        ],
+        "chipsBet": 60,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Spar Bot",
+        "hasDB": true,
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 3,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 190,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "3",
+            "type": "D"
+          },
+          {
+            "rank": "8",
+            "type": "S"
+          }
+        ],
+        "chipsBet": 60,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "One Hit Wonder",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 1,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 100,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "J",
+            "type": "H"
+          },
+          {
+            "rank": "Q",
+            "type": "D"
+          }
+        ],
+        "chipsBet": 150,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Spartin",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 2,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 100,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "6",
+            "type": "H"
+          },
+          {
+            "rank": "6",
+            "type": "S"
+          }
+        ],
+        "chipsBet": 150,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Mastermind",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 4,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 100,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "3",
+            "type": "H"
+          },
+          {
+            "rank": "2",
+            "type": "C"
+          }
+        ],
+        "chipsBet": 150,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Good Luck",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 6,
+        "sessionId": 14,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "userBot",
+        "buyIn": 250,
+        "chips": 100,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "7",
+            "type": "C"
+          },
+          {
+            "rank": "A",
+            "type": "D"
+          }
+        ],
+        "chipsBet": 150,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "My Bot",
+        "isAllin": false
+      }
+    ],
+    "session": "pre-flop",
+    "commonCards": null,
+    "playerId": 6,
+    "amount": 90,
+    "status": null,
+    "winners": null,
+    "playerName": null,
+    "createdAt": "2019-11-05T06:38:36.770Z"
+  },
+  {
+    "tournamentId": 6,
+    "gameId": 1,
+    "handId": 1,
+    "type": "bet",
+    "pot": 810,
+    "sb": null,
+    "players": [
+      {
+        "status": "active",
+        "id": 5,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 100,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "5",
+            "type": "H"
+          },
+          {
+            "rank": "4",
+            "type": "H"
+          }
+        ],
+        "chipsBet": 150,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Spar Bot",
+        "hasDB": true,
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 3,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 190,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "3",
+            "type": "D"
+          },
+          {
+            "rank": "8",
+            "type": "S"
+          }
+        ],
+        "chipsBet": 60,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "One Hit Wonder",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 1,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 100,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "J",
+            "type": "H"
+          },
+          {
+            "rank": "Q",
+            "type": "D"
+          }
+        ],
+        "chipsBet": 150,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Spartin",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 2,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 100,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "6",
+            "type": "H"
+          },
+          {
+            "rank": "6",
+            "type": "S"
+          }
+        ],
+        "chipsBet": 150,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Mastermind",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 4,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 100,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "3",
+            "type": "H"
+          },
+          {
+            "rank": "2",
+            "type": "C"
+          }
+        ],
+        "chipsBet": 150,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Good Luck",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 6,
+        "sessionId": 14,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "userBot",
+        "buyIn": 250,
+        "chips": 100,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "7",
+            "type": "C"
+          },
+          {
+            "rank": "A",
+            "type": "D"
+          }
+        ],
+        "chipsBet": 150,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "My Bot",
+        "isAllin": false
+      }
+    ],
+    "session": "pre-flop",
+    "commonCards": null,
+    "playerId": 5,
+    "amount": 90,
+    "status": null,
+    "winners": null,
+    "playerName": null,
+    "createdAt": "2019-11-05T06:38:36.819Z"
+  },
+  {
+    "tournamentId": 6,
+    "gameId": 1,
+    "handId": 1,
+    "type": "bet",
+    "pot": 900,
+    "sb": null,
+    "players": [
+      {
+        "status": "active",
+        "id": 5,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 100,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "5",
+            "type": "H"
+          },
+          {
+            "rank": "4",
+            "type": "H"
+          }
+        ],
+        "chipsBet": 150,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Spar Bot",
+        "hasDB": true,
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 3,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 100,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "3",
+            "type": "D"
+          },
+          {
+            "rank": "8",
+            "type": "S"
+          }
+        ],
+        "chipsBet": 150,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "One Hit Wonder",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 1,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 100,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "J",
+            "type": "H"
+          },
+          {
+            "rank": "Q",
+            "type": "D"
+          }
+        ],
+        "chipsBet": 150,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Spartin",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 2,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 100,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "6",
+            "type": "H"
+          },
+          {
+            "rank": "6",
+            "type": "S"
+          }
+        ],
+        "chipsBet": 150,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Mastermind",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 4,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 100,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "3",
+            "type": "H"
+          },
+          {
+            "rank": "2",
+            "type": "C"
+          }
+        ],
+        "chipsBet": 150,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Good Luck",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 6,
+        "sessionId": 14,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "userBot",
+        "buyIn": 250,
+        "chips": 100,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "7",
+            "type": "C"
+          },
+          {
+            "rank": "A",
+            "type": "D"
+          }
+        ],
+        "chipsBet": 150,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "My Bot",
+        "isAllin": false
+      }
+    ],
+    "session": "pre-flop",
+    "commonCards": null,
+    "playerId": 3,
+    "amount": 90,
+    "status": null,
+    "winners": null,
+    "playerName": null,
+    "createdAt": "2019-11-05T06:38:36.869Z"
+  },
+  {
+    "tournamentId": 6,
+    "gameId": 1,
+    "handId": 1,
+    "type": "cards",
+    "pot": null,
+    "sb": null,
+    "players": [
+      {
+        "status": "active",
+        "id": 5,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 100,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "5",
+            "type": "H"
+          },
+          {
+            "rank": "4",
+            "type": "H"
+          }
+        ],
+        "chipsBet": 150,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Spar Bot",
+        "hasDB": true,
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 3,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 100,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "3",
+            "type": "D"
+          },
+          {
+            "rank": "8",
+            "type": "S"
+          }
+        ],
+        "chipsBet": 150,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "One Hit Wonder",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 1,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 100,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "J",
+            "type": "H"
+          },
+          {
+            "rank": "Q",
+            "type": "D"
+          }
+        ],
+        "chipsBet": 150,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Spartin",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 2,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 100,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "6",
+            "type": "H"
+          },
+          {
+            "rank": "6",
+            "type": "S"
+          }
+        ],
+        "chipsBet": 150,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Mastermind",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 4,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 100,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "3",
+            "type": "H"
+          },
+          {
+            "rank": "2",
+            "type": "C"
+          }
+        ],
+        "chipsBet": 150,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Good Luck",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 6,
+        "sessionId": 14,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "userBot",
+        "buyIn": 250,
+        "chips": 100,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "7",
+            "type": "C"
+          },
+          {
+            "rank": "A",
+            "type": "D"
+          }
+        ],
+        "chipsBet": 150,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "My Bot",
+        "isAllin": false
+      }
+    ],
+    "session": "flop",
+    "commonCards": [
+      {
+        "rank": "8",
+        "type": "H"
+      },
+      {
+        "rank": "6",
+        "type": "D"
+      },
+      {
+        "rank": "Q",
+        "type": "C"
+      }
+    ],
+    "playerId": null,
+    "amount": null,
+    "status": null,
+    "winners": null,
+    "playerName": null,
+    "createdAt": "2019-11-05T06:38:36.901Z"
+  },
+  {
+    "tournamentId": 6,
+    "gameId": 1,
+    "handId": 1,
+    "type": "bet",
+    "pot": 900,
+    "sb": null,
+    "players": [
+      {
+        "status": "active",
+        "id": 5,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 100,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "5",
+            "type": "H"
+          },
+          {
+            "rank": "4",
+            "type": "H"
+          }
+        ],
+        "chipsBet": 150,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Spar Bot",
+        "hasDB": true,
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 3,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 100,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "3",
+            "type": "D"
+          },
+          {
+            "rank": "8",
+            "type": "S"
+          }
+        ],
+        "chipsBet": 150,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "One Hit Wonder",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 1,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 100,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "J",
+            "type": "H"
+          },
+          {
+            "rank": "Q",
+            "type": "D"
+          }
+        ],
+        "chipsBet": 150,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Spartin",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 2,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 100,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "6",
+            "type": "H"
+          },
+          {
+            "rank": "6",
+            "type": "S"
+          }
+        ],
+        "chipsBet": 150,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Mastermind",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 4,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 100,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "3",
+            "type": "H"
+          },
+          {
+            "rank": "2",
+            "type": "C"
+          }
+        ],
+        "chipsBet": 150,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Good Luck",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 6,
+        "sessionId": 14,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "userBot",
+        "buyIn": 250,
+        "chips": 100,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "7",
+            "type": "C"
+          },
+          {
+            "rank": "A",
+            "type": "D"
+          }
+        ],
+        "chipsBet": 150,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "My Bot",
+        "isAllin": false
+      }
+    ],
+    "session": "flop",
+    "commonCards": null,
+    "playerId": 3,
+    "amount": 0,
+    "status": null,
+    "winners": null,
+    "playerName": null,
+    "createdAt": "2019-11-05T06:38:36.940Z"
+  },
+  {
+    "tournamentId": 6,
+    "gameId": 1,
+    "handId": 1,
+    "type": "bet",
+    "pot": 990,
+    "sb": null,
+    "players": [
+      {
+        "status": "active",
+        "id": 5,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 100,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "5",
+            "type": "H"
+          },
+          {
+            "rank": "4",
+            "type": "H"
+          }
+        ],
+        "chipsBet": 150,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Spar Bot",
+        "hasDB": true,
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 3,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 100,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "3",
+            "type": "D"
+          },
+          {
+            "rank": "8",
+            "type": "S"
+          }
+        ],
+        "chipsBet": 150,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "One Hit Wonder",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 1,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 10,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "J",
+            "type": "H"
+          },
+          {
+            "rank": "Q",
+            "type": "D"
+          }
+        ],
+        "chipsBet": 240,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Spartin",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 2,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 100,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "6",
+            "type": "H"
+          },
+          {
+            "rank": "6",
+            "type": "S"
+          }
+        ],
+        "chipsBet": 150,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Mastermind",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 4,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 100,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "3",
+            "type": "H"
+          },
+          {
+            "rank": "2",
+            "type": "C"
+          }
+        ],
+        "chipsBet": 150,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Good Luck",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 6,
+        "sessionId": 14,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "userBot",
+        "buyIn": 250,
+        "chips": 100,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "7",
+            "type": "C"
+          },
+          {
+            "rank": "A",
+            "type": "D"
+          }
+        ],
+        "chipsBet": 150,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "My Bot",
+        "isAllin": false
+      }
+    ],
+    "session": "flop",
+    "commonCards": null,
+    "playerId": 1,
+    "amount": 90,
+    "status": null,
+    "winners": null,
+    "playerName": null,
+    "createdAt": "2019-11-05T06:38:36.987Z"
+  },
+  {
+    "tournamentId": 6,
+    "gameId": 1,
+    "handId": 1,
+    "type": "bet",
+    "pot": 1080,
+    "sb": null,
+    "players": [
+      {
+        "status": "active",
+        "id": 5,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 100,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "5",
+            "type": "H"
+          },
+          {
+            "rank": "4",
+            "type": "H"
+          }
+        ],
+        "chipsBet": 150,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Spar Bot",
+        "hasDB": true,
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 3,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 100,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "3",
+            "type": "D"
+          },
+          {
+            "rank": "8",
+            "type": "S"
+          }
+        ],
+        "chipsBet": 150,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "One Hit Wonder",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 1,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 10,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "J",
+            "type": "H"
+          },
+          {
+            "rank": "Q",
+            "type": "D"
+          }
+        ],
+        "chipsBet": 240,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Spartin",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 2,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 10,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "6",
+            "type": "H"
+          },
+          {
+            "rank": "6",
+            "type": "S"
+          }
+        ],
+        "chipsBet": 240,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Mastermind",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 4,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 100,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "3",
+            "type": "H"
+          },
+          {
+            "rank": "2",
+            "type": "C"
+          }
+        ],
+        "chipsBet": 150,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Good Luck",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 6,
+        "sessionId": 14,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "userBot",
+        "buyIn": 250,
+        "chips": 100,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "7",
+            "type": "C"
+          },
+          {
+            "rank": "A",
+            "type": "D"
+          }
+        ],
+        "chipsBet": 150,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "My Bot",
+        "isAllin": false
+      }
+    ],
+    "session": "flop",
+    "commonCards": null,
+    "playerId": 2,
+    "amount": 90,
+    "status": null,
+    "winners": null,
+    "playerName": null,
+    "createdAt": "2019-11-05T06:38:37.037Z"
+  },
+  {
+    "tournamentId": 6,
+    "gameId": 1,
+    "handId": 1,
+    "type": "bet",
+    "pot": 1170,
+    "sb": null,
+    "players": [
+      {
+        "status": "active",
+        "id": 5,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 100,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "5",
+            "type": "H"
+          },
+          {
+            "rank": "4",
+            "type": "H"
+          }
+        ],
+        "chipsBet": 150,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Spar Bot",
+        "hasDB": true,
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 3,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 100,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "3",
+            "type": "D"
+          },
+          {
+            "rank": "8",
+            "type": "S"
+          }
+        ],
+        "chipsBet": 150,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "One Hit Wonder",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 1,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 10,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "J",
+            "type": "H"
+          },
+          {
+            "rank": "Q",
+            "type": "D"
+          }
+        ],
+        "chipsBet": 240,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Spartin",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 2,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 10,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "6",
+            "type": "H"
+          },
+          {
+            "rank": "6",
+            "type": "S"
+          }
+        ],
+        "chipsBet": 240,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Mastermind",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 4,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 10,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "3",
+            "type": "H"
+          },
+          {
+            "rank": "2",
+            "type": "C"
+          }
+        ],
+        "chipsBet": 240,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Good Luck",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 6,
+        "sessionId": 14,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "userBot",
+        "buyIn": 250,
+        "chips": 100,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "7",
+            "type": "C"
+          },
+          {
+            "rank": "A",
+            "type": "D"
+          }
+        ],
+        "chipsBet": 150,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "My Bot",
+        "isAllin": false
+      }
+    ],
+    "session": "flop",
+    "commonCards": null,
+    "playerId": 4,
+    "amount": 90,
+    "status": null,
+    "winners": null,
+    "playerName": null,
+    "createdAt": "2019-11-05T06:38:37.086Z"
+  },
+  {
+    "tournamentId": 6,
+    "gameId": 1,
+    "handId": 1,
+    "type": "bet",
+    "pot": 1260,
+    "sb": null,
+    "players": [
+      {
+        "status": "active",
+        "id": 5,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 100,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "5",
+            "type": "H"
+          },
+          {
+            "rank": "4",
+            "type": "H"
+          }
+        ],
+        "chipsBet": 150,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Spar Bot",
+        "hasDB": true,
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 3,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 100,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "3",
+            "type": "D"
+          },
+          {
+            "rank": "8",
+            "type": "S"
+          }
+        ],
+        "chipsBet": 150,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "One Hit Wonder",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 1,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 10,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "J",
+            "type": "H"
+          },
+          {
+            "rank": "Q",
+            "type": "D"
+          }
+        ],
+        "chipsBet": 240,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Spartin",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 2,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 10,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "6",
+            "type": "H"
+          },
+          {
+            "rank": "6",
+            "type": "S"
+          }
+        ],
+        "chipsBet": 240,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Mastermind",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 4,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 10,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "3",
+            "type": "H"
+          },
+          {
+            "rank": "2",
+            "type": "C"
+          }
+        ],
+        "chipsBet": 240,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Good Luck",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 6,
+        "sessionId": 14,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "userBot",
+        "buyIn": 250,
+        "chips": 10,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "7",
+            "type": "C"
+          },
+          {
+            "rank": "A",
+            "type": "D"
+          }
+        ],
+        "chipsBet": 240,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "My Bot",
+        "isAllin": false
+      }
+    ],
+    "session": "flop",
+    "commonCards": null,
+    "playerId": 6,
+    "amount": 90,
+    "status": null,
+    "winners": null,
+    "playerName": null,
+    "createdAt": "2019-11-05T06:38:37.137Z"
+  },
+  {
+    "tournamentId": 6,
+    "gameId": 1,
+    "handId": 1,
+    "type": "bet",
+    "pot": 1360,
+    "sb": null,
+    "players": [
+      {
+        "status": "active",
+        "id": 5,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 0,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "5",
+            "type": "H"
+          },
+          {
+            "rank": "4",
+            "type": "H"
+          }
+        ],
+        "chipsBet": 250,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Spar Bot",
+        "hasDB": true,
+        "isAllin": true
+      },
+      {
+        "status": "active",
+        "id": 3,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 100,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "3",
+            "type": "D"
+          },
+          {
+            "rank": "8",
+            "type": "S"
+          }
+        ],
+        "chipsBet": 150,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "One Hit Wonder",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 1,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 10,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "J",
+            "type": "H"
+          },
+          {
+            "rank": "Q",
+            "type": "D"
+          }
+        ],
+        "chipsBet": 240,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Spartin",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 2,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 10,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "6",
+            "type": "H"
+          },
+          {
+            "rank": "6",
+            "type": "S"
+          }
+        ],
+        "chipsBet": 240,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Mastermind",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 4,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 10,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "3",
+            "type": "H"
+          },
+          {
+            "rank": "2",
+            "type": "C"
+          }
+        ],
+        "chipsBet": 240,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Good Luck",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 6,
+        "sessionId": 14,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "userBot",
+        "buyIn": 250,
+        "chips": 10,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "7",
+            "type": "C"
+          },
+          {
+            "rank": "A",
+            "type": "D"
+          }
+        ],
+        "chipsBet": 240,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "My Bot",
+        "isAllin": false
+      }
+    ],
+    "session": "flop",
+    "commonCards": null,
+    "playerId": 5,
+    "amount": 100,
+    "status": null,
+    "winners": null,
+    "playerName": null,
+    "createdAt": "2019-11-05T06:38:37.201Z"
+  },
+  {
+    "tournamentId": 6,
+    "gameId": 1,
+    "handId": 1,
+    "type": "bet",
+    "pot": 1460,
+    "sb": null,
+    "players": [
+      {
+        "status": "active",
+        "id": 5,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 0,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "5",
+            "type": "H"
+          },
+          {
+            "rank": "4",
+            "type": "H"
+          }
+        ],
+        "chipsBet": 250,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Spar Bot",
+        "hasDB": true,
+        "isAllin": true
+      },
+      {
+        "status": "active",
+        "id": 3,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 0,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "3",
+            "type": "D"
+          },
+          {
+            "rank": "8",
+            "type": "S"
+          }
+        ],
+        "chipsBet": 250,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "One Hit Wonder",
+        "isAllin": true
+      },
+      {
+        "status": "active",
+        "id": 1,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 10,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "J",
+            "type": "H"
+          },
+          {
+            "rank": "Q",
+            "type": "D"
+          }
+        ],
+        "chipsBet": 240,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Spartin",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 2,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 10,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "6",
+            "type": "H"
+          },
+          {
+            "rank": "6",
+            "type": "S"
+          }
+        ],
+        "chipsBet": 240,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Mastermind",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 4,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 10,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "3",
+            "type": "H"
+          },
+          {
+            "rank": "2",
+            "type": "C"
+          }
+        ],
+        "chipsBet": 240,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Good Luck",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 6,
+        "sessionId": 14,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "userBot",
+        "buyIn": 250,
+        "chips": 10,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "7",
+            "type": "C"
+          },
+          {
+            "rank": "A",
+            "type": "D"
+          }
+        ],
+        "chipsBet": 240,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "My Bot",
+        "isAllin": false
+      }
+    ],
+    "session": "flop",
+    "commonCards": null,
+    "playerId": 3,
+    "amount": 100,
+    "status": null,
+    "winners": null,
+    "playerName": null,
+    "createdAt": "2019-11-05T06:38:37.250Z"
+  },
+  {
+    "tournamentId": 6,
+    "gameId": 1,
+    "handId": 1,
+    "type": "bet",
+    "pot": 1470,
+    "sb": null,
+    "players": [
+      {
+        "status": "active",
+        "id": 5,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 0,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "5",
+            "type": "H"
+          },
+          {
+            "rank": "4",
+            "type": "H"
+          }
+        ],
+        "chipsBet": 250,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Spar Bot",
+        "hasDB": true,
+        "isAllin": true
+      },
+      {
+        "status": "active",
+        "id": 3,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 0,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "3",
+            "type": "D"
+          },
+          {
+            "rank": "8",
+            "type": "S"
+          }
+        ],
+        "chipsBet": 250,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "One Hit Wonder",
+        "isAllin": true
+      },
+      {
+        "status": "active",
+        "id": 1,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 0,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "J",
+            "type": "H"
+          },
+          {
+            "rank": "Q",
+            "type": "D"
+          }
+        ],
+        "chipsBet": 250,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Spartin",
+        "isAllin": true
+      },
+      {
+        "status": "active",
+        "id": 2,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 10,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "6",
+            "type": "H"
+          },
+          {
+            "rank": "6",
+            "type": "S"
+          }
+        ],
+        "chipsBet": 240,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Mastermind",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 4,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 10,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "3",
+            "type": "H"
+          },
+          {
+            "rank": "2",
+            "type": "C"
+          }
+        ],
+        "chipsBet": 240,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Good Luck",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 6,
+        "sessionId": 14,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "userBot",
+        "buyIn": 250,
+        "chips": 10,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "7",
+            "type": "C"
+          },
+          {
+            "rank": "A",
+            "type": "D"
+          }
+        ],
+        "chipsBet": 240,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "My Bot",
+        "isAllin": false
+      }
+    ],
+    "session": "flop",
+    "commonCards": null,
+    "playerId": 1,
+    "amount": 10,
+    "status": null,
+    "winners": null,
+    "playerName": null,
+    "createdAt": "2019-11-05T06:38:37.300Z"
+  },
+  {
+    "tournamentId": 6,
+    "gameId": 1,
+    "handId": 1,
+    "type": "bet",
+    "pot": 1480,
+    "sb": null,
+    "players": [
+      {
+        "status": "active",
+        "id": 5,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 0,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "5",
+            "type": "H"
+          },
+          {
+            "rank": "4",
+            "type": "H"
+          }
+        ],
+        "chipsBet": 250,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Spar Bot",
+        "hasDB": true,
+        "isAllin": true
+      },
+      {
+        "status": "active",
+        "id": 3,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 0,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "3",
+            "type": "D"
+          },
+          {
+            "rank": "8",
+            "type": "S"
+          }
+        ],
+        "chipsBet": 250,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "One Hit Wonder",
+        "isAllin": true
+      },
+      {
+        "status": "active",
+        "id": 1,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 0,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "J",
+            "type": "H"
+          },
+          {
+            "rank": "Q",
+            "type": "D"
+          }
+        ],
+        "chipsBet": 250,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Spartin",
+        "isAllin": true
+      },
+      {
+        "status": "active",
+        "id": 2,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 0,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "6",
+            "type": "H"
+          },
+          {
+            "rank": "6",
+            "type": "S"
+          }
+        ],
+        "chipsBet": 250,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Mastermind",
+        "isAllin": true
+      },
+      {
+        "status": "active",
+        "id": 4,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 10,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "3",
+            "type": "H"
+          },
+          {
+            "rank": "2",
+            "type": "C"
+          }
+        ],
+        "chipsBet": 240,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Good Luck",
+        "isAllin": false
+      },
+      {
+        "status": "active",
+        "id": 6,
+        "sessionId": 14,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "userBot",
+        "buyIn": 250,
+        "chips": 10,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "7",
+            "type": "C"
+          },
+          {
+            "rank": "A",
+            "type": "D"
+          }
+        ],
+        "chipsBet": 240,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "My Bot",
+        "isAllin": false
+      }
+    ],
+    "session": "flop",
+    "commonCards": null,
+    "playerId": 2,
+    "amount": 10,
+    "status": null,
+    "winners": null,
+    "playerName": null,
+    "createdAt": "2019-11-05T06:38:37.339Z"
+  },
+  {
+    "tournamentId": 6,
+    "gameId": 1,
+    "handId": 1,
+    "type": "bet",
+    "pot": 1490,
+    "sb": null,
+    "players": [
+      {
+        "status": "active",
+        "id": 5,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 0,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "5",
+            "type": "H"
+          },
+          {
+            "rank": "4",
+            "type": "H"
+          }
+        ],
+        "chipsBet": 250,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Spar Bot",
+        "hasDB": true,
+        "isAllin": true
+      },
+      {
+        "status": "active",
+        "id": 3,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 0,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "3",
+            "type": "D"
+          },
+          {
+            "rank": "8",
+            "type": "S"
+          }
+        ],
+        "chipsBet": 250,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "One Hit Wonder",
+        "isAllin": true
+      },
+      {
+        "status": "active",
+        "id": 1,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 0,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "J",
+            "type": "H"
+          },
+          {
+            "rank": "Q",
+            "type": "D"
+          }
+        ],
+        "chipsBet": 250,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Spartin",
+        "isAllin": true
+      },
+      {
+        "status": "active",
+        "id": 2,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 0,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "6",
+            "type": "H"
+          },
+          {
+            "rank": "6",
+            "type": "S"
+          }
+        ],
+        "chipsBet": 250,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Mastermind",
+        "isAllin": true
+      },
+      {
+        "status": "active",
+        "id": 4,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 0,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "3",
+            "type": "H"
+          },
+          {
+            "rank": "2",
+            "type": "C"
+          }
+        ],
+        "chipsBet": 250,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Good Luck",
+        "isAllin": true
+      },
+      {
+        "status": "active",
+        "id": 6,
+        "sessionId": 14,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "userBot",
+        "buyIn": 250,
+        "chips": 10,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "7",
+            "type": "C"
+          },
+          {
+            "rank": "A",
+            "type": "D"
+          }
+        ],
+        "chipsBet": 240,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "My Bot",
+        "isAllin": false
+      }
+    ],
+    "session": "flop",
+    "commonCards": null,
+    "playerId": 4,
+    "amount": 10,
+    "status": null,
+    "winners": null,
+    "playerName": null,
+    "createdAt": "2019-11-05T06:38:37.386Z"
+  },
+  {
+    "tournamentId": 6,
+    "gameId": 1,
+    "handId": 1,
+    "type": "bet",
+    "pot": 1500,
+    "sb": null,
+    "players": [
+      {
+        "status": "active",
+        "id": 5,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 0,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "5",
+            "type": "H"
+          },
+          {
+            "rank": "4",
+            "type": "H"
+          }
+        ],
+        "chipsBet": 250,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Spar Bot",
+        "hasDB": true,
+        "isAllin": true
+      },
+      {
+        "status": "active",
+        "id": 3,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 0,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "3",
+            "type": "D"
+          },
+          {
+            "rank": "8",
+            "type": "S"
+          }
+        ],
+        "chipsBet": 250,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "One Hit Wonder",
+        "isAllin": true
+      },
+      {
+        "status": "active",
+        "id": 1,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 0,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "J",
+            "type": "H"
+          },
+          {
+            "rank": "Q",
+            "type": "D"
+          }
+        ],
+        "chipsBet": 250,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Spartin",
+        "isAllin": true
+      },
+      {
+        "status": "active",
+        "id": 2,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 0,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "6",
+            "type": "H"
+          },
+          {
+            "rank": "6",
+            "type": "S"
+          }
+        ],
+        "chipsBet": 250,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Mastermind",
+        "isAllin": true
+      },
+      {
+        "status": "active",
+        "id": 4,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 0,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "3",
+            "type": "H"
+          },
+          {
+            "rank": "2",
+            "type": "C"
+          }
+        ],
+        "chipsBet": 250,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Good Luck",
+        "isAllin": true
+      },
+      {
+        "status": "active",
+        "id": 6,
+        "sessionId": 14,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "userBot",
+        "buyIn": 250,
+        "chips": 0,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "7",
+            "type": "C"
+          },
+          {
+            "rank": "A",
+            "type": "D"
+          }
+        ],
+        "chipsBet": 250,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "My Bot",
+        "isAllin": true
+      }
+    ],
+    "session": "flop",
+    "commonCards": null,
+    "playerId": 6,
+    "amount": 10,
+    "status": null,
+    "winners": null,
+    "playerName": null,
+    "createdAt": "2019-11-05T06:38:37.437Z"
+  },
+  {
+    "tournamentId": 6,
+    "gameId": 1,
+    "handId": 1,
+    "type": "cards",
+    "pot": null,
+    "sb": null,
+    "players": [
+      {
+        "status": "active",
+        "id": 5,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 0,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "5",
+            "type": "H"
+          },
+          {
+            "rank": "4",
+            "type": "H"
+          }
+        ],
+        "chipsBet": 250,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Spar Bot",
+        "hasDB": true,
+        "isAllin": true
+      },
+      {
+        "status": "active",
+        "id": 3,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 0,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "3",
+            "type": "D"
+          },
+          {
+            "rank": "8",
+            "type": "S"
+          }
+        ],
+        "chipsBet": 250,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "One Hit Wonder",
+        "isAllin": true
+      },
+      {
+        "status": "active",
+        "id": 1,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 0,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "J",
+            "type": "H"
+          },
+          {
+            "rank": "Q",
+            "type": "D"
+          }
+        ],
+        "chipsBet": 250,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Spartin",
+        "isAllin": true
+      },
+      {
+        "status": "active",
+        "id": 2,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 0,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "6",
+            "type": "H"
+          },
+          {
+            "rank": "6",
+            "type": "S"
+          }
+        ],
+        "chipsBet": 250,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Mastermind",
+        "isAllin": true
+      },
+      {
+        "status": "active",
+        "id": 4,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 0,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "3",
+            "type": "H"
+          },
+          {
+            "rank": "2",
+            "type": "C"
+          }
+        ],
+        "chipsBet": 250,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Good Luck",
+        "isAllin": true
+      },
+      {
+        "status": "active",
+        "id": 6,
+        "sessionId": 14,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "userBot",
+        "buyIn": 250,
+        "chips": 0,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "7",
+            "type": "C"
+          },
+          {
+            "rank": "A",
+            "type": "D"
+          }
+        ],
+        "chipsBet": 250,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "My Bot",
+        "isAllin": true
+      }
+    ],
+    "session": "turn",
+    "commonCards": [
+      {
+        "rank": "3",
+        "type": "S"
+      }
+    ],
+    "playerId": null,
+    "amount": null,
+    "status": null,
+    "winners": null,
+    "playerName": null,
+    "createdAt": "2019-11-05T06:38:37.468Z"
+  },
+  {
+    "tournamentId": 6,
+    "gameId": 1,
+    "handId": 1,
+    "type": "cards",
+    "pot": null,
+    "sb": null,
+    "players": [
+      {
+        "status": "active",
+        "id": 5,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 0,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "5",
+            "type": "H"
+          },
+          {
+            "rank": "4",
+            "type": "H"
+          }
+        ],
+        "chipsBet": 250,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Spar Bot",
+        "hasDB": true,
+        "isAllin": true
+      },
+      {
+        "status": "active",
+        "id": 3,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 0,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "3",
+            "type": "D"
+          },
+          {
+            "rank": "8",
+            "type": "S"
+          }
+        ],
+        "chipsBet": 250,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "One Hit Wonder",
+        "isAllin": true
+      },
+      {
+        "status": "active",
+        "id": 1,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 0,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "J",
+            "type": "H"
+          },
+          {
+            "rank": "Q",
+            "type": "D"
+          }
+        ],
+        "chipsBet": 250,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Spartin",
+        "isAllin": true
+      },
+      {
+        "status": "active",
+        "id": 2,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 0,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "6",
+            "type": "H"
+          },
+          {
+            "rank": "6",
+            "type": "S"
+          }
+        ],
+        "chipsBet": 250,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Mastermind",
+        "isAllin": true
+      },
+      {
+        "status": "active",
+        "id": 4,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 0,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "3",
+            "type": "H"
+          },
+          {
+            "rank": "2",
+            "type": "C"
+          }
+        ],
+        "chipsBet": 250,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "Good Luck",
+        "isAllin": true
+      },
+      {
+        "status": "active",
+        "id": 6,
+        "sessionId": 14,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "userBot",
+        "buyIn": 250,
+        "chips": 0,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "7",
+            "type": "C"
+          },
+          {
+            "rank": "A",
+            "type": "D"
+          }
+        ],
+        "chipsBet": 250,
+        "bestCombination": [],
+        "bestCombinationData": null,
+        "name": "My Bot",
+        "isAllin": true
+      }
+    ],
+    "session": "river",
+    "commonCards": [
+      {
+        "rank": "A",
+        "type": "C"
+      }
+    ],
+    "playerId": null,
+    "amount": null,
+    "status": null,
+    "winners": null,
+    "playerName": null,
+    "createdAt": "2019-11-05T06:38:37.489Z"
+  },
+  {
+    "tournamentId": 6,
+    "gameId": 1,
+    "handId": 1,
+    "type": "showdown",
+    "pot": null,
+    "sb": null,
+    "players": [
+      {
+        "status": "active",
+        "id": 5,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 0,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "5",
+            "type": "H"
+          },
+          {
+            "rank": "4",
+            "type": "H"
+          }
+        ],
+        "chipsBet": 250,
+        "bestCombination": [
+          {
+            "rank": "5",
+            "type": "H"
+          },
+          {
+            "rank": "8",
+            "type": "H"
+          },
+          {
+            "rank": "6",
+            "type": "D"
+          },
+          {
+            "rank": "Q",
+            "type": "C"
+          },
+          {
+            "rank": "A",
+            "type": "C"
+          }
+        ],
+        "bestCombinationData": null,
+        "name": "Spar Bot",
+        "hasDB": true,
+        "isAllin": true
+      },
+      {
+        "status": "active",
+        "id": 3,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 0,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "3",
+            "type": "D"
+          },
+          {
+            "rank": "8",
+            "type": "S"
+          }
+        ],
+        "chipsBet": 250,
+        "bestCombination": [
+          {
+            "rank": "3",
+            "type": "D"
+          },
+          {
+            "rank": "8",
+            "type": "S"
+          },
+          {
+            "rank": "8",
+            "type": "H"
+          },
+          {
+            "rank": "3",
+            "type": "S"
+          },
+          {
+            "rank": "A",
+            "type": "C"
+          }
+        ],
+        "bestCombinationData": null,
+        "name": "One Hit Wonder",
+        "isAllin": true
+      },
+      {
+        "status": "active",
+        "id": 1,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 0,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "J",
+            "type": "H"
+          },
+          {
+            "rank": "Q",
+            "type": "D"
+          }
+        ],
+        "chipsBet": 250,
+        "bestCombination": [
+          {
+            "rank": "J",
+            "type": "H"
+          },
+          {
+            "rank": "Q",
+            "type": "D"
+          },
+          {
+            "rank": "8",
+            "type": "H"
+          },
+          {
+            "rank": "Q",
+            "type": "C"
+          },
+          {
+            "rank": "A",
+            "type": "C"
+          }
+        ],
+        "bestCombinationData": null,
+        "name": "Spartin",
+        "isAllin": true
+      },
+      {
+        "status": "active",
+        "id": 2,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 0,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "6",
+            "type": "H"
+          },
+          {
+            "rank": "6",
+            "type": "S"
+          }
+        ],
+        "chipsBet": 250,
+        "bestCombination": [
+          {
+            "rank": "6",
+            "type": "H"
+          },
+          {
+            "rank": "6",
+            "type": "S"
+          },
+          {
+            "rank": "6",
+            "type": "D"
+          },
+          {
+            "rank": "Q",
+            "type": "C"
+          },
+          {
+            "rank": "A",
+            "type": "C"
+          }
+        ],
+        "bestCombinationData": null,
+        "name": "Mastermind",
+        "isAllin": true
+      },
+      {
+        "status": "active",
+        "id": 4,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 0,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "3",
+            "type": "H"
+          },
+          {
+            "rank": "2",
+            "type": "C"
+          }
+        ],
+        "chipsBet": 250,
+        "bestCombination": [
+          {
+            "rank": "3",
+            "type": "H"
+          },
+          {
+            "rank": "8",
+            "type": "H"
+          },
+          {
+            "rank": "Q",
+            "type": "C"
+          },
+          {
+            "rank": "3",
+            "type": "S"
+          },
+          {
+            "rank": "A",
+            "type": "C"
+          }
+        ],
+        "bestCombinationData": null,
+        "name": "Good Luck",
+        "isAllin": true
+      },
+      {
+        "status": "active",
+        "id": 6,
+        "sessionId": 14,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "userBot",
+        "buyIn": 250,
+        "chips": 0,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "7",
+            "type": "C"
+          },
+          {
+            "rank": "A",
+            "type": "D"
+          }
+        ],
+        "chipsBet": 250,
+        "bestCombination": [
+          {
+            "rank": "7",
+            "type": "C"
+          },
+          {
+            "rank": "A",
+            "type": "D"
+          },
+          {
+            "rank": "8",
+            "type": "H"
+          },
+          {
+            "rank": "Q",
+            "type": "C"
+          },
+          {
+            "rank": "A",
+            "type": "C"
+          }
+        ],
+        "bestCombinationData": null,
+        "name": "My Bot",
+        "isAllin": true
+      }
+    ],
+    "session": null,
+    "commonCards": null,
+    "playerId": null,
+    "amount": null,
+    "status": null,
+    "winners": null,
+    "playerName": null,
+    "createdAt": "2019-11-05T06:38:37.538Z"
+  },
+  {
+    "tournamentId": 6,
+    "gameId": 1,
+    "handId": 1,
+    "type": "win",
+    "pot": null,
+    "sb": null,
+    "players": [
+      {
+        "status": "active",
+        "id": 5,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 0,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "5",
+            "type": "H"
+          },
+          {
+            "rank": "4",
+            "type": "H"
+          }
+        ],
+        "chipsBet": 250,
+        "bestCombination": [
+          {
+            "rank": "5",
+            "type": "H"
+          },
+          {
+            "rank": "8",
+            "type": "H"
+          },
+          {
+            "rank": "6",
+            "type": "D"
+          },
+          {
+            "rank": "Q",
+            "type": "C"
+          },
+          {
+            "rank": "A",
+            "type": "C"
+          }
+        ],
+        "bestCombinationData": null,
+        "name": "Spar Bot",
+        "hasDB": true,
+        "isAllin": true
+      },
+      {
+        "status": "active",
+        "id": 3,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 0,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "3",
+            "type": "D"
+          },
+          {
+            "rank": "8",
+            "type": "S"
+          }
+        ],
+        "chipsBet": 250,
+        "bestCombination": [
+          {
+            "rank": "3",
+            "type": "D"
+          },
+          {
+            "rank": "8",
+            "type": "S"
+          },
+          {
+            "rank": "8",
+            "type": "H"
+          },
+          {
+            "rank": "3",
+            "type": "S"
+          },
+          {
+            "rank": "A",
+            "type": "C"
+          }
+        ],
+        "bestCombinationData": null,
+        "name": "One Hit Wonder",
+        "isAllin": true
+      },
+      {
+        "status": "active",
+        "id": 1,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 0,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "J",
+            "type": "H"
+          },
+          {
+            "rank": "Q",
+            "type": "D"
+          }
+        ],
+        "chipsBet": 250,
+        "bestCombination": [
+          {
+            "rank": "J",
+            "type": "H"
+          },
+          {
+            "rank": "Q",
+            "type": "D"
+          },
+          {
+            "rank": "8",
+            "type": "H"
+          },
+          {
+            "rank": "Q",
+            "type": "C"
+          },
+          {
+            "rank": "A",
+            "type": "C"
+          }
+        ],
+        "bestCombinationData": null,
+        "name": "Spartin",
+        "isAllin": true
+      },
+      {
+        "status": "active",
+        "id": 2,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 1500,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "6",
+            "type": "H"
+          },
+          {
+            "rank": "6",
+            "type": "S"
+          }
+        ],
+        "chipsBet": 250,
+        "bestCombination": [
+          {
+            "rank": "6",
+            "type": "H"
+          },
+          {
+            "rank": "6",
+            "type": "S"
+          },
+          {
+            "rank": "6",
+            "type": "D"
+          },
+          {
+            "rank": "Q",
+            "type": "C"
+          },
+          {
+            "rank": "A",
+            "type": "C"
+          }
+        ],
+        "bestCombinationData": null,
+        "name": "Mastermind",
+        "isAllin": true
+      },
+      {
+        "status": "active",
+        "id": 4,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 0,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "3",
+            "type": "H"
+          },
+          {
+            "rank": "2",
+            "type": "C"
+          }
+        ],
+        "chipsBet": 250,
+        "bestCombination": [
+          {
+            "rank": "3",
+            "type": "H"
+          },
+          {
+            "rank": "8",
+            "type": "H"
+          },
+          {
+            "rank": "Q",
+            "type": "C"
+          },
+          {
+            "rank": "3",
+            "type": "S"
+          },
+          {
+            "rank": "A",
+            "type": "C"
+          }
+        ],
+        "bestCombinationData": null,
+        "name": "Good Luck",
+        "isAllin": true
+      },
+      {
+        "status": "active",
+        "id": 6,
+        "sessionId": 14,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "userBot",
+        "buyIn": 250,
+        "chips": 0,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "7",
+            "type": "C"
+          },
+          {
+            "rank": "A",
+            "type": "D"
+          }
+        ],
+        "chipsBet": 250,
+        "bestCombination": [
+          {
+            "rank": "7",
+            "type": "C"
+          },
+          {
+            "rank": "A",
+            "type": "D"
+          },
+          {
+            "rank": "8",
+            "type": "H"
+          },
+          {
+            "rank": "Q",
+            "type": "C"
+          },
+          {
+            "rank": "A",
+            "type": "C"
+          }
+        ],
+        "bestCombinationData": null,
+        "name": "My Bot",
+        "isAllin": true
+      }
+    ],
+    "session": null,
+    "commonCards": null,
+    "playerId": null,
+    "amount": null,
+    "status": null,
+    "winners": [
+      {
+        "id": 2,
+        "name": "Mastermind",
+        "amount": 1500
+      }
+    ],
+    "playerName": null,
+    "createdAt": "2019-11-05T06:38:37.554Z"
+  },
+  {
+    "tournamentId": 6,
+    "gameId": 1,
+    "handId": 1,
+    "type": "status",
+    "pot": null,
+    "sb": null,
+    "players": [
+      {
+        "status": "active",
+        "id": 5,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 0,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "5",
+            "type": "H"
+          },
+          {
+            "rank": "4",
+            "type": "H"
+          }
+        ],
+        "chipsBet": 250,
+        "bestCombination": [
+          {
+            "rank": "5",
+            "type": "H"
+          },
+          {
+            "rank": "8",
+            "type": "H"
+          },
+          {
+            "rank": "6",
+            "type": "D"
+          },
+          {
+            "rank": "Q",
+            "type": "C"
+          },
+          {
+            "rank": "A",
+            "type": "C"
+          }
+        ],
+        "bestCombinationData": null,
+        "name": "Spar Bot",
+        "hasDB": true,
+        "isAllin": true
+      },
+      {
+        "status": "active",
+        "id": 3,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 0,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "3",
+            "type": "D"
+          },
+          {
+            "rank": "8",
+            "type": "S"
+          }
+        ],
+        "chipsBet": 250,
+        "bestCombination": [
+          {
+            "rank": "3",
+            "type": "D"
+          },
+          {
+            "rank": "8",
+            "type": "S"
+          },
+          {
+            "rank": "8",
+            "type": "H"
+          },
+          {
+            "rank": "3",
+            "type": "S"
+          },
+          {
+            "rank": "A",
+            "type": "C"
+          }
+        ],
+        "bestCombinationData": null,
+        "name": "One Hit Wonder",
+        "isAllin": true
+      },
+      {
+        "status": "active",
+        "id": 1,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 0,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "J",
+            "type": "H"
+          },
+          {
+            "rank": "Q",
+            "type": "D"
+          }
+        ],
+        "chipsBet": 250,
+        "bestCombination": [
+          {
+            "rank": "J",
+            "type": "H"
+          },
+          {
+            "rank": "Q",
+            "type": "D"
+          },
+          {
+            "rank": "8",
+            "type": "H"
+          },
+          {
+            "rank": "Q",
+            "type": "C"
+          },
+          {
+            "rank": "A",
+            "type": "C"
+          }
+        ],
+        "bestCombinationData": null,
+        "name": "Spartin",
+        "isAllin": true
+      },
+      {
+        "status": "active",
+        "id": 2,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 1500,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "6",
+            "type": "H"
+          },
+          {
+            "rank": "6",
+            "type": "S"
+          }
+        ],
+        "chipsBet": 250,
+        "bestCombination": [
+          {
+            "rank": "6",
+            "type": "H"
+          },
+          {
+            "rank": "6",
+            "type": "S"
+          },
+          {
+            "rank": "6",
+            "type": "D"
+          },
+          {
+            "rank": "Q",
+            "type": "C"
+          },
+          {
+            "rank": "A",
+            "type": "C"
+          }
+        ],
+        "bestCombinationData": null,
+        "name": "Mastermind",
+        "isAllin": true
+      },
+      {
+        "status": "active",
+        "id": 4,
+        "sessionId": null,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "sandbox",
+        "buyIn": 250,
+        "chips": 0,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "3",
+            "type": "H"
+          },
+          {
+            "rank": "2",
+            "type": "C"
+          }
+        ],
+        "chipsBet": 250,
+        "bestCombination": [
+          {
+            "rank": "3",
+            "type": "H"
+          },
+          {
+            "rank": "8",
+            "type": "H"
+          },
+          {
+            "rank": "Q",
+            "type": "C"
+          },
+          {
+            "rank": "3",
+            "type": "S"
+          },
+          {
+            "rank": "A",
+            "type": "C"
+          }
+        ],
+        "bestCombinationData": null,
+        "name": "Good Luck",
+        "isAllin": true
+      },
+      {
+        "status": "active",
+        "id": 6,
+        "sessionId": 14,
+        "willLeave": false,
+        "willJoin": false,
+        "botType": "userBot",
+        "buyIn": 250,
+        "chips": 0,
+        "totalWinnings": 0,
+        "cards": [
+          {
+            "rank": "7",
+            "type": "C"
+          },
+          {
+            "rank": "A",
+            "type": "D"
+          }
+        ],
+        "chipsBet": 250,
+        "bestCombination": [
+          {
+            "rank": "7",
+            "type": "C"
+          },
+          {
+            "rank": "A",
+            "type": "D"
+          },
+          {
+            "rank": "8",
+            "type": "H"
+          },
+          {
+            "rank": "Q",
+            "type": "C"
+          },
+          {
+            "rank": "A",
+            "type": "C"
+          }
+        ],
+        "bestCombinationData": null,
+        "name": "My Bot",
+        "isAllin": true
+      }
+    ],
+    "session": null,
+    "commonCards": null,
+    "playerId": 6,
+    "amount": null,
+    "status": "out",
+    "winners": null,
+    "playerName": null,
+    "createdAt": "2019-11-05T06:38:37.586Z"
+  }
+]

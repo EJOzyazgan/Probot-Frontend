@@ -281,6 +281,7 @@
 }
 
 .demo-table {
+  // height: 80%;
   width: 80%;
 }
 
@@ -292,6 +293,45 @@
 
 .bot-type-btn {
   margin: 5px;
+}
+
+.demo-tabs {
+  width: 100%;
+}
+
+.demo-tab {
+  width: 50%;
+  
+  :hover {
+    cursor: pointer;
+  }
+}
+
+.card-content {
+  overflow: auto;
+  height: 80%;
+}
+
+@media only screen and (max-width: 1050px) {
+  .demo-content {
+    height: fit-content;
+  }
+
+  .demo-bot{
+    margin: 5px auto;
+    width: 50%;
+    height: 35%;
+    max-height: 275px;
+  }
+
+  .demo-table {
+    width: 100%;
+    height: 750px;
+  }
+
+  .card-content {
+    height: 70%;
+  }
 }
 
 @media only screen and (max-width: 875px) {
@@ -317,6 +357,11 @@
 
   .get-started-icon {
     width: 125px;
+  }
+
+  .demo-table {
+    width: 100%;
+    height: 550px;
   }
 }
 
@@ -429,4 +474,21 @@
     font-size: 32px;
   }
 
+
+  //demo section
+  .demo-bot{
+    margin: 5px auto;
+    width: 80%;
+    height: 30%;
+    max-height: 250px;
+  }
+
+  .demo-table {
+    width: 100%;
+    height: 500px;
+  }
+
+  .card-content {
+    height: 260px;
+  }
 }

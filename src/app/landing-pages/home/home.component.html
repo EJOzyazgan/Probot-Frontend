@@ -10,36 +10,52 @@
   <div class="keep-center">
     <div>
       <div class="prompt">Get in on the action!</div>
-      <!-- <div class="prompt">Try our demo below</div> -->
+      <div class="prompt">Try our demo below.</div>
     </div>
 
-    <!-- <div class="section">
+    <div class="section">
       <div class="section-header">
         <div class="header">Demo</div>
         <div class="sub-header">Want to play against top-quality poker bots? Try our new demo:</div>
       </div>
-      <div class="demo-content" fxLayout="row wrap" fxLayoutAlign="space-between">
+      <div class="demo-content" fxLayout="row wrap">
         <mat-card class="demo-bot">
-          <mat-card-title>Demo Bot</mat-card-title>
-          <mat-card-content>
+          <div class="demo-tabs" fxLayout="row">
+            <div class="demo-tab" [ngStyle]="selectedTabStyle(0)" (click)="selectTab(0)">
+              <mat-icon class="example-tab-icon">build</mat-icon>
+            </div>
+            <div class="demo-tab" [ngStyle]="selectedTabStyle(1)" (click)="selectTab(1)">
+              <mat-icon class="example-tab-icon">code</mat-icon>
+            </div>
+          </div>
+          <mat-card-title>{{titles[selectedTab]}}</mat-card-title>
+          <mat-card-content *ngIf="selectedTab === 0" class="card-content">
             <mat-form-field class="field-input">
               <input matInput name="bot-name" placeholder="Demo Bot Name" type="text" id="bot-name"
                 [(ngModel)]="demoBotName">
             </mat-form-field><br>
-            <mat-label>Pick Bot Type</mat-label>
-            <mat-radio-group class="bot-types" aria-label="Select Bot Type" [(ngModel)]="botType">
-              <mat-radio-button class="bot-type-btn" value="1">Passive</mat-radio-button>
-              <mat-radio-button class="bot-type-btn" value="2">Aggresive</mat-radio-button>
-              <mat-radio-button class="bot-type-btn" value="3">Safe</mat-radio-button>
-            </mat-radio-group>
-            <button mat-raised-button name="play-btn" class="play-btn">Play</button>
+            <div fxLayout="row wrap">
+              <div>
+                <mat-label>Pick Bot Type</mat-label>
+                <mat-radio-group class="bot-types" aria-label="Select Bot Type" [(ngModel)]="botType">
+                  <mat-radio-button class="bot-type-btn" value="0">Safe</mat-radio-button>
+                  <mat-radio-button class="bot-type-btn" value="1">Passive</mat-radio-button>
+                  <mat-radio-button class="bot-type-btn" value="2">Aggresive</mat-radio-button>
+                </mat-radio-group>
+              </div>
+              <button mat-raised-button name="play-btn" class="play-btn" (click)="startDemo()">Play</button>
+            </div>
+          </mat-card-content>
+
+          <mat-card-content *ngIf="selectedTab === 1" class="card-content">
+            <pre><code [highlight]="demoCode[botType]"></code></pre>
           </mat-card-content>
         </mat-card>
         <div class="demo-table">
-          <app-game-table [demo]="true" [botName]="demoBotName"></app-game-table>
+          <app-game-table [demo]="true" [botName]="demoBotName" [botType]="botType"></app-game-table>
         </div>
       </div>
-    </div> -->
+    </div>
 
     <div class="section">
       <div class="section-header">
@@ -73,7 +89,7 @@
             <button mat-raised-button class="sign-up-text-btn" [routerLink]="['../../auth/signup']">
               Play For Free
             </button>
-            <button mat-raised-button class="sign-up-text-btn" [routerLink]="['./getting-started']">
+            <button mat-raised-button class="sign-up-text-btn" [routerLink]="['../getting-started']">
               Learn More
             </button>
           </div>
