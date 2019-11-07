@@ -26,7 +26,7 @@ import {AngularFontAwesomeModule} from 'angular-font-awesome';
 import {AngularSvgIconModule} from 'angular-svg-icon';
 import { TooltipComponent } from './tooltip/tooltip.component';
 import { CustomInputComponent } from './custom-input/custom-input.component';
-import { MatExpansionModule, MatRadioModule, MAT_RADIO_DEFAULT_OPTIONS } from '@angular/material';
+import { MatExpansionModule, MatRadioModule, MAT_RADIO_DEFAULT_OPTIONS, MatTabsModule } from '@angular/material';
 import { TosComponent } from './tos/tos.component';
 import { TosDialogComponent } from './dialogs/tos-dialog/tos-dialog.component';
 import { FriendDialogComponent } from './dialogs/friend-dialog/friend-dialog.component';
@@ -81,6 +81,7 @@ import { RouterModule } from '@angular/router';
     MatExpansionModule,
     RouterModule,
     MatRadioModule,
+    MatTabsModule,
   ],
   providers: [{
     provide: MAT_RADIO_DEFAULT_OPTIONS,
@@ -129,6 +130,7 @@ import { RouterModule } from '@angular/router';
     VerificationDialogComponent,
     GameTableComponent,
     MatRadioModule,
+    MatTabsModule,
   ]
 })
 export class SharedModule {}
