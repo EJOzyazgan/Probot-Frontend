@@ -23,6 +23,15 @@ import { FlexLayoutModule} from '@angular/flex-layout';
 import {AuthInterceptor} from './services/authInterceptor.service';
 import {environment} from '../environments/environment';
 import { PurchaseService } from './services/purchase.service';
+import { HighlightModule } from 'ngx-highlightjs';
+import javascript from 'highlight.js/lib/languages/javascript';
+import python from 'highlight.js/lib/languages/python';
+
+export function hljsLanguages() {
+  return [
+    { name: 'javascript', func: javascript},
+    { name: 'python', func: python}];
+}
 
 const config: SocketIoConfig = { url: `${environment.domain}`, options: {} };
 
@@ -41,7 +50,8 @@ const config: SocketIoConfig = { url: `${environment.domain}`, options: {} };
     Ng2GoogleChartsModule,
     FlexLayoutModule,
     AlertModule.forRoot({maxMessages: 5, timeout: 3000}),
-    SocketIoModule.forRoot(config)
+    SocketIoModule.forRoot(config),
+    HighlightModule.forRoot({languages: hljsLanguages}),
   ],
   providers: [
     AuthService,
