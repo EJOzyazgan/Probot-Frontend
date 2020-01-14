@@ -32,7 +32,7 @@ export class DataService {
     this.email.next((email));
   }
 
-  changeBracket(bracketId: string) {
+  changeBracket(bracketId: number) {
     this.bracketId.next(bracketId);
   }
 
@@ -40,15 +40,15 @@ export class DataService {
     this.tournamentId.next(tournamentId);
   }
 
-  changeDiv(divId: string) {
+  changeDiv(divId: number) {
     this.divId.next(divId);
   }
 
-  changeRound(roundId: string) {
+  changeRound(roundId: number) {
     this.roundId.next(roundId);
   }
 
-  changeMatch(matchId: string) {
+  changeMatch(matchId: number) {
     this.matchId.next(matchId);
   }
 

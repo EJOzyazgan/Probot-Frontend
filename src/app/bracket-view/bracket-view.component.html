@@ -1,33 +1,31 @@
 <div class="main-container">
-  <label>
-    Division:
-    <select class="division-select" [(ngModel)]="selectedDiv">
-      <option *ngFor="let division of bracket.divisions" [ngValue]="division">{{division.name}}</option>
-    </select>
-  </label>
+  <select [(ngModel)]="selectedDiv" class="division-select">
+    <option *ngFor="let division of bracket.divisions" [ngValue]="division">{{division.name}}</option>
+  </select>
 
-  <div *ngIf="bracketLoaded" class="bracket-container">
-    <div *ngFor="let round of selectedDiv.rounds" class="tournament-bracket__round">
-      <div class="tournament-bracket__round-title">Round: {{round.name}}</div>
-      <ul class="tournament-bracket__list">
-        <li *ngFor="let match of round.matches" class="tournament-bracket__item">
+  <div *ngIf="bracketLoaded" class="bracket-container" fxLayout="row" fxLayoutAlign="space-evenly">
+    <div *ngFor="let round of selectedDiv.rounds" class="tournament-bracket__round" fxLayout="column wrap" fxLayoutAlign="space-evenly">
+      <div class="tournament-bracket__list" fxLayout="column wrap" fxLayoutAlign="space-evenly">
+        <div *ngFor="let match of round.matches" class="tournament-bracket__item" fxLayout="column wrap" fxLayoutAlign="space-between">
           <mat-card class="tournament-bracket__match" tabindex="0">
             <mat-card-header class="card-header">
               <mat-card-title class="card-title">Match: {{match.name}}</mat-card-title>
             </mat-card-header>
-            <mat-card-content class="card-content">
-              <div *ngFor="let bot of match.bots" class="bot-container">
-                <mat-card class="bot-card">
-                  <mat-card-content class="bot-info">
-                    <div class="bot-header">{{bot.bot.name}}</div>
-                    <div class="bot-score">{{bot.score}}</div>
-                  </mat-card-content>
-                </mat-card>
+            <mat-card-content class="card-content" fxLayout="row wrap" fxLayoutAlign="space-between">
+              <div class="holder" fxLayout="row">
+                <div class="bot-container" fxLayout="row wrap" fxLayoutAlign="space-evenly">
+                  <mat-card *ngFor="let bot of numArray(match.numBots); let i = index" class="bot-card"
+                  [ngStyle]="botCardStyle(match, i)">
+                    <mat-card-content class="bot-info">
+                      <div class="bot-header" *ngIf="checkBots(match, i)">{{match.bots[i].bot.name}}</div>
+                      <div class="bot-score" *ngIf="checkBots(match, i)">{{match.bots[i].score}}</div>
+                    </mat-card-content>
+                  </mat-card>
+                </div>
               </div>
             </mat-card-content>
           </mat-card>
-        </li>
-      </ul>
+      </div>
     </div>
   </div>
 </div>

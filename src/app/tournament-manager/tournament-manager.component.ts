@@ -29,7 +29,6 @@ export class TournamentManagerComponent implements OnInit {
 
   ngOnInit() {
     this.getTournaments();
-    console.log(this.tournament);
   }
 
   createTournament() {
@@ -53,17 +52,17 @@ export class TournamentManagerComponent implements OnInit {
   }
 
   createBracket() {
-    this.bracket.tournamentId = this.tournament._id;
+    this.bracket.tournamentId = this.tournament.id;
     this.tournamentService.createBracket(this.bracket).subscribe((bracket) => {
       this.bracket = bracket['bracket'];
       this.toggle('bracket');
-      this.getBrackets(this.tournament._id);
+      this.getBrackets(this.tournament.id);
     });
   }
 
   viewBracket() {
-    console.log(this.bracket._id);
-    this.dataService.changeBracket(this.bracket._id);
+    console.log(this.bracket.id);
+    this.dataService.changeBracket(this.bracket.id);
   }
 
   startGame() {
@@ -74,10 +73,10 @@ export class TournamentManagerComponent implements OnInit {
       match: this.match
     };
 
-    const tournamentId = '' + this.tournament._id + '-' + this.division.name + this.round.name + this.match.name;
+    const tournamentId = '' + this.tournament.id + '-' + this.division.name + this.round.name + this.match.name;
 
     this.dataService.changeTournament(tournamentId);
-    this.dataService.changeBracket(this.bracket._id);
+    this.dataService.changeBracket(this.bracket.id);
     this.dataService.changeDiv(this.division.name);
     this.dataService.changeRound(this.round.name);
     this.dataService.changeMatch(this.match.name);

@@ -26,11 +26,37 @@ export class BracketViewComponent implements OnInit {
   }
 
   getBracket() {
-    this.tournamentService.getBracket(this.bracketId).subscribe((bracket) => {
+    this.tournamentService.getBracket(13).subscribe((bracket) => {
       this.bracket = bracket;
       this.selectedDiv = this.bracket.divisions[0];
       this.bracketLoaded = true;
     });
+  }
+
+  isWinner(id, winners) {
+    return winners.includes(id);
+  }
+
+  checkBots(match, num) {
+    return match.bots.length > num;
+  }
+
+  numArray(amount) {
+    return Array(amount);
+  }
+
+  botCardStyle(match, num) {
+    if (!this.checkBots(match, num)) {
+      return {
+        'background': '#5c5858',
+        'opacity': '0.75',
+      };
+    } else if (this.isWinner(match.bots[num].bot.id, match.winners)) {
+      return {
+        'background': '#cc0000',
+        'color': 'white',
+      };
+    }
   }
 
 }
