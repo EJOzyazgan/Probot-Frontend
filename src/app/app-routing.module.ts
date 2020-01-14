@@ -11,8 +11,8 @@ const appRoutes: Routes = [
   {path: 'auth', loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)},
   {path: 'platform', loadChildren: () => import('./platform/platform.module').then(m => m.PlatformModule), canActivate: [AuthGuard]},
   {path: 'game-view', component: GameViewComponent},
-  // {path: 'bracket-view', component: BracketViewComponent},
-  // {path: 'tournament-manager', component: TournamentManagerComponent}
+  {path: 'bracket-view', component: BracketViewComponent},
+  {path: 'tournament-manager', component: TournamentManagerComponent}
 ];
 
 @NgModule({

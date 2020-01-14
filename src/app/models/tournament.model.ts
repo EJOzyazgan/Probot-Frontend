@@ -1,6 +1,6 @@
 export class Tournament {
   constructor(
-    public _id?: string,
+    public id?: number,
     public maxPlayers?: number,
     public name?: string,
     public state?: string

@@ -23,7 +23,7 @@ export class TournamentService {
     return this.http.post(this.tournamentUrl + '/bracket/get/all', {tournamentId: tournamentId});
   }
 
-  getBracket(bracketId: string) {
+  getBracket(bracketId: number) {
     return this.http.post(this.tournamentUrl + '/bracket/get/:id', {bracketId: bracketId});
   }
 

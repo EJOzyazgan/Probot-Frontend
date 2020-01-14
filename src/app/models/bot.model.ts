@@ -2,7 +2,7 @@ import {Table} from './table.model';
 
 export class Bot {
   constructor(
-    public id?: string,
+    public id?: number,
     public name?: string,
     public serviceUrl?: string,
     public userId?: number,

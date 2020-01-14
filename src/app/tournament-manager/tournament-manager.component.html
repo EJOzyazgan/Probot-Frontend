@@ -8,7 +8,7 @@
       <div *ngIf="!newTournament" class="select-tournament">
         <mat-form-field class="tournament-name-input">
           <mat-select [(ngModel)]="tournament" placeholder="Select Tournament"
-                      (selectionChange)="getBrackets(tournament._id)">
+                      (selectionChange)="getBrackets(tournament.id)">
             <mat-option *ngFor="let t of tournaments" [value]="t">{{t.name}}</mat-option>
           </mat-select>
         </mat-form-field>
@@ -45,10 +45,10 @@
         </mat-form-field>
         <br>
 
-        <button mat-button [disabled]="tournament._id === null || tournament._id === undefined"
+        <button mat-button [disabled]="tournament.id === null || tournament.id === undefined"
                 (click)="toggle('bracket')">New Bracket
         </button>
-        <button mat-button [disabled]="bracket._id === null || bracket._id === undefined"
+        <button mat-button [disabled]="bracket.id === null || bracket.id === undefined"
                 (click)="viewBracket()" [routerLink]="['/bracket-view']">View Bracket
         </button>
       </div>
